@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "id": "skyblock_jp",
+  "version": "0.6.4",
+  "name": "SkyBlock JP",
+  "description": "Paragraph-aware Japanese lore and NPC translation. Keeps item statistics in English.",
+  "environment": "client",
+  "license": "MIT",
+  "entrypoints": { "client": ["local.skyblockjp.SkyBlockJp"] },
+  "mixins": ["skyblock_jp.mixins.json"],
+  "depends": { "fabricloader": ">=0.19.5", "minecraft": "~26.2", "java": ">=25", "fabric-api": "*" },
+  "breaks": { "skyblock_translator": "*", "hypixel-npc-and-items-translate": "*" }
+}
+

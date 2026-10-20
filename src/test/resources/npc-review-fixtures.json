@@ -1,0 +1,114 @@
+[
+  {
+    "speaker": "Kat",
+    "source": "Oh, hey!"
+  },
+  {
+    "speaker": "Kat",
+    "source": "I was able to upgrade your pet §5Blaze§f to §6§LLEGENDARY§f."
+  },
+  {
+    "speaker": "Kat",
+    "source": "If you have any other pets you'd like to upgrade, you know where to find me!"
+  },
+  {
+    "speaker": "Salesman",
+    "source": "Thank you for supporting the server and allowing us to maintain SkyBlock!"
+  },
+  {
+    "speaker": "Salesman",
+    "source": "If you want to support us, head over to the Hypixel Store at §bstore.hypixel.net§f!"
+  },
+  {
+    "speaker": "Farmer Rigby",
+    "source": "§fA farmer's life is a simple life."
+  },
+  {
+    "speaker": "Elle",
+    "source": "Hey!"
+  },
+  {
+    "speaker": "Elle",
+    "source": "How do you like your Faction?"
+  },
+  {
+    "speaker": "Elle",
+    "source": "If you want to swap Factions let me know, it really isn't that hard."
+  },
+  {
+    "speaker": "Elle",
+    "source": "All you have to do is lose all your Reputation points, we call that \"becoming neutral\"."
+  },
+  {
+    "speaker": "Elle",
+    "source": "If you go neutral, let me know!"
+  },
+  {
+    "speaker": "Elle",
+    "source": "Do you want to change your Faction?"
+  },
+  {
+    "speaker": "Elle",
+    "source": "Great!"
+  },
+  {
+    "speaker": "Barbarian Guard",
+    "source": "That hurt!"
+  },
+  {
+    "speaker": "Ziri",
+    "source": "§fI know people!"
+  },
+  {
+    "speaker": "Ziri",
+    "source": "§fIf you ever removed an §3Abiphone Contact §fby accident and don't know how to reach them, maybe I can hook you up!"
+  },
+  {
+    "speaker": "Hilda",
+    "source": "§fMorning, adventurer!"
+  },
+  {
+    "speaker": "Hilda",
+    "source": "§fWait, is it? I'm not sure; it's always so dark here..."
+  },
+  {
+    "speaker": "Hilda",
+    "source": "§fOh well, anyway, I can provide all manners of fun minions to you!"
+  },
+  {
+    "speaker": "Mazakala",
+    "source": "§fNonsense..."
+  },
+  {
+    "speaker": "Mazakala",
+    "source": "§fThe appearance of that strange disturbance on the nearby island might have nothing to do with time travel."
+  },
+  {
+    "speaker": "Mazakala",
+    "source": "§fThat doesn't mean we should ignore it, someone needs to..."
+  },
+  {
+    "speaker": "Mazakala",
+    "source": "§fCan't you see we are busy?"
+  },
+  {
+    "speaker": "Arbadak",
+    "source": "§fJust because you don't understand something doesn't mean it's not possible!"
+  },
+  {
+    "speaker": "Arbadak",
+    "source": "§fNot even a century ago teleportation was thought to be impossible!"
+  },
+  {
+    "speaker": "Arbadak",
+    "source": "§fAnd you yourself are capable of telepathy and telekinesis, which nobody knew were even possible recently!"
+  },
+  {
+    "speaker": "Arbadak",
+    "source": "§fOh, who are you?"
+  },
+  {
+    "speaker": "Arbadak",
+    "source": "§fCan you not disturb our conversation?"
+  }
+]

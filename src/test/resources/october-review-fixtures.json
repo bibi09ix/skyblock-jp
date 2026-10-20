@@ -1,0 +1,651 @@
+{
+  "npc": [
+    {
+      "time": "2026-10-01T13:46:54.894790100Z",
+      "version": "0.4.7",
+      "speaker": "[NPC] Torrhus Canyon",
+      "source": "The second island of Galatea - Torrhus Canyon, is here!",
+      "translation": "The second island of Galatea - Torrhus Canyon、ここにあるよ！",
+      "encodedSource": "The second island of <t0>Galatea</t0> <s0>- </s0><s1>Torrhus Canyon</s1><s2>, is here!</s2>",
+      "encodedTranslation": "The second island of <t0>Galatea</t0> <s0>- </s0><s1>Torrhus Canyon</s1><s2>、ここにあるよ！</s2>"
+    },
+    {
+      "time": "2026-10-01T13:47:00.214873800Z",
+      "version": "0.4.7",
+      "speaker": "[NPC] Torrhus Canyon",
+      "source": "I saw it on the horizon this morning and made my way over.",
+      "translation": "今朝、地平線にそれを見て、向かって行ったんだ。",
+      "encodedSource": "I saw it on the horizon this morning and made my way over.",
+      "encodedTranslation": "今朝、地平線にそれを見て、向かって行ったんだ。"
+    },
+    {
+      "time": "2026-10-01T13:47:03.246602200Z",
+      "version": "0.4.7",
+      "speaker": "[NPC] Torrhus Canyon",
+      "source": "Between Miria’s Contests, the Critter Safari, Torrhus Sea Creatures, and the new Collections, there's so much to do!",
+      "translation": "の間にMiria’s Contests、Critter Safari、Torrhus Sea Creatures、そして新しいCollections、やることがたくさんあるよ！",
+      "encodedSource": "<s0>Between </s0><s1>Miria’s Contests</s1>, the <s2>Critter Safari</s2>, <s3>Torrhus Sea Creatures</s3>, and the new <s4>Collections</s4>, there's so much to do!",
+      "encodedTranslation": "<s0>の間に</s0><s1>Miria’s Contests</s1>、<s2>Critter Safari</s2>、<s3>Torrhus Sea Creatures</s3>、そして新しい<s4>Collections</s4>、やることがたくさんあるよ！"
+    },
+    {
+      "time": "2026-10-01T13:47:09.396396400Z",
+      "version": "0.4.7",
+      "speaker": "[NPC] Torrhus Canyon",
+      "source": "If you want to check it out for yourself, you can access it from the Launch Pad over in the Moonglade Marsh.",
+      "translation": "自分で確かめたいなら、Launch Pad over in the Moonglade Marshからアクセスできるよ。",
+      "encodedSource": "If you want to check it out for yourself, you can access it from the <s0>Launch Pad </s0><s1>over in the </s1><s2>Moonglade Marsh</s2><s3>.</s3>",
+      "encodedTranslation": "自分で確かめたいなら、<s0>Launch Pad </s0><s1>over in the </s1><s2>Moonglade Marsh</s2><s3>からアクセスできるよ。</s3>"
+    },
+    {
+      "time": "2026-10-01T13:47:15.308931500Z",
+      "version": "0.4.7",
+      "speaker": "[NPC] Torrhus Canyon",
+      "source": "Happy hunting!",
+      "translation": "狩り、楽しんでね！",
+      "encodedSource": "Happy hunting!",
+      "encodedTranslation": "狩り、楽しんでね！"
+    },
+    {
+      "time": "2026-10-01T13:47:31.691593800Z",
+      "version": "0.4.7",
+      "speaker": "[NPC] Liz",
+      "source": "Welcome to the Trade Center!",
+      "translation": "ようこそTrade Center！",
+      "encodedSource": "Welcome to the <s0>Trade Center</s0><s1>!</s1>",
+      "encodedTranslation": "ようこそ<s0>Trade Center</s0><s1>！</s1>"
+    },
+    {
+      "time": "2026-10-01T13:47:33.838717Z",
+      "version": "0.4.7",
+      "speaker": "[NPC] Liz",
+      "source": "Sorry, but there's... not much to see here right now.",
+      "translation": "ごめん、でも今はここに見るものはあんまりないんだ。",
+      "encodedSource": "Sorry, but there's... not much to see here right now.",
+      "encodedTranslation": "ごめん、でも今はここに見るものはあんまりないんだ。"
+    },
+    {
+      "time": "2026-10-01T13:47:36.541892200Z",
+      "version": "0.4.7",
+      "speaker": "[NPC] Liz",
+      "source": "We're friends of Diaz's, so we only really have stuff to do when she's elected as Mayor with the Stock Exchange perk, haha.",
+      "translation": "私たちはDiazの友達だから、彼女がMayorに選ばれてStock Exchangeの特典が付くときだけ、本当にやることがあるんだ、はは。",
+      "encodedSource": "<s0>We're friends of </s0><s1>Diaz</s1>'s, so we only really have stuff to do when she's elected as <s2>Mayor </s2>with the <s3>Stock Exchange </s3>perk, haha.",
+      "encodedTranslation": "<s0>私たちは</s0><s1>Diaz</s1>の友達だから、彼女が<s2>Mayor</s2>に選ばれて<s3>Stock Exchange</s3>の特典が付くときだけ、本当にやることがあるんだ、はは。"
+    },
+    {
+      "time": "2026-10-01T13:47:38.235522800Z",
+      "version": "0.4.7",
+      "speaker": "[NPC] Liz",
+      "source": "Try dropping by another time!",
+      "translation": "また別の時に来てね！",
+      "encodedSource": "Try dropping by another time!",
+      "encodedTranslation": "また別の時に来てね！"
+    },
+    {
+      "time": "2026-10-01T13:48:59.664235400Z",
+      "version": "0.4.7",
+      "speaker": "[NPC] Farmhand",
+      "source": "Welcome to The Barn!",
+      "translation": "ようこそ The Barn へ！",
+      "encodedSource": "Welcome to The Barn!",
+      "encodedTranslation": "ようこそ The Barn へ！"
+    },
+    {
+      "time": "2026-10-01T13:49:01.904765600Z",
+      "version": "0.4.7",
+      "speaker": "[NPC] Farmhand",
+      "source": "Feel free to harvest any crops on the island, I'm taking a break.",
+      "translation": "島の作物は好きなだけ収穫していいよ、今は休憩中だから。",
+      "encodedSource": "Feel free to harvest any crops on the island, I'm taking a break.",
+      "encodedTranslation": "島の作物は好きなだけ収穫していいよ、今は休憩中だから。"
+    },
+    {
+      "time": "2026-10-01T13:49:03.176061800Z",
+      "version": "0.4.7",
+      "speaker": "[NPC] Farmhand",
+      "source": "Did you craft a Wheat Minion yet? Here's the recipe!",
+      "translation": "作った？Wheat Minion これがレシピだよ！",
+      "encodedSource": "<s0>Did you craft a </s0><s1>Wheat Minion</s1> yet? Here's the recipe!",
+      "encodedTranslation": "<s0>作った？</s0><s1>Wheat Minion</s1> これがレシピだよ！"
+    },
+    {
+      "time": "2026-10-01T13:50:01.132389700Z",
+      "version": "0.4.7",
+      "speaker": "[NPC] Farmer Jon",
+      "source": "I've been living on this island for 10 years.",
+      "translation": "この島に10年住んでいるんだ。",
+      "encodedSource": "I've been living on this island for <n0/> years.",
+      "encodedTranslation": "この島に<n0/>年住んでいるんだ。"
+    },
+    {
+      "time": "2026-10-01T13:50:03.498390700Z",
+      "version": "0.4.7",
+      "speaker": "[NPC] Farmer Jon",
+      "source": "Before that, I used to compete in sugar cane contests.",
+      "translation": "その前は、サトウキビコンテストに出場してたんだ。",
+      "encodedSource": "Before that, I used to compete in sugar cane contests.",
+      "encodedTranslation": "その前は、サトウキビコンテストに出場してたんだ。"
+    },
+    {
+      "time": "2026-10-01T13:50:05.583940900Z",
+      "version": "0.4.7",
+      "speaker": "[NPC] Farmer Jon",
+      "source": "I've now retired to this house to live out the rest of my days.",
+      "translation": "もうこの家に引退して、残りの人生を過ごすことにしたんだ。",
+      "encodedSource": "I've now retired to this house to live out the rest of my days.",
+      "encodedTranslation": "もうこの家に引退して、残りの人生を過ごすことにしたんだ。"
+    },
+    {
+      "time": "2026-10-01T13:50:50.115706900Z",
+      "version": "0.4.7",
+      "speaker": "[NPC] Jake",
+      "source": "Hi I'm Jake. I've been living on this island for 25 years.",
+      "translation": "やあ、俺はジェイクだ。25年この島に住んでるよ。",
+      "encodedSource": "Hi I'm Jake. I've been living on this island for <n0/> years.",
+      "encodedTranslation": "やあ、俺はジェイクだ。<n0/>年この島に住んでるよ。"
+    },
+    {
+      "time": "2026-10-01T13:50:52.021498300Z",
+      "version": "0.4.7",
+      "speaker": "[NPC] Jake",
+      "source": "I used to study animals from all over the land!",
+      "translation": "昔はこの土地のあちこちの動物を研究してたんだ！",
+      "encodedSource": "I used to study animals from all over the land!",
+      "encodedTranslation": "昔はこの土地のあちこちの動物を研究してたんだ！"
+    },
+    {
+      "time": "2026-10-01T13:50:55.072182700Z",
+      "version": "0.4.7",
+      "speaker": "[NPC] Jake",
+      "source": "Unfortunately, I suffered an injury which restricts me from leaving my house.",
+      "translation": "残念だけど、怪我をして家から出られなくなっちゃったんだ。",
+      "encodedSource": "Unfortunately, I suffered an injury which restricts me from leaving my house.",
+      "encodedTranslation": "残念だけど、怪我をして家から出られなくなっちゃったんだ。"
+    },
+    {
+      "time": "2026-10-01T13:50:59.820891300Z",
+      "version": "0.4.7",
+      "speaker": "[NPC] Jake",
+      "source": "I really enjoyed studying animals.",
+      "translation": "動物の研究が本当に楽しかったよ。",
+      "encodedSource": "I really enjoyed studying animals.",
+      "encodedTranslation": "動物の研究が本当に楽しかったよ。"
+    },
+    {
+      "time": "2026-10-01T13:51:00.848948700Z",
+      "version": "0.4.7",
+      "speaker": "[NPC] Jake",
+      "source": "Could you bring me an animal? You can find them all over the island!",
+      "translation": "動物を持ってきてくれる？島のあちこちにいるよ！",
+      "encodedSource": "Could you bring me an animal? You can find them all over the island!",
+      "encodedTranslation": "動物を持ってきてくれる？島のあちこちにいるよ！"
+    },
+    {
+      "time": "2026-10-01T13:51:12.763946800Z",
+      "version": "0.4.7",
+      "speaker": "[NPC] Hunter Ava",
+      "source": "I'm hunting an Elusive animal.",
+      "translation": "エルーシブな動物を狩っているんだ。",
+      "encodedSource": "I'm hunting an <s0>Elusive </s0>animal.",
+      "encodedTranslation": "<s0>エルーシブな</s0>動物を狩っているんだ。"
+    },
+    {
+      "time": "2026-10-01T13:51:14.778984200Z",
+      "version": "0.4.7",
+      "speaker": "[NPC] Hunter Ava",
+      "source": "If you want to hunt animals too, go talk to Trevor!",
+      "translation": "もし動物狩りもしたいなら、トレバーに話しかけてみて！",
+      "encodedSource": "If you want to hunt animals too, go talk to Trevor!",
+      "encodedTranslation": "もし動物狩りもしたいなら、トレバーに話しかけてみて！"
+    },
+    {
+      "time": "2026-10-01T13:51:17.204201500Z",
+      "version": "0.4.7",
+      "speaker": "[NPC] Hunter Ava",
+      "source": "You can find him just past the bridge in his den.",
+      "translation": "橋を越えた先の彼の巣で見つけられるよ。",
+      "encodedSource": "You can find him just past the bridge in his den.",
+      "encodedTranslation": "橋を越えた先の彼の巣で見つけられるよ。"
+    },
+    {
+      "time": "2026-10-01T13:57:20.995732400Z",
+      "version": "0.4.7",
+      "speaker": "[NPC] Offea",
+      "source": "My husband works all the time.",
+      "translation": "うちの夫はずっと働いてるんだ。",
+      "encodedSource": "My husband works all the time.",
+      "encodedTranslation": "うちの夫はずっと働いてるんだ。"
+    },
+    {
+      "time": "2026-10-01T13:58:07.878377700Z",
+      "version": "0.4.7",
+      "speaker": "[NPC] Mazakala",
+      "source": "Nonsense...",
+      "translation": "くだらない…",
+      "encodedSource": "Nonsense...",
+      "encodedTranslation": "くだらない…"
+    },
+    {
+      "time": "2026-10-01T13:58:09.933860300Z",
+      "version": "0.4.7",
+      "speaker": "[NPC] Mazakala",
+      "source": "The appearance of that strange disturbance on the nearby island might have nothing to do with time travel.",
+      "translation": "近くの島で起きたあの奇妙な乱れは、タイムトラベルとは関係ないかもしれないね。",
+      "encodedSource": "The appearance of that strange disturbance on the nearby island might have nothing to do with time travel.",
+      "encodedTranslation": "近くの島で起きたあの奇妙な乱れは、タイムトラベルとは関係ないかもしれないね。"
+    },
+    {
+      "time": "2026-10-01T13:58:12.433825100Z",
+      "version": "0.4.7",
+      "speaker": "[NPC] Mazakala",
+      "source": "That doesn't mean we should ignore it, someone needs to...",
+      "translation": "それは無視すべきだという意味ではない、誰かが…",
+      "encodedSource": "That doesn't mean we should ignore it, someone needs to...",
+      "encodedTranslation": "それは無視すべきだという意味ではない、誰かが…"
+    },
+    {
+      "time": "2026-10-01T13:58:14.523647700Z",
+      "version": "0.4.7",
+      "speaker": "[NPC] Mazakala",
+      "source": "Can't you see we are busy?",
+      "translation": "忙しいのが見えないの？",
+      "encodedSource": "Can't you see we are busy?",
+      "encodedTranslation": "忙しいのが見えないの？"
+    },
+    {
+      "time": "2026-10-01T13:58:32.311318200Z",
+      "version": "0.4.7",
+      "speaker": "[NPC] Arba",
+      "source": "Everyone knows time travel is a myth!",
+      "translation": "誰もがタイムトラベルは神話だって知ってるよ！",
+      "encodedSource": "Everyone knows time travel is a myth!",
+      "encodedTranslation": "誰もがタイムトラベルは神話だって知ってるよ！"
+    },
+    {
+      "time": "2026-10-01T13:58:44.509277400Z",
+      "version": "0.4.7",
+      "speaker": "[NPC] Arba",
+      "source": "Excuse me, can't you see we are trying to have a conversation here?",
+      "translation": "すみません、ここで会話しようとしているのが見えませんか？",
+      "encodedSource": "Excuse me, can't you see we are trying to have a conversation here?",
+      "encodedTranslation": "すみません、ここで会話しようとしているのが見えませんか？"
+    },
+    {
+      "time": "2026-10-01T13:58:52.846047100Z",
+      "version": "0.4.7",
+      "speaker": "[NPC] Arbadak",
+      "source": "Just because you don't understand something doesn't mean it's not possible!",
+      "translation": "分からないからって、できないってことじゃないよ！",
+      "encodedSource": "Just because you don't understand something doesn't mean it's not possible!",
+      "encodedTranslation": "分からないからって、できないってことじゃないよ！"
+    },
+    {
+      "time": "2026-10-01T13:59:00.113294900Z",
+      "version": "0.4.7",
+      "speaker": "[NPC] Arbadak",
+      "source": "Not even a century ago teleportation was thought to be impossible!",
+      "translation": "ほんの100年足らず前にはテレポートは不可能だと思われてたんだ！",
+      "encodedSource": "Not even a century ago teleportation was thought to be impossible!",
+      "encodedTranslation": "ほんの100年足らず前にはテレポートは不可能だと思われてたんだ！"
+    },
+    {
+      "time": "2026-10-01T13:59:08.712198700Z",
+      "version": "0.4.7",
+      "speaker": "[NPC] Arbadak",
+      "source": "And you yourself are capable of telepathy and telekinesis, which nobody knew were even possible recently!",
+      "translation": "そして君自身はテレパシーとテレキネシスができるんだ。最近までそれが可能だなんて誰も知らなかったんだ！",
+      "encodedSource": "And you yourself are capable of telepathy and telekinesis, which nobody knew were even possible recently!",
+      "encodedTranslation": "そして君自身はテレパシーとテレキネシスができるんだ。最近までそれが可能だなんて誰も知らなかったんだ！"
+    },
+    {
+      "time": "2026-10-01T13:59:09.346008200Z",
+      "version": "0.4.7",
+      "speaker": "[NPC] Arbadak",
+      "source": "Oh, who are you?",
+      "translation": "あれ、あなたは誰？",
+      "encodedSource": "Oh, who are you?",
+      "encodedTranslation": "あれ、あなたは誰？"
+    },
+    {
+      "time": "2026-10-01T13:59:11.570174900Z",
+      "version": "0.4.7",
+      "speaker": "[NPC] Arbadak",
+      "source": "Can you not disturb our conversation?",
+      "translation": "会話を邪魔しないでくれる？",
+      "encodedSource": "Can you not disturb our conversation?",
+      "encodedTranslation": "会話を邪魔しないでくれる？"
+    },
+    {
+      "time": "2026-10-01T13:59:22.609365900Z",
+      "version": "0.4.7",
+      "speaker": "[NPC] Seffea",
+      "source": "I love Rhanora's cats, but she wont let me play with any of them!",
+      "translation": "Rhanoraの猫が大好きだけど、彼女は全然遊ばせてくれないんだ！",
+      "encodedSource": "I love <s0>Rhanora's </s0>cats, but she wont let me play with any of them!",
+      "encodedTranslation": "<s0>Rhanoraの</s0>猫が大好きだけど、彼女は全然遊ばせてくれないんだ！"
+    },
+    {
+      "time": "2026-10-01T13:59:31.856103500Z",
+      "version": "0.4.7",
+      "speaker": "[NPC] Seffea",
+      "source": "I wonder if she will notice if one goes missing...",
+      "translation": "彼女は誰かがいなくなると気づくかな…",
+      "encodedSource": "I wonder if she will notice if one goes missing...",
+      "encodedTranslation": "彼女は誰かがいなくなると気づくかな…"
+    },
+    {
+      "time": "2026-10-01T13:59:52.033177100Z",
+      "version": "0.4.7",
+      "speaker": "[NPC] Krevius",
+      "source": "DO YOU WANT TO BE PULVERIZED?",
+      "translation": "粉砕されたいのか？",
+      "encodedSource": "DO YOU WANT TO BE PULVERIZED?",
+      "encodedTranslation": "粉砕されたいのか？"
+    },
+    {
+      "time": "2026-10-01T13:59:58.368443500Z",
+      "version": "0.4.7",
+      "speaker": "[NPC] Grelius",
+      "source": "DO YOU WANT TO BE PULVERIZED?",
+      "translation": "粉砕されたいのか？",
+      "encodedSource": "DO YOU WANT TO BE PULVERIZED?",
+      "encodedTranslation": "粉砕されたいのか？"
+    },
+    {
+      "time": "2026-10-01T14:00:06.386313400Z",
+      "version": "0.4.7",
+      "speaker": "[NPC] Queen Nyx",
+      "source": "The Mage Faction is growing, we will soon uncover all the secrets of Mana.",
+      "translation": "魔法使い派閥が勢いを増していて、すぐにManaのすべての秘密を解き明かすよ。",
+      "encodedSource": "The Mage Faction is growing, we will soon uncover all the secrets of <t0>Mana</t0>.",
+      "encodedTranslation": "魔法使い派閥が勢いを増していて、すぐに<t0>Mana</t0>のすべての秘密を解き明かすよ。"
+    },
+    {
+      "time": "2026-10-01T14:00:21.789360900Z",
+      "version": "0.4.7",
+      "speaker": "[NPC] Krevius",
+      "source": "WE HAVE OUR EYES ON YOU.",
+      "translation": "目を光らせているよ。",
+      "encodedSource": "WE HAVE OUR EYES ON YOU.",
+      "encodedTranslation": "目を光らせているよ。"
+    },
+    {
+      "time": "2026-10-01T14:00:28.539323100Z",
+      "version": "0.4.7",
+      "speaker": "[NPC] Grelius",
+      "source": "WE HAVE OUR EYES ON YOU.",
+      "translation": "目を光らせているよ。",
+      "encodedSource": "WE HAVE OUR EYES ON YOU.",
+      "encodedTranslation": "目を光らせているよ。"
+    },
+    {
+      "time": "2026-10-01T14:00:37.481555300Z",
+      "version": "0.4.7",
+      "speaker": "[NPC] Queen Nyx",
+      "source": "I can sense great power in you.",
+      "translation": "あなたからすごい力を感じるよ。",
+      "encodedSource": "I can sense great power in you.",
+      "encodedTranslation": "あなたからすごい力を感じるよ。"
+    }
+  ],
+  "items": [
+    {
+      "time": "2026-10-01T13:52:50.055935900Z",
+      "session": "a8d05d2f-36e4-448d-b1f4-556d497a119b",
+      "version": "0.4.7",
+      "item": "SkyBlock Leveling",
+      "observedAt": "2026-10-01T13:52:50.054917500Z",
+      "provider": "GROQ",
+      "model": "openai/gpt-oss-120b",
+      "wrapWidthPixels": 260,
+      "originalLines": [
+        "SkyBlock Leveling",
+        "Your SkyBlock Level: [272]",
+        "",
+        "Determine how far you've",
+        "progressed in SkyBlock and earn",
+        "rewards from completing unique",
+        "tasks.",
+        "",
+        "Progress to Level 273:",
+        "                          91/100 XP",
+        "",
+        "Also accessible via /levels",
+        "",
+        "Click to view!"
+      ],
+      "translatedParagraphs": [
+        "あなたのSkyBlockレベル: [272]",
+        "SkyBlockでの進行度を確認でき、ユニークなタスクを完了して報酬を得ることができる。",
+        "レベル273への進捗: 91/100 XP",
+        "/levelsでもアクセスできる。"
+      ],
+      "displayLines": [
+        "SkyBlock Leveling",
+        "あなたのSkyBlockレベル: [272]",
+        "",
+        "SkyBlockでの進行度を確認でき、ユニークなタスクを完了して",
+        "報酬を得ることができる。",
+        "",
+        "レベル273への進捗: 91/100 XP",
+        "",
+        "/levelsでもアクセスできる。",
+        "",
+        "Click to view!"
+      ],
+      "displayText": "SkyBlock Leveling\nあなたのSkyBlockレベル: [272]\n\nSkyBlockでの進行度を確認でき、ユニークなタスクを完了して\n報酬を得ることができる。\n\nレベル273への進捗: 91/100 XP\n\n/levelsでもアクセスできる。\n\nClick to view!",
+      "stage": "mod tooltip lines before Minecraft/other-mod layout"
+    },
+    {
+      "time": "2026-10-01T13:53:01.924597400Z",
+      "session": "a8d05d2f-36e4-448d-b1f4-556d497a119b",
+      "version": "0.4.7",
+      "item": "Recipe Book",
+      "observedAt": "2026-10-01T13:53:01.924087200Z",
+      "provider": "GROQ",
+      "model": "openai/gpt-oss-120b",
+      "wrapWidthPixels": 260,
+      "originalLines": [
+        "Recipe Book",
+        "Through your adventure, you will",
+        "unlock recipes for all kinds of",
+        "special items! You can view how to",
+        "craft these items here.",
+        "",
+        "Recipes Unlocked: 87%",
+        "                          884/1k",
+        "",
+        "Also accessible via /recipes.",
+        "",
+        "Click to view!"
+      ],
+      "translatedParagraphs": [
+        "冒険を進めると、さまざまな特別なアイテムのレシピが解除される！これらのアイテムの作り方はここで確認できる。",
+        "/recipesでもアクセスできる。"
+      ],
+      "displayLines": [
+        "Recipe Book",
+        "冒険を進めると、さまざまな特別なアイテムのレシピが",
+        "解除される！これらのアイテムの作り方はここで確認できる。",
+        "",
+        "Recipes Unlocked: 87%",
+        "                          884/1k",
+        "",
+        "/recipesでもアクセスできる。",
+        "",
+        "Click to view!"
+      ],
+      "displayText": "Recipe Book\n冒険を進めると、さまざまな特別なアイテムのレシピが\n解除される！これらのアイテムの作り方はここで確認できる。\n\nRecipes Unlocked: 87%\n                          884/1k\n\n/recipesでもアクセスできる。\n\nClick to view!",
+      "stage": "mod tooltip lines before Minecraft/other-mod layout"
+    },
+    {
+      "time": "2026-10-01T13:53:38.963927600Z",
+      "session": "a8d05d2f-36e4-448d-b1f4-556d497a119b",
+      "version": "0.4.7",
+      "item": "Chocobit Tower",
+      "observedAt": "2026-10-01T13:53:38.963422100Z",
+      "provider": "GROQ",
+      "model": "openai/gpt-oss-120b",
+      "wrapWidthPixels": 260,
+      "originalLines": [
+        "Chocobit Tower",
+        "You can now collect rare Chocobit",
+        "Rabbits!",
+        "",
+        "There are exactly 33,333 Chocobit",
+        "Rabbits, each one labeled #1 to",
+        "#33333!",
+        "",
+        "If you find a Chocobit, you are the",
+        "only one to obtain this UNIQUE",
+        "Rabbit!",
+        "",
+        "Click for more info!"
+      ],
+      "translatedParagraphs": [
+        "レアなChocobit Rabbitsを集めることができる。",
+        "正確に33,333匹のChocobit Rabbitsがあり、各々が#1とラベル付けされる。",
+        "Chocobitを見つけた場合、あなたはこのUNIQUE Rabbitを入手できる唯一のプレイヤーになる。",
+        "クリックして詳細を見る！"
+      ],
+      "displayLines": [
+        "Chocobit Tower",
+        "レアなChocobit Rabbitsを集めることができる。",
+        "",
+        "正確に33,333匹のChocobit Rabbitsがあり、各々が#1と",
+        "ラベル付けされる。",
+        "#33333!",
+        "",
+        "Chocobitを見つけた場合、あなたはこのUNIQUE Rabbitを",
+        "入手できる唯一のプレイヤーになる。",
+        "",
+        "クリックして詳細を見る！"
+      ],
+      "displayText": "Chocobit Tower\nレアなChocobit Rabbitsを集めることができる。\n\n正確に33,333匹のChocobit Rabbitsがあり、各々が#1と\nラベル付けされる。\n#33333!\n\nChocobitを見つけた場合、あなたはこのUNIQUE Rabbitを\n入手できる唯一のプレイヤーになる。\n\nクリックして詳細を見る！",
+      "stage": "mod tooltip lines before Minecraft/other-mod layout"
+    },
+    {
+      "time": "2026-10-01T13:53:49.924608600Z",
+      "session": "a8d05d2f-36e4-448d-b1f4-556d497a119b",
+      "version": "0.4.7",
+      "item": "Rabbit Factions",
+      "observedAt": "2026-10-01T13:53:49.924101600Z",
+      "provider": "GROQ",
+      "model": "openai/gpt-oss-120b",
+      "wrapWidthPixels": 260,
+      "originalLines": [
+        "Rabbit Factions",
+        "Your Factory is now famous",
+        "worldwide! But some \"political\"",
+        "Rabbits are waiting for you to",
+        "choose a faction before they will eat",
+        "your Chocolate.",
+        "",
+        "Click to choose faction!"
+      ],
+      "translatedParagraphs": [
+        "あなたのFactoryは今や世界的に有名になる！しかし、一部の「政治的」Rabbitsは、あなたが派閥を選択するまでChocolateを食べてくれない。"
+      ],
+      "displayLines": [
+        "Rabbit Factions",
+        "あなたのFactoryは今や世界的に有名になる！しかし、一部の",
+        "「政治的」Rabbitsは、あなたが派閥を選択するまで",
+        "Chocolateを食べてくれない。",
+        "",
+        "Click to choose faction!"
+      ],
+      "displayText": "Rabbit Factions\nあなたのFactoryは今や世界的に有名になる！しかし、一部の\n「政治的」Rabbitsは、あなたが派閥を選択するまで\nChocolateを食べてくれない。\n\nClick to choose faction!",
+      "stage": "mod tooltip lines before Minecraft/other-mod layout"
+    },
+    {
+      "time": "2026-10-01T13:54:37.054215500Z",
+      "session": "a8d05d2f-36e4-448d-b1f4-556d497a119b",
+      "version": "0.4.7",
+      "item": "Hoppity's Collection",
+      "observedAt": "2026-10-01T13:54:37.053709300Z",
+      "provider": "GROQ",
+      "model": "openai/gpt-oss-120b",
+      "wrapWidthPixels": 260,
+      "originalLines": [
+        "Hoppity's Collection",
+        "Help Hoppity find all of his Chocolate",
+        "Rabbits during the Hoppity's Hunt",
+        "event!",
+        "",
+        "The more unique Chocolate Rabbits",
+        "that you find, the more your",
+        "Chocolate Factory will produce!",
+        "",
+        "Finding duplicate Rabbits grants",
+        "+10% extra Chocolate per duplicate,",
+        "up to +100%!",
+        "",
+        "Rabbits Found: 48%",
+        "                          277/577",
+        "",
+        "Total Chocolate Production Boosts",
+        "+589 Chocolate per second",
+        "+0.915x Chocolate Multiplier",
+        "",
+        "Click to view!"
+      ],
+      "translatedParagraphs": [
+        "Hoppity がChocolate Rabbits をすべて見つけるのを、Hoppity's Hunt イベント中に手伝うする",
+        "より多くのチョコレートウサギを見つけるほど、Chocolate Factoryの生産量が増加する。",
+        "重複したウサギを見つけると、重複1つにつき+10%のChocolate が追加され、上限は+100%になる。",
+        "総チョコレート生産上昇する +589 Chocolate 毎秒"
+      ],
+      "displayLines": [
+        "Hoppity's Collection",
+        "Hoppity がChocolate Rabbits をすべて見つけるのを、",
+        "Hoppity's Hunt イベント中に手伝うする",
+        "",
+        "より多くのチョコレートウサギを見つけるほど、",
+        "Chocolate Factoryの生産量が増加する。",
+        "",
+        "重複したウサギを見つけると、重複1つにつき+10%の",
+        "Chocolate が追加され、上限は+100%になる。",
+        "",
+        "Rabbits Found: 48%",
+        "                          277/577",
+        "",
+        "総チョコレート生産上昇する +589 Chocolate 毎秒",
+        "+0.915x Chocolate Multiplier",
+        "",
+        "Click to view!"
+      ],
+      "displayText": "Hoppity's Collection\nHoppity がChocolate Rabbits をすべて見つけるのを、\nHoppity's Hunt イベント中に手伝うする\n\nより多くのチョコレートウサギを見つけるほど、\nChocolate Factoryの生産量が増加する。\n\n重複したウサギを見つけると、重複1つにつき+10%の\nChocolate が追加され、上限は+100%になる。\n\nRabbits Found: 48%\n                          277/577\n\n総チョコレート生産上昇する +589 Chocolate 毎秒\n+0.915x Chocolate Multiplier\n\nClick to view!",
+      "stage": "mod tooltip lines before Minecraft/other-mod layout"
+    },
+    {
+      "time": "2026-10-01T13:54:46.462033900Z",
+      "session": "a8d05d2f-36e4-448d-b1f4-556d497a119b",
+      "version": "0.4.7",
+      "item": "Chocolate Shop",
+      "observedAt": "2026-10-01T13:54:46.461526500Z",
+      "provider": "GROQ",
+      "model": "openai/gpt-oss-120b",
+      "wrapWidthPixels": 260,
+      "originalLines": [
+        "Chocolate Shop",
+        "Spend your Chocolate on the world's",
+        "most delectable treats in the",
+        "Chocolate Shop.",
+        "",
+        "Click to view!"
+      ],
+      "translatedParagraphs": [
+        "世界で最も美味しいお菓子に、Chocolate をChocolate Shopで使う。"
+      ],
+      "displayLines": [
+        "Chocolate Shop",
+        "世界で最も美味しいお菓子に、Chocolate をChocolate ",
+        "Shopで使う。",
+        "",
+        "Click to view!"
+      ],
+      "displayText": "Chocolate Shop\n世界で最も美味しいお菓子に、Chocolate をChocolate \nShopで使う。\n\nClick to view!",
+      "stage": "mod tooltip lines before Minecraft/other-mod layout"
+    }
+  ]
+}

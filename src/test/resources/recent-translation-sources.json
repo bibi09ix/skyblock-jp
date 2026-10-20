@@ -1,0 +1,47 @@
+[
+  {
+    "source": "<s0>• </s0>Heal others for <n0/><s1>❤</s1> per second.",
+    "original": "• Heal others for 25❤ per second.",
+    "item": "item=Overflux Power Orb"
+  },
+  {
+    "source": "<s0>• </s0>Heal yourself for <n0/><s1>❤</s1> per second.",
+    "original": "• Heal yourself for 50❤ per second.",
+    "item": "item=Overflux Power Orb"
+  },
+  {
+    "source": "<s0>‣ </s0><n0/><s1> </s1>Magic Find",
+    "original": "‣ +15 Magic Find",
+    "item": "item=Booster Cookie (Quest)"
+  },
+  {
+    "source": "<s0>Pet Items </s0>can boost pets in many powerful ways! A pet can only hold one <s1>Pet Item</s1>, but you can <s2>swap </s2>it at any time! <s3>The pet must be visible to apply the item!</s3>",
+    "original": "Pet Items can boost pets in many powerful ways! A pet can only hold one Pet Item, but you can swap it at any time! The pet must be visible to apply the item!",
+    "item": "item=Combat Exp Boost"
+  },
+  {
+    "source": "<s0>Sunny Side Goblin Egg Part </s0>Grants <n0/><s1> Mining Fortune</s1>, but this Drill consumes quadruple the <s2>Fuel</s2>.",
+    "original": "Sunny Side Goblin Egg Part Grants +50 Mining Fortune, but this Drill consumes quadruple the Fuel.",
+    "item": "item=Auspicious Titanium Drill DR-X655"
+  },
+  {
+    "source": "Gain <n0/><s0> Pet Luck </s0>and <n1/><s1>x Chocolate </s1>per second.",
+    "original": "Gain +15 Pet Luck and +0.05x Chocolate per second.",
+    "item": "item=Hot Chocolate Mixin"
+  },
+  {
+    "source": "Gains <n0/><s0> Strength </s0>and <n1/><s1> Defense </s1>every minute spent in the Dungeon.",
+    "original": "Gains +10 Strength and +10 Defense every minute spent in the Dungeon.",
+    "item": "item=Pure Zombie Lord Leggings"
+  },
+  {
+    "source": "Only one deployable buff applies.",
+    "original": "Only one deployable buff applies.",
+    "item": "item=Overflux Power Orb"
+  },
+  {
+    "source": "Spawns a wither minion every <n0/> seconds up to a maximum <n1/> wither. Your withers will travel to and explode on nearby enemies.",
+    "original": "Spawns a wither minion every 30 seconds up to a maximum 1 wither. Your withers will travel to and explode on nearby enemies.",
+    "item": "item=Giant Goldor's Chestplate ✪✪✪✪"
+  }
+]
