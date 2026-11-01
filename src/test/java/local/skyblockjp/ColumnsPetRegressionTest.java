@@ -32,9 +32,9 @@ class ColumnsPetRegressionTest {
             var p = NpcTranslation.whole(Component.literal(source));
             assertFalse(p.encoded().contains("<t"), p.encoded());
         }
-        var chat = NpcTranslation.whole(Component.literal("[260] [MVP+] ManSui: cqwl u want to buy ti"));
+        var chat = NpcTranslation.wholeChat(Component.literal("[260] [MVP+] ManSui: cqwl u want to buy ti"));
         assertTrue(chat.encoded().contains(">cqwl</t"));
-        assertFalse(NpcTranslation.whole(Component.literal("[MVP+] A: Have you done it?")).encoded().contains(">Have</t"));
+        assertFalse(NpcTranslation.wholeChat(Component.literal("[MVP+] A: Have you done it?")).encoded().contains(">Have</t"));
     }
     @Test void petTitlesStaySeparateAndNamedAbilityCannotBeDropped() {
         var lines = List.of("[Lvl 100] Endermite", "Mining Pet", "", "Daily Commuter", "Transmission Abilities cost 40% less", "mana", "", "Mite Bait", "Gain a 3% chance to dig up a bonus", "Nest Endermite per +1 Pet Luck", "(Stacks above 100%)");

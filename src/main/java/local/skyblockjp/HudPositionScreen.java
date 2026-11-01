@@ -18,6 +18,7 @@ final class HudPositionScreen extends Screen {
     private boolean dragging;
     private double grabX, grabY;
     private int resizeX, resizeY;
+    private TextScaleSlider textScaleSlider;
     HudPositionScreen(Screen parent, Config draft, SkyBlockJp mod) {
         super(Component.literal("翻訳HUDの位置")); this.parent = parent; this.draft = draft; this.hud = mod.hud(); this.mod = mod;
         beforeWidth = draft.hudWidth; beforeLines = draft.hudLines;
@@ -26,9 +27,9 @@ final class HudPositionScreen extends Screen {
     }
     @Override protected void init() {
         addRenderableWidget(Button.builder(Component.literal("保存して戻る"), b -> { try { mod.saveHudConfig(draft); minecraft.gui.setScreen(parent); } catch (Exception ex) { status = "保存できませんでした。"; } }).bounds(width / 2 - 155, 8, 100, 20).build());
-        addRenderableWidget(Button.builder(Component.literal("初期値"), b -> draft.resetHudLayout()).bounds(width / 2 - 50, 8, 100, 20).build());
+        addRenderableWidget(Button.builder(Component.literal("初期値"), b -> { draft.resetHudLayout(); textScaleSlider.syncFromConfig(); }).bounds(width / 2 - 50, 8, 100, 20).build());
         addRenderableWidget(Button.builder(Component.literal("キャンセル"), b -> onClose()).bounds(width / 2 + 55, 8, 100, 20).build());
-        addRenderableWidget(new TextScaleSlider(width / 2 - 155, 34, 310, draft));
+        textScaleSlider = addRenderableWidget(new TextScaleSlider(width / 2 - 155, 34, 310, draft));
     }
     @Override public boolean mouseClicked(MouseButtonEvent e, boolean doubleClick) {
         if (super.mouseClicked(e, doubleClick)) return true;

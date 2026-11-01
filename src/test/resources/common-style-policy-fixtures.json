@@ -1,0 +1,1417 @@
+[
+  {
+    "id": "same-color_multiplier_duration_reorder",
+    "lines": [
+      [
+        {
+          "text": "When in a minion, this increases the number of resources created by ",
+          "color": 11184810
+        },
+        {
+          "text": "3x",
+          "color": 5635925
+        },
+        {
+          "text": " for ",
+          "color": 11184810
+        },
+        {
+          "text": "3",
+          "color": 5635925
+        },
+        {
+          "text": " hours!",
+          "color": 11184810
+        }
+      ]
+    ],
+    "target": "Minionに入れると、3時間、生産する資源の数が3倍になる！",
+    "channel": "item",
+    "speaker": "",
+    "expectedPrototype": "ACCEPTED",
+    "colorChecks": [
+      {
+        "text": "3倍",
+        "color": 5635925
+      }
+    ]
+  },
+  {
+    "id": "same-color_kills_duration_reorder",
+    "lines": [
+      [
+        {
+          "text": "Increases your damage by ",
+          "color": 11184810
+        },
+        {
+          "text": "+1%",
+          "color": 5635925
+        },
+        {
+          "text": " per kill up to ",
+          "color": 11184810
+        },
+        {
+          "text": "2",
+          "color": 5635925
+        },
+        {
+          "text": " kills within ",
+          "color": 11184810
+        },
+        {
+          "text": "2s",
+          "color": 5635925
+        },
+        {
+          "text": ".",
+          "color": 11184810
+        }
+      ]
+    ],
+    "target": "2秒以内に倒した敵ごとに、与えるダメージが+1%増加する。最大2体分まで。",
+    "channel": "item",
+    "speaker": "",
+    "expectedPrototype": "ACCEPTED",
+    "colorChecks": [
+      {
+        "text": "2秒",
+        "color": 5635925
+      }
+    ]
+  },
+  {
+    "id": "different-color_count_duration",
+    "lines": [
+      [
+        {
+          "text": "Stacks up to ",
+          "color": 11184810
+        },
+        {
+          "text": "4",
+          "color": 5635925
+        },
+        {
+          "text": " times and lasts ",
+          "color": 11184810
+        },
+        {
+          "text": "4",
+          "color": 16755200
+        },
+        {
+          "text": " seconds.",
+          "color": 11184810
+        }
+      ]
+    ],
+    "target": "効果は4秒続き、最大4回まで重複する。",
+    "channel": "item",
+    "speaker": "",
+    "expectedPrototype": "ACCEPTED",
+    "colorChecks": [
+      {
+        "text": "4秒",
+        "color": 16755200,
+        "length": 1
+      },
+      {
+        "text": "4回",
+        "color": 5635925,
+        "length": 1
+      }
+    ]
+  },
+  {
+    "id": "different-color_distance_count",
+    "lines": [
+      [
+        {
+          "text": "Within ",
+          "color": 11184810
+        },
+        {
+          "text": "10",
+          "color": 16777045
+        },
+        {
+          "text": " blocks. Maximum of ",
+          "color": 11184810
+        },
+        {
+          "text": "10",
+          "color": 16733525
+        },
+        {
+          "text": " enemies.",
+          "color": 11184810
+        }
+      ]
+    ],
+    "target": "10ブロック以内。最大10体分。",
+    "channel": "item",
+    "speaker": "",
+    "expectedPrototype": "ACCEPTED",
+    "colorChecks": [
+      {
+        "text": "10ブロック",
+        "color": 16777045,
+        "length": 2
+      },
+      {
+        "text": "10体",
+        "color": 16733525,
+        "length": 2
+      }
+    ]
+  },
+  {
+    "id": "ambiguous_duplicate_duration_different_color",
+    "lines": [
+      [
+        {
+          "text": "Lasts ",
+          "color": 11184810
+        },
+        {
+          "text": "4",
+          "color": 16733525
+        },
+        {
+          "text": " seconds and ",
+          "color": 11184810
+        },
+        {
+          "text": "4",
+          "color": 5635925
+        },
+        {
+          "text": " seconds.",
+          "color": 11184810
+        }
+      ]
+    ],
+    "target": "4秒と4秒。",
+    "channel": "item",
+    "speaker": "",
+    "expectedPrototype": "REJECTED"
+  },
+  {
+    "id": "same-color_untyped_values",
+    "lines": [
+      [
+        {
+          "text": "Gain ",
+          "color": 11184810
+        },
+        {
+          "text": "10",
+          "color": 5635925
+        },
+        {
+          "text": " alpha and ",
+          "color": 11184810
+        },
+        {
+          "text": "10",
+          "color": 5635925
+        },
+        {
+          "text": " beta.",
+          "color": 11184810
+        }
+      ]
+    ],
+    "target": "betaが10、alphaが10増加する。",
+    "channel": "item",
+    "speaker": "",
+    "expectedPrototype": "ACCEPTED"
+  },
+  {
+    "id": "different-color_untyped_values",
+    "lines": [
+      [
+        {
+          "text": "Gain ",
+          "color": 11184810
+        },
+        {
+          "text": "10",
+          "color": 5635925
+        },
+        {
+          "text": " alpha and ",
+          "color": 11184810
+        },
+        {
+          "text": "10",
+          "color": 16733525
+        },
+        {
+          "text": " beta.",
+          "color": 11184810
+        }
+      ]
+    ],
+    "target": "betaが10、alphaが10増加する。",
+    "channel": "item",
+    "speaker": "",
+    "expectedPrototype": "REJECTED"
+  },
+  {
+    "id": "dimension_5x5",
+    "lines": [
+      [
+        {
+          "text": "Cleans a ",
+          "color": 11184810
+        },
+        {
+          "text": "5x5",
+          "color": 5592575
+        },
+        {
+          "text": " area of grass, leaves and flowers.",
+          "color": 11184810
+        }
+      ]
+    ],
+    "target": "5x5の範囲の草、葉、花を片付ける。",
+    "channel": "item",
+    "speaker": "",
+    "expectedPrototype": "ACCEPTED",
+    "colorChecks": [
+      {
+        "text": "5x5",
+        "color": 5592575
+      }
+    ]
+  },
+  {
+    "id": "dimension_value_changed",
+    "lines": [
+      [
+        {
+          "text": "Cleans a ",
+          "color": 11184810
+        },
+        {
+          "text": "5x5",
+          "color": 5592575
+        },
+        {
+          "text": " area.",
+          "color": 11184810
+        }
+      ]
+    ],
+    "target": "5x6の範囲を片付ける。",
+    "channel": "item",
+    "speaker": "",
+    "expectedPrototype": "REJECTED"
+  },
+  {
+    "id": "quantity_value_changed",
+    "lines": [
+      [
+        {
+          "text": "Lasts ",
+          "color": 11184810
+        },
+        {
+          "text": "2s",
+          "color": 5635925
+        },
+        {
+          "text": ".",
+          "color": 11184810
+        }
+      ]
+    ],
+    "target": "3秒続く。",
+    "channel": "item",
+    "speaker": "",
+    "expectedPrototype": "REJECTED"
+  },
+  {
+    "id": "quantity_extra_value",
+    "lines": [
+      [
+        {
+          "text": "Lasts ",
+          "color": 11184810
+        },
+        {
+          "text": "2s",
+          "color": 5635925
+        },
+        {
+          "text": ".",
+          "color": 11184810
+        }
+      ]
+    ],
+    "target": "2秒と2秒続く。",
+    "channel": "item",
+    "speaker": "",
+    "expectedPrototype": "REJECTED"
+  },
+  {
+    "id": "parentheses_semantic_signature",
+    "lines": [
+      [
+        {
+          "text": "Heal ",
+          "color": 11184810
+        },
+        {
+          "text": "30❤",
+          "color": 16733525
+        },
+        {
+          "text": " every time you kill a mob. ",
+          "color": 11184810
+        },
+        {
+          "text": "(",
+          "color": 5592405
+        },
+        {
+          "text": "0.5",
+          "color": 5592405
+        },
+        {
+          "text": "s Cooldown).",
+          "color": 5592405
+        }
+      ]
+    ],
+    "target": "モンスターを倒すたびに30❤回復する。（Cooldown：0.5秒）",
+    "channel": "item",
+    "speaker": "",
+    "expectedPrototype": "ACCEPTED",
+    "colorChecks": [
+      {
+        "text": "（",
+        "color": 5592405
+      }
+    ]
+  },
+  {
+    "id": "punctuation_without_anchor_stays_unresolved",
+    "lines": [
+      [
+        {
+          "text": "Gain power. ",
+          "color": 11184810
+        },
+        {
+          "text": "(optional)",
+          "color": 5592405
+        }
+      ]
+    ],
+    "target": "力を得る。（任意）",
+    "channel": "item",
+    "speaker": "",
+    "expectedPrototype": "REJECTED"
+  },
+  {
+    "id": "nested_numeric_style_parenthetical",
+    "lines": [
+      [
+        {
+          "text": "Gain ",
+          "color": 11184810
+        },
+        {
+          "text": "10",
+          "color": 5635925,
+          "bold": true
+        },
+        {
+          "text": " power ",
+          "color": 11184810
+        },
+        {
+          "text": "(",
+          "color": 5592405
+        },
+        {
+          "text": "max ",
+          "color": 5592405
+        },
+        {
+          "text": "20",
+          "color": 5635925,
+          "bold": true
+        },
+        {
+          "text": ").",
+          "color": 5592405
+        }
+      ]
+    ],
+    "target": "力が10増加する（最大20）。",
+    "channel": "item",
+    "speaker": "",
+    "expectedPrototype": "ACCEPTED",
+    "annotations": [
+      {
+        "source": "max",
+        "target": "最大",
+        "kind": "ordinary",
+        "sourceOccurrence": 0,
+        "targetOccurrence": 0
+      }
+    ],
+    "colorChecks": [
+      {
+        "text": "20",
+        "color": 5635925,
+        "bold": true
+      },
+      {
+        "text": "（",
+        "color": 5592405
+      }
+    ],
+    "annotationSourceSha256": "fe0c8785d46e1302d4250b0723fe41de8893910c348cb64111890e584f86d4c9",
+    "annotationTargetSha256": "13768c97638ee30b400a569544c35f91becbeeb429eb94223e61943837c444e9"
+  },
+  {
+    "id": "ordinary_annotation_notes",
+    "lines": [
+      [
+        {
+          "text": "Here, read my ",
+          "color": 16777215
+        },
+        {
+          "text": "notes",
+          "color": 5636095
+        },
+        {
+          "text": "!",
+          "color": 16777215
+        }
+      ]
+    ],
+    "target": "ほら、私のノートを読んでみて！",
+    "channel": "npc",
+    "speaker": "",
+    "expectedPrototype": "ACCEPTED",
+    "annotations": [
+      {
+        "source": "notes",
+        "target": "ノート",
+        "kind": "ordinary",
+        "sourceOccurrence": 0,
+        "targetOccurrence": 0
+      }
+    ],
+    "colorChecks": [
+      {
+        "text": "ノート",
+        "color": 5636095
+      }
+    ],
+    "annotationSourceSha256": "4e0a69c39a2a295b5f07652d5561634e1a4a122a6445fa4a1ad8e99fcd2b9436",
+    "annotationTargetSha256": "e9c497c25a35693f856f4dd03adb047933776e88dce9f0d95a24eafe41d751a5"
+  },
+  {
+    "id": "ordinary_annotation_recolored_notes",
+    "lines": [
+      [
+        {
+          "text": "Here, read my ",
+          "color": 16777215
+        },
+        {
+          "text": "notes",
+          "color": 11141290,
+          "bold": true,
+          "underlined": true
+        },
+        {
+          "text": "!",
+          "color": 16777215
+        }
+      ]
+    ],
+    "target": "ほら、私のノートを読んでみて！",
+    "channel": "npc",
+    "speaker": "",
+    "expectedPrototype": "ACCEPTED",
+    "annotations": [
+      {
+        "source": "notes",
+        "target": "ノート",
+        "kind": "ordinary",
+        "sourceOccurrence": 0,
+        "targetOccurrence": 0
+      }
+    ],
+    "colorChecks": [
+      {
+        "text": "ノート",
+        "color": 11141290,
+        "bold": true,
+        "underlined": true
+      }
+    ],
+    "annotationSourceSha256": "4e0a69c39a2a295b5f07652d5561634e1a4a122a6445fa4a1ad8e99fcd2b9436",
+    "annotationTargetSha256": "e9c497c25a35693f856f4dd03adb047933776e88dce9f0d95a24eafe41d751a5"
+  },
+  {
+    "id": "ordinary_annotation_stale_hash",
+    "lines": [
+      [
+        {
+          "text": "Here, read my ",
+          "color": 16777215
+        },
+        {
+          "text": "notes",
+          "color": 5636095
+        },
+        {
+          "text": "!",
+          "color": 16777215
+        }
+      ]
+    ],
+    "target": "ほら、私のノートを読んでみて！",
+    "channel": "npc",
+    "speaker": "",
+    "expectedPrototype": "REJECTED",
+    "annotations": [
+      {
+        "source": "notes",
+        "target": "ノート",
+        "kind": "ordinary",
+        "sourceOccurrence": 0,
+        "targetOccurrence": 0
+      }
+    ],
+    "staleHash": true,
+    "annotationSourceSha256": "4e0a69c39a2a295b5f07652d5561634e1a4a122a6445fa4a1ad8e99fcd2b9436",
+    "annotationTargetSha256": "e9c497c25a35693f856f4dd03adb047933776e88dce9f0d95a24eafe41d751a5"
+  },
+  {
+    "id": "ordinary_annotation_cannot_hide_stat",
+    "lines": [
+      [
+        {
+          "text": "Gain ",
+          "color": 11184810
+        },
+        {
+          "text": "Health",
+          "color": 16733525
+        },
+        {
+          "text": ".",
+          "color": 11184810
+        }
+      ]
+    ],
+    "target": "体力を得る。",
+    "channel": "item",
+    "speaker": "",
+    "expectedPrototype": "REJECTED",
+    "annotations": [
+      {
+        "source": "Health",
+        "target": "体力",
+        "kind": "ordinary",
+        "sourceOccurrence": 0,
+        "targetOccurrence": 0
+      }
+    ],
+    "annotationSourceSha256": "858a3eae7fdb1705784a42ccc7b3640be04a319e0c39fea23f78acd32ae4c3fa",
+    "annotationTargetSha256": "11d80740b490e965aa8ce7624a1a2664e55b7963bdfb32c514b0b737dff594c1"
+  },
+  {
+    "id": "white_body_gray_accent_no_metadata",
+    "lines": [
+      [
+        {
+          "text": "For my wares, you'll have to pay the ",
+          "color": 16777215
+        },
+        {
+          "text": "iron price",
+          "color": 11184810
+        },
+        {
+          "text": "!",
+          "color": 16777215
+        }
+      ]
+    ],
+    "target": "うちの品が欲しければ、鉄の代償を払ってもらうぞ！",
+    "channel": "npc",
+    "speaker": "",
+    "expectedPrototype": "REJECTED"
+  },
+  {
+    "id": "white_body_gray_accent_with_reviewed_role",
+    "lines": [
+      [
+        {
+          "text": "For my wares, you'll have to pay the ",
+          "color": 16777215
+        },
+        {
+          "text": "iron price",
+          "color": 11184810
+        },
+        {
+          "text": "!",
+          "color": 16777215
+        }
+      ]
+    ],
+    "target": "うちの品が欲しければ、鉄の代償を払ってもらうぞ！",
+    "channel": "npc",
+    "speaker": "",
+    "expectedPrototype": "ACCEPTED",
+    "bodyAnchor": "For my wares",
+    "annotations": [
+      {
+        "source": "iron price",
+        "target": "鉄の代償",
+        "kind": "ordinary",
+        "sourceOccurrence": 0,
+        "targetOccurrence": 0
+      }
+    ],
+    "colorChecks": [
+      {
+        "text": "鉄の代償",
+        "color": 11184810
+      },
+      {
+        "text": "うちの品が欲しければ、",
+        "color": 16777215
+      }
+    ],
+    "annotationSourceSha256": "a757f7d665fe4a39db13f5bac5fdbead822f4c6a5a82d1c60890a6a7adb07431",
+    "annotationTargetSha256": "438a839050a38b70466ba2fbbb4818bdf7d926d311e2c957e506113b32763f36"
+  },
+  {
+    "id": "long_white_emphasis_with_gray_body",
+    "lines": [
+      [
+        {
+          "text": "Hit ",
+          "color": 11184810
+        },
+        {
+          "text": "nearby enemies",
+          "color": 16777215
+        },
+        {
+          "text": ".",
+          "color": 11184810
+        }
+      ]
+    ],
+    "target": "周囲の敵に命中する。",
+    "channel": "item",
+    "speaker": "",
+    "expectedPrototype": "ACCEPTED",
+    "colorChecks": [
+      {
+        "text": "周囲の敵",
+        "color": 16777215
+      },
+      {
+        "text": "に命中する。",
+        "color": 11184810
+      }
+    ]
+  },
+  {
+    "id": "aqua_body_white_protected_stat",
+    "lines": [
+      [
+        {
+          "text": "Mining Fortune",
+          "color": 16777215
+        },
+        {
+          "text": " grants ",
+          "color": 5636095
+        },
+        {
+          "text": "+5",
+          "color": 5635925
+        }
+      ]
+    ],
+    "target": "Mining Fortuneを+5獲得する",
+    "channel": "item",
+    "speaker": "",
+    "expectedPrototype": "ACCEPTED",
+    "colorChecks": [
+      {
+        "text": "Mining Fortune",
+        "color": 16777215
+      },
+      {
+        "text": "を",
+        "color": 5636095
+      }
+    ]
+  },
+  {
+    "id": "green_body_with_gray_arrow",
+    "lines": [
+      [
+        {
+          "text": "Gain ",
+          "color": 5635925
+        },
+        {
+          "text": "+5",
+          "color": 16777045
+        },
+        {
+          "text": "➜",
+          "color": 11184810
+        },
+        {
+          "text": "10",
+          "color": 16777045
+        },
+        {
+          "text": " Mining Fortune",
+          "color": 16755200
+        }
+      ]
+    ],
+    "target": "Mining Fortuneが+5➜10増加する",
+    "channel": "item",
+    "speaker": "",
+    "expectedPrototype": "ACCEPTED",
+    "colorChecks": [
+      {
+        "text": "が",
+        "color": 5635925
+      },
+      {
+        "text": "➜",
+        "color": 11184810
+      }
+    ]
+  },
+  {
+    "id": "overlapping_names_with_reviewed_spans",
+    "lines": [
+      [
+        {
+          "text": "About ",
+          "color": 16777215
+        },
+        {
+          "text": "Bait",
+          "color": 16755200
+        },
+        {
+          "text": ", view my ",
+          "color": 16777215
+        },
+        {
+          "text": "Bait Guide",
+          "color": 16755200
+        },
+        {
+          "text": "!",
+          "color": 16777215
+        }
+      ]
+    ],
+    "target": "Bait GuideでBaitを確認！",
+    "channel": "npc",
+    "speaker": "",
+    "expectedPrototype": "ACCEPTED",
+    "annotations": [
+      {
+        "source": "Bait",
+        "target": "Bait",
+        "kind": "name",
+        "sourceOccurrence": 0,
+        "targetOccurrence": 1
+      },
+      {
+        "source": "Bait Guide",
+        "target": "Bait Guide",
+        "kind": "name",
+        "sourceOccurrence": 0,
+        "targetOccurrence": 0
+      }
+    ],
+    "colorChecks": [
+      {
+        "text": "Bait Guide",
+        "color": 16755200
+      },
+      {
+        "text": "Bait",
+        "color": 16755200,
+        "occurrence": 1
+      }
+    ],
+    "annotationSourceSha256": "d8cae1b9306297061b97f605f4dad76f36c93daa0fc6c15daca675e554d2b6f8",
+    "annotationTargetSha256": "acf33223307a27fc66f8ac14dc4a97a58f4a00993c3c5fd4b974a8a250b4572a"
+  },
+  {
+    "id": "overlapping_names_without_metadata",
+    "lines": [
+      [
+        {
+          "text": "About ",
+          "color": 16777215
+        },
+        {
+          "text": "Bait",
+          "color": 16755200
+        },
+        {
+          "text": ", view my ",
+          "color": 16777215
+        },
+        {
+          "text": "Bait Guide",
+          "color": 16755200
+        },
+        {
+          "text": "!",
+          "color": 16777215
+        }
+      ]
+    ],
+    "target": "Bait GuideでBaitを確認！",
+    "channel": "npc",
+    "speaker": "",
+    "expectedPrototype": "REJECTED"
+  },
+  {
+    "id": "unknown_emphasis_no_guessed_alias",
+    "lines": [
+      [
+        {
+          "text": "Gain ",
+          "color": 11184810
+        },
+        {
+          "text": "curiously humming",
+          "color": 16777215,
+          "bold": true
+        },
+        {
+          "text": " power.",
+          "color": 11184810
+        }
+      ]
+    ],
+    "target": "不思議な力を得る。",
+    "channel": "item",
+    "speaker": "",
+    "expectedPrototype": "REJECTED"
+  },
+  {
+    "id": "command_argument_change_rejected",
+    "lines": [
+      [
+        {
+          "text": "Use /warp hub to travel.",
+          "color": 11184810
+        }
+      ]
+    ],
+    "target": "/warp homeで移動する。",
+    "channel": "item",
+    "speaker": "",
+    "expectedPrototype": "REJECTED"
+  },
+  {
+    "id": "roman_change_rejected",
+    "lines": [
+      [
+        {
+          "text": "Grants permanent Haste IV.",
+          "color": 11184810
+        }
+      ]
+    ],
+    "target": "常時Haste Vを得る。",
+    "channel": "item",
+    "speaker": "",
+    "expectedPrototype": "REJECTED"
+  },
+  {
+    "id": "ambiguous_parenthetical_payloads",
+    "lines": [
+      [
+        {
+          "text": "Gain ",
+          "color": 11184810
+        },
+        {
+          "text": "(4 power)",
+          "color": 16733525
+        },
+        {
+          "text": " and ",
+          "color": 11184810
+        },
+        {
+          "text": "(4 power)",
+          "color": 5635925
+        }
+      ]
+    ],
+    "target": "（4の力）と（4の力）を得る。",
+    "channel": "item",
+    "speaker": "",
+    "expectedPrototype": "REJECTED"
+  },
+  {
+    "id": "mixed_nested_ordinary_styles_require_metadata",
+    "lines": [
+      [
+        {
+          "text": "Gain ",
+          "color": 11184810
+        },
+        {
+          "text": "(max ",
+          "color": 5592405
+        },
+        {
+          "text": "20",
+          "color": 5635925,
+          "bold": true
+        },
+        {
+          "text": " (",
+          "color": 5592405
+        },
+        {
+          "text": "nearby enemies",
+          "color": 16777215
+        },
+        {
+          "text": "))",
+          "color": 5592405
+        }
+      ]
+    ],
+    "target": "（最大20（周囲の敵））を得る。",
+    "channel": "item",
+    "speaker": "",
+    "expectedPrototype": "REJECTED"
+  },
+  {
+    "id": "parenthetical_cap_cannot_become_duration",
+    "lines": [
+      [
+        {
+          "text": "Gain ",
+          "color": 11184810
+        },
+        {
+          "text": "10",
+          "color": 5635925
+        },
+        {
+          "text": " power. ",
+          "color": 11184810
+        },
+        {
+          "text": "(Max ",
+          "color": 5592405
+        },
+        {
+          "text": "20",
+          "color": 5635925
+        },
+        {
+          "text": ")",
+          "color": 5592405
+        }
+      ]
+    ],
+    "target": "力が10増加する。（20秒持続）",
+    "channel": "item",
+    "speaker": "",
+    "expectedPrototype": "REJECTED"
+  },
+  {
+    "id": "untyped_parenthetical_requires_metadata",
+    "lines": [
+      [
+        {
+          "text": "Gain power. ",
+          "color": 11184810
+        },
+        {
+          "text": "(",
+          "color": 5592405
+        },
+        {
+          "text": "20",
+          "color": 5635925
+        },
+        {
+          "text": " foo)",
+          "color": 5592405
+        }
+      ]
+    ],
+    "target": "力を得る。（20の別効果）",
+    "channel": "item",
+    "speaker": "",
+    "expectedPrototype": "REJECTED"
+  },
+  {
+    "id": "multiplier_duration_cannot_become_dimension",
+    "lines": [
+      [
+        {
+          "text": "Grants ",
+          "color": 11184810
+        },
+        {
+          "text": "5x",
+          "color": 5635925
+        },
+        {
+          "text": " for ",
+          "color": 11184810
+        },
+        {
+          "text": "5",
+          "color": 5635925
+        },
+        {
+          "text": " hours.",
+          "color": 11184810
+        }
+      ]
+    ],
+    "target": "5x5の効果を得る。",
+    "channel": "item",
+    "speaker": "",
+    "expectedPrototype": "REJECTED"
+  },
+  {
+    "id": "parenthetical_cap_unit_change",
+    "lines": [
+      [
+        {
+          "text": "Gain power. ",
+          "color": 11184810
+        },
+        {
+          "text": "(Max ",
+          "color": 5592405
+        },
+        {
+          "text": "20",
+          "color": 5635925
+        },
+        {
+          "text": ")",
+          "color": 5592405
+        }
+      ]
+    ],
+    "target": "力を得る。（最大20秒）",
+    "channel": "item",
+    "speaker": "",
+    "expectedPrototype": "REJECTED"
+  },
+  {
+    "id": "parenthetical_payload_moved_outside",
+    "lines": [
+      [
+        {
+          "text": "Gain ",
+          "color": 11184810
+        },
+        {
+          "text": "10",
+          "color": 5635925
+        },
+        {
+          "text": " power. ",
+          "color": 11184810
+        },
+        {
+          "text": "(Max ",
+          "color": 5592405
+        },
+        {
+          "text": "20",
+          "color": 5635925
+        },
+        {
+          "text": ")",
+          "color": 5592405
+        }
+      ]
+    ],
+    "target": "（10の力を得る。）最大20。",
+    "channel": "item",
+    "speaker": "",
+    "expectedPrototype": "REJECTED"
+  },
+  {
+    "id": "parentheticals_reordered_by_unique_payload",
+    "lines": [
+      [
+        {
+          "text": "Gain power. ",
+          "color": 11184810
+        },
+        {
+          "text": "(Max ",
+          "color": 16733525
+        },
+        {
+          "text": "20",
+          "color": 5635925
+        },
+        {
+          "text": ")",
+          "color": 16733525
+        },
+        {
+          "text": " and ",
+          "color": 11184810
+        },
+        {
+          "text": "(Max ",
+          "color": 5592575
+        },
+        {
+          "text": "30",
+          "color": 5635925
+        },
+        {
+          "text": ")",
+          "color": 5592575
+        }
+      ]
+    ],
+    "target": "力を得る。（最大30）と（最大20）",
+    "channel": "item",
+    "speaker": "",
+    "expectedPrototype": "ACCEPTED",
+    "colorChecks": [
+      {
+        "text": "（最大30",
+        "color": 5592575,
+        "length": 3
+      },
+      {
+        "text": "（最大20",
+        "color": 16733525,
+        "length": 3
+      }
+    ]
+  },
+  {
+    "id": "ordinary_annotation_cannot_hide_unknown_name",
+    "lines": [
+      [
+        {
+          "text": "The ",
+          "color": 11184810
+        },
+        {
+          "text": "Zephyrus pet must be visible",
+          "color": 5592405
+        },
+        {
+          "text": ".",
+          "color": 11184810
+        }
+      ]
+    ],
+    "target": "ペットを表示する必要がある。",
+    "channel": "item",
+    "speaker": "",
+    "expectedPrototype": "REJECTED",
+    "annotations": [
+      {
+        "source": "Zephyrus pet must be visible",
+        "target": "ペットを表示する必要がある",
+        "kind": "ordinary",
+        "sourceOccurrence": 0,
+        "targetOccurrence": 0
+      }
+    ],
+    "annotationSourceSha256": "18d972ddff9c752e4ec07ab8cc52a180aced4a54dd7cbe3d0bee58f7b3d90020",
+    "annotationTargetSha256": "0f9732920c7cb4770d80f173cfac46cc84cee431301ba3482084511722ee19a3"
+  },
+  {
+    "id": "body_role_stale_hash",
+    "lines": [
+      [
+        {
+          "text": "For my wares, you'll have to pay the ",
+          "color": 16777215
+        },
+        {
+          "text": "iron price",
+          "color": 11184810
+        },
+        {
+          "text": "!",
+          "color": 16777215
+        }
+      ]
+    ],
+    "target": "うちの品が欲しければ、鉄の代償を払ってもらうぞ！",
+    "channel": "npc",
+    "speaker": "",
+    "expectedPrototype": "REJECTED",
+    "bodyAnchor": "For my wares",
+    "annotations": [
+      {
+        "source": "iron price",
+        "target": "鉄の代償",
+        "kind": "ordinary",
+        "sourceOccurrence": 0,
+        "targetOccurrence": 0
+      }
+    ],
+    "metadataHashStale": true,
+    "annotationSourceSha256": "stale",
+    "annotationTargetSha256": "438a839050a38b70466ba2fbbb4818bdf7d926d311e2c957e506113b32763f36"
+  },
+  {
+    "id": "protected_extra_name_rejected",
+    "lines": [
+      [
+        {
+          "text": "Gain 5 Health.",
+          "color": 11184810
+        }
+      ]
+    ],
+    "target": "HealthとDefenseが5増加する。",
+    "channel": "item",
+    "speaker": "",
+    "expectedPrototype": "REJECTED"
+  },
+  {
+    "id": "identity_formula_native_styles",
+    "lines": [
+      [
+        {
+          "text": "Stats Mult. ",
+          "color": 16733695,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "= ",
+          "color": 16777215,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "29.97",
+          "color": 5636095,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "(",
+          "color": 16777045,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "ln(",
+          "color": 5635925,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "0.0019",
+          "color": 5636095,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "AP",
+          "color": 16755200,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "+1)",
+          "color": 5635925,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": ")^",
+          "color": 16777045,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "1.2",
+          "color": 5636095,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ]
+    ],
+    "target": "Stats Mult. = 29.97(ln(0.0019AP+1))^1.2",
+    "channel": "npc",
+    "speaker": "",
+    "expectedPrototype": "ACCEPTED",
+    "identityGlyphs": true
+  }
+]

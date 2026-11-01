@@ -9,6 +9,10 @@ import java.util.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 class PetReviewTest {
+    private static List<LoreParser.Block> descriptions(List<String> lines) {
+        return LoreParser.analyze(lines, new TooltipContext.Decision(TooltipContext.Kind.ITEM, "ITEM_FIXTURE", Map.of()))
+            .paragraphs().stream().filter(p -> p.channel().equals("item")).map(LoreParser.Paragraph::block).toList();
+    }
     static Map<String, List<String>> fixtures() throws Exception {
         var result = new LinkedHashMap<String, List<String>>();
         try (var in = PetReviewTest.class.getResourceAsStream("/pet-review-fixtures.json")) {
@@ -25,7 +29,7 @@ class PetReviewTest {
         var all = fixtures();
         for (String pet : List.of("[Lvl 1] Bal", "[Lvl 100] Enderman", "[Lvl 72] Tarantula", "[Lvl 82] Sheep")) {
             var lines = all.get(pet);
-            var blocks = LoreParser.parse(lines);
+            var blocks = descriptions(lines);
             assertEquals(pet.contains("Bal") ? 3 : pet.contains("Enderman") ? 5 : 4, blocks.size(), pet);
             for (var b : blocks) {
                 assertFalse(b.text().contains("Held Item:"));
@@ -34,19 +38,19 @@ class PetReviewTest {
                 assertTrue(b.start() > 1);
             }
         }
-        assertTrue(LoreParser.parse(all.get("[Lvl 82] Sheep")).stream().anyMatch(b -> b.text().equals("Reduces the mana cost of abilities by 16.4%.")));
-        assertTrue(LoreParser.parse(all.get("[Lvl 100] Enderman")).stream().anyMatch(b -> b.text().endsWith("special Zealot by 25%.")));
+        assertTrue(descriptions(all.get("[Lvl 82] Sheep")).stream().anyMatch(b -> b.text().equals("Reduces the mana cost of abilities by 16.4%.")));
+        assertTrue(descriptions(all.get("[Lvl 100] Enderman")).stream().anyMatch(b -> b.text().endsWith("special Zealot by 25%.")));
     }
     @Test void nonPetWrappedTailsAreNotMetadata() throws Exception {
         var all = fixtures();
-        assertEquals(1, LoreParser.parse(all.get("Coal Minion XI")).size());
-        var compactor = LoreParser.parse(all.get("Super Compactor 3000"));
-        assertEquals(1, compactor.size());
+        assertEquals(1, descriptions(all.get("Coal Minion XI")).size());
+        var compactor = descriptions(all.get("Super Compactor 3000"));
+        assertEquals(1, compactor.size(), compactor.toString());
         assertTrue(compactor.getFirst().text().contains("minion upgrade. This will automatically"));
-        assertTrue(LoreParser.parse(all.get("Salty Rod of Champions")).stream().anyMatch(b -> b.text().equals("Increases the chance to catch COMMON Sea Creatures by 25%.")));
-        assertTrue(LoreParser.parse(all.get("Refined Gemstone Drill LT-522")).stream().anyMatch(b -> b.text().contains("+800 Mining Speed when mining Gemstones.")));
-        assertEquals(1, LoreParser.parse(all.get(" Waxed Adaptive Belt ✪✪✪✪✪")).size());
-        assertEquals(1, LoreParser.parse(all.get("Coal")).size());
+        assertTrue(descriptions(all.get("Salty Rod of Champions")).stream().anyMatch(b -> b.text().equals("Increases the chance to catch COMMON Sea Creatures by 25%.")));
+        assertTrue(descriptions(all.get("Refined Gemstone Drill LT-522")).stream().anyMatch(b -> b.text().contains("+800 Mining Speed when mining Gemstones.")));
+        assertEquals(1, descriptions(all.get(" Waxed Adaptive Belt ✪✪✪✪✪")).size());
+        assertEquals(1, descriptions(all.get("Coal")).size());
     }
     @Test void omittedEquipmentTargetsFailValidationAndRetainColor() {
         String names = "Spider, Tarantula, Primordial and Spirit Boots";

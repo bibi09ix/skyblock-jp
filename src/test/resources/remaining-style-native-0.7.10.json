@@ -1,0 +1,899 @@
+[
+  {
+    "id": "52",
+    "channel": "item",
+    "source": "Grants +1%  Magic Find and +1% to ALL Combat Stats.",
+    "target": " Magic Findが+1%、すべてのCombat Statsが+1%増加する。",
+    "oldTarget": " Magic Findが+1%、すべてのCombat Statsが+1%増加する。",
+    "sourceIds": [
+      "common/ability_body/11c8eb6fcc86b2b06efc28fd"
+    ],
+    "nativeStyles": true,
+    "oldReason": "AMBIGUOUS_VALUE_STYLE",
+    "lines": [
+      [
+        {
+          "text": "Grants ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "+1%  Magic Find ",
+          "color": 5636095,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "and ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "+1% ",
+          "color": 16733525,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "to",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "ALL ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "Combat Stats",
+          "color": 16733525,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": ".",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ]
+    ]
+  },
+  {
+    "id": "91",
+    "channel": "item",
+    "source": "Pet Items can boost pets in many powerful ways! A pet can only hold one Pet Item, but you can swap it at any time! The pet must be visible to apply the item!",
+    "target": "Pet Itemsは、さまざまな強力な効果でペットを強化する！ ペットが持てるPet Itemはひとつだけだが、いつでも交換できる！ アイテムを使うには、ペットを表示しておく必要がある！",
+    "oldTarget": "Pet Itemは、さまざまな強力な効果でペットを強化する！ ペットが持てるPet Itemはひとつだけだが、いつでも交換できる！ アイテムを使うには、ペットを表示しておく必要がある！",
+    "sourceIds": [
+      "item/description/020314bf44f4c3df74bd7ff2",
+      "item/description/0a0de3c86e33935a24ac645b",
+      "item/description/0cf0da3ba65a6c0262f563df",
+      "item/description/102c0dd349343a687dc29bb9",
+      "item/description/1af39b599db9b150f29b9285",
+      "item/description/1ea43879b7ff4a2a05610e1f",
+      "item/description/20e1536da19d39c5beecb84a",
+      "item/description/227fa7c40d35acadb30133a2",
+      "item/description/2299b8af77547f9bcfec5a57",
+      "item/description/2aa447892ec66229686d8214",
+      "item/description/2c0e2f6d1f46c51b34abca7e",
+      "item/description/308e87867c2d902b26d05a94",
+      "item/description/34d058bb88cb5266c58174e5",
+      "item/description/376ca300c50fc0ba1026ca77",
+      "item/description/3bc6bb6980b37efe91c3bd5e",
+      "item/description/46ae4438f61f6d6179ee125b",
+      "item/description/47ce5c2c0fa344253a18693f",
+      "item/description/4b382f6f62063de61ec65e66",
+      "item/description/4c2f9620f9c029b62d9ad263",
+      "item/description/4fd362f09f1648d1bfd9335d",
+      "item/description/5077ecfaff27d10eba0b4c38",
+      "item/description/515f50db450acbfe43612ab0",
+      "item/description/51dd1eef449ac98802b63061",
+      "item/description/51e0cce050fd9fa64163ff3b",
+      "item/description/53fc66b1c207e42910c8681e",
+      "item/description/56cb75abcb7aa719e77a3faa",
+      "item/description/6ab5a5b290d63955aa441611",
+      "item/description/6e0da483b90f9d70bf1546bf",
+      "item/description/71bf525a274bc7ddf6b7ea28",
+      "item/description/72de1331bf73463fcd805890",
+      "item/description/74f17b993cb3102d9e18c67e",
+      "item/description/7f8b512df4e8182f32f2ea8b",
+      "item/description/80523b90de124a669611ebd6",
+      "item/description/80735baf50804e61b5fd8133",
+      "item/description/80b695ed2308852b91500b06",
+      "item/description/83de6a4f5680f810808594fe",
+      "item/description/89f31d5b75307f92908fca61",
+      "item/description/8b33d9955f82d594cea728a2",
+      "item/description/918d33fa8ad8d80f4bbebb4e",
+      "item/description/93af2d071c504f6444aa9907",
+      "item/description/9700ddde7740c9bf5b5c3c7f",
+      "item/description/99d3b56ce8f6c6cd8452fe6a",
+      "item/description/9adbaf3051aa8df14dbcbaf0",
+      "item/description/9bba2f7af001a5b310d305cf",
+      "item/description/9d2a5d5e17b2b6c560abfb44",
+      "item/description/a0ff299d0477b7bccd207b39",
+      "item/description/a48a16c21fe0d3ae8dafd52e",
+      "item/description/aab45873e56f451c53574318",
+      "item/description/ad98b38af2ac8f58593e27c0",
+      "item/description/b30ed059380322e3860bdd21",
+      "item/description/b75e6d6081da91e07a4aafab",
+      "item/description/bb97bcb444dc882c29032d0c",
+      "item/description/bd0d97fd97ba512d57d8e17d",
+      "item/description/bfcfcf558e8b39316ecebf04",
+      "item/description/c78cfe845e0740040d000a76",
+      "item/description/c826b5d21c6bd7f7c91b8666",
+      "item/description/cc8d4966f4b5aff6b0229ad9",
+      "item/description/d004dc2f5800f0d72d58b832",
+      "item/description/d174b7315fb03b6bb054c5b7",
+      "item/description/e272571994befc7152b2de82",
+      "item/description/e7373722d6b5346f033a347b",
+      "item/description/e7fba0b348e9ee0a0c014650",
+      "item/description/ef8ae3d01af000f19ed37340",
+      "item/description/f28896f78d3e872b2ca6f8e4",
+      "item/description/f3ab93d8e0f2271a9d2e71af",
+      "item/description/f6a211c6a4c869b22a1e0a4a",
+      "item/description/f8ce92404e7e8920c0d8422c",
+      "item/description/ff72082906565110c089ea3c",
+      "ui/slot_description/05cea8fe620b94d61509aec3",
+      "ui/slot_description/08ba4769a383b048040f91e5",
+      "ui/slot_description/22cb26a89a542883641f1707",
+      "ui/slot_description/2611658ee38b6aeccc769bb2",
+      "ui/slot_description/375a9408172c701a000d9510",
+      "ui/slot_description/6b0b84dbaa0d9acb28b3c2be",
+      "ui/slot_description/7a37c9411ea2c69813171753",
+      "ui/slot_description/7eb7313ab89ddf01f3491caa",
+      "ui/slot_description/820cfd7c9f337c1ae2f7b4b0",
+      "ui/slot_description/8acd810e82dc6cd1a5e461a2",
+      "ui/slot_description/92635a46e401b8640dd55144",
+      "ui/slot_description/92e31d5b907216b71c3ec21f",
+      "ui/slot_description/edbf23ba81cbf6aab490a288",
+      "ui/slot_description/fcf84c98dd2995737b3ef4ee"
+    ],
+    "nativeStyles": true,
+    "oldReason": "STYLE_ALIGNMENT_MISSING",
+    "lines": [
+      [
+        {
+          "text": "Pet Items ",
+          "color": 5635925,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "can boost pets in many",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "powerful ways! A pet can only hold",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "one ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "Pet Item",
+          "color": 5635925,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": ", but you can ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "swap ",
+          "color": 16777045,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "it at",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "any time!",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "The pet must be visible to apply the item!",
+          "color": 5592405,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ]
+    ]
+  },
+  {
+    "id": "146",
+    "channel": "item",
+    "source": "Refined Bonus You have a 0.25% chance to find enchanted forms of items when mining Ores.",
+    "target": "Refined Bonus Oresの採掘時、0.25%の確率でEnchanted版のアイテムが見つかる。",
+    "oldTarget": "Refined Bonus 鉱石の採掘時、0.25%の確率でEnchanted版のアイテムが見つかる。",
+    "sourceIds": [
+      "item/description/6b19974dfab25d1c6a1d7075"
+    ],
+    "nativeStyles": true,
+    "oldReason": "STYLE_ALIGNMENT_MISSING",
+    "lines": [
+      [
+        {
+          "text": "Refined Bonus",
+          "color": 5592575,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "You have a ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "0.25% ",
+          "color": 5635925,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "chance to find",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "enchanted forms of items when mining",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "Ores",
+          "color": 16755200,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": ".",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ]
+    ]
+  },
+  {
+    "id": "178",
+    "channel": "item",
+    "source": "Training Refunds The more coins you spend on Fann's Sessions, the less coins they will cost in the future. (Max 5% off).",
+    "target": "Training Refunds Fannの訓練にCoinsを使うほど、 今後の訓練費用が安くなる（最大5%引き）。",
+    "oldTarget": "Training Refunds Fannの訓練にCoinsを使うほど、 今後の訓練費用が安くなる（最大5%引き）。",
+    "sourceIds": [
+      "ui/slot_description/dbeecdca18f0c6290c562d4c"
+    ],
+    "nativeStyles": true,
+    "oldReason": "STYLE_ALIGNMENT_MISSING",
+    "lines": [
+      [
+        {
+          "text": "Training Refunds",
+          "color": 16755200,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "The more coins you spend on Fann's",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "Sessions, the less coins they will",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "cost in the future. ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "(Max 5% off).",
+          "color": 5592405,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ]
+    ]
+  },
+  {
+    "id": "188",
+    "channel": "item",
+    "source": "Each island has its own series of Chapters for you to complete!",
+    "target": "各島には、達成を目指す 一連のChaptersが用意されている！",
+    "oldTarget": "各島には、達成を目指す 一連のChapterが用意されている！",
+    "sourceIds": [
+      "ui/slot_description/1d230df981f909b9241df1dd",
+      "ui/slot_description/208ad5ba14f0f817a67603f7"
+    ],
+    "nativeStyles": true,
+    "oldReason": "STYLE_ALIGNMENT_MISSING",
+    "lines": [
+      [
+        {
+          "text": "Each island has its own series of",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "Chapters ",
+          "color": 5636095,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "for you to complete!",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ]
+    ]
+  },
+  {
+    "id": "188-rewards",
+    "channel": "item",
+    "source": "Complete tasks within a Chapter to earn small rewards, or complete entire Chapters to earn big ones!",
+    "target": "Chapter内の課題を達成すると小さな報酬を、そのChapterをすべて終えると大きな報酬を得られる！",
+    "oldTarget": "Chapter内の課題を達成すると小さな報酬を、そのChapterをすべて終えると大きな報酬を得られる！",
+    "sourceIds": [
+      "ui/slot_description/3314ae97c6097cc709525ea4",
+      "ui/slot_description/8667ace6caab4ae1c95256cd"
+    ],
+    "nativeStyles": true,
+    "oldReason": "STYLE_ALIGNMENT_AMBIGUOUS",
+    "lines": [
+      [
+        {
+          "text": "Complete tasks within a Chapter to",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "earn small ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "rewards",
+          "color": 16755200,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": ", or complete",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "entire Chapters to earn big ones!",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ]
+    ]
+  },
+  {
+    "id": "202",
+    "channel": "item",
+    "source": "Your swing range isn't modified.",
+    "target": "swing rangeは変更されていない。",
+    "oldTarget": "近接攻撃の射程は変更されていない。",
+    "sourceIds": [
+      "ui/slot_description/3e7c98326bc0f5280b2edfe2",
+      "ui/slot_description/88f9175733eb2931005a2803",
+      "ui/slot_description/d1b6940b15bc48a89f890285"
+    ],
+    "nativeStyles": true,
+    "oldReason": "PROTECTED_VALUE_MISSING",
+    "lines": [
+      [
+        {
+          "text": "Your swing range isn't modified.",
+          "color": 5592405,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ]
+    ]
+  },
+  {
+    "id": "215",
+    "channel": "item",
+    "source": "These achievements reward Achievement Points, which let you unlock rewards on the Hypixel Network.",
+    "target": "これらのAchievementからはAchievement Pointsが得られ、Hypixel Networkの報酬を解放できる。",
+    "oldTarget": "これらのAchievementからはAchievement Pointが得られ、Hypixel Networkの報酬を解放できる。",
+    "sourceIds": [
+      "ui/slot_description/cffd9b958fcaca09f416f8bc"
+    ],
+    "nativeStyles": true,
+    "oldReason": "STYLE_ALIGNMENT_MISSING",
+    "lines": [
+      [
+        {
+          "text": "These achievements reward",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "Achievement Points",
+          "color": 16777045,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": ", which let you",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "unlock rewards on the Hypixel",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "Network.",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ]
+    ]
+  },
+  {
+    "id": "389",
+    "channel": "item",
+    "source": "Tarantula Broodfather's  Vitality reduction is 25% less effective against you.",
+    "target": "Tarantula Broodfatherによる Vitality低下の影響を、25%軽減する。",
+    "oldTarget": "Tarantula Broodfatherによる Vitality低下の影響を、25%軽減する。",
+    "sourceIds": [
+      "item/description/e0d5840b6bbc6276bff64804"
+    ],
+    "nativeStyles": true,
+    "oldReason": "STYLE_ALIGNMENT_MISSING",
+    "lines": [
+      [
+        {
+          "text": "Tarantula Broodfather's ",
+          "color": 16733525,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": " Vitality",
+          "color": 11141120,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "reduction is ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "25% ",
+          "color": 5635925,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "less effective",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "against you.",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ]
+    ]
+  },
+  {
+    "id": "1419",
+    "channel": "item",
+    "source": "You can progress through the Honeycomb Collection by looting the various Honeyhives found around Torrhus Canyon that refill periodically.",
+    "target": "Torrhus Canyon各地の、定期的に中身が補充されるHoneyhivesから戦利品を手に入れると、Honeycomb Collectionが進む。",
+    "oldTarget": "Torrhus Canyon各地の、定期的に中身が補充されるHoneyhiveから戦利品を手に入れると、Honeycomb Collectionが進む。",
+    "sourceIds": [
+      "ui/slot_description/6c8f2ca4ebad8bd7db88723e"
+    ],
+    "nativeStyles": false,
+    "oldReason": "PROTECTED_VALUE_MISSING",
+    "lines": [
+      [
+        {
+          "text": "You can progress through the Honeycomb Collection by looting the various Honeyhives found around Torrhus Canyon that refill periodically.",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ]
+    ]
+  },
+  {
+    "id": "1420",
+    "channel": "item",
+    "source": "These things take time. Go cut some Trees, hunt some  Critters, catch some Torrhus Sea Creatures, I don't know, I'm not your babysitter! Entertain yourself!",
+    "target": "こういうものには時間がかかる。Treesを切るなり、 Crittersを狩るなり、Torrhus Sea Creaturesを釣るなり……知らないよ、僕は子守じゃないんだから！自分で楽しんで！",
+    "oldTarget": "こういうものには時間がかかる。Treeを切るなり、 Critterを狩るなり、TorrhusのSea Creatureを釣るなり……知らないよ、僕は子守じゃないんだから！自分で楽しんで！",
+    "sourceIds": [
+      "ui/slot_description/acbee731b40c8c3dbafe483e"
+    ],
+    "nativeStyles": false,
+    "oldReason": "PROTECTED_VALUE_MISSING",
+    "lines": [
+      [
+        {
+          "text": "These things take time. Go cut some Trees, hunt some  Critters, catch some Torrhus Sea Creatures, I don't know, I'm not your babysitter! Entertain yourself!",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ]
+    ]
+  },
+  {
+    "id": "owl-training-maximum-body",
+    "channel": "item",
+    "source": "The more coins you spend on Fann's Sessions, the less coins they will cost in the future. (Max 5% off).",
+    "target": "FannのSessionにCoinsを使うほど、今後のSessionの費用が安くなる。（最大5%割引）",
+    "oldTarget": "FannのSessionにCoinsを使うほど、今後のSessionの費用が安くなる。（最大5%割引）",
+    "sourceIds": [
+      "item/ability_body/348e3db2d8b623b180828d73"
+    ],
+    "nativeStyles": true,
+    "oldReason": "same native paragraph after correct heading split",
+    "lines": [
+      [
+        {
+          "text": "The more coins you spend on Fann's",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "Sessions, the less coins they will",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "cost in the future. ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "(Max 5% off).",
+          "color": 5592405,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ]
+    ]
+  },
+  {
+    "id": "refined-body",
+    "channel": "item",
+    "source": "You have a 0.25% chance to find enchanted forms of items when mining Ores.",
+    "target": "Oresの採掘時に、0.25%の確率でアイテムのEnchanted版を見つける。",
+    "oldTarget": "Oresの採掘時に、0.25%の確率でアイテムのEnchanted版を見つける。",
+    "sourceIds": [
+      "common/ability_body/ddd05d1b8d29ee3836004465"
+    ],
+    "nativeStyles": true,
+    "oldReason": "same native paragraph after correct heading split",
+    "lines": [
+      [
+        {
+          "text": "You have a ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "0.25% ",
+          "color": 5635925,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "chance to find",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "enchanted forms of items when mining",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "Ores",
+          "color": 16755200,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": ".",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ]
+    ]
+  }
+]

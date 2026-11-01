@@ -45,14 +45,18 @@ final class NpcTranslation {
     static boolean automaticMessage(String text) {
         String plain = LoreParser.clean(text);
         int colon = plain.indexOf(':');
-        return optionPrompt(plain) || plain.startsWith("[NPC]") && colon >= 0 && colon + 1 < plain.length();
+        return optionPrompt(plain) || (plain.startsWith("[NPC]") || plain.startsWith("[BOSS]")) && colon >= 0 && colon + 1 < plain.length();
     }
     /** Slice the original component, preserving native styles and legacy section codes. */
     static StyledParagraph paragraph(Component message) {
         return paragraph(message, message.getString().indexOf(':') + 1);
     }
     static StyledParagraph whole(Component message) { return paragraph(message, 0); }
+    static StyledParagraph wholeChat(Component message) { return paragraph(message, 0, true); }
     private static StyledParagraph paragraph(Component message, int begin) {
+        return paragraph(message, begin, false);
+    }
+    private static StyledParagraph paragraph(Component message, int begin, boolean playerChat) {
         var glyphs = StyledParagraph.glyphs(message);
         var body = Component.empty();
         int offset = 0;
@@ -60,7 +64,6 @@ final class NpcTranslation {
         for (int i = 0; i < glyphs.size(); i++) {
             var g = glyphs.get(i);
             int start = offset; offset += g.text().length();
-            if (start < begin) continue;
             Style nativeStyle = g.style().getColor() == null ? g.style().withColor(ChatFormatting.WHITE) : g.style();
             nativeStyle = nativeStyle.withBold(nativeStyle.isBold()).withItalic(nativeStyle.isItalic())
                 .withUnderlined(nativeStyle.isUnderlined()).withStrikethrough(nativeStyle.isStrikethrough()).withObfuscated(nativeStyle.isObfuscated());
@@ -72,8 +75,9 @@ final class NpcTranslation {
                     offset += glyphs.get(++i).text().length(); continue;
                 }
             }
-            body.append(Component.literal(g.text()).setStyle(legacy == null ? g.style() : legacy));
+            // Formatting before the body (for example §c[NPC] Elle:) still governs it.
+            if (start >= begin) body.append(Component.literal(g.text()).setStyle(legacy == null ? g.style() : legacy));
         }
-        return new StyledParagraph(List.of(body));
+        return new StyledParagraph(List.of(body), playerChat);
     }
 }

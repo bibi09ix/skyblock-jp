@@ -15,6 +15,20 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ChatFeatureTest {
     @TempDir Path dir;
+    @Test void hoveringAnyWrappedLineUsesWholeOriginalMessageWithStylesAndLinks() {
+        var original = Component.literal("First sentence. Second sentence.").withStyle(ChatFormatting.GOLD)
+            .withStyle(s -> s.withClickEvent(new ClickEvent.RunCommand("/quest")));
+        var message = new GuiMessage(0, original, null, null, null);
+        var first = Component.literal("First sentence.").getVisualOrderText();
+        var second = Component.literal("Second sentence.").getVisualOrderText();
+        var lines = java.util.List.of(new GuiMessage.Line(message, second, true), new GuiMessage.Line(message, first, false));
+        assertEquals(original, ChatHover.source(lines, first));
+        assertEquals(original, ChatHover.source(lines, second));
+        assertEquals("First sentence. Second sentence.", ChatHover.source(lines, second).getString());
+        assertEquals(new ClickEvent.RunCommand("/quest"), ChatHover.source(lines, second).getStyle().getClickEvent());
+        assertNull(ChatHover.source(lines, null));
+        assertNull(ChatHover.source(lines, Component.literal("unrelated queue indicator").getVisualOrderText()));
+    }
     @Test void buttonsPreserveOriginalLinksAndWorkAtEitherEnd() {
         var source = Component.literal("Click for quest").setStyle(Style.EMPTY.withColor(ChatFormatting.GOLD)
             .withClickEvent(new ClickEvent.RunCommand("/quest"))
@@ -38,7 +52,7 @@ class ChatFeatureTest {
         assertFalse(next.contains("Hello")); handles.clear(); assertNull(handles.get(next));
     }
     @Test void playerNamesUrlsAndCommandsAreImmutable() {
-        var p = NpcTranslation.whole(Component.literal("[MVP+] Player123: go to https://hypixel.net or /bank"));
+        var p = NpcTranslation.wholeChat(Component.literal("[MVP+] Player123: go to https://hypixel.net or /bank"));
         assertTrue(p.encoded().matches("(?s).*<t\\d+>[^<>]*Player123[^<>]*</t\\d+>.*"));
         assertTrue(p.encoded().contains(">https://hypixel.net</t"));
         assertTrue(p.encoded().contains(">/bank</t"));
@@ -58,6 +72,8 @@ class ChatFeatureTest {
     @Test void mixinTargetsMatchInstalledMinecraft26Api() throws Exception {
         assertNotNull(ChatComponent.class.getDeclaredMethod("addMessage", Component.class, MessageSignature.class, GuiMessageSource.class, GuiMessageTag.class));
         assertNotNull(ChatComponent.class.getDeclaredField("allMessages"));
+        assertNotNull(ChatComponent.class.getDeclaredField("trimmedMessages"));
+        assertNotNull(ChatComponent.class.getDeclaredMethod("extractRenderState", ChatComponent.ChatGraphicsAccess.class, int.class, int.class, ChatComponent.DisplayMode.class));
         for (String name : new String[]{"defaultHandleClickEvent", "defaultHandleGameClickEvent"})
             assertNotNull(Screen.class.getDeclaredMethod(name, ClickEvent.class, Minecraft.class, Screen.class));
     }

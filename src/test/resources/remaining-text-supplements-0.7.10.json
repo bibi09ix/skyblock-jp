@@ -1,0 +1,522 @@
+[
+  {
+    "channel": "item",
+    "source": "5 Combo (lasts 10s)",
+    "target": "5 Combo（10秒間持続）",
+    "source_id": "observed/item/review0710_10f2b7b03a85e08110_f09884c4",
+    "category": "metadata_prose",
+    "keep_original": false
+  },
+  {
+    "channel": "item",
+    "source": "10 Combo (lasts 8s)",
+    "target": "10 Combo（8秒間持続）",
+    "source_id": "observed/item/review0710_f426c0d55c4edfc2e3_3a071fed",
+    "category": "metadata_prose",
+    "keep_original": false
+  },
+  {
+    "channel": "item",
+    "source": "+10 coins per kill",
+    "target": "+10 coinsを討伐ごとに獲得する。",
+    "source_id": "observed/item/review0710_4d3c7ef154196f99e6_e4084998",
+    "category": "metadata_prose",
+    "keep_original": false
+  },
+  {
+    "channel": "item",
+    "source": "15 Combo (lasts 6s)",
+    "target": "15 Combo（6秒間持続）",
+    "source_id": "observed/item/review0710_dfdbc3db9d1fb2bca0_9863ecba",
+    "category": "metadata_prose",
+    "keep_original": false
+  },
+  {
+    "channel": "item",
+    "source": "20 Combo (lasts 5s)",
+    "target": "20 Combo（5秒間持続）",
+    "source_id": "observed/item/review0710_48df94aab70d54721b_422e8107",
+    "category": "metadata_prose",
+    "keep_original": false
+  },
+  {
+    "channel": "item",
+    "source": "25 Combo (lasts 4s)",
+    "target": "25 Combo（4秒間持続）",
+    "source_id": "observed/item/review0710_ccf6729af71ccb16c5_ada99b40",
+    "category": "metadata_prose",
+    "keep_original": false
+  },
+  {
+    "channel": "item",
+    "source": "30 Combo (lasts 3s)",
+    "target": "30 Combo（3秒間持続）",
+    "source_id": "observed/item/review0710_7cd371d836f52bff68_55c14357",
+    "category": "metadata_prose",
+    "keep_original": false
+  },
+  {
+    "channel": "item",
+    "source": "Sell Price",
+    "target": "売却価格",
+    "source_id": "observed/item/review0710_625c07ac912fda924b_c60064c9",
+    "category": "boundary",
+    "keep_original": false
+  },
+  {
+    "channel": "item",
+    "source": "Active Events:",
+    "target": "開催中のイベント:",
+    "source_id": "observed/item/review0710_45e673b619462b91df_2481f749",
+    "category": "boundary",
+    "keep_original": false
+  },
+  {
+    "channel": "ui",
+    "source": "Mining Stats",
+    "target": "Miningのステータス",
+    "source_id": "observed/ui/review0710_04e67bcf26930f39aa_e6fc802c",
+    "category": "boundary",
+    "keep_original": false
+  },
+  {
+    "channel": "ui",
+    "source": "Farming Stats",
+    "target": "Farmingのステータス",
+    "source_id": "observed/ui/review0710_905d8ede5de8ae8c3e_c6fa1f07",
+    "category": "boundary",
+    "keep_original": false
+  },
+  {
+    "channel": "ui",
+    "source": "Foraging Stats",
+    "target": "Foragingのステータス",
+    "source_id": "observed/ui/review0710_da0994e8a2569967ff_d163dcd7",
+    "category": "boundary",
+    "keep_original": false
+  },
+  {
+    "channel": "ui",
+    "source": " Flat Bonuses",
+    "target": " 加算ボーナス",
+    "source_id": "observed/ui/review0710_3688717e210ed6a07d_f1b5784d",
+    "category": "boundary",
+    "keep_original": false
+  },
+  {
+    "channel": "ui",
+    "source": " Flat Bonuses",
+    "target": " 加算ボーナス",
+    "source_id": "observed/ui/review0710_1c9d761bef7205d405_09dc2c43",
+    "category": "boundary",
+    "keep_original": false
+  },
+  {
+    "channel": "item",
+    "source": "- SkyMart Barn & Greenhouse Skins",
+    "target": "- SkyMartのBarn・Greenhouse用スキン",
+    "source_id": "observed/item/review0710_dfc61b7caaed546697_69ccea87",
+    "category": "boundary",
+    "keep_original": false
+  },
+  {
+    "channel": "item",
+    "source": "- Account & Profile Upgrades",
+    "target": "- Account・Profileのアップグレード",
+    "source_id": "observed/item/review0710_4db1e048a817e490fc_e6149029",
+    "category": "boundary",
+    "keep_original": false
+  },
+  {
+    "channel": "item",
+    "source": "◼ Tons of left clicking.",
+    "target": "◼ 左クリックを大量に使う。",
+    "source_id": "observed/item/review0710_ce4ca16a7ba611d775_4038966e",
+    "category": "boundary",
+    "keep_original": false
+  },
+  {
+    "channel": "item",
+    "source": "◼ Reward: Leech Sword (or better!)",
+    "target": "◼ 報酬: Leech Sword（またはそれ以上のもの！）",
+    "source_id": "observed/item/review0710_a9f272e73d2231026d_4268d760",
+    "category": "boundary",
+    "keep_original": false
+  },
+  {
+    "channel": "item",
+    "source": "When falling below 40% ❤ Health:",
+    "target": "❤ Healthが40%を下回ると:",
+    "source_id": "observed/item/review0710_e1a8f6592adb9767d9_2573cc9f",
+    "category": "boundary",
+    "keep_original": false
+  },
+  {
+    "channel": "item",
+    "source": "- Gain +10%  Defense for 10s.",
+    "target": "- 10秒間、+10%  Defenseを得る。",
+    "source_id": "observed/item/review0710_9bef2292c0530a062a_f3e80264",
+    "category": "boundary",
+    "keep_original": false
+  },
+  {
+    "channel": "item",
+    "source": "- Gain +7.5%  Defense for 10s.",
+    "target": "- 10秒間、+7.5%  Defenseを得る。",
+    "source_id": "observed/item/review0710_098e0de7cdae4fe842_16d7103a",
+    "category": "boundary",
+    "keep_original": false
+  },
+  {
+    "channel": "item",
+    "source": "- Gain +2.5%  Defense for 10s.",
+    "target": "- 10秒間、+2.5%  Defenseを得る。",
+    "source_id": "observed/item/review0710_d74cdafda18038ae24_5fefeda8",
+    "category": "boundary",
+    "keep_original": false
+  },
+  {
+    "channel": "item",
+    "source": "- Regen 8 Vitality.",
+    "target": "- 回復効果: 8 Vitality。",
+    "source_id": "observed/item/review0710_f9e027a4c5efbe2afc_ec5441be",
+    "category": "boundary",
+    "keep_original": false
+  },
+  {
+    "channel": "item",
+    "source": "- Regen 6 Vitality.",
+    "target": "- 回復効果: 6 Vitality。",
+    "source_id": "observed/item/review0710_ad9e89f3737d9edb5d_535b49b0",
+    "category": "boundary",
+    "keep_original": false
+  },
+  {
+    "channel": "item",
+    "source": "- Regen 2 Vitality.",
+    "target": "- 回復効果: 2 Vitality。",
+    "source_id": "observed/item/review0710_7c0fd6fe141b450dc5_743212b3",
+    "category": "boundary",
+    "keep_original": false
+  },
+  {
+    "channel": "item",
+    "source": "(From SkyHanni)",
+    "target": "（SkyHanniより）",
+    "source_id": "observed/item/review0710_d10a1d45f3d7009dbd_4f0e1cc0",
+    "category": "legacy_format",
+    "keep_original": false
+  },
+  {
+    "channel": "ui",
+    "source": "Click here to run /chocolatefactory",
+    "target": "クリックで /chocolatefactory を実行！",
+    "source_id": "observed/ui/review0710_45235682621e273e06_3f813e5c",
+    "category": "legacy_format",
+    "keep_original": false
+  },
+  {
+    "channel": "ui",
+    "source": "Ctrl + Click to open config",
+    "target": "Ctrl + クリックで設定を開く！",
+    "source_id": "observed/ui/review0710_3f1193cd3319acb023_25d5b326",
+    "category": "legacy_format",
+    "keep_original": false
+  },
+  {
+    "channel": "item",
+    "source": "When Mining, each collection progress grants a 0.0015% chance to drop a random enchanted mining item.",
+    "target": "Miningでコレクションが進むたびに、0.0015%の確率でランダムな採掘アイテムのエンチャント版がドロップする。",
+    "source_id": "observed/item/review0710_4412480878ce89d05a_1fd09baa",
+    "category": "additional_coverage",
+    "keep_original": false
+  },
+  {
+    "channel": "item",
+    "source": "For each player within 25 blocks:",
+    "target": "25ブロック以内にいるプレイヤーごとに:",
+    "source_id": "observed/item/review0710_8810c448f0134a24fa_a0193c67",
+    "category": "additional_coverage",
+    "keep_original": false
+  },
+  {
+    "channel": "item",
+    "source": "Automatons drop their parts 50% more frequently.",
+    "target": "Automatonsが部品をドロップする頻度が50%増加する。",
+    "source_id": "observed/item/review0710_c4954ae01db7b5891d_8203af8d",
+    "category": "additional_coverage",
+    "keep_original": false
+  },
+  {
+    "channel": "item",
+    "source": "Deal +300% damage to Endermen.",
+    "target": "Endermenに与えるダメージが+300%増加する。",
+    "source_id": "observed/item/review0710_68cc9f1778e57341dc_84b9073e",
+    "category": "additional_coverage",
+    "keep_original": false
+  },
+  {
+    "channel": "item",
+    "source": "Receive 12% less damage from Endermen when held. Gain +45☯ Combat Wisdom against Endermen.",
+    "target": "持っている間、Endermenから受けるダメージが12%減少する。Endermenに対して、+45☯ Combat Wisdomを獲得する。",
+    "source_id": "observed/item/review0710_bd759f930d746580b3_9d1da47b",
+    "category": "additional_coverage",
+    "keep_original": false
+  },
+  {
+    "channel": "item",
+    "source": "Creates a veil of fire around you for 5s, dealing 43,716.4 damage per second to mobs within.",
+    "target": "周囲に5秒間の炎の幕を作り、その中にいるモブに毎秒43,716.4のダメージを与える。",
+    "source_id": "observed/item/review0710_55f54ac1543178421b_de27db1a",
+    "category": "additional_coverage",
+    "keep_original": false
+  },
+  {
+    "channel": "item",
+    "source": "Changes the color of an armor piece to #7FFFD4!",
+    "target": "防具の部位の色を#7FFFD4に変える！",
+    "source_id": "observed/item/review0710_1011e75183e55a6188_2fbc2c51",
+    "category": "additional_coverage",
+    "keep_original": false
+  },
+  {
+    "channel": "item",
+    "source": "Heal 10❤ per hit.",
+    "target": "命中ごとに10❤回復する。",
+    "source_id": "observed/item/review0710_218ad2203f176fa0d5_785208d2",
+    "category": "additional_coverage",
+    "keep_original": false
+  },
+  {
+    "channel": "item",
+    "source": "Deal +200% damage to  Undead mobs.",
+    "target": " Undeadのモンスターに与えるダメージが+200%増加する。",
+    "source_id": "observed/item/review0710_f03284627f40d42fdf_23b106f1",
+    "category": "additional_coverage",
+    "keep_original": false
+  },
+  {
+    "channel": "item",
+    "source": "Gain +45☯ Combat Wisdom against  Undead mobs.",
+    "target": " Undeadのモンスターに対して、+45☯ Combat Wisdomを獲得する。",
+    "source_id": "observed/item/review0710_8afea609139f232da6_d4805f41",
+    "category": "additional_coverage",
+    "keep_original": false
+  },
+  {
+    "channel": "item",
+    "source": "Deal +20 Damage per Wolf Slayer level",
+    "target": "Wolf Slayerの各レベルにつき、与える Damageが+20増加する。",
+    "source_id": "observed/item/review0710_cba00fc429270e8edc_4b86c82c",
+    "category": "additional_coverage",
+    "keep_original": false
+  },
+  {
+    "channel": "item",
+    "source": "Deal +200%  Damage against Wolves",
+    "target": "Wolvesに与える Damageが+200%増加する。",
+    "source_id": "observed/item/review0710_f66dc99e947db19bbb_b315c4be",
+    "category": "additional_coverage",
+    "keep_original": false
+  },
+  {
+    "channel": "item",
+    "source": "Take -20% damage from  Animal mobs",
+    "target": " Animal mobsから受けるダメージに-20%の補正がかかる。",
+    "source_id": "observed/item/review0710_5a6762ada17e5af331_d8039b6a",
+    "category": "additional_coverage",
+    "keep_original": false
+  },
+  {
+    "channel": "item",
+    "source": "Gain +45☯ Combat Wisdom against  Animal mobs",
+    "target": " Animal mobsに対して、+45☯ Combat Wisdomを獲得する。",
+    "source_id": "observed/item/review0710_2c49138a0281f953e6_858d5e08",
+    "category": "additional_coverage",
+    "keep_original": false
+  },
+  {
+    "channel": "item",
+    "source": "Earn +10% Mithril Powder and +35 Mining Fortune when mining near a Fallen Star.",
+    "target": "Fallen Starの近くで採掘すると、獲得するMithril Powderが+10%増加し、+35 Mining Fortuneを得る。",
+    "source_id": "observed/item/review0710_a7598ecf4b7328b108_2291b878",
+    "category": "additional_coverage",
+    "keep_original": false
+  },
+  {
+    "channel": "ui",
+    "source": " SkyBlock Level",
+    "target": " SkyBlock Level",
+    "source_id": "observed/ui/review0710_96e5a8315ed66dbf2c_96e5a831",
+    "category": "proper_name_preservation",
+    "keep_original": true
+  },
+  {
+    "channel": "ui",
+    "source": "SkyBlock Levels",
+    "target": "SkyBlock Levels",
+    "source_id": "observed/ui/review0710_1df79f1231813a4011_1df79f12",
+    "category": "proper_name_preservation",
+    "keep_original": true
+  },
+  {
+    "channel": "ui",
+    "source": "Farming XXXVI",
+    "target": "Farming XXXVI",
+    "source_id": "observed/ui/review0710_8984337ca835a37cd9_8984337c",
+    "category": "proper_name_preservation",
+    "keep_original": true
+  },
+  {
+    "channel": "ui",
+    "source": "Mining LX",
+    "target": "Mining LX",
+    "source_id": "observed/ui/review0710_241f8eead3d7446752_241f8eea",
+    "category": "proper_name_preservation",
+    "keep_original": true
+  },
+  {
+    "channel": "ui",
+    "source": " Jerry Candy",
+    "target": " Jerry Candy",
+    "source_id": "observed/ui/review0710_75266002ae4e9892d2_75266002",
+    "category": "proper_name_preservation",
+    "keep_original": true
+  },
+  {
+    "channel": "item",
+    "source": "Halloween Simulator",
+    "target": "Halloween Simulator",
+    "source_id": "observed/item/review0710_453701210de268d441_45370121",
+    "category": "proper_name_preservation",
+    "keep_original": true
+  },
+  {
+    "channel": "item",
+    "source": "Pet Items can boost pets in many powerful ways! A pet can only hold one Pet Item, but you can swap it at any time! The pet must be visible to apply the item!",
+    "target": "Pet Itemsは、さまざまな強力な効果でペットを強化する！ ペットが持てるPet Itemはひとつだけだが、いつでも交換できる！ アイテムを使うには、ペットを表示しておく必要がある！",
+    "source_id": "observed/item/review0710_1e8905d75307c43065_73cb2f60",
+    "category": "restoration",
+    "keep_original": false
+  },
+  {
+    "channel": "ui",
+    "source": "Pet Items can boost pets in many powerful ways! A pet can only hold one Pet Item, but you can swap it at any time! The pet must be visible to apply the item!",
+    "target": "Pet Itemsは、さまざまな強力な効果でペットを強化する！ ペットが持てるPet Itemはひとつだけだが、いつでも交換できる！ アイテムを使うには、ペットを表示しておく必要がある！",
+    "source_id": "observed/ui/review0710_1e8905d75307c43065_73cb2f60",
+    "category": "restoration",
+    "keep_original": false
+  },
+  {
+    "channel": "item",
+    "source": "Refined Bonus You have a 0.25% chance to find enchanted forms of items when mining Ores.",
+    "target": "Refined Bonus Oresの採掘時、0.25%の確率でEnchanted版のアイテムが見つかる。",
+    "source_id": "observed/item/review0710_e58e7ae350c93e47c7_2af32004",
+    "category": "restoration",
+    "keep_original": false
+  },
+  {
+    "channel": "ui",
+    "source": "Refined Bonus You have a 0.25% chance to find enchanted forms of items when mining Ores.",
+    "target": "Refined Bonus Oresの採掘時、0.25%の確率でEnchanted版のアイテムが見つかる。",
+    "source_id": "observed/ui/review0710_e58e7ae350c93e47c7_2af32004",
+    "category": "restoration",
+    "keep_original": false
+  },
+  {
+    "channel": "item",
+    "source": "Each island has its own series of Chapters for you to complete!",
+    "target": "各島には、達成を目指す 一連のChaptersが用意されている！",
+    "source_id": "observed/item/review0710_366af122c7d5ae762a_a087764c",
+    "category": "restoration",
+    "keep_original": false
+  },
+  {
+    "channel": "ui",
+    "source": "Each island has its own series of Chapters for you to complete!",
+    "target": "各島には、達成を目指す 一連のChaptersが用意されている！",
+    "source_id": "observed/ui/review0710_366af122c7d5ae762a_a087764c",
+    "category": "restoration",
+    "keep_original": false
+  },
+  {
+    "channel": "item",
+    "source": "Your swing range isn't modified.",
+    "target": "swing rangeは変更されていない。",
+    "source_id": "observed/item/review0710_e0ee62d12248d5f255_5c76308a",
+    "category": "restoration",
+    "keep_original": false
+  },
+  {
+    "channel": "ui",
+    "source": "Your swing range isn't modified.",
+    "target": "swing rangeは変更されていない。",
+    "source_id": "observed/ui/review0710_e0ee62d12248d5f255_5c76308a",
+    "category": "restoration",
+    "keep_original": false
+  },
+  {
+    "channel": "item",
+    "source": "These achievements reward Achievement Points, which let you unlock rewards on the Hypixel Network.",
+    "target": "これらのAchievementからはAchievement Pointsが得られ、Hypixel Networkの報酬を解放できる。",
+    "source_id": "observed/item/review0710_64049ca1a164b71891_df0647c7",
+    "category": "restoration",
+    "keep_original": false
+  },
+  {
+    "channel": "ui",
+    "source": "These achievements reward Achievement Points, which let you unlock rewards on the Hypixel Network.",
+    "target": "これらのAchievementからはAchievement Pointsが得られ、Hypixel Networkの報酬を解放できる。",
+    "source_id": "observed/ui/review0710_64049ca1a164b71891_df0647c7",
+    "category": "restoration",
+    "keep_original": false
+  },
+  {
+    "channel": "item",
+    "source": "You can progress through the Honeycomb Collection by looting the various Honeyhives found around Torrhus Canyon that refill periodically.",
+    "target": "Torrhus Canyon各地の、定期的に中身が補充されるHoneyhivesから戦利品を手に入れると、Honeycomb Collectionが進む。",
+    "source_id": "observed/item/review0710_55d46c629784987f14_80f537fc",
+    "category": "restoration",
+    "keep_original": false
+  },
+  {
+    "channel": "ui",
+    "source": "You can progress through the Honeycomb Collection by looting the various Honeyhives found around Torrhus Canyon that refill periodically.",
+    "target": "Torrhus Canyon各地の、定期的に中身が補充されるHoneyhivesから戦利品を手に入れると、Honeycomb Collectionが進む。",
+    "source_id": "observed/ui/review0710_55d46c629784987f14_80f537fc",
+    "category": "restoration",
+    "keep_original": false
+  },
+  {
+    "channel": "item",
+    "source": "These things take time. Go cut some Trees, hunt some  Critters, catch some Torrhus Sea Creatures, I don't know, I'm not your babysitter! Entertain yourself!",
+    "target": "こういうものには時間がかかる。Treesを切るなり、 Crittersを狩るなり、Torrhus Sea Creaturesを釣るなり……知らないよ、僕は子守じゃないんだから！自分で楽しんで！",
+    "source_id": "observed/item/review0710_3843755b9aec8be569_b96093f1",
+    "category": "restoration",
+    "keep_original": false
+  },
+  {
+    "channel": "ui",
+    "source": "These things take time. Go cut some Trees, hunt some  Critters, catch some Torrhus Sea Creatures, I don't know, I'm not your babysitter! Entertain yourself!",
+    "target": "こういうものには時間がかかる。Treesを切るなり、 Crittersを狩るなり、Torrhus Sea Creaturesを釣るなり……知らないよ、僕は子守じゃないんだから！自分で楽しんで！",
+    "source_id": "observed/ui/review0710_3843755b9aec8be569_b96093f1",
+    "category": "restoration",
+    "keep_original": false
+  },
+  {
+    "channel": "item",
+    "source": "Its warm chocolatey goodness imbues you with the ability to overcome the heat death of the Blazing Volcano.",
+    "target": "温かく濃厚なチョコレートのおいしさが、Blazing Volcanoの灼熱を乗り越える力を与えてくれる。",
+    "source_id": "observed/item/review0710_3a5e0fa28315940c79_bb95740c",
+    "category": "restoration",
+    "keep_original": false
+  },
+  {
+    "channel": "ui",
+    "source": "Its warm chocolatey goodness imbues you with the ability to overcome the heat death of the Blazing Volcano.",
+    "target": "温かく濃厚なチョコレートのおいしさが、Blazing Volcanoの灼熱を乗り越える力を与えてくれる。",
+    "source_id": "observed/ui/review0710_3a5e0fa28315940c79_bb95740c",
+    "category": "restoration",
+    "keep_original": false
+  }
+]

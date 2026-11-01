@@ -1,0 +1,312 @@
+{
+  "editing_help": "Only explicit hash-bound native replays license another presentation scope. Do not enable all observed descriptions by role alone. Re-review hashes and context after changing a translation.",
+  "entries": [
+    {
+      "approved": true,
+      "from_channel": "item",
+      "id": "observed-applicability/old-11",
+      "native_evidence": {
+        "context": {
+          "containerSize": 90,
+          "containerTitle": "SkyBlock Menu",
+          "controlCarrierEvidence": false,
+          "controlEvidence": true,
+          "location": "CONTAINER",
+          "minecraftItemId": "minecraft:clock",
+          "numericStatRows": 1,
+          "paragraphRole": "DESCRIPTION",
+          "screenClass": "net.minecraft.client.gui.screens.inventory.ContainerScreen",
+          "skyblockItemId": "",
+          "slotIndex": 24,
+          "slotMatches": true,
+          "statBreakdownMenu": false,
+          "tooltipKind": "UI",
+          "tooltipTitle": "Calendar and Events",
+          "trustedMenu": true
+        },
+        "export_original_line": 145,
+        "log": "logs/translation-display.jsonl.1",
+        "source_lines": [
+          "View the SkyBlock Calendar, upcoming",
+          "events, and event rewards!"
+        ],
+        "source_lines_sha256": "7c06075a44c876fd10d0de9c264b5645789660fed5684961819841134061b137",
+        "source_styled_complete": true,
+        "source_styled_lines": [
+          [
+            {
+              "bold": false,
+              "color": 11184810,
+              "italic": false,
+              "obfuscated": false,
+              "strikethrough": false,
+              "text": "View the SkyBlock Calendar, upcoming",
+              "underlined": false
+            }
+          ],
+          [
+            {
+              "bold": false,
+              "color": 11184810,
+              "italic": false,
+              "obfuscated": false,
+              "strikethrough": false,
+              "text": "events, and event rewards!",
+              "underlined": false
+            }
+          ]
+        ],
+        "zip": "skyblock-jp-shared-logs-20261030-144921-69f304e7-9840-452b-859c-c43745f8dbef.zip"
+      },
+      "native_evidence_sha256": "9e5456eedf22fef81cb4f4b7d2d8c773103bb7a73642975cca1723b1fbe414a4",
+      "origin_source_id": "observed/item/runtime079_fc0e055e5124f5353e",
+      "reason": "Native shared-log replay verified complete source, exact reviewed translation, independent semantic role and all live context guards. No other source/channel is licensed.",
+      "requires": {
+        "location": "CONTAINER",
+        "paragraphRole": "DESCRIPTION",
+        "slotMatches": true,
+        "tooltipKind": "UI",
+        "tooltipTitle": "Calendar and Events"
+      },
+      "semantic_role": "DESCRIPTION",
+      "source_sha256": "fc0e055e5124f5353e2a315fc9cec1796822fa5d996fd54074593f4c340a9d55",
+      "target_sha256": "f6f45b3e338e4d938f57c821065d128ce82e0f225067c6a6a60311fd8301fa65",
+      "to_channel": "ui"
+    },
+    {
+      "approved": true,
+      "from_channel": "item",
+      "id": "observed-applicability/old-12",
+      "native_evidence": {
+        "context": {
+          "containerSize": 90,
+          "containerTitle": "SkyBlock Menu",
+          "controlCarrierEvidence": false,
+          "controlEvidence": true,
+          "location": "CONTAINER",
+          "minecraftItemId": "minecraft:clock",
+          "numericStatRows": 1,
+          "paragraphRole": "DESCRIPTION_LABEL",
+          "screenClass": "net.minecraft.client.gui.screens.inventory.ContainerScreen",
+          "skyblockItemId": "",
+          "slotIndex": 24,
+          "slotMatches": true,
+          "statBreakdownMenu": false,
+          "tooltipKind": "UI",
+          "tooltipTitle": "Calendar and Events",
+          "trustedMenu": true
+        },
+        "export_original_line": 145,
+        "log": "logs/translation-display.jsonl.1",
+        "source_lines": [
+          "Active Events:"
+        ],
+        "source_lines_sha256": "81d35a9f674c9647e55f6c1a8abb14a26759b0db4c5510c447219ea405088d98",
+        "source_styled_complete": true,
+        "source_styled_lines": [
+          [
+            {
+              "bold": false,
+              "color": 11184810,
+              "italic": false,
+              "obfuscated": false,
+              "strikethrough": false,
+              "text": "Active Events:",
+              "underlined": false
+            }
+          ]
+        ],
+        "zip": "skyblock-jp-shared-logs-20261030-144921-69f304e7-9840-452b-859c-c43745f8dbef.zip"
+      },
+      "native_evidence_sha256": "ca06f882b0d95d521d3d74ca990302f76634c0825598ada4ab178f0d2d83e2b8",
+      "origin_source_id": "observed/item/review0710_45e673b619462b91df_2481f749",
+      "reason": "Native shared-log replay verified complete source, exact reviewed translation, independent semantic role and all live context guards. No other source/channel is licensed.",
+      "requires": {
+        "location": "CONTAINER",
+        "paragraphRole": "DESCRIPTION_LABEL",
+        "slotMatches": true,
+        "tooltipKind": "UI",
+        "tooltipTitle": "Calendar and Events"
+      },
+      "semantic_role": "DESCRIPTION_LABEL",
+      "source_sha256": "45e673b619462b91dfcc546888b369d1ce0f431f53d557433d368d20d109746b",
+      "target_sha256": "2481f749d2c23320d4cd89a292c31811c6d6aebbdeedb82030ca04c836fd4102",
+      "to_channel": "ui"
+    },
+    {
+      "approved": true,
+      "from_channel": "item",
+      "id": "observed-applicability/new-31",
+      "native_evidence": {
+        "context": {
+          "containerSize": 90,
+          "containerTitle": "SkyBlock Menu",
+          "controlCarrierEvidence": false,
+          "controlEvidence": true,
+          "location": "CONTAINER",
+          "minecraftItemId": "minecraft:cookie",
+          "numericStatRows": 1,
+          "paragraphRole": "DESCRIPTION",
+          "screenClass": "net.minecraft.client.gui.screens.inventory.ContainerScreen",
+          "skyblockItemId": "",
+          "slotIndex": 51,
+          "slotMatches": true,
+          "statBreakdownMenu": false,
+          "tooltipKind": "UI",
+          "tooltipTitle": "Booster Cookie",
+          "trustedMenu": true
+        },
+        "export_original_line": 171,
+        "log": "logs/translation-display.jsonl.1",
+        "source_lines": [
+          "Obtain the Cookie Buff from Booster",
+          "Cookies in the hub's Community Shop."
+        ],
+        "source_lines_sha256": "bcfb0b58dbb6e9262ba21c91d63a2a68da671f3024e7695f48807b489108d6d7",
+        "source_styled_complete": true,
+        "source_styled_lines": [
+          [
+            {
+              "bold": false,
+              "color": 11184810,
+              "italic": false,
+              "obfuscated": false,
+              "strikethrough": false,
+              "text": "Obtain the ",
+              "underlined": false
+            },
+            {
+              "bold": false,
+              "color": 16733695,
+              "italic": false,
+              "obfuscated": false,
+              "strikethrough": false,
+              "text": "Cookie Buff ",
+              "underlined": false
+            },
+            {
+              "bold": false,
+              "color": 11184810,
+              "italic": false,
+              "obfuscated": false,
+              "strikethrough": false,
+              "text": "from Booster",
+              "underlined": false
+            }
+          ],
+          [
+            {
+              "bold": false,
+              "color": 11184810,
+              "italic": false,
+              "obfuscated": false,
+              "strikethrough": false,
+              "text": "Cookies in the hub's Community Shop.",
+              "underlined": false
+            }
+          ]
+        ],
+        "zip": "skyblock-jp-shared-logs-20261101-011011-6030798f-8fe1-4ae5-a694-3b071fa75a55.zip"
+      },
+      "native_evidence_sha256": "46dd2fb01e3600b6928d1fff3c1c9f3721db1c3a7f18364fe842d10a59cdcc81",
+      "origin_source_id": "observed/item/runtime079_3a29ed15a14527f1b3",
+      "reason": "Native shared-log replay verified complete source, exact reviewed translation, independent semantic role and all live context guards. No other source/channel is licensed.",
+      "requires": {
+        "location": "CONTAINER",
+        "paragraphRole": "DESCRIPTION",
+        "slotMatches": true,
+        "tooltipKind": "UI",
+        "tooltipTitle": "Booster Cookie"
+      },
+      "semantic_role": "DESCRIPTION",
+      "source_sha256": "3a29ed15a14527f1b3c0fd0c5bb07e8c1eca6811bebe35547384496595fd9eb5",
+      "target_sha256": "50558abd016afbed461e25a32967458d6c11122fc6b68485b533d44f4e44d563",
+      "to_channel": "ui"
+    },
+    {
+      "approved": true,
+      "from_channel": "item",
+      "id": "observed-applicability/new-34",
+      "native_evidence": {
+        "context": {
+          "containerSize": 90,
+          "containerTitle": "SkyBlock Menu",
+          "controlCarrierEvidence": false,
+          "controlEvidence": true,
+          "location": "CONTAINER",
+          "minecraftItemId": "minecraft:barrel",
+          "numericStatRows": 0,
+          "paragraphRole": "DESCRIPTION",
+          "screenClass": "net.minecraft.client.gui.screens.inventory.ContainerScreen",
+          "skyblockItemId": "",
+          "slotIndex": 32,
+          "slotMatches": true,
+          "statBreakdownMenu": false,
+          "tooltipKind": "UI",
+          "tooltipTitle": "Loadouts",
+          "trustedMenu": true
+        },
+        "export_original_line": 172,
+        "log": "logs/translation-display.jsonl.1",
+        "source_lines": [
+          "View and edit preset armor and",
+          "equipment sets with other settings to",
+          "make switching activities easy."
+        ],
+        "source_lines_sha256": "ad9c0fbc87b79e81e97b65133c8d448c5cba0150aed0e7e981b685fcc4d8c951",
+        "source_styled_complete": true,
+        "source_styled_lines": [
+          [
+            {
+              "bold": false,
+              "color": 11184810,
+              "italic": false,
+              "obfuscated": false,
+              "strikethrough": false,
+              "text": "View and edit preset armor and",
+              "underlined": false
+            }
+          ],
+          [
+            {
+              "bold": false,
+              "color": 11184810,
+              "italic": false,
+              "obfuscated": false,
+              "strikethrough": false,
+              "text": "equipment sets with other settings to",
+              "underlined": false
+            }
+          ],
+          [
+            {
+              "bold": false,
+              "color": 11184810,
+              "italic": false,
+              "obfuscated": false,
+              "strikethrough": false,
+              "text": "make switching activities easy.",
+              "underlined": false
+            }
+          ]
+        ],
+        "zip": "skyblock-jp-shared-logs-20261101-011011-6030798f-8fe1-4ae5-a694-3b071fa75a55.zip"
+      },
+      "native_evidence_sha256": "c792617b9a6d9bf9e15a5799b8ac0e2aacba0cd466f1aadc57a3dba690d594ef",
+      "origin_source_id": "observed/item/runtime079_857be82ee975adecab",
+      "reason": "Native shared-log replay verified complete source, exact reviewed translation, independent semantic role and all live context guards. No other source/channel is licensed.",
+      "requires": {
+        "location": "CONTAINER",
+        "paragraphRole": "DESCRIPTION",
+        "slotMatches": true,
+        "tooltipKind": "UI",
+        "tooltipTitle": "Loadouts"
+      },
+      "semantic_role": "DESCRIPTION",
+      "source_sha256": "857be82ee975adecab6c7c0bc23a7fc9fbac53e94c831fc4225adf80c036e34a",
+      "target_sha256": "b80134fbb36e86148926754ed10511c8d3b1cc3be93a6ea51f7215c90fe4ed41",
+      "to_channel": "ui"
+    }
+  ],
+  "schema_version": 1
+}

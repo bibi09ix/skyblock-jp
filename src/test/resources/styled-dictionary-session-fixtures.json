@@ -1,0 +1,892 @@
+[
+  {
+    "item": "Dungeonbreaker",
+    "source": "While in The Catacombs, consume 1⸕ charge to break a block. 20 blocks can be broken at a time, and re-appear after 10s. 2⸕ charges are regenerated each second.",
+    "target": "The Catacombs内で1⸕チャージを消費し、ブロックを壊す。同時に壊せるのは20ブロックまでで、10秒後に元に戻る。毎秒2⸕チャージを回復する。",
+    "previousReason": "STYLE_ALIGNMENT_AMBIGUOUS",
+    "lines": [
+      [
+        {
+          "text": "While in ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "The Catacombs",
+          "color": 16733525,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": ", consume ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "1",
+          "color": 16777045,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "⸕",
+          "color": 16733525,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "charge to break a block. ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "20",
+          "color": 43690,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": " blocks can",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "be broken at a time, and re-appear after",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "10s",
+          "color": 5635925,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": ". ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "2",
+          "color": 16777045,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "⸕",
+          "color": 16733525,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": " charges are regenerated each",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "second.",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ]
+    ]
+  },
+  {
+    "item": "Moby-Duck",
+    "source": "Keep this item in your inventory to increase the bonus up to +30☯ Fishing Wisdom, at which point the item evolves!",
+    "target": "Inventoryに入れておくと、ボーナスが最大+30☯ Fishing Wisdomまで増加する。最大に達するとアイテムが進化する！",
+    "previousReason": "STYLE_ALIGNMENT_MISSING",
+    "lines": [
+      [
+        {
+          "text": "Keep this item in your inventory to",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "increase the bonus up to ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "+30☯",
+          "color": 43690,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "Fishing Wisdom",
+          "color": 43690,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": ", at which point the item",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "evolves",
+          "color": 16733525,
+          "bold": false,
+          "italic": true,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "!",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ]
+    ]
+  },
+  {
+    "item": "Bottle of Jyrre",
+    "source": "Keep this item in your inventory to increase the bonus up to +300 Intelligence, at which point the item evolves!",
+    "target": "Inventoryに入れておくと、ボーナスが最大+300 Intelligenceまで増加する。最大に達するとアイテムが進化する！",
+    "previousReason": "STYLE_ALIGNMENT_MISSING",
+    "lines": [
+      [
+        {
+          "text": "Keep this item in your inventory to",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "increase the bonus up to ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "+300",
+          "color": 5636095,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "Intelligence",
+          "color": 5636095,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": ", at which point the item",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "evolves",
+          "color": 16733525,
+          "bold": false,
+          "italic": true,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "!",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ]
+    ]
+  },
+  {
+    "item": "Pure Shark Scale Helmet",
+    "source": "Doubles your  Defense while in water.",
+    "target": "水中では、 Defenseが2倍になる。",
+    "previousReason": "STYLE_ALIGNMENT_MISSING",
+    "lines": [
+      [
+        {
+          "text": "Doubles",
+          "color": 5592575,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": " your ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": " Defense",
+          "color": 5635925,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": " while in",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "water.",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ]
+    ]
+  },
+  {
+    "item": "Buzzing SkyMart Vacuum",
+    "source": "Can be used to damage  Pests.",
+    "target": " Pestにダメージを与えるために使用できる。",
+    "previousReason": "STYLE_ALIGNMENT_MISSING",
+    "lines": [
+      [
+        {
+          "text": "Can be used to damage ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": " Pests",
+          "color": 43520,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": ".",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ]
+    ]
+  },
+  {
+    "item": "Buzzing SkyMart Vacuum",
+    "source": "Deals 100  Damage per second to nearby  Pests.",
+    "target": "近くの Pestに、毎秒100  Damageを与える。",
+    "previousReason": "STYLE_ALIGNMENT_MISSING",
+    "lines": [
+      [
+        {
+          "text": "Deals ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "100  Damage ",
+          "color": 16733525,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "per second to",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "nearby ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": " Pests",
+          "color": 43520,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": ".",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ]
+    ]
+  },
+  {
+    "item": "Buzzing SkyMart Vacuum",
+    "source": "Buzzing Bonus This item deals x2 Damage towards  Pests.",
+    "target": "Buzzing Bonus このアイテムが Pestに与える Damageがx2になる。",
+    "previousReason": "STYLE_ALIGNMENT_MISSING",
+    "lines": [
+      [
+        {
+          "text": "Buzzing Bonus",
+          "color": 5592575,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "This item deals ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "x2 Damage ",
+          "color": 16733525,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "towards",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": " Pests",
+          "color": 43520,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": ".",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ]
+    ]
+  },
+  {
+    "item": "Sprayonator",
+    "source": "Select a nozzle and material for spraying. Certain materials attract certain types of  Pests.",
+    "target": "散布に使うNozzleと素材を選ぶ。素材ごとに、引き寄せる Pestの種類が異なる。",
+    "previousReason": "STYLE_ALIGNMENT_MISSING",
+    "lines": [
+      [
+        {
+          "text": "Select a nozzle and material for",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "spraying. Certain materials attract",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "certain types of ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": " Pests",
+          "color": 43520,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": ".",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ]
+    ]
+  },
+  {
+    "item": "Dung",
+    "source": "Can be spread across a Garden plot with a Sprayonator or used in Pest Traps.",
+    "target": "SprayonatorでGardenのPlotに散布するか、Pest Trapに入れて使用できる。",
+    "previousReason": "STYLE_ALIGNMENT_MISSING",
+    "lines": [
+      [
+        {
+          "text": "Can be spread across a ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "Garden ",
+          "color": 5635925,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "plot",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "with a ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "Sprayonator",
+          "color": 5635925,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": " or used in ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "Pest",
+          "color": 43520,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "Traps",
+          "color": 43520,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": ".",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ]
+    ]
+  },
+  {
+    "item": "Stock of Stonks",
+    "source": "Can be traded in to Liz when Diaz is Mayor for special items!",
+    "target": "DiazがMayorの間、Lizのところで特別な品と交換できる！",
+    "previousReason": "STYLE_ALIGNMENT_MISSING",
+    "lines": [
+      [
+        {
+          "text": "Can be traded in to ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "Liz ",
+          "color": 5635925,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "when ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "Diaz ",
+          "color": 16755200,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "is",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "Mayor for ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "special items",
+          "color": 16733695,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "!",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ]
+    ]
+  },
+  {
+    "item": "Fierce Tarantula Chestplate ✪✪✪✪✪",
+    "source": "Every 4th strike, deal +100%  Damage and apply Venom reducing healing by 40% for 4 seconds.",
+    "target": "4回目の攻撃ごとに Damageが+100%増加し、4秒間、回復の効果を40%低下させるVenomを付与する。",
+    "previousReason": "AMBIGUOUS_VALUE_STYLE",
+    "lines": [
+      [
+        {
+          "text": "Every 4th strike, deal ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "+100% ",
+          "color": 16733525,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "Damage ",
+          "color": 16733525,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "and apply ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "Venom",
+          "color": 43520,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": " reducing",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "healing by ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "40% ",
+          "color": 43520,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "for ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "4 ",
+          "color": 5635925,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "seconds.",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ]
+    ]
+  }
+]

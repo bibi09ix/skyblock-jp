@@ -15,7 +15,7 @@ F8 → 自動更新で停止／手動確認できます。APIキーや個人設�
 
 ## 新版を公開する
 
-1. `build.gradle` と `src/main/resources/fabric.mod.json` のバージョンを同じ新しい値へ更新します。
+1. `build.gradle`、`src/main/resources/fabric.mod.json`、`src/main/java/local/skyblockjp/ModVersion.java` のバージョンを同じ新しい値へ更新します。ビルド時に一致を検証します。
 2. 更新をコミットし、`v0.6.5` のようなタグをプッシュします。
 3. `.github/workflows/release.yml` がテスト、ビルド、JARと更新情報の公開を実施します。
    Actionsの「Publish SkyBlock JP」→「Run workflow」でも実行できます。同じ版の公開は一度だけにします。
@@ -28,7 +28,7 @@ GitHubへ初めてソースをアップロードするときは、config、logs�
 PowerShellでプロジェクトフォルダーを開きます。
 
 ```powershell
-.\gradlew.bat build -PupdateRepository=bibi09ix/skyblock-jp
+.\gradlew.bat offlineTest build -x test -PupdateRepository=bibi09ix/skyblock-jp
 python scripts/prepare_release.py --repository bibi09ix/skyblock-jp
 ```
 

@@ -10,6 +10,7 @@ import java.security.MessageDigest;
 import java.time.Duration;
 import java.util.*;
 import java.util.concurrent.*;
+import java.util.function.LongSupplier;
 import org.slf4j.Logger;
 
 /** Bounded FIFO, deduplication, retries and provider-scoped paragraph cache. */
@@ -17,47 +18,101 @@ public final class Translator implements AutoCloseable {
     private final Config config;
     private final Path cachePath;
     private final Logger log;
+    private final BundledDictionary dictionary;
+    private final Map<String, DictionaryDecision> dictionaryDecisions = Collections.synchronizedMap(
+        new LinkedHashMap<>(128, 0.75f, true) {
+            @Override protected boolean removeEldestEntry(Map.Entry<String, DictionaryDecision> entry) { return size() > 4096; }
+        });
+    private static final int NPC_DICTIONARY_AUDIT_LIMIT = 512;
+    private static final int NPC_DICTIONARY_AUDIT_TEXT_LIMIT = 8192;
+    private final Map<String, Boolean> npcDictionaryAuditSeen = boundedLru(NPC_DICTIONARY_AUDIT_LIMIT);
+    private final Map<String,String> npcStatusSeen=boundedLru(NPC_DICTIONARY_AUDIT_LIMIT);
+    private final java.util.concurrent.atomic.AtomicLong npcDiagnosticSkipped=new java.util.concurrent.atomic.AtomicLong();
+    private final String npcDictionaryAuditSession = UUID.randomUUID().toString();
+    // Explicit retranslation must keep displaying its API result, even if a dictionary entry exists.
+    private final Set<String> externalOverrides = ConcurrentHashMap.newKeySet();
+    private final Set<String> paragraphOverrides = ConcurrentHashMap.newKeySet();
+    private final Map<String, Set<String>> overridesByRequest = new ConcurrentHashMap<>();
+    private static final class CandidateDictionary {
+        private static final BundledDictionary VALUE = BundledDictionary.loadBundled();
+    }
     private final HttpClient http = HttpClient.newBuilder().connectTimeout(Duration.ofSeconds(8)).build();
     private final ThreadPoolExecutor worker = new ThreadPoolExecutor(1, 1, 0, TimeUnit.SECONDS, new ArrayBlockingQueue<>(256), r -> { Thread t = new Thread(r, "SkyBlock-JP"); t.setDaemon(true); return t; });
-    private final Map<String, String> cache = new ConcurrentHashMap<>();
+    private final ThreadPoolExecutor diagnosticWorker = new ThreadPoolExecutor(1,1,0,TimeUnit.SECONDS,new ArrayBlockingQueue<>(256),r->{
+        Thread t=new Thread(r,"SkyBlock-JP-Diagnostics");t.setDaemon(true);return t;});
+    static final int CACHE_LIMIT = 10000;
+    private final Map<String, String> cache = boundedLru(CACHE_LIMIT);
     private final Map<String, CompletableFuture<String>> pending = new ConcurrentHashMap<>();
-    private final Map<String, Long> cooldown = new ConcurrentHashMap<>();
+    private enum TemporaryKind { PROVISIONAL, ORIGINAL, FAILED }
+    private record TemporaryResult(String text, String error, TemporaryKind kind, long retryAfter) {}
+    // A failure's displayed text, reason and retry time have one lifetime and one eviction policy.
+    private final Map<String, TemporaryResult> temporaryResults = boundedLru(2000);
+    private final LongSupplier retryClock;
     private long nextRequestAt;
-    private volatile long lastForegroundUse = System.currentTimeMillis(), backgroundPausedUntil;
-    public long lastForegroundUse() { return lastForegroundUse; }
-    public boolean backgroundReady() { return queueSize() == 0 && System.currentTimeMillis() >= backgroundPausedUntil; }
-    public void foregroundUsed() { lastForegroundUse = System.currentTimeMillis(); }
-    public synchronized CompletableFuture<String> requestBackground(String text, String context) {
-        if (!backgroundReady()) return CompletableFuture.completedFuture(null);
-        return requestInternal(text, "BACKGROUND; " + context, null, null, "", false, true);
-    }
     private String responseDetails = "";
     private String retryHint = "";
     private String npcSpeaker;
     private String previousDialogue = "";
     private boolean manualChat;
     private long lastSave;
-    private final Map<String, String> fallbacks = new ConcurrentHashMap<>();
-    private final Map<String, String> errors = new ConcurrentHashMap<>();
     private volatile String lastError = "";
-    public String lastError() { return lastError; }
-    public String error(String text) { return errors.get(key(text)); }
-    public boolean pending(String text) { return pending.containsKey(key(text)); }
-    public void retry(String text) { cooldown.remove(key(text)); errors.remove(key(text)); fallbacks.remove(key(text)); }
+    private volatile boolean closed;
+    private boolean apiAvailable() { return !closed && config.apiTranslation; }
+    public String lastError() { return apiAvailable() ? lastError : ""; }
+    public String error(String text) {
+        if (!apiAvailable()) return null;
+        var result = temporaryResults.get(key(text));
+        return result == null || result.error().isEmpty() ? null : result.error();
+    }
+    public boolean pending(String text) { return apiAvailable() && pending.containsKey(key(text)); }
+    public boolean pending(String text, String channel) { return apiAvailable() && pending.containsKey(scopeKey(text, channel)); }
+    public boolean pending(String text,String channel,Map<String,Object> context) {return apiAvailable()&&pending.containsKey(scopeKey(text,channel,context));}
+    public synchronized void retry(String text) { if (apiAvailable()) temporaryResults.remove(key(text)); }
+    public synchronized void retry(String text, String channel) { if (apiAvailable()) temporaryResults.remove(scopeKey(text, channel)); }
+    public synchronized void retry(String text,String channel,Map<String,Object> context) {if(apiAvailable())temporaryResults.remove(scopeKey(text,channel,context));}
+    private static <K,V> Map<K,V> boundedLru(int limit) {
+        return Collections.synchronizedMap(new LinkedHashMap<>(128, 0.75f, true) {
+            @Override protected boolean removeEldestEntry(Map.Entry<K,V> entry) { return size() > limit; }
+        });
+    }
     /** Refresh the original paragraph, coalescing clicks while a request is running. */
     public synchronized CompletableFuture<String> retranslate(String text, String context) {
-        String k = key(text);
+        return retranslateInternal(text, context, null);
+    }
+    public synchronized CompletableFuture<String> retranslate(StyledParagraph paragraph, String context) {
+        return retranslateInternal(paragraph.encoded(), context, paragraph.sourceText());
+    }
+    public synchronized CompletableFuture<String> retranslate(StyledParagraph paragraph,String context,Map<String,Object> dictionaryContext) {
+        return retranslateInternal(paragraph.encoded(),context,paragraph.sourceText(),dictionaryContext);
+    }
+    private CompletableFuture<String> retranslateInternal(String text, String context, String source) {
+        return retranslateInternal(text,context,source,Map.of());
+    }
+    private CompletableFuture<String> retranslateInternal(String text, String context, String source,Map<String,Object> dictionaryContext) {
+        // Disabling API translation is read-only with respect to persisted responses and
+        // manual override/cooldown state, so re-enabling it can resume the same cache.
+        if (!apiAvailable()) return CompletableFuture.completedFuture(null);
+        String channel = contextChannel(context);
+        String k = scopeKey(text, channel,dictionaryContext);
         var current = pending.get(k);
         if (current != null && !current.isDone()) return current;
         if (current != null) pending.remove(k, current);
+        if (source == null) externalOverrides.add(k);
+        else {
+            if (paragraphOverrides.size() >= 2000) { paragraphOverrides.clear(); overridesByRequest.clear(); }
+            String token = overrideKey(channel, source, text,dictionaryContext);
+            paragraphOverrides.add(token);
+            overridesByRequest.computeIfAbsent(k, ignored -> ConcurrentHashMap.newKeySet()).add(token);
+        }
         cache.remove(k);
-        retry(text);
-        return request(text, context);
+        retry(text, channel,dictionaryContext);
+        return requestInternal(text,context,null,null,"",false,dictionaryContext);
     }
-    public CompletableFuture<String> connectionTest() {
+    public synchronized CompletableFuture<String> connectionTest() {
+        if (!apiAvailable()) return CompletableFuture.completedFuture(null);
         String probe = "This item restores 50 Health.";
         cache.remove(key(probe)); retry(probe);
-        return request(probe).thenApply(result -> errors.containsKey(key(probe)) ? null : result);
+        return request(probe).thenApply(result -> error(probe) != null ? null : result);
     }
     @FunctionalInterface interface Transport { String translate(String text) throws Exception; }
     private final Transport transport;
@@ -65,12 +120,27 @@ public final class Translator implements AutoCloseable {
         this(config, cachePath, log, null);
     }
     Translator(Config config, Path cachePath, Logger log, Transport transport) {
+        this(config, cachePath, log, transport, config.candidateDictionary ? CandidateDictionary.VALUE : BundledDictionary.empty());
+    }
+    Translator(Config config, Path cachePath, Logger log, Transport transport, BundledDictionary dictionary) {
+        this(config, cachePath, log, transport, dictionary, System::currentTimeMillis);
+    }
+    Translator(Config config, Path cachePath, Logger log, Transport transport, BundledDictionary dictionary, LongSupplier retryClock) {
         this.config = config; this.cachePath = cachePath; this.log = log;
+        this.dictionary = Objects.requireNonNull(dictionary);
+        this.retryClock = Objects.requireNonNull(retryClock);
         this.transport = transport == null ? this::translate : transport;
+        if (config.candidateDictionary) {
+            var stats = dictionary.stats();
+            log.info("SkyBlock JP candidate dictionary: loaded={}, build={}, keys={}, rejected={}, conflicts={}, error={}",
+                stats.loaded(), stats.buildId(), stats.availableKeys(), stats.rejectedEntries(), stats.conflictingKeys(), stats.error());
+            log.info("SkyBlock JP reviewed dictionary: {}; alignments: {}; ordinary token roles: {}",
+                dictionary.reviewedStats(), DictionaryAlignment.stats(), OrdinaryTokenRoles.stats());
+        }
         try {
             if (Files.exists(cachePath)) {
                 JsonObject obj = JsonParser.parseString(Files.readString(cachePath)).getAsJsonObject();
-                obj.entrySet().stream().limit(10000).forEach(e -> cache.put(e.getKey(), e.getValue().getAsString()));
+                obj.entrySet().stream().limit(CACHE_LIMIT).forEach(e -> cache.put(e.getKey(), e.getValue().getAsString()));
             }
         } catch (Exception e) { log.warn("SkyBlock JP: could not load translation cache ({})", e.getClass().getSimpleName()); }
     }
@@ -78,137 +148,486 @@ public final class Translator implements AutoCloseable {
         try { return HexFormat.of().formatHex(MessageDigest.getInstance("SHA-256").digest(("v14|ja|" + config.provider + "|" + config.groqModel + "|" + text).getBytes(StandardCharsets.UTF_8))); }
         catch (Exception e) { throw new IllegalStateException(e); }
     }
-    public String cached(String text) { return cache.getOrDefault(key(text), fallbacks.get(key(text))); }
+    private String displayValue(String key) {
+        String hit = cache.get(key);
+        if (hit != null) return hit;
+        var temporary = temporaryResults.get(key);
+        return temporary == null ? null : temporary.text();
+    }
+    public String cached(String text) { return apiAvailable() ? displayValue(key(text)) : null; }
+    public String cached(String text, String channel) { return apiAvailable() ? displayValue(scopeKey(text, channel)) : null; }
+    public record CacheInspection(String status, String error) {}
+    /** Read the existing request state only; never performs dictionary lookup or schedules work. */
+    public CacheInspection cacheInspection(String text, String channel) {
+        return cacheInspection(text,channel,Map.of());
+    }
+    public CacheInspection cacheInspection(String text,String channel,Map<String,Object> dictionaryContext) {
+        if (!apiAvailable()) return new CacheInspection("API_DISABLED", "");
+        String k = scopeKey(text, channel,dictionaryContext);
+        if (cache.containsKey(k)) return new CacheInspection("API_CACHE", "");
+        var temporary = temporaryResults.get(k);
+        if (temporary != null) {
+            if (temporary.kind() == TemporaryKind.FAILED) return new CacheInspection("API_FAILED_ORIGINAL", temporary.error());
+            return new CacheInspection(Objects.equals(temporary.text(), text) ? "ORIGINAL_FALLBACK" : "API_PROVISIONAL", "");
+        }
+        // Follow result availability in the same way as tooltip display, including
+        // the interval between publishing a result and completing/removing its future.
+        var request = pending.get(k);
+        return new CacheInspection(request != null && !request.isDone() ? "PENDING" : "EMPTY", "");
+    }
+    public String cached(StyledParagraph paragraph) {
+        return cached(paragraph, "item");
+    }
+    public String cached(StyledParagraph paragraph, String channel) {
+        return cached(paragraph,channel,Map.of());
+    }
+    public String cached(StyledParagraph paragraph,String channel,Map<String,Object> dictionaryContext) {
+        if (closed) return null;
+        String local = inspectDictionary(paragraph, channel, "",true,dictionaryContext).encoded();
+        return local == null ? apiAvailable()?displayValue(scopeKey(paragraph.encoded(),channel,dictionaryContext)):null : local;
+    }
+    /** Local-only, synchronous lookup. Never queues work, reads API cache, or contacts a provider. */
+    public String dictionaryTranslation(StyledParagraph paragraph) { return localTranslation(paragraph, null); }
+    public String dictionaryTranslation(StyledParagraph paragraph, String channel) { return inspectDictionary(paragraph, channel, "").encoded(); }
+    /** A real item-label decision can disambiguate verb-like ability names without guessing prose. */
+    public boolean knownItemLabel(String title) {
+        if (closed || !config.candidateDictionary || !dictionary.stats().loaded()) return false;
+        return dictionary.inspect("item", title, "").match()
+                .filter(BundledDictionary.Match::keepOriginal)
+                .filter(match -> match.sourceIds().stream().anyMatch(id -> id.startsWith("item/label/")))
+                .isPresent();
+    }
+    public record DictionaryDecision(String encoded, String reason, String mode, String channel, List<String> sourceIds, Map<String, Object> details) {
+        public DictionaryDecision(String encoded, String reason, String mode, String channel, List<String> sourceIds) {
+            this(encoded, reason, mode, channel, sourceIds, Map.of());
+        }
+        public DictionaryDecision { details = details == null ? Map.of() : Map.copyOf(details); }
+        public boolean accepted() { return encoded != null; }
+    }
+    /** A bounded-category explanation for every local decision; never queues API work. */
+    public DictionaryDecision inspectDictionary(StyledParagraph paragraph, String channel, String speaker) {
+        return inspectDictionary(paragraph, channel, speaker, true);
+    }
+    /** Automatic display must not inherit another tooltip's manual API preference. */
+    public DictionaryDecision inspectDictionary(StyledParagraph paragraph, String channel, String speaker, boolean manualRequested) {
+        return inspectDictionary(paragraph,channel,speaker,manualRequested,Map.of());
+    }
+    public DictionaryDecision inspectDictionary(StyledParagraph paragraph, String channel, String speaker, boolean manualRequested, Map<String,Object> dictionaryContext) {
+        if (closed) return new DictionaryDecision(null, "SERVICE_CLOSED", "none", channel, List.of(), dictionaryDetails("POLICY", Map.of()));
+        if (!config.candidateDictionary) return new DictionaryDecision(null, "DICTIONARY_DISABLED", "none", channel, List.of(), dictionaryDetails("POLICY", Map.of()));
+        if (!dictionary.stats().loaded()) return new DictionaryDecision(null, "DICTIONARY_UNAVAILABLE", "none", channel, List.of(), dictionaryDetails("POLICY", Map.of()));
+        if (apiAvailable() && manualRequested && !channel.equals("npc") && !channel.equals("system") && (externalOverrides.contains(scopeKey(paragraph.encoded(), channel,dictionaryContext))
+            || paragraphOverrides.contains(overrideKey(channel, paragraph.sourceText(), paragraph.encoded(),dictionaryContext))))
+            return new DictionaryDecision(null, "API_RETRANSLATION_PRIORITY", "none", channel, List.of(), dictionaryDetails("POLICY", Map.of()));
+        String fingerprint = channel + "|" + speaker + "|" + contextFingerprint(dictionaryContext) + "|" + config.dictionaryPlainFallback + "|" + paragraph.dictionaryFingerprint();
+        var cached = dictionaryDecisions.get(fingerprint);
+        if (cached != null) return cached;
+        var result = resolveDictionary(paragraph, channel, speaker, dictionaryContext);
+        dictionaryDecisions.put(fingerprint, result);
+        return result;
+    }
+    private DictionaryDecision resolveDictionary(StyledParagraph paragraph, String channel, String speaker, Map<String,Object> dictionaryContext) {
+        var lookup = dictionary.inspect(channel, paragraph.sourceText(), speaker,dictionaryContext);
+        if(lookup.match().isEmpty()&&lookup.reason().equals("not_found")&&channel.equals("ui")) {
+            var scoped=ScopedDescriptionFallbacks.inspect(dictionary,channel,paragraph.sourceText(),dictionaryContext);
+            if(!scoped.reason().equals("not_found"))lookup=scoped;
+        }
+        if (lookup.match().isEmpty()) return new DictionaryDecision(null, lookup.reason(), lookup.mode(), channel, List.of(), dictionaryDetails("DICTIONARY_LOOKUP", Map.of()));
+        var match = lookup.match().get();
+        if (match.keepOriginal()) return new DictionaryDecision(paragraph.encoded(), "KEEP_ORIGINAL", lookup.mode(), channel, match.sourceIds(), dictionaryDetails("ACCEPTED", Map.of()));
+        var result = paragraph.dictionaryEncoding(match,config.dictionaryPlainFallback);
+        var details=new LinkedHashMap<String,Object>(result.details());
+        details.put("dictionaryBuildId",dictionary.stats().buildId());
+        details.put("sourceSha256",textHash(paragraph.sourceText()));
+        details.put("sourceHashFormat","UTF8_JOINED_SOURCE_TEXT");
+        details.put("normalizedSourceSha256",textHash(BundledDictionary.normalize(paragraph.sourceText())));
+        details.put("alignmentNormalization","bundled-source-v1");
+        details.put("targetSha256",textHash(match.text()));
+        details.put("targetCandidate",match.text());
+        details.put("normalizationVersion","ascii_case_single_period_stat_glyphs_v1");
+        details.put("dictionaryContext",new TreeMap<>(dictionaryContext==null?Map.of():dictionaryContext));
+        details.put("plainFallbackEnabled",config.dictionaryPlainFallback);
+        var ordinaryWords = OrdinaryTokenRoles.wordsForSource(paragraph.sourceText());
+        if (!ordinaryWords.isEmpty()) details.put("ordinaryTokenWords", ordinaryWords.stream().sorted().toList());
+        boolean semantic=String.valueOf(details.getOrDefault("validationStage","")).startsWith("TYPED_")
+            ||result.reason().startsWith("PROTECTED_")||result.reason().startsWith("SEMANTIC_")
+            ||Set.of("INVALID_TARGET","INVALID_BINDING","INVALID_DICTIONARY_VALUE").contains(result.reason());
+        return new DictionaryDecision(result.text(), result.reason(), lookup.mode(), channel, match.sourceIds(),
+            dictionaryDetails(result.accepted() ? "ACCEPTED" : semantic?"SEMANTIC_VALIDATION":"STYLE_RESTORE", details));
+    }
+    boolean exactJapanese(String channel,String source) {
+        if(!config.candidateDictionary||closed||!source.endsWith(" Recipe"))return false;
+        var lookup=dictionary.inspect(channel,source,"");
+        String expected=source.substring(0,source.length()-" Recipe".length())+"のレシピ";
+        return lookup.mode().equals("exact")&&lookup.match().filter(m->!m.keepOriginal()&&m.text().equals(expected)).isPresent();
+    }
+    private static String textHash(String text) {
+        try{return HexFormat.of().formatHex(MessageDigest.getInstance("SHA-256").digest(text.getBytes(StandardCharsets.UTF_8)));}
+        catch(Exception e){throw new IllegalStateException(e);}
+    }
+    private static String contextFingerprint(Map<String,Object> context) {
+        var sorted=new TreeMap<String,Object>();if(context!=null)context.forEach((k,v)->{if(v instanceof String||v instanceof Number||v instanceof Boolean)sorted.put(k,v);});
+        return new Gson().toJson(sorted);
+    }
+    private static Map<String, Object> dictionaryDetails(String stage, Map<String, Object> details) {
+        var result = new LinkedHashMap<String, Object>(details);
+        result.put("stage", stage);
+        return result;
+    }
+    private String overrideKey(String channel, String source, String encoded) { return key(channel + "|" + source + "|" + encoded); }
+    private String overrideKey(String channel,String source,String encoded,Map<String,Object> context) {return context==null||context.isEmpty()?overrideKey(channel,source,encoded):key(channel+"|"+contextFingerprint(context)+"|"+source+"|"+encoded);}
+    private String scopeKey(String text, String channel) { return key(channel.equals("item") ? text : channel + "-v1|" + text); }
+    private String scopeKey(String text,String channel,Map<String,Object> context) {return context==null||context.isEmpty()?scopeKey(text,channel):key(channel+"-context-v1|"+contextFingerprint(context)+"|"+text);}
+    String requestIdentity(StyledParagraph paragraph,String channel,Map<String,Object> context) {
+        return scopeKey(paragraph.encoded(),channel,context);
+    }
+    static String contextChannel(String context) {
+        return context.startsWith("scope=ui; ") ? "ui" : "item";
+    }
+    public BundledDictionary.Stats dictionaryStats() { return dictionary.stats(); }
     public int queueSize() { return pending.size(); }
     public CompletableFuture<String> request(String text) {
         return request(text, "unspecified");
     }
     public synchronized CompletableFuture<String> request(String text, String context) {
-        foregroundUsed();
         return requestInternal(text, context, null, null, "", false);
     }
+    public synchronized CompletableFuture<String> request(StyledParagraph paragraph, String context) {
+        return requestInternal(paragraph.encoded(), context, null, paragraph, "", false);
+    }
+    public synchronized CompletableFuture<String> request(StyledParagraph paragraph, String context, Map<String,Object> dictionaryContext) {
+        return requestInternal(paragraph.encoded(),context,null,paragraph,"",false,dictionaryContext);
+    }
     public synchronized CompletableFuture<String> requestNpc(String text, String speaker) {
-        foregroundUsed();
         return requestInternal(text, "NPC=" + speaker, speaker, null, "", false);
     }
     public synchronized CompletableFuture<String> requestNpc(StyledParagraph paragraph, String speaker) {
         return requestNpc(paragraph, speaker, "");
     }
     public synchronized CompletableFuture<String> requestNpc(StyledParagraph paragraph, String speaker, String previous) {
-        foregroundUsed();
-        return requestInternal(paragraph.encoded(), "NPC=" + speaker, speaker, paragraph, previous, false);
+        return requestNpc(paragraph,speaker,previous,Map.of());
+    }
+    public synchronized CompletableFuture<String> requestNpc(StyledParagraph paragraph,String speaker,String previous,Map<String,Object> evidence) {
+        var context=new LinkedHashMap<String,Object>(evidence==null?Map.of():evidence);
+        context.put("previousDialogue",previous==null?"":previous);
+        return requestInternal(paragraph.encoded(),"NPC="+speaker,speaker,paragraph,previous==null?"":previous,false,Map.copyOf(context));
+    }
+    /** A deliberate hover request may retry a failed/provisional NPC reply before its automatic cooldown. */
+    public synchronized CompletableFuture<String> requestNpcManually(StyledParagraph paragraph, String speaker, String previous) {
+        return requestNpcManually(paragraph,speaker,previous,Map.of());
+    }
+    public synchronized CompletableFuture<String> requestNpcManually(StyledParagraph paragraph,String speaker,String previous,Map<String,Object> evidence) {
+        if (apiAvailable()) temporaryResults.remove(dialogueKey(paragraph.encoded(), speaker, previous, false));
+        return requestNpc(paragraph, speaker, previous,evidence);
+    }
+    private String dialogueKey(String text, String speaker, String previous, boolean chat) {
+        return key((chat ? "chat-v2|" : "npc-v2|") + speaker + "|" + previous + "|" + text);
+    }
+    private static String npcTraceId(StyledParagraph paragraph,String speaker,String previous) {
+        return textHash("npc|"+speaker+"|"+previous+"|"+paragraph.dictionaryFingerprint()).substring(0,16);
     }
     public synchronized CompletableFuture<String> requestChat(StyledParagraph paragraph, String previous) {
-        foregroundUsed();
-        String k = key("chat-v2|CHAT|" + previous + "|" + paragraph.encoded());
-        cooldown.remove(k); errors.remove(k); fallbacks.remove(k);
+        if (!apiAvailable()) return CompletableFuture.completedFuture(null);
+        String k = dialogueKey(paragraph.encoded(), "CHAT", previous, true);
+        temporaryResults.remove(k);
         return requestInternal(paragraph.encoded(), "CHAT=manual", "CHAT", paragraph, previous, true);
     }
     void recordLocalChat(net.minecraft.network.chat.Component original, net.minecraft.network.chat.Component translated) {
-        foregroundUsed();
-        var p = NpcTranslation.whole(original);
+        if (closed) return;
+        var p = NpcTranslation.wholeChat(original);
         try { TranslationDiagnostics.append(cachePath.resolveSibling("chat-translations.jsonl"), Map.of(
-            "speaker", "CHAT", "version", "0.6.4", "mode", "local-death-template", "previousDialogue", "",
+            "speaker", "CHAT", "version", ModVersion.CURRENT, "mode", "local-death-template", "previousDialogue", "",
             "source", p.decode(p.encoded()).getString(), "translation", translated.getString()), config.groqApiKey); }
         catch (Exception e) { log.warn("SkyBlock JP: local chat audit failed ({})", e.getClass().getSimpleName()); }
     }
     private CompletableFuture<String> requestInternal(String text, String context, String speaker, StyledParagraph paragraph, String previous, boolean chat) {
-        return requestInternal(text, context, speaker, paragraph, previous, chat, false);
+        return requestInternal(text,context,speaker,paragraph,previous,chat,speaker!=null&&!chat?Map.of("previousDialogue",previous):Map.of());
     }
-    private CompletableFuture<String> requestInternal(String text, String context, String speaker, StyledParagraph paragraph, String previous, boolean chat, boolean background) {
-        long foregroundAtSubmission = lastForegroundUse;
-        String k = speaker == null ? key(text) : key((chat ? "chat-v2|" : "npc-v2|") + speaker + "|" + previous + "|" + text);
-        String hit = cache.getOrDefault(k, fallbacks.get(k));
-        if (hit != null) return CompletableFuture.completedFuture(hit);
+    private CompletableFuture<String> requestInternal(String text, String context, String speaker, StyledParagraph paragraph, String previous, boolean chat, Map<String,Object> dictionaryContext) {
+        if (closed) return CompletableFuture.completedFuture(null);
+        // Plain String requests lack the original styled text. Only paragraph-aware calls can
+        // safely restore literal values, names and colors from the bundled plain-text corpus.
+        String channel = speaker == null ? contextChannel(context) : "npc";
+        var decision = chat || paragraph == null ? null : inspectDictionary(paragraph, channel, speaker,true,dictionaryContext);
+        String local = decision == null ? null : decision.encoded();
+        if (local != null) {
+            recordDictionary(paragraph, speaker, local, context, decision);
+            return CompletableFuture.completedFuture(local);
+        }
+        if (speaker != null && !chat && paragraph != null && decision != null)
+            recordNpcDictionaryMiss(paragraph, speaker, previous, dictionaryContext, decision);
+        String trace=!chat&&speaker!=null&&paragraph!=null?npcTraceId(paragraph,speaker,previous):"";
+        // The dictionary remains available while API output (including old cached or
+        // provisional output) is disabled. Do not enqueue unknown text in this mode.
+        if (!apiAvailable()) {recordNpcStatus(trace,"POLICY","API_DISABLED",0);return CompletableFuture.completedFuture(null);}
+        String k = speaker == null ? scopeKey(text, channel,dictionaryContext) : dialogueKey(text, speaker, previous, chat);
+        var temporary = temporaryResults.get(k);
+        if (temporary != null && temporary.kind() == TemporaryKind.FAILED && temporary.retryAfter() <= retryClock.getAsLong()) {
+            temporaryResults.remove(k);
+        }
+        String hit = displayValue(k);
+        if (hit != null) {
+            // Apply safe NPC corrections to old saved responses too, without paying for a
+            // full cache invalidation or changing unrelated item/player translations.
+            if (speaker != null && !chat) {
+                String repaired = NpcTranslationRepair.repair(text, hit, previous);
+                if (!Objects.equals(hit, repaired) && StyledParagraph.validNumbers(text, repaired)
+                    && NpcTranslation.validate(text, repaired) == null) {
+                    if (cache.containsKey(k)) cache.put(k, repaired);
+                    else {
+                        var priorResult = temporaryResults.get(k);
+                        if (priorResult != null) temporaryResults.put(k, new TemporaryResult(repaired, priorResult.error(), priorResult.kind(), priorResult.retryAfter()));
+                    }
+                    hit = repaired;
+                }
+            }
+            var state=temporaryResults.get(k);
+            String cacheOutcome=cache.containsKey(k)?"CACHE_HIT":state==null?"CACHE_ORIGINAL":switch(state.kind()) {
+                case PROVISIONAL -> "CACHE_PROVISIONAL";case FAILED -> "CACHE_FAILED_ORIGINAL";case ORIGINAL -> "CACHE_ORIGINAL";
+            };
+            recordNpcStatus(trace,"CACHE",cacheOutcome,0);
+            return CompletableFuture.completedFuture(hit);
+        }
         if (text.length() > 4000) {
+            recordNpcStatus(trace,"POLICY","INPUT_TOO_LONG",0);
             diagnostic(k, context, text, null, 0, "INPUT_TOO_LONG: original displayed");
-            fallbacks.put(k, text);
+            restoreDictionaryAfterFailure(k);
+            temporaryResults.put(k, new TemporaryResult(text, "", TemporaryKind.ORIGINAL, 0));
             return CompletableFuture.completedFuture(text);
         }
-        if (cooldown.getOrDefault(k, 0L) > System.currentTimeMillis()) return CompletableFuture.completedFuture(text);
+        // A completion callback can request again before the worker reaches finally.
+        var current = pending.get(k);
+        if (current != null && !current.isDone()) return current;
+        if (current != null) pending.remove(k, current);
         var future = new CompletableFuture<String>();
         var prior = pending.putIfAbsent(k, future);
         if (prior != null) return prior;
+        recordNpcStatus(trace,"REQUEST","QUEUED",0);
         try { worker.execute(() -> {
             try {
+                if (!apiAvailable()) {recordNpcStatus(trace,"POLICY","API_DISABLED",0);future.complete(null);return;}
                 retryHint = ""; npcSpeaker = speaker; previousDialogue = previous; manualChat = chat;
-                for (int attempt = 0; attempt < (background ? 1 : 3); attempt++) {
+                for (int attempt = 0; attempt < 3; attempt++) {
                     String result = null;
                     responseDetails = "";
                     try {
+                        if (!apiAvailable()) {recordNpcStatus(trace,"POLICY","API_DISABLED",0);future.complete(null);return;}
                         long delay = nextRequestAt - System.currentTimeMillis();
                         if (delay > 0) Thread.sleep(delay);
-                        if (background && (pending.size() > 1 || lastForegroundUse > foregroundAtSubmission)) {
-                            future.complete(null); return;
-                        }
+                        if (!apiAvailable()) {recordNpcStatus(trace,"POLICY","API_DISABLED",0);future.complete(null);return;}
                         nextRequestAt = System.currentTimeMillis() + (config.provider.equals("GROQ") ? 2200 : 350);
+                        recordNpcStatus(trace,"REQUEST","RUNNING",attempt+1);
                         String apiText = chat ? ChatText.body(text) : text;
                         boolean symbolic = text.matches("#[A-Z0-9_]+[!]?");
                         result = symbolic || chat && ChatText.coordinatesOnly(text) ? text : transport.translate(apiText);
-                        result = ChatText.unwrap(result);
-                        if (chat) result = ChatText.rejoin(text, result);
-                        String rawResult = result;
-                        result = TranslationRepair.repair(text, result);
-                        if (speaker != null && !chat) result = TranslationRepair.repair(text, NpcTranslationRepair.repair(text, result, previous));
-                        if (!Objects.equals(rawResult, result)) {
-                            try { TranslationDiagnostics.append(cachePath.resolveSibling("translation-repairs.jsonl"), Map.of(
-                                "version", "0.6.4", "context", context, "source", text, "rawResponse", rawResult == null ? "" : rawResult, "repairedResponse", result == null ? "" : result), config.groqApiKey); }
-                            catch (Exception e) { log.warn("SkyBlock JP: repair audit failed ({})", e.getClass().getSimpleName()); }
+                        // close() shares this publication boundary. A transport that ignores
+                        // interruption must not publish or save its response after replacement.
+                        synchronized (Translator.this) {
+                            if (!apiAvailable()) { future.complete(null); return; }
+                            result = ChatText.unwrap(result);
+                            if (chat) result = ChatText.rejoin(text, result);
+                            String rawResult = result;
+                            String repairCandidate = TranslationRepair.candidate(text, result);
+                            if (speaker != null && !chat) repairCandidate = TranslationRepair.candidate(text, NpcTranslationRepair.candidate(text, repairCandidate, previous));
+                            String candidateError = validateResult(text, repairCandidate, speaker, chat);
+                            boolean rejectedRepair = !Objects.equals(rawResult, repairCandidate)
+                                && (TranslationRepair.worsensStructure(text, rawResult, repairCandidate)
+                                    || validateResult(text, rawResult, speaker, chat) == null && candidateError != null);
+                            result = rejectedRepair ? rawResult : repairCandidate;
+                            if (!Objects.equals(rawResult, repairCandidate)) {
+                                try { TranslationDiagnostics.append(cachePath.resolveSibling("translation-repairs.jsonl"), Map.of(
+                                    "version", ModVersion.CURRENT, "requestId", k.substring(0, 12), "context", context, "source", text,
+                                    "rawResponse", rawResult == null ? "" : rawResult, "candidateResponse", repairCandidate == null ? "" : repairCandidate,
+                                    "repairedResponse", result == null ? "" : result, "decision", rejectedRepair ? "REJECTED_REPAIR_KEPT_ORIGINAL" : "REPAIR_APPLIED",
+                                    "candidateValidation", candidateError == null ? "" : candidateError), config.groqApiKey); }
+                                catch (Exception e) { log.warn("SkyBlock JP: repair audit failed ({})", e.getClass().getSimpleName()); }
+                            }
+                            String validationError = validateResult(text, result, speaker, chat);
+                            if ((symbolic || chat && ChatText.coordinatesOnly(text)) && text.equals(result)) validationError = null;
+                            if (validationError != null) {
+                                diagnostic(k, context, text, result, attempt + 1, "DISPLAY_ANYWAY: " + validationError);
+                                if (result == null || result.isBlank() || validationError.startsWith("NPC_META_RESPONSE") || validationError.startsWith("CHAT_JSON_WRAPPER")) {
+                                    result = text;
+                                    restoreDictionaryAfterFailure(k);
+                                }
+                            }
+                            if (validationError == null) { cache.put(k, result.strip()); temporaryResults.remove(k); }
+                            else { cache.remove(k); temporaryResults.put(k, new TemporaryResult(result.strip(), "", TemporaryKind.PROVISIONAL, 0)); }
+                            lastError = "";
+                            if (speaker != null) {
+                                try { TranslationDiagnostics.append(cachePath.resolveSibling(chat ? "chat-translations.jsonl" : "npc-translations.jsonl"), Map.of(
+                                    "speaker", speaker, "version", ModVersion.CURRENT, "previousDialogue", previous, "source", paragraph == null ? text : paragraph.decode(text).getString(),
+                                    "translation", paragraph == null ? result : paragraph.decodeForDisplay(result).getString(), "encodedSource", text, "encodedTranslation", result, "provisional", validationError != null, "validationReason", validationError == null ? "" : validationError), config.groqApiKey); }
+                                catch (Exception auditError) { log.warn("SkyBlock JP: NPC audit failed ({})", auditError.getClass().getSimpleName()); }
+                            }
+                            recordNpcStatus(trace,"RESULT",validationError!=null?"PROVISIONAL":text.equals(result)?"UNCHANGED":"TRANSLATED",attempt+1);
+                            future.complete(result.strip());
+                            if (apiAvailable() && System.currentTimeMillis() - lastSave > 5000) save();
+                            return;
                         }
-                        String validationError = speaker == null ? TranslationDiagnostics.validate(text, result) : chat ? ChatText.validate(text, result) : NpcTranslation.validate(text, result);
-                        if ((symbolic || chat && ChatText.coordinatesOnly(text)) && text.equals(result)) validationError = null;
-                        if (validationError != null) {
-                            diagnostic(k, context, text, result, attempt + 1, "DISPLAY_ANYWAY: " + validationError);
-                            if (result == null || result.isBlank() || validationError.startsWith("NPC_META_RESPONSE") || validationError.startsWith("CHAT_JSON_WRAPPER")) result = text;
-                        }
-                        if (cache.size() >= 10000) cache.clear();
-                        if (validationError == null) { cache.put(k, result.strip()); fallbacks.remove(k); }
-                        else { cache.remove(k); fallbacks.put(k, result.strip()); }
-                        errors.remove(k); if (!background) lastError = "";
-                        if (background) {
-                            try { TranslationDiagnostics.append(cachePath.resolveSibling("background-translations.jsonl"), Map.of(
-                                "version", "0.6.4", "context", context, "source", text, "translation", result,
-                                "provisional", validationError != null, "validationReason", validationError == null ? "" : validationError), config.groqApiKey); }
-                            catch (Exception auditError) { log.warn("SkyBlock JP: background audit failed ({})", auditError.getClass().getSimpleName()); }
-                        }
-                        if (speaker != null) {
-                            try { TranslationDiagnostics.append(cachePath.resolveSibling(chat ? "chat-translations.jsonl" : "npc-translations.jsonl"), Map.of(
-                                "speaker", speaker, "version", "0.6.4", "previousDialogue", previous, "source", paragraph == null ? text : paragraph.decode(text).getString(),
-                                "translation", paragraph == null ? result : paragraph.decodeForDisplay(result).getString(), "encodedSource", text, "encodedTranslation", result, "provisional", validationError != null, "validationReason", validationError == null ? "" : validationError), config.groqApiKey); }
-                            catch (Exception auditError) { log.warn("SkyBlock JP: NPC audit failed ({})", auditError.getClass().getSimpleName()); }
-                        }
-                        future.complete(result.strip());
-                        if (System.currentTimeMillis() - lastSave > 5000) save();
-                        return;
                     } catch (TranslationFailure e) {
-                        if (e.getMessage().equals("HTTP 429")) backgroundPausedUntil = System.currentTimeMillis() + 15 * 60_000L;
+                        if (!apiAvailable()) { future.complete(null); return; }
                         diagnostic(k, context, text, result, attempt + 1, e.getMessage());
                         retryHint = chat ? " Your last translation was invalid. Translate all ordinary chat text including u=you, lf=looking for, p me=invite me. Never copy English u after the addressee. Return only Japanese translation with all immutable markers intact, without JSON fields." : speaker == null ? " Previous attempt failed validation: " + e.getMessage() + ". Correct this failure; include every required marker." : " Translate the dialogue itself. Your previous response was invalid. Return only Japanese dialogue and preserve all markers, with no service messages or diagnostic codes.";
-                        if (background || !e.retryable || attempt == 2) throw e;
+                        if (!e.retryable || attempt == 2) throw e;
                         Thread.sleep(e.getMessage().equals("HTTP 429") ? 15000L * (attempt + 1) : 1500L * (attempt + 1));
                     } catch (Exception e) {
+                        if (!apiAvailable()) { future.complete(null); return; }
                         diagnostic(k, context, text, result, attempt + 1, e.getClass().getSimpleName());
                         throw e;
                     }
                 }
             } catch (Exception e) {
-                cooldown.put(k, System.currentTimeMillis() + 60000);
-                if (background) {
-                    backgroundPausedUntil = System.currentTimeMillis() + 15 * 60_000L;
-                    log.warn("SkyBlock JP: background translation paused for 15 minutes ({})", e.getClass().getSimpleName());
-                    future.complete(null); return;
+                synchronized (Translator.this) {
+                    if (!apiAvailable()) { future.complete(null); return; }
+                    // A failed refresh must not hide an otherwise usable local translation.
+                    restoreDictionaryAfterFailure(k);
+                    lastError = describeError(e);
+                    temporaryResults.put(k, new TemporaryResult(text, lastError, TemporaryKind.FAILED, retryClock.getAsLong() + 60000));
+                    recordNpcStatus(trace,"RESULT","FAILED",0);
+                    future.complete(text);
+                    if (e instanceof InterruptedException) Thread.currentThread().interrupt();
                 }
-                lastError = describeError(e);
-                errors.put(k, lastError);
-                if (cooldown.size() > 2000) cooldown.entrySet().removeIf(entry -> entry.getValue() < System.currentTimeMillis());
-                fallbacks.put(k, text);
-                future.complete(text);
-                if (e instanceof InterruptedException) Thread.currentThread().interrupt();
-            } finally { pending.remove(k, future); if (!background) foregroundUsed(); }
-        }); } catch (RejectedExecutionException e) { pending.remove(k, future); cooldown.put(k, System.currentTimeMillis() + 3000); errors.put(k, "翻訳待ちが満杯です。少し待って再試行してください"); diagnostic(k, context, text, null, 0, "QUEUE_FULL: original displayed"); fallbacks.put(k, text); future.complete(text); }
+            } finally { pending.remove(k, future); }
+        }); } catch (RejectedExecutionException e) {
+            recordNpcStatus(trace,"REQUEST","QUEUE_FULL",0);
+            pending.remove(k, future); restoreDictionaryAfterFailure(k);
+            temporaryResults.put(k, new TemporaryResult(text, "翻訳待ちが満杯です。少し待って再試行してください", TemporaryKind.FAILED, retryClock.getAsLong() + 3000));
+            diagnostic(k, context, text, null, 0, "QUEUE_FULL: original displayed"); future.complete(text);
+        }
         return future;
     }
-    private void diagnostic(String id, String context, String source, String response, int attempt, String reason) {
+    /** Safe status-only records join the miss trace; no API body, player chat, names or raw errors. */
+    private void recordNpcStatus(String trace,String phase,String outcome,int attempt) {
+        if(trace.isEmpty()||closed||!config.dictionaryDiagnostics)return;
+        String state=phase+'|'+outcome+'|'+attempt;
+        if(state.equals(npcStatusSeen.put(trace,state)))return;
+        var row=new LinkedHashMap<String,Object>();row.put("schemaVersion",2);row.put("event","NPC_TRANSLATION_STATUS");
+        row.put("version",ModVersion.CURRENT);row.put("session",npcDictionaryAuditSession);row.put("channel","npc");
+        row.put("traceId",trace);row.put("stage",phase);row.put("outcome",outcome);row.put("attempt",attempt);
+        row.put("observedAt",java.time.Instant.now().toString());
+        row.put("skippedDiagnosticRecords",npcDiagnosticSkipped.get());
+        try {diagnosticWorker.execute(()->{
+            synchronized(Translator.this) {
+                if(closed||!config.dictionaryDiagnostics)return;
+                try {TranslationDiagnostics.append(cachePath.resolveSibling("npc-dictionary-decisions.jsonl"),row,config.groqApiKey);}
+                catch(Exception ignored){npcDiagnosticSkipped.incrementAndGet();}
+            }
+        });} catch(RejectedExecutionException ignored) {npcStatusSeen.remove(trace,state);npcDiagnosticSkipped.incrementAndGet();}
+    }
+    private static String validateResult(String text, String result, String speaker, boolean chat) {
+        return speaker == null ? TranslationDiagnostics.validate(text, result)
+            : chat ? ChatText.validate(text, result) : NpcTranslation.validate(text, result);
+    }
+    private void restoreDictionaryAfterFailure(String key) {
+        externalOverrides.remove(key);
+        var tokens = overridesByRequest.remove(key);
+        if (tokens != null) paragraphOverrides.removeAll(tokens);
+    }
+    private String localTranslation(StyledParagraph paragraph, String speaker) {
+        return inspectDictionary(paragraph, speaker == null ? "item" : "npc", speaker).encoded();
+    }
+    void recordDictionary(StyledParagraph paragraph, String speaker, String encoded, String context, DictionaryDecision decision) {
+        if (closed) return;
+        Map<String, Object> record = new LinkedHashMap<>();
+        record.put("mode", "bundled-dictionary"); record.put("tier", "candidate");
+        record.put("buildId", dictionary.stats().buildId()); record.put("sourceIds", decision.sourceIds().stream().limit(16).toList());
+        record.put("sourceIdCount", decision.sourceIds().size());
+        record.put("channel", decision.channel()); record.put("matchMode", decision.mode()); record.put("speaker", speaker == null ? "" : speaker);
+        record.put("context", context); record.put("source", paragraph.sourceText());
+        record.put("decisionDetails",decision.details());
+        record.put("translation", paragraph.decode(encoded).getString()); record.put("keepOriginal", decision.reason().equals("KEEP_ORIGINAL"));
+        // The display path stays immediate. Audit IO joins the existing bounded worker queue.
+        try { diagnosticWorker.execute(() -> {
+            synchronized(Translator.this) {
+                if (closed) return;
+                try { TranslationDiagnostics.append(cachePath.resolveSibling("dictionary-translations.jsonl"), record, config.groqApiKey); }
+                catch (Exception e) { npcDiagnosticSkipped.incrementAndGet();log.warn("SkyBlock JP: dictionary audit failed ({})", e.getClass().getSimpleName()); }
+            }
+        }); } catch (RejectedExecutionException e) { npcDiagnosticSkipped.incrementAndGet();log.debug("SkyBlock JP: dictionary audit queue unavailable"); }
+    }
+    /** Local rejection is evidence even when API OFF intentionally prevents any request/failure log. */
+    private void recordNpcDictionaryMiss(StyledParagraph paragraph, String speaker, String previous,
+            Map<String,Object> context, DictionaryDecision decision) {
+        if (closed || !config.dictionaryDiagnostics || decision.accepted()) return;
+        boolean fallbackAllowed = apiAvailable();
+        String stage = String.valueOf(decision.details().getOrDefault("stage", "DICTIONARY_LOOKUP"));
+        String fingerprint = textHash(speaker + "|" + paragraph.dictionaryFingerprint() + "|" + contextFingerprint(context)
+            + "|" + stage + "|" + decision.reason() + "|" + fallbackAllowed + "|" + config.dictionaryPlainFallback);
+        if (npcDictionaryAuditSeen.putIfAbsent(fingerprint, Boolean.TRUE) != null) return;
+        try {
+            var record = npcDictionaryMissRecord(paragraph, speaker, previous, decision, stage, fingerprint, fallbackAllowed);
+            diagnosticWorker.execute(() -> {
+                synchronized (Translator.this) {
+                    if (closed || !config.dictionaryDiagnostics) return;
+                    try { TranslationDiagnostics.append(cachePath.resolveSibling("npc-dictionary-decisions.jsonl"), record, config.groqApiKey); }
+                    catch (Exception e) { npcDiagnosticSkipped.incrementAndGet();npcDictionaryAuditSeen.remove(fingerprint); log.warn("SkyBlock JP: NPC dictionary audit failed ({})", e.getClass().getSimpleName()); }
+                }
+            });
+        } catch (RejectedExecutionException e) {
+            npcDiagnosticSkipped.incrementAndGet();
+            npcDictionaryAuditSeen.remove(fingerprint); log.debug("SkyBlock JP: NPC dictionary audit queue unavailable");
+        } catch (Exception e) {
+            // Diagnostic serialization must never change translation/display behavior.
+            npcDictionaryAuditSeen.remove(fingerprint); log.warn("SkyBlock JP: NPC dictionary audit preparation failed ({})", e.getClass().getSimpleName());
+        }
+    }
+    private Map<String,Object> npcDictionaryMissRecord(StyledParagraph paragraph, String speaker, String previous,
+            DictionaryDecision decision, String stage, String fingerprint, boolean fallbackAllowed) {
+        previous = previous == null ? "" : previous;
+        Map<String,Object> record = new LinkedHashMap<>();
+        record.put("schemaVersion", 1); record.put("event", "NPC_DICTIONARY_DECISION");
+        record.put("version", ModVersion.CURRENT); record.put("session", npcDictionaryAuditSession); record.put("decisionId", fingerprint);
+        record.put("traceId",npcTraceId(paragraph,speaker,previous));
+        record.put("channel", "npc"); record.put("speaker", auditText(speaker));
+        record.put("source", auditText(paragraph.sourceText())); record.put("sourceComplete", paragraph.sourceText().length() <= NPC_DICTIONARY_AUDIT_TEXT_LIMIT);
+        record.put("encodedSource", auditText(paragraph.encoded())); record.put("encodedSourceComplete", paragraph.encoded().length() <= NPC_DICTIONARY_AUDIT_TEXT_LIMIT);
+        record.put("sourceSha256", textHash(paragraph.sourceText()));
+        record.put("normalizedSourceSha256", textHash(BundledDictionary.normalize(paragraph.sourceText())));
+        record.put("styleFingerprintSha256", textHash(paragraph.dictionaryFingerprint()));
+        record.put("sourceHashFormat", "UTF8_JOINED_SOURCE_TEXT");
+        record.put("normalizationVersion", "ascii_case_single_period_stat_glyphs_v1");
+        record.put("previousDialogue", auditText(previous)); record.put("previousDialogueComplete", previous.length() <= NPC_DICTIONARY_AUDIT_TEXT_LIMIT);
+        record.put("previousDialogueSha256", textHash(previous));
+        record.put("dictionaryContext", Map.of("previousDialogue", auditText(previous)));
+        record.put("dictionaryBuildId", dictionary.stats().buildId());
+        record.put("dictionaryAccepted", false); record.put("dictionaryEnabled", config.candidateDictionary);
+        record.put("stage", stage); record.put("reason", decision.reason()); record.put("matchMode", decision.mode());
+        record.put("sourceIds", decision.sourceIds().stream().limit(16).toList()); record.put("sourceIdCount", decision.sourceIds().size());
+        record.put("apiTranslationEnabled", fallbackAllowed); record.put("plainFallbackEnabled", config.dictionaryPlainFallback);
+        record.put("fallbackAction", fallbackAllowed ? "API_FALLBACK_ALLOWED" : "API_OFF_STOP");
+        record.put("stopStage", fallbackAllowed ? "NONE" : "POLICY");
+        // Keep exact stage/hash/fragment diagnostics without copying arbitrary large context values.
+        record.put("dictionaryDetails", DictionaryDiagnosticDetails.copy(decision.details()));
+        // Display encoding deliberately omits style markers around whitespace.
+        // Diagnostics must retain those native colors rather than reconstruct
+        // them from the selected translated-prose base style.
+        var glyphs = paragraph.sourceGlyphs();
+        var runs = new ArrayList<Map<String,Object>>(); int cursor = 0;
+        while (cursor < glyphs.size() && cursor < NPC_DICTIONARY_AUDIT_TEXT_LIMIT && runs.size() < 256) {
+            var style = glyphs.get(cursor).style(); var text = new StringBuilder();
+            do { text.append(glyphs.get(cursor++).text()); }
+            while (cursor < glyphs.size() && cursor < NPC_DICTIONARY_AUDIT_TEXT_LIMIT && glyphs.get(cursor).style().equals(style));
+            var run = new LinkedHashMap<String,Object>(); run.put("text", text.toString());
+            if (style.getColor() != null) run.put("color", style.getColor().getValue());
+            run.put("bold", style.isBold()); run.put("italic", style.isItalic()); run.put("underlined", style.isUnderlined());
+            run.put("strikethrough", style.isStrikethrough()); run.put("obfuscated", style.isObfuscated()); runs.add(run);
+        }
+        record.put("sourceStyledRuns", runs); record.put("sourceStyledOrigin", "NATIVE_JOINED_SOURCE");
+        record.put("sourceStyledGlyphCount", cursor);
+        var sourceCheck = new StringBuilder(); glyphs.forEach(g -> sourceCheck.append(g.text()));
+        record.put("sourceStyledComplete", cursor == glyphs.size() && sourceCheck.toString().equals(paragraph.sourceText()));
+        return record;
+    }
+    private static String auditText(String value) {
+        if (value == null) return "";
+        if (value.length() <= NPC_DICTIONARY_AUDIT_TEXT_LIMIT) return value;
+        int end = NPC_DICTIONARY_AUDIT_TEXT_LIMIT;
+        if (Character.isHighSurrogate(value.charAt(end - 1))) end--;
+        return value.substring(0, end);
+    }
+    private synchronized void diagnostic(String id, String context, String source, String response, int attempt, String reason) {
+        if (!apiAvailable()) return;
         Map<String, Object> record = new LinkedHashMap<>();
         record.put("requestId", id.substring(0, 12)); record.put("attempt", attempt);
         record.put("provider", config.provider); record.put("model", config.groqModel);
@@ -220,6 +639,7 @@ public final class Translator implements AutoCloseable {
         catch (Exception e) { log.warn("SkyBlock JP: could not save diagnostic log ({})", e.getClass().getSimpleName()); }
     }
     private String translate(String text) throws Exception {
+        if (!apiAvailable()) throw new CancellationException("API translation disabled");
         HttpRequest request;
         if (config.provider.equals("GROQ")) {
             if (config.groqApiKey == null || config.groqApiKey.isBlank()) throw new TranslationFailure("missing Groq key", false);
@@ -244,6 +664,7 @@ public final class Translator implements AutoCloseable {
             request = HttpRequest.newBuilder(URI.create("https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=ja&dt=t&q=" + URLEncoder.encode(text, StandardCharsets.UTF_8))).timeout(Duration.ofSeconds(15)).GET().build();
         }
         HttpResponse<String> response;
+        if (!apiAvailable()) throw new CancellationException("API translation disabled");
         try { response = http.send(request, HttpResponse.BodyHandlers.ofString()); }
         catch (java.io.IOException e) { throw new TranslationFailure("network timeout/error", true); }
         responseDetails = "HTTP " + response.statusCode();
@@ -270,12 +691,23 @@ public final class Translator implements AutoCloseable {
         try {
             Files.createDirectories(cachePath.getParent());
             Path temp = cachePath.resolveSibling(cachePath.getFileName() + ".tmp");
-            Files.writeString(temp, new Gson().toJson(cache));
+            Map<String,String> snapshot;
+            synchronized (cache) { snapshot = new LinkedHashMap<>(cache); }
+            Files.writeString(temp, new Gson().toJson(snapshot));
             Files.move(temp, cachePath, StandardCopyOption.REPLACE_EXISTING);
             lastSave = System.currentTimeMillis();
         } catch (Exception e) { log.warn("SkyBlock JP: cache save failed ({})", e.getClass().getSimpleName()); }
     }
-    public void close() { worker.shutdownNow(); pending.values().forEach(f -> f.complete(null)); pending.clear(); save(); http.shutdownNow(); }
+    public synchronized void close() {
+        if (closed) return;
+        closed = true;
+        worker.shutdownNow();
+        diagnosticWorker.shutdownNow();
+        http.shutdownNow();
+        pending.values().forEach(f -> f.complete(null));
+        pending.clear();
+        save();
+    }
     private String describeError(Exception e) {
         if (!(e instanceof TranslationFailure)) return "通信または応答の処理に失敗しました";
         if (e.getMessage().startsWith("MARKER_")) return "色・数値のマーカーが壊れました。詳細ログに記録済み";

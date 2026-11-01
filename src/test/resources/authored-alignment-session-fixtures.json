@@ -1,0 +1,2697 @@
+[
+  {
+    "source": "While in The Catacombs, consume 1⸕ charge to break a block. 20 blocks can be broken at a time, and re-appear after 10s. 2⸕ charges are regenerated each second.",
+    "target": "The Catacombs内で1⸕チャージを消費し、ブロックを壊す。同時に壊せるのは20ブロックまでで、10秒後に元に戻る。毎秒2⸕チャージを回復する。",
+    "sourceIds": [
+      "item/ability_body/cbd5436d4af7d74fbf0e5ee5"
+    ],
+    "channel": "item",
+    "item": "Dungeonbreaker",
+    "lookupMode": "exact",
+    "scopes": [
+      {
+        "sourceIds": [
+          "item/ability_body/cbd5436d4af7d74fbf0e5ee5"
+        ],
+        "channel": "item"
+      },
+      {
+        "sourceIds": [
+          "item/ability_body/cbd5436d4af7d74fbf0e5ee5"
+        ],
+        "channel": "ui"
+      }
+    ],
+    "lines": [
+      [
+        {
+          "text": "While in ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "The Catacombs",
+          "color": 16733525,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": ", consume ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "1",
+          "color": 16777045,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "⸕",
+          "color": 16733525,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "charge to break a block. ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "20",
+          "color": 43690,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": " blocks can",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "be broken at a time, and re-appear after",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "10s",
+          "color": 5635925,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": ". ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "2",
+          "color": 16777045,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "⸕",
+          "color": 16733525,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": " charges are regenerated each",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "second.",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ]
+    ]
+  },
+  {
+    "source": "Keep this item in your inventory to increase the bonus up to +30☯ Fishing Wisdom, at which point the item evolves!",
+    "target": "インベントリに入れておくとボーナスが最大+30☯ Fishing Wisdomまで増加し、その時点でアイテムが進化する！",
+    "sourceIds": [
+      "item/description/ca92e3e711bfc64ea0ff79c7",
+      "ui/slot_description/06619fd1b45c3f241dad7184"
+    ],
+    "channel": "item",
+    "item": "Moby-Duck",
+    "lookupMode": "reviewed",
+    "scopes": [
+      {
+        "sourceIds": [
+          "item/description/ca92e3e711bfc64ea0ff79c7",
+          "ui/slot_description/06619fd1b45c3f241dad7184"
+        ],
+        "channel": "item"
+      },
+      {
+        "sourceIds": [
+          "item/description/ca92e3e711bfc64ea0ff79c7",
+          "ui/slot_description/06619fd1b45c3f241dad7184"
+        ],
+        "channel": "ui"
+      }
+    ],
+    "lines": [
+      [
+        {
+          "text": "Keep this item in your inventory to",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "increase the bonus up to ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "+30☯",
+          "color": 43690,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "Fishing Wisdom",
+          "color": 43690,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": ", at which point the item",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "evolves",
+          "color": 16733525,
+          "bold": false,
+          "italic": true,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "!",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ]
+    ]
+  },
+  {
+    "source": "Keep this item in your inventory to increase the bonus up to +300 Intelligence, at which point the item evolves!",
+    "target": "Inventoryに入れておくと、ボーナスが最大+300 Intelligenceまで増加する。最大に達するとアイテムが進化する！",
+    "sourceIds": [
+      "item/description/6a6407a588c8a940cc91be51"
+    ],
+    "channel": "item",
+    "item": "Bottle of Jyrre",
+    "lookupMode": "exact",
+    "scopes": [
+      {
+        "sourceIds": [
+          "item/description/6a6407a588c8a940cc91be51"
+        ],
+        "channel": "item"
+      },
+      {
+        "sourceIds": [
+          "item/description/6a6407a588c8a940cc91be51"
+        ],
+        "channel": "ui"
+      }
+    ],
+    "lines": [
+      [
+        {
+          "text": "Keep this item in your inventory to",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "increase the bonus up to ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "+300",
+          "color": 5636095,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "Intelligence",
+          "color": 5636095,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": ", at which point the item",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "evolves",
+          "color": 16733525,
+          "bold": false,
+          "italic": true,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "!",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ]
+    ]
+  },
+  {
+    "source": "Doubles your  Defense while in water.",
+    "target": "水中では、 Defenseが2倍になる。",
+    "sourceIds": [
+      "item/ability_body/23eea289c6ce0aec727e9b84"
+    ],
+    "channel": "item",
+    "item": "Pure Shark Scale Chestplate",
+    "lookupMode": "exact",
+    "scopes": [
+      {
+        "sourceIds": [
+          "item/ability_body/23eea289c6ce0aec727e9b84"
+        ],
+        "channel": "item"
+      },
+      {
+        "sourceIds": [
+          "item/ability_body/23eea289c6ce0aec727e9b84"
+        ],
+        "channel": "ui"
+      }
+    ],
+    "lines": [
+      [
+        {
+          "text": "Doubles",
+          "color": 5592575,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": " your ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": " Defense",
+          "color": 5635925,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": " while in",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "water.",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ]
+    ]
+  },
+  {
+    "source": "Can be used to damage  Pests.",
+    "target": " Pestにダメージを与えるために使用できる。",
+    "sourceIds": [
+      "item/description/80667e303398a69f865bc61f",
+      "item/description/98db54b79440b916bc5e5b83",
+      "item/description/bdbbd9f26decc45b3bdda9f3",
+      "item/description/c8e52a81e31b01a0511139f3",
+      "item/description/ced6097272b98a80eaab7855"
+    ],
+    "channel": "item",
+    "item": "Buzzing SkyMart Vacuum",
+    "lookupMode": "exact",
+    "scopes": [
+      {
+        "sourceIds": [
+          "item/description/80667e303398a69f865bc61f",
+          "item/description/98db54b79440b916bc5e5b83",
+          "item/description/bdbbd9f26decc45b3bdda9f3",
+          "item/description/c8e52a81e31b01a0511139f3",
+          "item/description/ced6097272b98a80eaab7855"
+        ],
+        "channel": "item"
+      },
+      {
+        "sourceIds": [
+          "item/description/80667e303398a69f865bc61f",
+          "item/description/98db54b79440b916bc5e5b83",
+          "item/description/bdbbd9f26decc45b3bdda9f3",
+          "item/description/c8e52a81e31b01a0511139f3",
+          "item/description/ced6097272b98a80eaab7855"
+        ],
+        "channel": "ui"
+      }
+    ],
+    "lines": [
+      [
+        {
+          "text": "Can be used to damage ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": " Pests",
+          "color": 43520,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": ".",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ]
+    ]
+  },
+  {
+    "source": "Deals 100  Damage per second to nearby  Pests.",
+    "target": "近くの Pestに、毎秒100  Damageを与える。",
+    "sourceIds": [
+      "item/ability_body/874f94a7cd241ec3cea7630b"
+    ],
+    "channel": "item",
+    "item": "Buzzing SkyMart Vacuum",
+    "lookupMode": "exact",
+    "scopes": [
+      {
+        "sourceIds": [
+          "item/ability_body/874f94a7cd241ec3cea7630b"
+        ],
+        "channel": "item"
+      },
+      {
+        "sourceIds": [
+          "item/ability_body/874f94a7cd241ec3cea7630b"
+        ],
+        "channel": "ui"
+      }
+    ],
+    "lines": [
+      [
+        {
+          "text": "Deals ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "100  Damage ",
+          "color": 16733525,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "per second to",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "nearby ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": " Pests",
+          "color": 43520,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": ".",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ]
+    ]
+  },
+  {
+    "source": "Buzzing Bonus This item deals x2 Damage towards  Pests.",
+    "target": "Buzzing Bonus このアイテムが Pestに与える Damageがx2になる。",
+    "sourceIds": [
+      "item/description/4f30eae62d41b384ba3ea9e5"
+    ],
+    "channel": "item",
+    "item": "Buzzing SkyMart Vacuum",
+    "lookupMode": "exact",
+    "scopes": [
+      {
+        "sourceIds": [
+          "item/description/4f30eae62d41b384ba3ea9e5"
+        ],
+        "channel": "item"
+      },
+      {
+        "sourceIds": [
+          "item/description/4f30eae62d41b384ba3ea9e5"
+        ],
+        "channel": "ui"
+      }
+    ],
+    "lines": [
+      [
+        {
+          "text": "Buzzing Bonus",
+          "color": 5592575,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "This item deals ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "x2 Damage ",
+          "color": 16733525,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "towards",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": " Pests",
+          "color": 43520,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": ".",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ]
+    ]
+  },
+  {
+    "source": "Select a nozzle and material for spraying. Certain materials attract certain types of  Pests.",
+    "target": "散布に使うNozzleと素材を選ぶ。素材ごとに、引き寄せる Pestの種類が異なる。",
+    "sourceIds": [
+      "item/ability_body/32e6c04fc420ab45c67a30c2"
+    ],
+    "channel": "item",
+    "item": "Sprayonator",
+    "lookupMode": "exact",
+    "scopes": [
+      {
+        "sourceIds": [
+          "item/ability_body/32e6c04fc420ab45c67a30c2"
+        ],
+        "channel": "item"
+      },
+      {
+        "sourceIds": [
+          "item/ability_body/32e6c04fc420ab45c67a30c2"
+        ],
+        "channel": "ui"
+      }
+    ],
+    "lines": [
+      [
+        {
+          "text": "Select a nozzle and material for",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "spraying. Certain materials attract",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "certain types of ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": " Pests",
+          "color": 43520,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": ".",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ]
+    ]
+  },
+  {
+    "source": "Can be spread across a Garden plot with a Sprayonator or used in Pest Traps.",
+    "target": "SprayonatorでGardenのPlotに散布するか、Pest Trapに入れて使用できる。",
+    "sourceIds": [
+      "item/description/08c80961215654af1f5ba223",
+      "item/description/0fbc311a991f9ced48ff0fd9",
+      "item/description/48af529280a59017f00c9565",
+      "item/description/7dcc60687a28df0d3ae9b9be",
+      "item/description/aa7746cf60925917e1304fce",
+      "item/description/ec187b7e7ac13d9e0c4f81fa",
+      "ui/slot_description/4414ef245e8742d6ab4e61bf"
+    ],
+    "channel": "item",
+    "item": "Honey Jar",
+    "lookupMode": "exact",
+    "scopes": [
+      {
+        "sourceIds": [
+          "item/description/08c80961215654af1f5ba223",
+          "item/description/0fbc311a991f9ced48ff0fd9",
+          "item/description/48af529280a59017f00c9565",
+          "item/description/7dcc60687a28df0d3ae9b9be",
+          "item/description/aa7746cf60925917e1304fce",
+          "item/description/ec187b7e7ac13d9e0c4f81fa",
+          "ui/slot_description/4414ef245e8742d6ab4e61bf"
+        ],
+        "channel": "item"
+      },
+      {
+        "sourceIds": [
+          "item/description/08c80961215654af1f5ba223",
+          "item/description/0fbc311a991f9ced48ff0fd9",
+          "item/description/48af529280a59017f00c9565",
+          "item/description/7dcc60687a28df0d3ae9b9be",
+          "item/description/aa7746cf60925917e1304fce",
+          "item/description/ec187b7e7ac13d9e0c4f81fa",
+          "ui/slot_description/4414ef245e8742d6ab4e61bf"
+        ],
+        "channel": "ui"
+      }
+    ],
+    "lines": [
+      [
+        {
+          "text": "Can be spread across a ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "Garden ",
+          "color": 5635925,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "plot",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "with a ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "Sprayonator",
+          "color": 5635925,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": " or used in ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "Pest",
+          "color": 43520,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "Traps",
+          "color": 43520,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": ".",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ]
+    ]
+  },
+  {
+    "source": "Can be traded in to Liz when Diaz is Mayor for special items!",
+    "target": "DiazがMayorの間、Lizのところで特別な品と交換できる！",
+    "sourceIds": [
+      "item/description/67baedc0c2099fb9cb708180"
+    ],
+    "channel": "item",
+    "item": "Stock of Stonks",
+    "lookupMode": "exact",
+    "scopes": [
+      {
+        "sourceIds": [
+          "item/description/67baedc0c2099fb9cb708180"
+        ],
+        "channel": "item"
+      },
+      {
+        "sourceIds": [
+          "item/description/67baedc0c2099fb9cb708180"
+        ],
+        "channel": "ui"
+      }
+    ],
+    "lines": [
+      [
+        {
+          "text": "Can be traded in to ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "Liz ",
+          "color": 5635925,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "when ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "Diaz ",
+          "color": 16755200,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "is",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "Mayor for ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "special items",
+          "color": 16733695,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "!",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ]
+    ]
+  },
+  {
+    "source": "Grants a +18.5% chance to catch Sharks during the Fishing Festival.",
+    "target": "Fishing Festival中、Sharkが釣れる確率が+18.5%上昇する。",
+    "sourceIds": [
+      "item/ability_body/74a5df293cd970763c59262c"
+    ],
+    "channel": "item",
+    "item": "[Lvl 85] Megalodon",
+    "lookupMode": "template",
+    "scopes": [
+      {
+        "sourceIds": [
+          "item/ability_body/74a5df293cd970763c59262c"
+        ],
+        "channel": "item"
+      },
+      {
+        "sourceIds": [
+          "item/ability_body/74a5df293cd970763c59262c"
+        ],
+        "channel": "ui"
+      }
+    ],
+    "lines": [
+      [
+        {
+          "text": "Grants a ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "+18.5% ",
+          "color": 5635925,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "chance to catch",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "Sharks ",
+          "color": 5636095,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "during the ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "Fishing Festival",
+          "color": 5636095,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": ".",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ]
+    ]
+  },
+  {
+    "source": "Your pet fuses its power with placed Deployables to give them 2x duration.",
+    "target": "Petが設置したDeployableに力を合わせ、その持続時間を2xにする。",
+    "sourceIds": [
+      "item/description/f9d3d6aa7f5fecea9c708c9a"
+    ],
+    "channel": "item",
+    "item": "[Lvl 85] Megalodon",
+    "lookupMode": "exact",
+    "scopes": [
+      {
+        "sourceIds": [
+          "item/description/f9d3d6aa7f5fecea9c708c9a"
+        ],
+        "channel": "item"
+      },
+      {
+        "sourceIds": [
+          "item/description/f9d3d6aa7f5fecea9c708c9a"
+        ],
+        "channel": "ui"
+      }
+    ],
+    "lines": [
+      [
+        {
+          "text": "Your pet fuses its power with placed",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "Deployables ",
+          "color": 5592575,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "to give them ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "2x ",
+          "color": 5635925,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "duration.",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ]
+    ]
+  },
+  {
+    "source": "Gain 13.3  Crit Damage for every nearby wolf monster Max 10 wolves",
+    "target": "近くにいるWolfモンスターごとに、 Crit Damageが13.3増加する。計算対象は最大10体まで。",
+    "sourceIds": [
+      "item/ability_body/4b598f8fc1f613b10c327606",
+      "item/ability_body/6bc35b64da62bd191dd3abb4",
+      "item/ability_body/9ebec2a82a7117dbd095c374"
+    ],
+    "channel": "item",
+    "item": "[Lvl 89] Wolf",
+    "lookupMode": "template",
+    "scopes": [
+      {
+        "sourceIds": [
+          "item/ability_body/4b598f8fc1f613b10c327606",
+          "item/ability_body/6bc35b64da62bd191dd3abb4",
+          "item/ability_body/9ebec2a82a7117dbd095c374"
+        ],
+        "channel": "item"
+      },
+      {
+        "sourceIds": [
+          "item/ability_body/4b598f8fc1f613b10c327606",
+          "item/ability_body/6bc35b64da62bd191dd3abb4",
+          "item/ability_body/9ebec2a82a7117dbd095c374"
+        ],
+        "channel": "ui"
+      }
+    ],
+    "lines": [
+      [
+        {
+          "text": "Gain ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "13.3 ",
+          "color": 5635925,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": " Crit Damage ",
+          "color": 5592575,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "for every",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "nearby wolf monster",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "Max 10 wolves",
+          "color": 5592405,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ]
+    ]
+  },
+  {
+    "source": "Damage taken from  Magmatic mobs is reduced by 5% and damage dealt is increased by 1.1x.",
+    "target": " Magmaticモブから受けるダメージが5%減少し、与えるダメージが1.1倍になる。",
+    "sourceIds": [
+      "item/description/03e9f04c844a262a1f232032",
+      "item/description/056387e7b60c45cf8b8b5609",
+      "item/description/5a05022fb8319674eeaecb2a",
+      "item/description/7624c737350133429c4a653f"
+    ],
+    "channel": "item",
+    "item": "Pure Moogma Leggings",
+    "lookupMode": "exact",
+    "scopes": [
+      {
+        "sourceIds": [
+          "item/description/03e9f04c844a262a1f232032",
+          "item/description/056387e7b60c45cf8b8b5609",
+          "item/description/5a05022fb8319674eeaecb2a",
+          "item/description/7624c737350133429c4a653f"
+        ],
+        "channel": "item"
+      },
+      {
+        "sourceIds": [
+          "item/description/03e9f04c844a262a1f232032",
+          "item/description/056387e7b60c45cf8b8b5609",
+          "item/description/5a05022fb8319674eeaecb2a",
+          "item/description/7624c737350133429c4a653f"
+        ],
+        "channel": "ui"
+      }
+    ],
+    "lines": [
+      [
+        {
+          "text": "Damage taken from ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": " Magmatic",
+          "color": 16733525,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": " mobs",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "is reduced by ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "5% ",
+          "color": 5635925,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "and damage dealt",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "is increased by ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "1.1x",
+          "color": 16733525,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": ".",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ]
+    ]
+  },
+  {
+    "source": "Increases damage dealt to Sea Creatures by 5%.",
+    "target": "Sea Creatureに与えるダメージが5%増加する。",
+    "sourceIds": [
+      "item/ability_body/3053553dae2aceb6e0911089"
+    ],
+    "channel": "item",
+    "item": "Backwater Gloves",
+    "lookupMode": "exact",
+    "scopes": [
+      {
+        "sourceIds": [
+          "item/ability_body/3053553dae2aceb6e0911089"
+        ],
+        "channel": "item"
+      },
+      {
+        "sourceIds": [
+          "item/ability_body/3053553dae2aceb6e0911089"
+        ],
+        "channel": "ui"
+      }
+    ],
+    "lines": [
+      [
+        {
+          "text": "Increases damage dealt to ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "Sea",
+          "color": 43690,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "Creatures ",
+          "color": 43690,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "by ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "5%",
+          "color": 5635925,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": ".",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ]
+    ]
+  },
+  {
+    "source": "Some islands also have Quests for you to complete! Some items can only be obtained through Quests.",
+    "target": "一部の島にはQuestもある！ Questでしか入手できない アイテムもある。",
+    "sourceIds": [
+      "ui/slot_description/f7add64116f0a948bcbcb0b1"
+    ],
+    "channel": "item",
+    "item": "Quests & Chapters",
+    "lookupMode": "exact",
+    "scopes": [
+      {
+        "sourceIds": [
+          "ui/slot_description/f7add64116f0a948bcbcb0b1"
+        ],
+        "channel": "item"
+      },
+      {
+        "sourceIds": [
+          "ui/slot_description/f7add64116f0a948bcbcb0b1"
+        ],
+        "channel": "ui"
+      }
+    ],
+    "lines": [
+      [
+        {
+          "text": "Some islands also have ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "Quests ",
+          "color": 5635925,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "for",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "you to complete! Some items can only",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "be obtained through Quests.",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ]
+    ]
+  },
+  {
+    "source": "Sells Abiphones for beginners.",
+    "target": "初心者向けのAbiphoneを売る。",
+    "sourceIds": [
+      "ui/slot_description/db5f85fcce89525de9f43eab"
+    ],
+    "channel": "item",
+    "item": "Alda",
+    "lookupMode": "exact",
+    "scopes": [
+      {
+        "sourceIds": [
+          "ui/slot_description/db5f85fcce89525de9f43eab"
+        ],
+        "channel": "item"
+      },
+      {
+        "sourceIds": [
+          "ui/slot_description/db5f85fcce89525de9f43eab"
+        ],
+        "channel": "ui"
+      }
+    ],
+    "lines": [
+      [
+        {
+          "text": "Sells ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "Abiphones ",
+          "color": 43690,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "for beginners.",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ]
+    ]
+  },
+  {
+    "source": "A perfectly refined Sapphire.",
+    "target": "完璧に精製されたSapphire。",
+    "sourceIds": [
+      "item/description/52027f1c1eb986fd2fd47851",
+      "ui/slot_description/93fdcf399b4801219a482438"
+    ],
+    "channel": "item",
+    "item": " Perfect Sapphire Gemstone",
+    "lookupMode": "exact",
+    "scopes": [
+      {
+        "sourceIds": [
+          "item/description/52027f1c1eb986fd2fd47851",
+          "ui/slot_description/93fdcf399b4801219a482438"
+        ],
+        "channel": "item"
+      },
+      {
+        "sourceIds": [
+          "item/description/52027f1c1eb986fd2fd47851",
+          "ui/slot_description/93fdcf399b4801219a482438"
+        ],
+        "channel": "ui"
+      }
+    ],
+    "lines": [
+      [
+        {
+          "text": "A perfectly ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "refined Sapphire",
+          "color": 5636095,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": ".",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ]
+    ]
+  },
+  {
+    "source": "Some say that when harnessed properly, it can give its owner extra  Intelligence.",
+    "target": "うまく力を引き出せば、持ち主に追加の Intelligenceを与えるという。",
+    "sourceIds": [
+      "item/description/013130ce1d5ca8beafecef60",
+      "item/description/0e43f7c7f9d82b75c882cc73",
+      "item/description/7ed13b59d3d4d6becad02893",
+      "item/description/ca7df49e44cc04f69d2f0cfe",
+      "item/description/eb2dfd4c7866a774af666090"
+    ],
+    "channel": "item",
+    "item": " Perfect Sapphire Gemstone",
+    "lookupMode": "exact",
+    "scopes": [
+      {
+        "sourceIds": [
+          "item/description/013130ce1d5ca8beafecef60",
+          "item/description/0e43f7c7f9d82b75c882cc73",
+          "item/description/7ed13b59d3d4d6becad02893",
+          "item/description/ca7df49e44cc04f69d2f0cfe",
+          "item/description/eb2dfd4c7866a774af666090"
+        ],
+        "channel": "item"
+      },
+      {
+        "sourceIds": [
+          "item/description/013130ce1d5ca8beafecef60",
+          "item/description/0e43f7c7f9d82b75c882cc73",
+          "item/description/7ed13b59d3d4d6becad02893",
+          "item/description/ca7df49e44cc04f69d2f0cfe",
+          "item/description/eb2dfd4c7866a774af666090"
+        ],
+        "channel": "ui"
+      }
+    ],
+    "lines": [
+      [
+        {
+          "text": "Some say that when ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "harnessed",
+          "color": 16777045,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "properly",
+          "color": 16777045,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": ", it can give its owner extra",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": " Intelligence",
+          "color": 5636095,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": ".",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ]
+    ]
+  },
+  {
+    "source": "Gains 1 Sweep every 2,000 Logs cut on Galatea. (max 20)",
+    "target": "GalateaでLogを2,000本切るごとに、1 Sweepを獲得する。（最大20）",
+    "sourceIds": [
+      "item/ability_body/32d5dd9eef97e976682ecc03"
+    ],
+    "channel": "item",
+    "item": "Moonglade Fig Hew ✪✪✪✪✪",
+    "lookupMode": "exact",
+    "scopes": [
+      {
+        "sourceIds": [
+          "item/ability_body/32d5dd9eef97e976682ecc03"
+        ],
+        "channel": "item"
+      },
+      {
+        "sourceIds": [
+          "item/ability_body/32d5dd9eef97e976682ecc03"
+        ],
+        "channel": "ui"
+      }
+    ],
+    "lines": [
+      [
+        {
+          "text": "Gains ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "1 Sweep ",
+          "color": 43520,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "every ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "2,000 Logs",
+          "color": 5635925,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "cut on ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "Galatea",
+          "color": 43520,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": ". ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "(max 20)",
+          "color": 5592405,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ]
+    ]
+  },
+  {
+    "source": "Your axe deals double  Damage to creatures on Galatea for 10s.",
+    "target": "10sの間、斧がGalateaの生き物に与える Damageが倍になる。",
+    "sourceIds": [
+      "common/ability_body/42ceb262d76b29378860b405"
+    ],
+    "channel": "item",
+    "item": "Moonglade Fig Hew ✪✪✪✪✪",
+    "lookupMode": "exact",
+    "scopes": [
+      {
+        "sourceIds": [
+          "common/ability_body/42ceb262d76b29378860b405"
+        ],
+        "channel": "item"
+      },
+      {
+        "sourceIds": [
+          "common/ability_body/42ceb262d76b29378860b405"
+        ],
+        "channel": "ui"
+      },
+      {
+        "sourceIds": [
+          "common/ability_body/42ceb262d76b29378860b405"
+        ],
+        "channel": "common"
+      }
+    ],
+    "lines": [
+      [
+        {
+          "text": "Your axe deals double ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": " Damage ",
+          "color": 16733525,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "to",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "creatures on ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "Galatea ",
+          "color": 43520,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "for ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "10s",
+          "color": 5635925,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": ".",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ]
+    ]
+  },
+  {
+    "source": "When playing, this vinyl attracts Beetle Pests.",
+    "target": "再生中、このVinylはBeetle Pestを引き寄せる。",
+    "sourceIds": [
+      "item/description/57e9542813356dabaa781a96"
+    ],
+    "channel": "item",
+    "item": "Not Just a Pest Vinyl",
+    "lookupMode": "exact",
+    "scopes": [
+      {
+        "sourceIds": [
+          "item/description/57e9542813356dabaa781a96"
+        ],
+        "channel": "item"
+      },
+      {
+        "sourceIds": [
+          "item/description/57e9542813356dabaa781a96"
+        ],
+        "channel": "ui"
+      }
+    ],
+    "lines": [
+      [
+        {
+          "text": "When playing, this vinyl attracts",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "Beetle Pests",
+          "color": 43520,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": ".",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ]
+    ]
+  },
+  {
+    "source": "Grants +250%  Mining Speed for 15s.",
+    "target": "15sの間、 Mining Speedが+250%増加する。",
+    "sourceIds": [
+      "common/ability_body/0173b8de72527454dd36ab65"
+    ],
+    "channel": "item",
+    "item": "Refined Gemstone Drill LT-522",
+    "lookupMode": "template",
+    "scopes": [
+      {
+        "sourceIds": [
+          "common/ability_body/0173b8de72527454dd36ab65"
+        ],
+        "channel": "item"
+      },
+      {
+        "sourceIds": [
+          "common/ability_body/0173b8de72527454dd36ab65"
+        ],
+        "channel": "ui"
+      },
+      {
+        "sourceIds": [
+          "common/ability_body/0173b8de72527454dd36ab65"
+        ],
+        "channel": "common"
+      }
+    ],
+    "lines": [
+      [
+        {
+          "text": "Grants ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "+250%  Mining Speed ",
+          "color": 16755200,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "for",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "15s",
+          "color": 5635925,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": ".",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ]
+    ]
+  },
+  {
+    "source": "Grants 32.08 Foraging Fortune for 20s every time you jump. Gain Jump Boost IV while on Foraging Islands.",
+    "target": "ジャンプするたびに、20秒間 Foraging Fortuneが32.08増加する。Foraging Islandsにいる間はJump Boost IVを得る。",
+    "sourceIds": [
+      "item/ability_body/4687fb85f5a2b982ae7f63bd",
+      "item/ability_body/51d544d4bd35c6fcafa1b77e",
+      "item/ability_body/672f693112e5c54e99586349",
+      "item/ability_body/67fc343f34eb9d5c5ce6288a",
+      "item/ability_body/7c979af21a5443acba74e4a4",
+      "item/ability_body/c8b83fcd79c3f39b5c42f064"
+    ],
+    "channel": "item",
+    "item": "[Lvl 53] Frog",
+    "lookupMode": "template",
+    "scopes": [
+      {
+        "sourceIds": [
+          "item/ability_body/4687fb85f5a2b982ae7f63bd",
+          "item/ability_body/51d544d4bd35c6fcafa1b77e",
+          "item/ability_body/672f693112e5c54e99586349",
+          "item/ability_body/67fc343f34eb9d5c5ce6288a",
+          "item/ability_body/7c979af21a5443acba74e4a4",
+          "item/ability_body/c8b83fcd79c3f39b5c42f064"
+        ],
+        "channel": "item"
+      },
+      {
+        "sourceIds": [
+          "item/ability_body/4687fb85f5a2b982ae7f63bd",
+          "item/ability_body/51d544d4bd35c6fcafa1b77e",
+          "item/ability_body/672f693112e5c54e99586349",
+          "item/ability_body/67fc343f34eb9d5c5ce6288a",
+          "item/ability_body/7c979af21a5443acba74e4a4",
+          "item/ability_body/c8b83fcd79c3f39b5c42f064"
+        ],
+        "channel": "ui"
+      }
+    ],
+    "lines": [
+      [
+        {
+          "text": "Grants ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "32.08 Foraging Fortune ",
+          "color": 16755200,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "for",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "20s ",
+          "color": 5635925,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "every time you jump. Gain ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "Jump",
+          "color": 5636095,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "Boost IV ",
+          "color": 5636095,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "while on ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "Foraging Islands",
+          "color": 43520,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": ".",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ]
+    ]
+  },
+  {
+    "source": "Use at Kat to upgrade Frog Pets from Uncommon to Rare.",
+    "target": "Katのところで使うと、Frog PetをUncommonからRareにアップグレードする。",
+    "sourceIds": [
+      "item/description/647898a4d44436ff9b60afa5",
+      "ui/slot_description/434f435dddefd07fbd8efd38"
+    ],
+    "channel": "item",
+    "item": "Medium Frog Treat",
+    "lookupMode": "exact",
+    "scopes": [
+      {
+        "sourceIds": [
+          "item/description/647898a4d44436ff9b60afa5",
+          "ui/slot_description/434f435dddefd07fbd8efd38"
+        ],
+        "channel": "item"
+      },
+      {
+        "sourceIds": [
+          "item/description/647898a4d44436ff9b60afa5",
+          "ui/slot_description/434f435dddefd07fbd8efd38"
+        ],
+        "channel": "ui"
+      }
+    ],
+    "lines": [
+      [
+        {
+          "text": "Use at ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "Kat ",
+          "color": 5636095,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "to upgrade ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "Frog Pets",
+          "color": 16777045,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "from ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "Uncommon ",
+          "color": 5635925,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "to ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "Rare.",
+          "color": 5592575,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ]
+    ]
+  },
+  {
+    "source": "Gain +5 Strength for every 5% of total HP you have for 5s. Capped at +100 Strength.",
+    "target": "現在のHPが合計HPに占める割合5%ごとに、5秒間 Strengthを+5得る。最大+100 Strengthまで。",
+    "sourceIds": [
+      "item/ability_body/9b59cc8611d73b402048afc8"
+    ],
+    "channel": "item",
+    "item": "Sword of Bad Health",
+    "lookupMode": "exact",
+    "scopes": [
+      {
+        "sourceIds": [
+          "item/ability_body/9b59cc8611d73b402048afc8"
+        ],
+        "channel": "item"
+      },
+      {
+        "sourceIds": [
+          "item/ability_body/9b59cc8611d73b402048afc8"
+        ],
+        "channel": "ui"
+      }
+    ],
+    "lines": [
+      [
+        {
+          "text": "Gain ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "+5 Strength ",
+          "color": 16733525,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "for every 5% of total HP",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "you have for ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "5s",
+          "color": 5635925,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": ". Capped at ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "+100 Strength",
+          "color": 16733525,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": ".",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ]
+    ]
+  },
+  {
+    "source": "The more Safari Milestones you have, the stronger this belt gets!",
+    "target": "Safari Milestoneが増えるほど、このBeltは強くなる！",
+    "sourceIds": [
+      "item/description/89617c1736ef28843a106901",
+      "ui/slot_description/24ee86afcb05aa745c788d2a",
+      "ui/slot_description/34f9eff7a540a2e0bf10900f",
+      "ui/slot_description/67d5c07537fbec9208c18d5a",
+      "ui/slot_description/84382502217c5207cbf5cc0e"
+    ],
+    "channel": "item",
+    "item": "Safari Belt",
+    "lookupMode": "reviewed",
+    "scopes": [
+      {
+        "sourceIds": [
+          "item/description/89617c1736ef28843a106901",
+          "ui/slot_description/24ee86afcb05aa745c788d2a",
+          "ui/slot_description/34f9eff7a540a2e0bf10900f",
+          "ui/slot_description/67d5c07537fbec9208c18d5a",
+          "ui/slot_description/84382502217c5207cbf5cc0e"
+        ],
+        "channel": "item"
+      },
+      {
+        "sourceIds": [
+          "item/description/89617c1736ef28843a106901",
+          "ui/slot_description/24ee86afcb05aa745c788d2a",
+          "ui/slot_description/34f9eff7a540a2e0bf10900f",
+          "ui/slot_description/67d5c07537fbec9208c18d5a",
+          "ui/slot_description/84382502217c5207cbf5cc0e"
+        ],
+        "channel": "ui"
+      }
+    ],
+    "lines": [
+      [
+        {
+          "text": "The more ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "Safari Milestones",
+          "color": 43520,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": " you have,",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "the stronger this belt gets!",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ]
+    ]
+  },
+  {
+    "source": "Increases the effect of Wounded Potions by 10%.",
+    "target": "Wounded Potionの効果が10%増加する。",
+    "sourceIds": [
+      "item/description/42d7b14bfb62110e167af9f5"
+    ],
+    "channel": "item",
+    "item": "Scarleton Premium",
+    "lookupMode": "exact",
+    "scopes": [
+      {
+        "sourceIds": [
+          "item/description/42d7b14bfb62110e167af9f5"
+        ],
+        "channel": "item"
+      },
+      {
+        "sourceIds": [
+          "item/description/42d7b14bfb62110e167af9f5"
+        ],
+        "channel": "ui"
+      }
+    ],
+    "lines": [
+      [
+        {
+          "text": "Increases the effect of ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "Wounded",
+          "color": 11141120,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "Potions ",
+          "color": 11141120,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "by ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "10%",
+          "color": 5635925,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": ".",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ]
+    ]
+  },
+  {
+    "source": "Its warm chocolatey goodness imbues you with the ability to overcome the heat death of the Blazing Volcano.",
+    "target": "温かく濃厚なチョコレートのおいしさが、Blazing Volcanoの灼熱を乗り越える力を与えてくれる。",
+    "sourceIds": [
+      "item/description/406827901d96ba63f81788d9"
+    ],
+    "channel": "item",
+    "item": "Hot Chocolate",
+    "lookupMode": "exact",
+    "scopes": [
+      {
+        "sourceIds": [
+          "item/description/406827901d96ba63f81788d9"
+        ],
+        "channel": "item"
+      },
+      {
+        "sourceIds": [
+          "item/description/406827901d96ba63f81788d9"
+        ],
+        "channel": "ui"
+      }
+    ],
+    "lines": [
+      [
+        {
+          "text": "Its warm ",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "chocolatey ",
+          "color": 16777045,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "goodness",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "imbues you with the ability to",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "overcome the heat death of the",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      [
+        {
+          "text": "Blazing Volcano",
+          "color": 16755200,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": ".",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ]
+    ]
+  }
+]

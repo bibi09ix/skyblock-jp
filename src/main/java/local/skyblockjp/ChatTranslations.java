@@ -5,19 +5,18 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.network.chat.*;
 import java.util.*;
 
-/** Client-side message handles; button commands never contain the chat text. */
+/** Client-side translation requests; original chat components remain untouched. */
 public final class ChatTranslations {
     private final SkyBlockJp mod;
     private final MessageHandles handles = new MessageHandles(500);
-    private final Map<String, Previous> previous = new HashMap<>();
-    private final LinkedHashMap<String, String> contextBySource = new LinkedHashMap<>();
+    private final NpcMessageContexts contexts = new NpcMessageContexts(1000);
     private final LinkedHashMap<String, String> contextById = new LinkedHashMap<>();
     private final Set<String> inFlight = new HashSet<>();
+    private final IdentityHashMap<Component,String> idsBySource = new IdentityHashMap<>();
     private Object connection;
     private boolean output;
-    private record Previous(String text, long time) {}
     ChatTranslations(SkyBlockJp mod) { this.mod = mod; }
-    void reset() { handles.clear(); previous.clear(); inFlight.clear(); contextBySource.clear(); contextById.clear(); }
+    void reset() { handles.clear(); contexts.clear(); inFlight.clear(); contextById.clear(); idsBySource.clear(); }
     void refreshButtons() {
         var chat = Minecraft.getInstance().gui.hud.getChat();
         if (!(chat instanceof ChatAccess access)) return;
@@ -25,27 +24,40 @@ public final class ChatTranslations {
         for (int i = 0; i < messages.size(); i++) {
             var m = messages.get(i);
             Component original = MessageHandles.original(m.content());
-            boolean translated = LoreParser.clean(original.getString()).startsWith("[JP]");
-            Component updated = translated ? original : decorate(original);
+            Component updated = original;
+            contexts.transfer(MessageHandles.originalReference(m.content()), updated);
             messages.set(i, new net.minecraft.client.multiplayer.chat.GuiMessage(m.addedTime(), updated, m.signature(), m.source(), m.tag()));
         }
         chat.rescaleChat();
     }
-    private void connectionChanged() {
-        Object current = Minecraft.getInstance().getConnection();
+    void syncConnection() { syncConnection(Minecraft.getInstance().getConnection()); }
+    /** Tick/connect and every receive path share the same idempotent transition. */
+    void syncConnection(Object current) {
         if (connection != current) { reset(); mod.hud().clear(); connection = current; }
     }
     public Component decorate(Component original) {
-        connectionChanged();
-        if (output || !mod.active() || !mod.configuration().chatButtons || original.getString().isBlank()) return original;
+        syncConnection();
+        if(!output && !LoreParser.clean(original.getString()).startsWith("[JP]")) contexts.capture(MessageHandles.originalReference(original),System.currentTimeMillis(),false);
+        return original;
+    }
+    public void request(Component original) {
+        syncConnection();
+        String pending=idsBySource.get(original);
+        if(pending!=null&&inFlight.contains(pending)){request(pending);return;}
         String id = handles.put(original);
-        contextById.put(id, contextBySource.getOrDefault(original.getString(), ""));
-        if (contextById.size() > 500) contextById.remove(contextById.keySet().iterator().next());
-        return MessageHandles.decorate(original, id, mod.configuration().chatButtonFirst);
+        idsBySource.put(original,id);
+        var occurrence=contexts.get(original);
+        contextById.put(id,occurrence==null?"":occurrence.previous());
+        if (contextById.size() > 500) {
+            String oldest=contextById.keySet().iterator().next();contextById.remove(oldest);
+            idsBySource.values().removeIf(oldest::equals);
+        }
+        request(id);
     }
     void npc(Component original) {
-        connectionChanged();
+        syncConnection();
         String plain = LoreParser.clean(original.getString());
+        var occurrence=contexts.capture(MessageHandles.originalReference(original),System.currentTimeMillis(),true);
         if (NpcTranslation.optionPrompt(plain)) {
             translate(NpcTranslation.whole(original), "選択肢", "", false, null);
             return;
@@ -53,19 +65,22 @@ public final class ChatTranslations {
         int colon = plain.indexOf(':');
         if (colon < 0) return;
         String speaker = plain.substring(0, colon);
-        long now = System.currentTimeMillis();
-        Previous last = previous.get(speaker);
-        String context = last != null && now - last.time() < 45000 ? last.text() : "";
-        contextBySource.put(original.getString(), context);
-        if (contextBySource.size() > 500) contextBySource.remove(contextBySource.keySet().iterator().next());
-        if (previous.size() > 100) previous.clear();
-        previous.put(speaker, new Previous(plain.substring(colon + 1).strip(), now));
+        String context = occurrence.previous();
         translate(NpcTranslation.paragraph(original), speaker, context, false, null);
     }
+    /** Only registered fixed notifications are automatic; unknown/player text is never sent. */
+    void system(Component original) {
+        syncConnection();
+        var paragraph = NpcTranslation.whole(original);
+        var decision = mod.service().inspectDictionary(paragraph, "system", "");
+        if (!decision.accepted() || decision.reason().equals("KEEP_ORIGINAL")) return;
+        mod.service().recordDictionary(paragraph, "", decision.encoded(), "scope=system; notification", decision);
+        display("システム", paragraph.decode(decision.encoded()));
+    }
     public void request(String id) {
-        connectionChanged();
+        syncConnection();
         Component original = handles.get(id);
-        if (original == null) { notifyLocal("このチャットは履歴から外れました。新しい行の「訳」を押してください。"); return; }
+        if (original == null) { notifyLocal("このチャットは履歴から外れました。翻訳したいテキストにカーソルを合わせて翻訳キーを押してください。"); return; }
         if (!mod.active()) { notifyLocal("翻訳がOFF、または翻訳対象のサーバーではありません。"); return; }
         if (!inFlight.add(id)) { notifyLocal("この行は翻訳中です。"); return; }
         Component death = ChatText.death(original);
@@ -73,20 +88,34 @@ public final class ChatTranslations {
             inFlight.remove(id); mod.service().recordLocalChat(original, death); display("チャット", death); return;
         }
         String plain = LoreParser.clean(original.getString());
-        String speaker = plain.startsWith("[NPC]") && plain.contains(":") ? plain.substring(0, plain.indexOf(':')) : "チャット";
+        boolean npcHeader = (plain.startsWith("[NPC]") || plain.startsWith("[BOSS]")) && plain.contains(":");
+        String speaker = npcHeader ? plain.substring(0, plain.indexOf(':')) : "チャット";
         String context = contextById.getOrDefault(id, "");
-        mod.hud().status("翻訳中…");
-        if (!mod.configuration().translationHud) notifyLocal("翻訳中…");
-        translate(speaker.startsWith("[NPC]") ? NpcTranslation.paragraph(original) : NpcTranslation.whole(original), speaker, context, true, id);
+        String status = mod.configuration().apiTranslation ? "翻訳中…" : "辞書を確認中…";
+        mod.hud().status(status);
+        if (!mod.configuration().translationHud) notifyLocal(status);
+        boolean npc = npcHeader || NpcTranslation.optionPrompt(plain);
+        if (NpcTranslation.optionPrompt(plain)) speaker = "選択肢";
+        translate(npcHeader ? NpcTranslation.paragraph(original)
+            : npc ? NpcTranslation.whole(original) : NpcTranslation.wholeChat(original), speaker, context, !npc, id);
     }
     private void translate(StyledParagraph paragraph, String speaker, String context, boolean manual, String id) {
         var mc = Minecraft.getInstance();
         var origin = mc.getConnection();
         var service = mod.service();
-        var future = manual ? service.requestChat(paragraph, context) : service.requestNpc(paragraph, speaker, context);
+        var npcEvidence=Map.<String,Object>of("localPlayerName",mc.getUser().getName());
+        var future = manual ? service.requestChat(paragraph, context)
+            : id != null ? service.requestNpcManually(paragraph, speaker, context,npcEvidence) : service.requestNpc(paragraph, speaker, context,npcEvidence);
         future.thenAccept(result -> mc.execute(() -> {
             if (id != null) inFlight.remove(id);
             if (mc.getConnection() != origin || service != mod.service() || !mod.active()) return;
+            if (result == null) {
+                if (id != null && !mod.configuration().apiTranslation) {
+                    mod.hud().status("API翻訳OFF: この文章の辞書訳はありません");
+                    if (!mod.configuration().translationHud) notifyLocal("API翻訳OFF: この文章の辞書訳はありません。");
+                }
+                return;
+            }
             display(speaker, paragraph.decodeForDisplay(result).copy().withStyle(ChatFormatting.WHITE));
         }));
     }

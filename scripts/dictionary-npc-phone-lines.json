@@ -1,0 +1,1469 @@
+{
+  "editing_help": "本文は採用済みbare_en/bare_jaからの厳密な派生。元の訳・取得元・Wiki条件が変わった場合は再精査が必要。全NPCへ電話記号を自動付加するものではない。",
+  "entries": [
+    {
+      "approved": true,
+      "bare_en": "A giant magma creature with massive tentacles?",
+      "bare_ja": "巨大な触手を持つ、とてつもなく大きなマグマの怪物じゃと？",
+      "bare_source_ids": [
+        "recovered/npc/919833cf4c2ca414c6046a7a"
+      ],
+      "bare_source_sha256": "2b5237236fddcaf3c1cde36d4734bd02ce2048ba2bd36783b9bc1f06a70d99b8",
+      "bare_target_sha256": "da12e1e73839e37fd7e85b7557ec4564b04717e96f4ee152ad6c0b6706bd323f",
+      "channel": "npc",
+      "en": "✆ A giant magma creature with massive tentacles?",
+      "evidence": {
+        "kind": "wiki_abiphone_dialogue",
+        "native_prefix": {
+          "event_hash_format": "canonical_json_v1",
+          "event_line": 2,
+          "event_sha256": "80251552da659f7f7be530c1bab620cc8030814523daa9627201f237ba06e9f8",
+          "log": "npc-dictionary-decisions.jsonl",
+          "source": "✆ If left unchecked, it is possible that the powers of this creature will grow.",
+          "source_complete": true,
+          "source_sha256": "3276c069da3b29ca8c144110d4d355145ab20053b4f463d41c9d56a0f64784d9",
+          "source_styled_complete": true,
+          "source_styled_runs": [
+            {
+              "bold": false,
+              "color": 5636095,
+              "italic": false,
+              "obfuscated": false,
+              "strikethrough": false,
+              "text": "✆",
+              "underlined": false
+            },
+            {
+              "bold": false,
+              "color": 16777215,
+              "italic": false,
+              "obfuscated": false,
+              "strikethrough": false,
+              "text": " If left unchecked, it is possible that the powers of this creature will grow.",
+              "underlined": false
+            }
+          ],
+          "source_styled_runs_sha256": "e8f93e2f1e2dd8ad6c3fa5236482902fd813a4d686c1717fda065ab642038d91",
+          "speaker": "Dean",
+          "time": "2026-10-30T01:54:55.726463700Z",
+          "version": "0.7.9"
+        },
+        "source_complete": true,
+        "speaker": "Dean",
+        "wiki_group": {
+          "conditions": [
+            "First interaction after defeating [[Kuudra]] <br> (Can appear as [[Abiphone]] dialogue)"
+          ],
+          "conditions_sha256": "f10abb5696f1fd6016e251071010f002cb6f30e108a5cf1e97f6504ef52ada4d",
+          "extracted_line": 2,
+          "extracted_text": "[NPC] Dean: Hello <player>?\n[NPC] Dean: You found who stole our Sulphur?\n[NPC] Dean: A giant magma creature with massive tentacles?\n[NPC] Dean: Well that explains a lot, my Apprentice just awoken from his coma, he described the same creature.\n[NPC] Dean: In a way it is good that the Piglins were not behind this.\n[NPC] Dean: We need to learn more about that monster, where it is from and what it wants.\n[NPC] Dean: I will call you later!",
+          "extracted_text_sha256": "711ac0661a48482693d0a8123622dcff05a3eab0627fd6066f664c2027dbb25d",
+          "group_sha256": "e603610003a07fc5adcc5b05c003d02e564699b0fc49aa0c21fbca8f2ac61496",
+          "source": {
+            "dataset": "wiki",
+            "file": "wiki/pages/91759.json",
+            "pointer": "/raw_wikitext",
+            "revision": 830417,
+            "sha256": "1ccc7a2967d081ed1d64f257709046ad063eb6697287a0cafb827883a3278dff",
+            "source_id": "91759",
+            "span": [
+              14933,
+              15432
+            ],
+            "templatepath": "root/74/table/row[35]/message/dialogue[0]/1",
+            "url": "https://hypixelskyblock.minecraft.wiki/w/Special:PermanentLink/830417"
+          }
+        }
+      },
+      "id": "reviewed/npc_phone/78fb477c858b88f8ca1ff327",
+      "ja": "✆ 巨大な触手を持つ、とてつもなく大きなマグマの怪物じゃと？",
+      "reason": "Wikiの条件がAbiphoneでも現れる台詞と明示し、実機の同じ話者の電話記号も確認済み。現在の採用済み固定訳に✆だけを付け、本文・名前・数値を変更しない。既存の電話専用訳と動的なプレイヤー名入り台詞は置き換えない。",
+      "source_sha256": "479f0a75a9c601b1f77530aa0178f823f4d8ccdbe8d87df9bfc9ec8ca9cf6612",
+      "speaker": "Dean",
+      "target_sha256": "a002ca85f6d988b990c4ab33b5b571729badd2abf915ea98476d70ac9021ae75"
+    },
+    {
+      "approved": true,
+      "bare_en": "Hallowed Skulls can be obtained from Bladesoul inside the Stronghold.",
+      "bare_ja": "Hallowed Skullsは、StrongholdにいるBladesoulから手に入るぞ。",
+      "bare_source_ids": [
+        "recovered/npc/ca5b7b594e1c21274f78558c"
+      ],
+      "bare_source_sha256": "5f23bb0c6478b7c5a8394f067d450fd76c946028decd72778e28e4ced8131a9b",
+      "bare_target_sha256": "18bce7f46969f5555b7280e17d8db24233a50cfee0b6e58f8716c2bb30bfd096",
+      "channel": "npc",
+      "en": "✆ Hallowed Skulls can be obtained from Bladesoul inside the Stronghold.",
+      "evidence": {
+        "kind": "wiki_abiphone_dialogue",
+        "native_prefix": {
+          "event_hash_format": "canonical_json_v1",
+          "event_line": 2,
+          "event_sha256": "80251552da659f7f7be530c1bab620cc8030814523daa9627201f237ba06e9f8",
+          "log": "npc-dictionary-decisions.jsonl",
+          "source": "✆ If left unchecked, it is possible that the powers of this creature will grow.",
+          "source_complete": true,
+          "source_sha256": "3276c069da3b29ca8c144110d4d355145ab20053b4f463d41c9d56a0f64784d9",
+          "source_styled_complete": true,
+          "source_styled_runs": [
+            {
+              "bold": false,
+              "color": 5636095,
+              "italic": false,
+              "obfuscated": false,
+              "strikethrough": false,
+              "text": "✆",
+              "underlined": false
+            },
+            {
+              "bold": false,
+              "color": 16777215,
+              "italic": false,
+              "obfuscated": false,
+              "strikethrough": false,
+              "text": " If left unchecked, it is possible that the powers of this creature will grow.",
+              "underlined": false
+            }
+          ],
+          "source_styled_runs_sha256": "e8f93e2f1e2dd8ad6c3fa5236482902fd813a4d686c1717fda065ab642038d91",
+          "speaker": "Dean",
+          "time": "2026-10-30T01:54:55.726463700Z",
+          "version": "0.7.9"
+        },
+        "source_complete": true,
+        "speaker": "Dean",
+        "wiki_group": {
+          "conditions": [
+            "Before giving a {{Item|Hallowed Skull}} <br> (Can appear as [[Abiphone]] dialogue)",
+            "Random"
+          ],
+          "conditions_sha256": "71dc33574837d5c293626f365f27d10c3fb5e3f37067d6fe1cb1f1d8721a737e",
+          "extracted_line": 0,
+          "extracted_text": "[NPC] Dean: Hallowed Skulls can be obtained from Bladesoul inside the Stronghold.",
+          "extracted_text_sha256": "7c5fc8e8b962101f3bb3b20067584594332f3190fba4389bbcf2209c2437069a",
+          "group_sha256": "2a7dfe4fc07fa0d33b7369ed50a4b1a3a549f3c1da764fa321794f4e4818bc6f",
+          "source": {
+            "dataset": "wiki",
+            "file": "wiki/pages/91759.json",
+            "pointer": "/raw_wikitext",
+            "revision": 830417,
+            "sha256": "1ccc7a2967d081ed1d64f257709046ad063eb6697287a0cafb827883a3278dff",
+            "source_id": "91759",
+            "span": [
+              11950,
+              12054
+            ],
+            "templatepath": "root/74/table/row[24]/message/dialogue[0]/1",
+            "url": "https://hypixelskyblock.minecraft.wiki/w/Special:PermanentLink/830417"
+          }
+        }
+      },
+      "id": "reviewed/npc_phone/3f2a91ef6e850e21f4f566e7",
+      "ja": "✆ Hallowed Skullsは、StrongholdにいるBladesoulから手に入るぞ。",
+      "reason": "Wikiの条件がAbiphoneでも現れる台詞と明示し、実機の同じ話者の電話記号も確認済み。現在の採用済み固定訳に✆だけを付け、本文・名前・数値を変更しない。既存の電話専用訳と動的なプレイヤー名入り台詞は置き換えない。",
+      "source_sha256": "ad5309220a0a060f26a65a80fadd5e33a1c7116c02aae057f408ac7428cda540",
+      "speaker": "Dean",
+      "target_sha256": "ced79bd599e8f9b151a4153aff03cfd036ebe3d51dddc81a5761ddbdeae3a551"
+    },
+    {
+      "approved": true,
+      "bare_en": "I have reasons to believe there is a lot of Sulphur in the North, it would explain the appearance of those Blaze species.",
+      "bare_ja": "北にはSulphurが大量にあると考えておるのじゃ。そうなら、ああしたBlazeの種が現れるのも説明がつく。",
+      "bare_source_ids": [
+        "recovered/npc/62f6d845f87e7963acb7c0ca"
+      ],
+      "bare_source_sha256": "df282a194c0e058404ddfc8097ac887a8f68ebeb3cf22eaeba98a006b34dcffe",
+      "bare_target_sha256": "543099224d43abca9044669e5a1d01928e6b67bb3dbdd282eb296211d3c70ccb",
+      "channel": "npc",
+      "en": "✆ I have reasons to believe there is a lot of Sulphur in the North, it would explain the appearance of those Blaze species.",
+      "evidence": {
+        "kind": "wiki_abiphone_dialogue",
+        "native_prefix": {
+          "event_hash_format": "canonical_json_v1",
+          "event_line": 2,
+          "event_sha256": "80251552da659f7f7be530c1bab620cc8030814523daa9627201f237ba06e9f8",
+          "log": "npc-dictionary-decisions.jsonl",
+          "source": "✆ If left unchecked, it is possible that the powers of this creature will grow.",
+          "source_complete": true,
+          "source_sha256": "3276c069da3b29ca8c144110d4d355145ab20053b4f463d41c9d56a0f64784d9",
+          "source_styled_complete": true,
+          "source_styled_runs": [
+            {
+              "bold": false,
+              "color": 5636095,
+              "italic": false,
+              "obfuscated": false,
+              "strikethrough": false,
+              "text": "✆",
+              "underlined": false
+            },
+            {
+              "bold": false,
+              "color": 16777215,
+              "italic": false,
+              "obfuscated": false,
+              "strikethrough": false,
+              "text": " If left unchecked, it is possible that the powers of this creature will grow.",
+              "underlined": false
+            }
+          ],
+          "source_styled_runs_sha256": "e8f93e2f1e2dd8ad6c3fa5236482902fd813a4d686c1717fda065ab642038d91",
+          "speaker": "Dean",
+          "time": "2026-10-30T01:54:55.726463700Z",
+          "version": "0.7.9"
+        },
+        "source_complete": true,
+        "speaker": "Dean",
+        "wiki_group": {
+          "conditions": [
+            "Before giving a {{Item|Lumino Fiber}} <br> (Can appear as [[Abiphone]] dialogue)",
+            "Random"
+          ],
+          "conditions_sha256": "1cb89cfbbda0a81652646b60d99dd94837db5a91bdbc5b9b271329db5cc6fca4",
+          "extracted_line": 0,
+          "extracted_text": "[NPC] Dean: I have reasons to believe there is a lot of Sulphur in the North, it would explain the appearance of those Blaze species.",
+          "extracted_text_sha256": "c1d3dae8c324fb828db232ac5d0b2741d01199ded9a4c96ef5002c4f9ade381c",
+          "group_sha256": "5e12a24f0d489c0c8cb2415097156102f2c0f10e63904bf4d2b5d46a2a369c76",
+          "source": {
+            "dataset": "wiki",
+            "file": "wiki/pages/91759.json",
+            "pointer": "/raw_wikitext",
+            "revision": 830417,
+            "sha256": "1ccc7a2967d081ed1d64f257709046ad063eb6697287a0cafb827883a3278dff",
+            "source_id": "91759",
+            "span": [
+              12987,
+              13143
+            ],
+            "templatepath": "root/74/table/row[28]/message/dialogue[0]/1",
+            "url": "https://hypixelskyblock.minecraft.wiki/w/Special:PermanentLink/830417"
+          }
+        }
+      },
+      "id": "reviewed/npc_phone/e80b94cb67998364d8bb7e51",
+      "ja": "✆ 北にはSulphurが大量にあると考えておるのじゃ。そうなら、ああしたBlazeの種が現れるのも説明がつく。",
+      "reason": "Wikiの条件がAbiphoneでも現れる台詞と明示し、実機の同じ話者の電話記号も確認済み。現在の採用済み固定訳に✆だけを付け、本文・名前・数値を変更しない。既存の電話専用訳と動的なプレイヤー名入り台詞は置き換えない。",
+      "source_sha256": "d3abb568753a81fcc3ef0c80ee5a6d801f4f8c57621e399e4a6cc454b7cc4981",
+      "speaker": "Dean",
+      "target_sha256": "8b8bac1d21ead37258e90918797dfa720094b0ccc349c34b2224686eaa51827e"
+    },
+    {
+      "approved": true,
+      "bare_en": "I will call you later!",
+      "bare_ja": "また後で電話するとしよう！",
+      "bare_source_ids": [
+        "recovered/npc/d4a8ff2eaf6bc69d2a3dbecb"
+      ],
+      "bare_source_sha256": "38bfe66083673964799a04c82aefab2d88bcd3e869a0d6dca6858dca360c4283",
+      "bare_target_sha256": "5fb3cc217d76c9355e0139ec72d1a462f536c190d85d088c875de0b3eea23103",
+      "channel": "npc",
+      "en": "✆ I will call you later!",
+      "evidence": {
+        "kind": "wiki_abiphone_dialogue",
+        "native_prefix": {
+          "event_hash_format": "canonical_json_v1",
+          "event_line": 2,
+          "event_sha256": "80251552da659f7f7be530c1bab620cc8030814523daa9627201f237ba06e9f8",
+          "log": "npc-dictionary-decisions.jsonl",
+          "source": "✆ If left unchecked, it is possible that the powers of this creature will grow.",
+          "source_complete": true,
+          "source_sha256": "3276c069da3b29ca8c144110d4d355145ab20053b4f463d41c9d56a0f64784d9",
+          "source_styled_complete": true,
+          "source_styled_runs": [
+            {
+              "bold": false,
+              "color": 5636095,
+              "italic": false,
+              "obfuscated": false,
+              "strikethrough": false,
+              "text": "✆",
+              "underlined": false
+            },
+            {
+              "bold": false,
+              "color": 16777215,
+              "italic": false,
+              "obfuscated": false,
+              "strikethrough": false,
+              "text": " If left unchecked, it is possible that the powers of this creature will grow.",
+              "underlined": false
+            }
+          ],
+          "source_styled_runs_sha256": "e8f93e2f1e2dd8ad6c3fa5236482902fd813a4d686c1717fda065ab642038d91",
+          "speaker": "Dean",
+          "time": "2026-10-30T01:54:55.726463700Z",
+          "version": "0.7.9"
+        },
+        "source_complete": true,
+        "speaker": "Dean",
+        "wiki_group": {
+          "conditions": [
+            "First interaction after defeating [[Kuudra]] <br> (Can appear as [[Abiphone]] dialogue)"
+          ],
+          "conditions_sha256": "f10abb5696f1fd6016e251071010f002cb6f30e108a5cf1e97f6504ef52ada4d",
+          "extracted_line": 6,
+          "extracted_text": "[NPC] Dean: Hello <player>?\n[NPC] Dean: You found who stole our Sulphur?\n[NPC] Dean: A giant magma creature with massive tentacles?\n[NPC] Dean: Well that explains a lot, my Apprentice just awoken from his coma, he described the same creature.\n[NPC] Dean: In a way it is good that the Piglins were not behind this.\n[NPC] Dean: We need to learn more about that monster, where it is from and what it wants.\n[NPC] Dean: I will call you later!",
+          "extracted_text_sha256": "711ac0661a48482693d0a8123622dcff05a3eab0627fd6066f664c2027dbb25d",
+          "group_sha256": "e603610003a07fc5adcc5b05c003d02e564699b0fc49aa0c21fbca8f2ac61496",
+          "source": {
+            "dataset": "wiki",
+            "file": "wiki/pages/91759.json",
+            "pointer": "/raw_wikitext",
+            "revision": 830417,
+            "sha256": "1ccc7a2967d081ed1d64f257709046ad063eb6697287a0cafb827883a3278dff",
+            "source_id": "91759",
+            "span": [
+              14933,
+              15432
+            ],
+            "templatepath": "root/74/table/row[35]/message/dialogue[0]/1",
+            "url": "https://hypixelskyblock.minecraft.wiki/w/Special:PermanentLink/830417"
+          }
+        }
+      },
+      "id": "reviewed/npc_phone/5507ddcd0d088b33c1d42e69",
+      "ja": "✆ また後で電話するとしよう！",
+      "reason": "Wikiの条件がAbiphoneでも現れる台詞と明示し、実機の同じ話者の電話記号も確認済み。現在の採用済み固定訳に✆だけを付け、本文・名前・数値を変更しない。既存の電話専用訳と動的なプレイヤー名入り台詞は置き換えない。",
+      "source_sha256": "3c26a3e89c780b46e223b6b56c84bb9cc748827713330f02933072a49c12f6fd",
+      "speaker": "Dean",
+      "target_sha256": "69eff3786bd867bd4107588a08d8e0c42cfd8ddfa7a842b9c139026fa63d88ff"
+    },
+    {
+      "approved": true,
+      "bare_en": "If left unchecked, it is possible that the powers of this creature will grow.",
+      "bare_ja": "放っておけば、この生き物の力はさらに増すかもしれん。",
+      "bare_source_ids": [
+        "observed/npc/21177aa7e6861807a3348ce2"
+      ],
+      "bare_source_sha256": "873206711a0beebc10b027c57b4406ab1acec50e2105dff8f511330d53925c54",
+      "bare_target_sha256": "2bee02135e0e988ef156b43552226ad2936788148cab68785b00f5aac27e43e7",
+      "channel": "npc",
+      "en": "✆ If left unchecked, it is possible that the powers of this creature will grow.",
+      "evidence": {
+        "kind": "wiki_abiphone_dialogue",
+        "native_prefix": {
+          "event_hash_format": "canonical_json_v1",
+          "event_line": 2,
+          "event_sha256": "80251552da659f7f7be530c1bab620cc8030814523daa9627201f237ba06e9f8",
+          "log": "npc-dictionary-decisions.jsonl",
+          "source": "✆ If left unchecked, it is possible that the powers of this creature will grow.",
+          "source_complete": true,
+          "source_sha256": "3276c069da3b29ca8c144110d4d355145ab20053b4f463d41c9d56a0f64784d9",
+          "source_styled_complete": true,
+          "source_styled_runs": [
+            {
+              "bold": false,
+              "color": 5636095,
+              "italic": false,
+              "obfuscated": false,
+              "strikethrough": false,
+              "text": "✆",
+              "underlined": false
+            },
+            {
+              "bold": false,
+              "color": 16777215,
+              "italic": false,
+              "obfuscated": false,
+              "strikethrough": false,
+              "text": " If left unchecked, it is possible that the powers of this creature will grow.",
+              "underlined": false
+            }
+          ],
+          "source_styled_runs_sha256": "e8f93e2f1e2dd8ad6c3fa5236482902fd813a4d686c1717fda065ab642038d91",
+          "speaker": "Dean",
+          "time": "2026-10-30T01:54:55.726463700Z",
+          "version": "0.7.9"
+        },
+        "source_complete": true,
+        "speaker": "Dean",
+        "wiki_group": {
+          "conditions": [
+            "After defeating [[Kuudra]] <br> (Can appear as [[Abiphone]] dialogue)",
+            "Random"
+          ],
+          "conditions_sha256": "c779cb2df5ba44e8d46a87dff6fcddce46253ec4bca825d17701250c2084a198",
+          "extracted_line": 0,
+          "extracted_text": "[NPC] Dean: If left unchecked, it is possible that the powers of this creature will grow.",
+          "extracted_text_sha256": "56537436fb7d2a0d3142df1354d9070b70c8677f71e672a6f859137ac06121b2",
+          "group_sha256": "0b51cd2d066ebab783d48fcd868a63937dc4241904e4222b47f0360466048168",
+          "source": {
+            "dataset": "wiki",
+            "file": "wiki/pages/91759.json",
+            "pointer": "/raw_wikitext",
+            "revision": 830417,
+            "sha256": "1ccc7a2967d081ed1d64f257709046ad063eb6697287a0cafb827883a3278dff",
+            "source_id": "91759",
+            "span": [
+              15710,
+              15818
+            ],
+            "templatepath": "root/74/table/row[37]/message/dialogue[0]/1",
+            "url": "https://hypixelskyblock.minecraft.wiki/w/Special:PermanentLink/830417"
+          }
+        }
+      },
+      "id": "reviewed/npc_phone/21177aa7e6861807a3348ce2",
+      "ja": "✆ 放っておけば、この生き物の力はさらに増すかもしれん。",
+      "reason": "Wikiの条件がAbiphoneでも現れる台詞と明示し、実機の同じ話者の電話記号も確認済み。現在の採用済み固定訳に✆だけを付け、本文・名前・数値を変更しない。既存の電話専用訳と動的なプレイヤー名入り台詞は置き換えない。",
+      "source_sha256": "3276c069da3b29ca8c144110d4d355145ab20053b4f463d41c9d56a0f64784d9",
+      "speaker": "Dean",
+      "target_sha256": "220a75e8494e272ef3243521d0c81caf159581064184a0561c3c1108a180ccb3"
+    },
+    {
+      "approved": true,
+      "bare_en": "In a way it is good that the Piglins were not behind this.",
+      "bare_ja": "ある意味、Piglinsの仕業ではなくてよかったのう。",
+      "bare_source_ids": [
+        "recovered/npc/7a237d4facd5bb9bff55e028"
+      ],
+      "bare_source_sha256": "d0bdfce345e45ed1d174d702dccfa471a4b488f489cd73eea49f4e42e619820b",
+      "bare_target_sha256": "cd71aabc9632b384d7f5cb3a1a8eadc5ba444ea87fe4c01eaab58f193796ab5e",
+      "channel": "npc",
+      "en": "✆ In a way it is good that the Piglins were not behind this.",
+      "evidence": {
+        "kind": "wiki_abiphone_dialogue",
+        "native_prefix": {
+          "event_hash_format": "canonical_json_v1",
+          "event_line": 2,
+          "event_sha256": "80251552da659f7f7be530c1bab620cc8030814523daa9627201f237ba06e9f8",
+          "log": "npc-dictionary-decisions.jsonl",
+          "source": "✆ If left unchecked, it is possible that the powers of this creature will grow.",
+          "source_complete": true,
+          "source_sha256": "3276c069da3b29ca8c144110d4d355145ab20053b4f463d41c9d56a0f64784d9",
+          "source_styled_complete": true,
+          "source_styled_runs": [
+            {
+              "bold": false,
+              "color": 5636095,
+              "italic": false,
+              "obfuscated": false,
+              "strikethrough": false,
+              "text": "✆",
+              "underlined": false
+            },
+            {
+              "bold": false,
+              "color": 16777215,
+              "italic": false,
+              "obfuscated": false,
+              "strikethrough": false,
+              "text": " If left unchecked, it is possible that the powers of this creature will grow.",
+              "underlined": false
+            }
+          ],
+          "source_styled_runs_sha256": "e8f93e2f1e2dd8ad6c3fa5236482902fd813a4d686c1717fda065ab642038d91",
+          "speaker": "Dean",
+          "time": "2026-10-30T01:54:55.726463700Z",
+          "version": "0.7.9"
+        },
+        "source_complete": true,
+        "speaker": "Dean",
+        "wiki_group": {
+          "conditions": [
+            "First interaction after defeating [[Kuudra]] <br> (Can appear as [[Abiphone]] dialogue)"
+          ],
+          "conditions_sha256": "f10abb5696f1fd6016e251071010f002cb6f30e108a5cf1e97f6504ef52ada4d",
+          "extracted_line": 4,
+          "extracted_text": "[NPC] Dean: Hello <player>?\n[NPC] Dean: You found who stole our Sulphur?\n[NPC] Dean: A giant magma creature with massive tentacles?\n[NPC] Dean: Well that explains a lot, my Apprentice just awoken from his coma, he described the same creature.\n[NPC] Dean: In a way it is good that the Piglins were not behind this.\n[NPC] Dean: We need to learn more about that monster, where it is from and what it wants.\n[NPC] Dean: I will call you later!",
+          "extracted_text_sha256": "711ac0661a48482693d0a8123622dcff05a3eab0627fd6066f664c2027dbb25d",
+          "group_sha256": "e603610003a07fc5adcc5b05c003d02e564699b0fc49aa0c21fbca8f2ac61496",
+          "source": {
+            "dataset": "wiki",
+            "file": "wiki/pages/91759.json",
+            "pointer": "/raw_wikitext",
+            "revision": 830417,
+            "sha256": "1ccc7a2967d081ed1d64f257709046ad063eb6697287a0cafb827883a3278dff",
+            "source_id": "91759",
+            "span": [
+              14933,
+              15432
+            ],
+            "templatepath": "root/74/table/row[35]/message/dialogue[0]/1",
+            "url": "https://hypixelskyblock.minecraft.wiki/w/Special:PermanentLink/830417"
+          }
+        }
+      },
+      "id": "reviewed/npc_phone/49c44b95beb2d9ef336773ce",
+      "ja": "✆ ある意味、Piglinsの仕業ではなくてよかったのう。",
+      "reason": "Wikiの条件がAbiphoneでも現れる台詞と明示し、実機の同じ話者の電話記号も確認済み。現在の採用済み固定訳に✆だけを付け、本文・名前・数値を変更しない。既存の電話専用訳と動的なプレイヤー名入り台詞は置き換えない。",
+      "source_sha256": "cf950bf20096a7235ba73ebd9d0cda82a2ae2121b974bb4a02b156f413ab641c",
+      "speaker": "Dean",
+      "target_sha256": "33cd4762b953f772d7bfa159395b3666c482ac9dcb9dfe05e8f0186c8fd1fef8"
+    },
+    {
+      "approved": true,
+      "bare_en": "My poor Apprentice, it is my vault, I shouldn't send him on difficult missions.",
+      "bare_ja": "かわいそうなApprentice……わしの落ち度じゃ。難しい任務に行かせるべきではなかった。",
+      "bare_source_ids": [
+        "recovered/npc/c9b37ead9244c67512bd2c1e"
+      ],
+      "bare_source_sha256": "e891ac9c48a978b15702d1df158e4c33d3b851a71d56fb4bb5d449d880f9a269",
+      "bare_target_sha256": "90cbd37a6ecb729cabed8d1b1c4f0270961caa506dd2a31738cd3b6d0d83aeec",
+      "channel": "npc",
+      "en": "✆ My poor Apprentice, it is my vault, I shouldn't send him on difficult missions.",
+      "evidence": {
+        "kind": "wiki_abiphone_dialogue",
+        "native_prefix": {
+          "event_hash_format": "canonical_json_v1",
+          "event_line": 2,
+          "event_sha256": "80251552da659f7f7be530c1bab620cc8030814523daa9627201f237ba06e9f8",
+          "log": "npc-dictionary-decisions.jsonl",
+          "source": "✆ If left unchecked, it is possible that the powers of this creature will grow.",
+          "source_complete": true,
+          "source_sha256": "3276c069da3b29ca8c144110d4d355145ab20053b4f463d41c9d56a0f64784d9",
+          "source_styled_complete": true,
+          "source_styled_runs": [
+            {
+              "bold": false,
+              "color": 5636095,
+              "italic": false,
+              "obfuscated": false,
+              "strikethrough": false,
+              "text": "✆",
+              "underlined": false
+            },
+            {
+              "bold": false,
+              "color": 16777215,
+              "italic": false,
+              "obfuscated": false,
+              "strikethrough": false,
+              "text": " If left unchecked, it is possible that the powers of this creature will grow.",
+              "underlined": false
+            }
+          ],
+          "source_styled_runs_sha256": "e8f93e2f1e2dd8ad6c3fa5236482902fd813a4d686c1717fda065ab642038d91",
+          "speaker": "Dean",
+          "time": "2026-10-30T01:54:55.726463700Z",
+          "version": "0.7.9"
+        },
+        "source_complete": true,
+        "speaker": "Dean",
+        "wiki_group": {
+          "conditions": [
+            "After finding the {{NPCSprite|Apprentice (Crimson Isle);Apprentice}} <br> (Can appear as [[Abiphone]] dialogue)"
+          ],
+          "conditions_sha256": "086aae8521df1bf9346d28d28708636d80dd169d3b73f3ec6727a90142c80e85",
+          "extracted_line": 2,
+          "extracted_text": "[NPC] Dean: You found my Apprentice and he WHAT?!\n[NPC] Dean: SULPHUR! This is catastrophic!!\n[NPC] Dean: My poor Apprentice, it is my vault, I shouldn't send him on difficult missions.\n[NPC] Dean: This will also delay my work considerably, how am I going to obtain all those precious materials now...\n[NPC] Dean: Oh, you are willing to help?\n[NPC] Dean: Well in that case, I will send you the list of items I need.\n[NPC] Dean: Thank you very much you are a life savior, quite literally.",
+          "extracted_text_sha256": "b87babc8179fd4483396214eda1235e3c733069989e2bf1c0be25812632afb2a",
+          "group_sha256": "054efb05e98e214204e0a145bc6b0ce18e158ea184af64ef4e317218e68b5f17",
+          "source": {
+            "dataset": "wiki",
+            "file": "wiki/pages/91759.json",
+            "pointer": "/raw_wikitext",
+            "revision": 830417,
+            "sha256": "1ccc7a2967d081ed1d64f257709046ad063eb6697287a0cafb827883a3278dff",
+            "source_id": "91759",
+            "span": [
+              9871,
+              10415
+            ],
+            "templatepath": "root/74/table/row[19]/message/dialogue[0]/1",
+            "url": "https://hypixelskyblock.minecraft.wiki/w/Special:PermanentLink/830417"
+          }
+        }
+      },
+      "id": "reviewed/npc_phone/3c37fe1278e75dfcfa57cc56",
+      "ja": "✆ かわいそうなApprentice……わしの落ち度じゃ。難しい任務に行かせるべきではなかった。",
+      "reason": "Wikiの条件がAbiphoneでも現れる台詞と明示し、実機の同じ話者の電話記号も確認済み。現在の採用済み固定訳に✆だけを付け、本文・名前・数値を変更しない。既存の電話専用訳と動的なプレイヤー名入り台詞は置き換えない。",
+      "source_sha256": "9d1cd58cc09e969dab65ce9e53817e592c0fb7cd76aa6768216f54e5ea3dfb6c",
+      "speaker": "Dean",
+      "target_sha256": "265c198f8c73f04502f68f1eeef2ed405901862a48b6bd42f107a95e850f6079"
+    },
+    {
+      "approved": true,
+      "bare_en": "Oh, you are willing to help?",
+      "bare_ja": "おお、手伝ってくれるというのかね？",
+      "bare_source_ids": [
+        "recovered/npc/005c5ed21b942bf84e6c2881"
+      ],
+      "bare_source_sha256": "f954474ce579f7c52a71d4c9b4839c90bd1fdb4f8cd257b19181f16b31b7410b",
+      "bare_target_sha256": "799b8b82cfe1843a768367e4950bf0e139e9d281a9f2164fb513b5996a3666c5",
+      "channel": "npc",
+      "en": "✆ Oh, you are willing to help?",
+      "evidence": {
+        "kind": "wiki_abiphone_dialogue",
+        "native_prefix": {
+          "event_hash_format": "canonical_json_v1",
+          "event_line": 2,
+          "event_sha256": "80251552da659f7f7be530c1bab620cc8030814523daa9627201f237ba06e9f8",
+          "log": "npc-dictionary-decisions.jsonl",
+          "source": "✆ If left unchecked, it is possible that the powers of this creature will grow.",
+          "source_complete": true,
+          "source_sha256": "3276c069da3b29ca8c144110d4d355145ab20053b4f463d41c9d56a0f64784d9",
+          "source_styled_complete": true,
+          "source_styled_runs": [
+            {
+              "bold": false,
+              "color": 5636095,
+              "italic": false,
+              "obfuscated": false,
+              "strikethrough": false,
+              "text": "✆",
+              "underlined": false
+            },
+            {
+              "bold": false,
+              "color": 16777215,
+              "italic": false,
+              "obfuscated": false,
+              "strikethrough": false,
+              "text": " If left unchecked, it is possible that the powers of this creature will grow.",
+              "underlined": false
+            }
+          ],
+          "source_styled_runs_sha256": "e8f93e2f1e2dd8ad6c3fa5236482902fd813a4d686c1717fda065ab642038d91",
+          "speaker": "Dean",
+          "time": "2026-10-30T01:54:55.726463700Z",
+          "version": "0.7.9"
+        },
+        "source_complete": true,
+        "speaker": "Dean",
+        "wiki_group": {
+          "conditions": [
+            "After finding the {{NPCSprite|Apprentice (Crimson Isle);Apprentice}} <br> (Can appear as [[Abiphone]] dialogue)"
+          ],
+          "conditions_sha256": "086aae8521df1bf9346d28d28708636d80dd169d3b73f3ec6727a90142c80e85",
+          "extracted_line": 4,
+          "extracted_text": "[NPC] Dean: You found my Apprentice and he WHAT?!\n[NPC] Dean: SULPHUR! This is catastrophic!!\n[NPC] Dean: My poor Apprentice, it is my vault, I shouldn't send him on difficult missions.\n[NPC] Dean: This will also delay my work considerably, how am I going to obtain all those precious materials now...\n[NPC] Dean: Oh, you are willing to help?\n[NPC] Dean: Well in that case, I will send you the list of items I need.\n[NPC] Dean: Thank you very much you are a life savior, quite literally.",
+          "extracted_text_sha256": "b87babc8179fd4483396214eda1235e3c733069989e2bf1c0be25812632afb2a",
+          "group_sha256": "054efb05e98e214204e0a145bc6b0ce18e158ea184af64ef4e317218e68b5f17",
+          "source": {
+            "dataset": "wiki",
+            "file": "wiki/pages/91759.json",
+            "pointer": "/raw_wikitext",
+            "revision": 830417,
+            "sha256": "1ccc7a2967d081ed1d64f257709046ad063eb6697287a0cafb827883a3278dff",
+            "source_id": "91759",
+            "span": [
+              9871,
+              10415
+            ],
+            "templatepath": "root/74/table/row[19]/message/dialogue[0]/1",
+            "url": "https://hypixelskyblock.minecraft.wiki/w/Special:PermanentLink/830417"
+          }
+        }
+      },
+      "id": "reviewed/npc_phone/4bd6437fdcf947e64555460c",
+      "ja": "✆ おお、手伝ってくれるというのかね？",
+      "reason": "Wikiの条件がAbiphoneでも現れる台詞と明示し、実機の同じ話者の電話記号も確認済み。現在の採用済み固定訳に✆だけを付け、本文・名前・数値を変更しない。既存の電話専用訳と動的なプレイヤー名入り台詞は置き換えない。",
+      "source_sha256": "5daa5fed44fa851d48bc69ec622e3460b51081304650563d897ba2572d4253ed",
+      "speaker": "Dean",
+      "target_sha256": "3e322294d053373aaae391cd84850ef24490c937efe5c209b8ba0fc2be13a8bd"
+    },
+    {
+      "approved": true,
+      "bare_en": "SULPHUR! This is catastrophic!!",
+      "bare_ja": "SULPHURじゃと！ なんということじゃ！！",
+      "bare_source_ids": [
+        "recovered/npc/9964c66b69bdce1a23758a3b"
+      ],
+      "bare_source_sha256": "b206c03ca407370652b50e63ccc402167b3efd91b6bccee34a085d1913ff85ae",
+      "bare_target_sha256": "631efabc6305dae2562d7e99ced1ed88b7494a3c6819d0c31413b2c033f62363",
+      "channel": "npc",
+      "en": "✆ SULPHUR! This is catastrophic!!",
+      "evidence": {
+        "kind": "wiki_abiphone_dialogue",
+        "native_prefix": {
+          "event_hash_format": "canonical_json_v1",
+          "event_line": 2,
+          "event_sha256": "80251552da659f7f7be530c1bab620cc8030814523daa9627201f237ba06e9f8",
+          "log": "npc-dictionary-decisions.jsonl",
+          "source": "✆ If left unchecked, it is possible that the powers of this creature will grow.",
+          "source_complete": true,
+          "source_sha256": "3276c069da3b29ca8c144110d4d355145ab20053b4f463d41c9d56a0f64784d9",
+          "source_styled_complete": true,
+          "source_styled_runs": [
+            {
+              "bold": false,
+              "color": 5636095,
+              "italic": false,
+              "obfuscated": false,
+              "strikethrough": false,
+              "text": "✆",
+              "underlined": false
+            },
+            {
+              "bold": false,
+              "color": 16777215,
+              "italic": false,
+              "obfuscated": false,
+              "strikethrough": false,
+              "text": " If left unchecked, it is possible that the powers of this creature will grow.",
+              "underlined": false
+            }
+          ],
+          "source_styled_runs_sha256": "e8f93e2f1e2dd8ad6c3fa5236482902fd813a4d686c1717fda065ab642038d91",
+          "speaker": "Dean",
+          "time": "2026-10-30T01:54:55.726463700Z",
+          "version": "0.7.9"
+        },
+        "source_complete": true,
+        "speaker": "Dean",
+        "wiki_group": {
+          "conditions": [
+            "After finding the {{NPCSprite|Apprentice (Crimson Isle);Apprentice}} <br> (Can appear as [[Abiphone]] dialogue)"
+          ],
+          "conditions_sha256": "086aae8521df1bf9346d28d28708636d80dd169d3b73f3ec6727a90142c80e85",
+          "extracted_line": 1,
+          "extracted_text": "[NPC] Dean: You found my Apprentice and he WHAT?!\n[NPC] Dean: SULPHUR! This is catastrophic!!\n[NPC] Dean: My poor Apprentice, it is my vault, I shouldn't send him on difficult missions.\n[NPC] Dean: This will also delay my work considerably, how am I going to obtain all those precious materials now...\n[NPC] Dean: Oh, you are willing to help?\n[NPC] Dean: Well in that case, I will send you the list of items I need.\n[NPC] Dean: Thank you very much you are a life savior, quite literally.",
+          "extracted_text_sha256": "b87babc8179fd4483396214eda1235e3c733069989e2bf1c0be25812632afb2a",
+          "group_sha256": "054efb05e98e214204e0a145bc6b0ce18e158ea184af64ef4e317218e68b5f17",
+          "source": {
+            "dataset": "wiki",
+            "file": "wiki/pages/91759.json",
+            "pointer": "/raw_wikitext",
+            "revision": 830417,
+            "sha256": "1ccc7a2967d081ed1d64f257709046ad063eb6697287a0cafb827883a3278dff",
+            "source_id": "91759",
+            "span": [
+              9871,
+              10415
+            ],
+            "templatepath": "root/74/table/row[19]/message/dialogue[0]/1",
+            "url": "https://hypixelskyblock.minecraft.wiki/w/Special:PermanentLink/830417"
+          }
+        }
+      },
+      "id": "reviewed/npc_phone/fd03c5aa4e9892182f50ccf1",
+      "ja": "✆ SULPHURじゃと！ なんということじゃ！！",
+      "reason": "Wikiの条件がAbiphoneでも現れる台詞と明示し、実機の同じ話者の電話記号も確認済み。現在の採用済み固定訳に✆だけを付け、本文・名前・数値を変更しない。既存の電話専用訳と動的なプレイヤー名入り台詞は置き換えない。",
+      "source_sha256": "67861533ebac542b91680b1fd0758f43c4e9b8a86624f93935492c658ac355de",
+      "speaker": "Dean",
+      "target_sha256": "2e4a666a3eefa2e22fde68180f2bcd76351baaefec709892c250fbec61d68990"
+    },
+    {
+      "approved": true,
+      "bare_en": "Thank you very much you are a life savior, quite literally.",
+      "bare_ja": "本当にありがとう。君は命の恩人じゃ。文字どおり、な。",
+      "bare_source_ids": [
+        "recovered/npc/e1d51465a551e1106e57de66"
+      ],
+      "bare_source_sha256": "0185c645b13f407fe2b123553a77d90dda387a3c1632534cf3b6dc38721da9b9",
+      "bare_target_sha256": "2a566a9c84f78f262cf1f18ea8cb79d268a46402539581f5351fc895c06230cc",
+      "channel": "npc",
+      "en": "✆ Thank you very much you are a life savior, quite literally.",
+      "evidence": {
+        "kind": "wiki_abiphone_dialogue",
+        "native_prefix": {
+          "event_hash_format": "canonical_json_v1",
+          "event_line": 2,
+          "event_sha256": "80251552da659f7f7be530c1bab620cc8030814523daa9627201f237ba06e9f8",
+          "log": "npc-dictionary-decisions.jsonl",
+          "source": "✆ If left unchecked, it is possible that the powers of this creature will grow.",
+          "source_complete": true,
+          "source_sha256": "3276c069da3b29ca8c144110d4d355145ab20053b4f463d41c9d56a0f64784d9",
+          "source_styled_complete": true,
+          "source_styled_runs": [
+            {
+              "bold": false,
+              "color": 5636095,
+              "italic": false,
+              "obfuscated": false,
+              "strikethrough": false,
+              "text": "✆",
+              "underlined": false
+            },
+            {
+              "bold": false,
+              "color": 16777215,
+              "italic": false,
+              "obfuscated": false,
+              "strikethrough": false,
+              "text": " If left unchecked, it is possible that the powers of this creature will grow.",
+              "underlined": false
+            }
+          ],
+          "source_styled_runs_sha256": "e8f93e2f1e2dd8ad6c3fa5236482902fd813a4d686c1717fda065ab642038d91",
+          "speaker": "Dean",
+          "time": "2026-10-30T01:54:55.726463700Z",
+          "version": "0.7.9"
+        },
+        "source_complete": true,
+        "speaker": "Dean",
+        "wiki_group": {
+          "conditions": [
+            "After finding the {{NPCSprite|Apprentice (Crimson Isle);Apprentice}} <br> (Can appear as [[Abiphone]] dialogue)"
+          ],
+          "conditions_sha256": "086aae8521df1bf9346d28d28708636d80dd169d3b73f3ec6727a90142c80e85",
+          "extracted_line": 6,
+          "extracted_text": "[NPC] Dean: You found my Apprentice and he WHAT?!\n[NPC] Dean: SULPHUR! This is catastrophic!!\n[NPC] Dean: My poor Apprentice, it is my vault, I shouldn't send him on difficult missions.\n[NPC] Dean: This will also delay my work considerably, how am I going to obtain all those precious materials now...\n[NPC] Dean: Oh, you are willing to help?\n[NPC] Dean: Well in that case, I will send you the list of items I need.\n[NPC] Dean: Thank you very much you are a life savior, quite literally.",
+          "extracted_text_sha256": "b87babc8179fd4483396214eda1235e3c733069989e2bf1c0be25812632afb2a",
+          "group_sha256": "054efb05e98e214204e0a145bc6b0ce18e158ea184af64ef4e317218e68b5f17",
+          "source": {
+            "dataset": "wiki",
+            "file": "wiki/pages/91759.json",
+            "pointer": "/raw_wikitext",
+            "revision": 830417,
+            "sha256": "1ccc7a2967d081ed1d64f257709046ad063eb6697287a0cafb827883a3278dff",
+            "source_id": "91759",
+            "span": [
+              9871,
+              10415
+            ],
+            "templatepath": "root/74/table/row[19]/message/dialogue[0]/1",
+            "url": "https://hypixelskyblock.minecraft.wiki/w/Special:PermanentLink/830417"
+          }
+        }
+      },
+      "id": "reviewed/npc_phone/64eccab1d045172f2f3d8a4d",
+      "ja": "✆ 本当にありがとう。君は命の恩人じゃ。文字どおり、な。",
+      "reason": "Wikiの条件がAbiphoneでも現れる台詞と明示し、実機の同じ話者の電話記号も確認済み。現在の採用済み固定訳に✆だけを付け、本文・名前・数値を変更しない。既存の電話専用訳と動的なプレイヤー名入り台詞は置き換えない。",
+      "source_sha256": "86fad4387393c9847886bfb236f9ce4a7c10cdd3f2f2812e9a8f1fe057b8cd27",
+      "speaker": "Dean",
+      "target_sha256": "bab33a3d80806e3c7972f6d361168ed8f0fa5a6ab3b7d930d681215e0fcabdd3"
+    },
+    {
+      "approved": true,
+      "bare_en": "The Stronghold was built by Blazes and Wither Skeletons, they are still expanding it slowly, quite fascinating.",
+      "bare_ja": "StrongholdはBlazesとWither Skeletonsが建てたのじゃ。今も少しずつ広げておる。実に興味深いのう。",
+      "bare_source_ids": [
+        "recovered/npc/77311a41280087debcd987c3"
+      ],
+      "bare_source_sha256": "8dcc646304c95f4a48023b6f363a19d11404b9966406cd6e59f1ad3002de18e5",
+      "bare_target_sha256": "2eb1fc90b499b202a07f7d99654c0170c3775179d6ef6bb45a1be2139f50cfe1",
+      "channel": "npc",
+      "en": "✆ The Stronghold was built by Blazes and Wither Skeletons, they are still expanding it slowly, quite fascinating.",
+      "evidence": {
+        "kind": "wiki_abiphone_dialogue",
+        "native_prefix": {
+          "event_hash_format": "canonical_json_v1",
+          "event_line": 2,
+          "event_sha256": "80251552da659f7f7be530c1bab620cc8030814523daa9627201f237ba06e9f8",
+          "log": "npc-dictionary-decisions.jsonl",
+          "source": "✆ If left unchecked, it is possible that the powers of this creature will grow.",
+          "source_complete": true,
+          "source_sha256": "3276c069da3b29ca8c144110d4d355145ab20053b4f463d41c9d56a0f64784d9",
+          "source_styled_complete": true,
+          "source_styled_runs": [
+            {
+              "bold": false,
+              "color": 5636095,
+              "italic": false,
+              "obfuscated": false,
+              "strikethrough": false,
+              "text": "✆",
+              "underlined": false
+            },
+            {
+              "bold": false,
+              "color": 16777215,
+              "italic": false,
+              "obfuscated": false,
+              "strikethrough": false,
+              "text": " If left unchecked, it is possible that the powers of this creature will grow.",
+              "underlined": false
+            }
+          ],
+          "source_styled_runs_sha256": "e8f93e2f1e2dd8ad6c3fa5236482902fd813a4d686c1717fda065ab642038d91",
+          "speaker": "Dean",
+          "time": "2026-10-30T01:54:55.726463700Z",
+          "version": "0.7.9"
+        },
+        "source_complete": true,
+        "speaker": "Dean",
+        "wiki_group": {
+          "conditions": [
+            "Before giving a {{Item|Hallowed Skull}} <br> (Can appear as [[Abiphone]] dialogue)",
+            "Random"
+          ],
+          "conditions_sha256": "71dc33574837d5c293626f365f27d10c3fb5e3f37067d6fe1cb1f1d8721a737e",
+          "extracted_line": 0,
+          "extracted_text": "[NPC] Dean: The Stronghold was built by Blazes and Wither Skeletons, they are still expanding it slowly, quite fascinating.",
+          "extracted_text_sha256": "5c489c6e91fe13744ca461c783bb75f21f735890b573946ecedaec385adb45c7",
+          "group_sha256": "91025b369efbf299b245c017a06091d8f89cefa865c0400f691394e49a9abe3b",
+          "source": {
+            "dataset": "wiki",
+            "file": "wiki/pages/91759.json",
+            "pointer": "/raw_wikitext",
+            "revision": 830417,
+            "sha256": "1ccc7a2967d081ed1d64f257709046ad063eb6697287a0cafb827883a3278dff",
+            "source_id": "91759",
+            "span": [
+              12088,
+              12230
+            ],
+            "templatepath": "root/74/table/row[25]/message/dialogue[0]/1",
+            "url": "https://hypixelskyblock.minecraft.wiki/w/Special:PermanentLink/830417"
+          }
+        }
+      },
+      "id": "reviewed/npc_phone/f38899dad56c470cae0c4e9c",
+      "ja": "✆ StrongholdはBlazesとWither Skeletonsが建てたのじゃ。今も少しずつ広げておる。実に興味深いのう。",
+      "reason": "Wikiの条件がAbiphoneでも現れる台詞と明示し、実機の同じ話者の電話記号も確認済み。現在の採用済み固定訳に✆だけを付け、本文・名前・数値を変更しない。既存の電話専用訳と動的なプレイヤー名入り台詞は置き換えない。",
+      "source_sha256": "dfae21c5f80473ff2492ac5c5fd7abd35ef06fddc70d2641999e1925aa2f1de1",
+      "speaker": "Dean",
+      "target_sha256": "fc2985a1dc20a8250880a97e81da4ae7bcb0ca46bfe2a488c9cfceb755123fac"
+    },
+    {
+      "approved": true,
+      "bare_en": "The reason why I need a Lumino Fiber? Well...it's hard to explain.",
+      "bare_ja": "Lumino Fiberが必要な理由かね？ ううむ……説明が難しくてな。",
+      "bare_source_ids": [
+        "recovered/npc/48f0e5cab7a9c714678c6356"
+      ],
+      "bare_source_sha256": "883e43335b85b412dcee6aa583314a0b7775bf21e21f59e9cacc3a35183f8f9c",
+      "bare_target_sha256": "13780dd210522f2f67e7ce70e666f2829015737755f1ab60c1ec5ad39bd97b3c",
+      "channel": "npc",
+      "en": "✆ The reason why I need a Lumino Fiber? Well...it's hard to explain.",
+      "evidence": {
+        "kind": "wiki_abiphone_dialogue",
+        "native_prefix": {
+          "event_hash_format": "canonical_json_v1",
+          "event_line": 2,
+          "event_sha256": "80251552da659f7f7be530c1bab620cc8030814523daa9627201f237ba06e9f8",
+          "log": "npc-dictionary-decisions.jsonl",
+          "source": "✆ If left unchecked, it is possible that the powers of this creature will grow.",
+          "source_complete": true,
+          "source_sha256": "3276c069da3b29ca8c144110d4d355145ab20053b4f463d41c9d56a0f64784d9",
+          "source_styled_complete": true,
+          "source_styled_runs": [
+            {
+              "bold": false,
+              "color": 5636095,
+              "italic": false,
+              "obfuscated": false,
+              "strikethrough": false,
+              "text": "✆",
+              "underlined": false
+            },
+            {
+              "bold": false,
+              "color": 16777215,
+              "italic": false,
+              "obfuscated": false,
+              "strikethrough": false,
+              "text": " If left unchecked, it is possible that the powers of this creature will grow.",
+              "underlined": false
+            }
+          ],
+          "source_styled_runs_sha256": "e8f93e2f1e2dd8ad6c3fa5236482902fd813a4d686c1717fda065ab642038d91",
+          "speaker": "Dean",
+          "time": "2026-10-30T01:54:55.726463700Z",
+          "version": "0.7.9"
+        },
+        "source_complete": true,
+        "speaker": "Dean",
+        "wiki_group": {
+          "conditions": [
+            "Before giving a {{Item|Lumino Fiber}} <br> (Can appear as [[Abiphone]] dialogue)",
+            "Random"
+          ],
+          "conditions_sha256": "1cb89cfbbda0a81652646b60d99dd94837db5a91bdbc5b9b271329db5cc6fca4",
+          "extracted_line": 0,
+          "extracted_text": "[NPC] Dean: The reason why I need a Lumino Fiber? Well...it's hard to explain.",
+          "extracted_text_sha256": "90526140a9422bb182d4ec446d39aa3e6ec2904e1fc76aaab739ea558ba3c778",
+          "group_sha256": "595b710ca7cbf5d551430ca6bb391d5d9245dcc697edf5c37fcda705f11b972f",
+          "source": {
+            "dataset": "wiki",
+            "file": "wiki/pages/91759.json",
+            "pointer": "/raw_wikitext",
+            "revision": 830417,
+            "sha256": "1ccc7a2967d081ed1d64f257709046ad063eb6697287a0cafb827883a3278dff",
+            "source_id": "91759",
+            "span": [
+              12852,
+              12953
+            ],
+            "templatepath": "root/74/table/row[27]/message/dialogue[0]/1",
+            "url": "https://hypixelskyblock.minecraft.wiki/w/Special:PermanentLink/830417"
+          }
+        }
+      },
+      "id": "reviewed/npc_phone/bd1fde67c896abe4e34b2b0d",
+      "ja": "✆ Lumino Fiberが必要な理由かね？ ううむ……説明が難しくてな。",
+      "reason": "Wikiの条件がAbiphoneでも現れる台詞と明示し、実機の同じ話者の電話記号も確認済み。現在の採用済み固定訳に✆だけを付け、本文・名前・数値を変更しない。既存の電話専用訳と動的なプレイヤー名入り台詞は置き換えない。",
+      "source_sha256": "fe6a725757a6aa2303dbfff9a9e2c574b7cc3c83c9d8d979b40ac5c12cdc9280",
+      "speaker": "Dean",
+      "target_sha256": "b18cb2bde122f598bea222d026e26c028e9ba1498fc6305577cfbc701608097c"
+    },
+    {
+      "approved": true,
+      "bare_en": "This will also delay my work considerably, how am I going to obtain all those precious materials now...",
+      "bare_ja": "これでは研究も大幅に遅れてしまう。貴重な材料を、これからどうやって集めたものか……。",
+      "bare_source_ids": [
+        "recovered/npc/3c534da476cfc4f432606bd1"
+      ],
+      "bare_source_sha256": "2a337399485ed01df0ac53bfdf90804ffa0c6f2a42df0c38e244330549d16c19",
+      "bare_target_sha256": "79cbafe3777b921aec5fab7234b962dac795c0c602827f60129f8de63b1388f2",
+      "channel": "npc",
+      "en": "✆ This will also delay my work considerably, how am I going to obtain all those precious materials now...",
+      "evidence": {
+        "kind": "wiki_abiphone_dialogue",
+        "native_prefix": {
+          "event_hash_format": "canonical_json_v1",
+          "event_line": 2,
+          "event_sha256": "80251552da659f7f7be530c1bab620cc8030814523daa9627201f237ba06e9f8",
+          "log": "npc-dictionary-decisions.jsonl",
+          "source": "✆ If left unchecked, it is possible that the powers of this creature will grow.",
+          "source_complete": true,
+          "source_sha256": "3276c069da3b29ca8c144110d4d355145ab20053b4f463d41c9d56a0f64784d9",
+          "source_styled_complete": true,
+          "source_styled_runs": [
+            {
+              "bold": false,
+              "color": 5636095,
+              "italic": false,
+              "obfuscated": false,
+              "strikethrough": false,
+              "text": "✆",
+              "underlined": false
+            },
+            {
+              "bold": false,
+              "color": 16777215,
+              "italic": false,
+              "obfuscated": false,
+              "strikethrough": false,
+              "text": " If left unchecked, it is possible that the powers of this creature will grow.",
+              "underlined": false
+            }
+          ],
+          "source_styled_runs_sha256": "e8f93e2f1e2dd8ad6c3fa5236482902fd813a4d686c1717fda065ab642038d91",
+          "speaker": "Dean",
+          "time": "2026-10-30T01:54:55.726463700Z",
+          "version": "0.7.9"
+        },
+        "source_complete": true,
+        "speaker": "Dean",
+        "wiki_group": {
+          "conditions": [
+            "After finding the {{NPCSprite|Apprentice (Crimson Isle);Apprentice}} <br> (Can appear as [[Abiphone]] dialogue)"
+          ],
+          "conditions_sha256": "086aae8521df1bf9346d28d28708636d80dd169d3b73f3ec6727a90142c80e85",
+          "extracted_line": 3,
+          "extracted_text": "[NPC] Dean: You found my Apprentice and he WHAT?!\n[NPC] Dean: SULPHUR! This is catastrophic!!\n[NPC] Dean: My poor Apprentice, it is my vault, I shouldn't send him on difficult missions.\n[NPC] Dean: This will also delay my work considerably, how am I going to obtain all those precious materials now...\n[NPC] Dean: Oh, you are willing to help?\n[NPC] Dean: Well in that case, I will send you the list of items I need.\n[NPC] Dean: Thank you very much you are a life savior, quite literally.",
+          "extracted_text_sha256": "b87babc8179fd4483396214eda1235e3c733069989e2bf1c0be25812632afb2a",
+          "group_sha256": "054efb05e98e214204e0a145bc6b0ce18e158ea184af64ef4e317218e68b5f17",
+          "source": {
+            "dataset": "wiki",
+            "file": "wiki/pages/91759.json",
+            "pointer": "/raw_wikitext",
+            "revision": 830417,
+            "sha256": "1ccc7a2967d081ed1d64f257709046ad063eb6697287a0cafb827883a3278dff",
+            "source_id": "91759",
+            "span": [
+              9871,
+              10415
+            ],
+            "templatepath": "root/74/table/row[19]/message/dialogue[0]/1",
+            "url": "https://hypixelskyblock.minecraft.wiki/w/Special:PermanentLink/830417"
+          }
+        }
+      },
+      "id": "reviewed/npc_phone/857b5248e300bb896f10bdd2",
+      "ja": "✆ これでは研究も大幅に遅れてしまう。貴重な材料を、これからどうやって集めたものか……。",
+      "reason": "Wikiの条件がAbiphoneでも現れる台詞と明示し、実機の同じ話者の電話記号も確認済み。現在の採用済み固定訳に✆だけを付け、本文・名前・数値を変更しない。既存の電話専用訳と動的なプレイヤー名入り台詞は置き換えない。",
+      "source_sha256": "afb6ee14ac141f7590f7af5d011709dadcd71fed71930fe1a0a5b22b113129b1",
+      "speaker": "Dean",
+      "target_sha256": "cb01e1ffe30b3ec2a6a580688d22bb80b7cce2b85042c81d86b4c933e9fff784"
+    },
+    {
+      "approved": true,
+      "bare_en": "We need to learn more about that monster, where it is from and what it wants.",
+      "bare_ja": "その怪物について、もっと調べねばならん。どこから来たのか、何を求めておるのか、な。",
+      "bare_source_ids": [
+        "recovered/npc/abe1b17dcafe06e9890ce081"
+      ],
+      "bare_source_sha256": "37c2a897013f45953861fc232c27122350ce54a05403f946c5665338cbf95764",
+      "bare_target_sha256": "a690db91fec397e496607688729d3625d29aacb9b017483d2d57203a08f0a1ee",
+      "channel": "npc",
+      "en": "✆ We need to learn more about that monster, where it is from and what it wants.",
+      "evidence": {
+        "kind": "wiki_abiphone_dialogue",
+        "native_prefix": {
+          "event_hash_format": "canonical_json_v1",
+          "event_line": 2,
+          "event_sha256": "80251552da659f7f7be530c1bab620cc8030814523daa9627201f237ba06e9f8",
+          "log": "npc-dictionary-decisions.jsonl",
+          "source": "✆ If left unchecked, it is possible that the powers of this creature will grow.",
+          "source_complete": true,
+          "source_sha256": "3276c069da3b29ca8c144110d4d355145ab20053b4f463d41c9d56a0f64784d9",
+          "source_styled_complete": true,
+          "source_styled_runs": [
+            {
+              "bold": false,
+              "color": 5636095,
+              "italic": false,
+              "obfuscated": false,
+              "strikethrough": false,
+              "text": "✆",
+              "underlined": false
+            },
+            {
+              "bold": false,
+              "color": 16777215,
+              "italic": false,
+              "obfuscated": false,
+              "strikethrough": false,
+              "text": " If left unchecked, it is possible that the powers of this creature will grow.",
+              "underlined": false
+            }
+          ],
+          "source_styled_runs_sha256": "e8f93e2f1e2dd8ad6c3fa5236482902fd813a4d686c1717fda065ab642038d91",
+          "speaker": "Dean",
+          "time": "2026-10-30T01:54:55.726463700Z",
+          "version": "0.7.9"
+        },
+        "source_complete": true,
+        "speaker": "Dean",
+        "wiki_group": {
+          "conditions": [
+            "First interaction after defeating [[Kuudra]] <br> (Can appear as [[Abiphone]] dialogue)"
+          ],
+          "conditions_sha256": "f10abb5696f1fd6016e251071010f002cb6f30e108a5cf1e97f6504ef52ada4d",
+          "extracted_line": 5,
+          "extracted_text": "[NPC] Dean: Hello <player>?\n[NPC] Dean: You found who stole our Sulphur?\n[NPC] Dean: A giant magma creature with massive tentacles?\n[NPC] Dean: Well that explains a lot, my Apprentice just awoken from his coma, he described the same creature.\n[NPC] Dean: In a way it is good that the Piglins were not behind this.\n[NPC] Dean: We need to learn more about that monster, where it is from and what it wants.\n[NPC] Dean: I will call you later!",
+          "extracted_text_sha256": "711ac0661a48482693d0a8123622dcff05a3eab0627fd6066f664c2027dbb25d",
+          "group_sha256": "e603610003a07fc5adcc5b05c003d02e564699b0fc49aa0c21fbca8f2ac61496",
+          "source": {
+            "dataset": "wiki",
+            "file": "wiki/pages/91759.json",
+            "pointer": "/raw_wikitext",
+            "revision": 830417,
+            "sha256": "1ccc7a2967d081ed1d64f257709046ad063eb6697287a0cafb827883a3278dff",
+            "source_id": "91759",
+            "span": [
+              14933,
+              15432
+            ],
+            "templatepath": "root/74/table/row[35]/message/dialogue[0]/1",
+            "url": "https://hypixelskyblock.minecraft.wiki/w/Special:PermanentLink/830417"
+          }
+        }
+      },
+      "id": "reviewed/npc_phone/d1ffe7ed26768f9b7f4fe6d8",
+      "ja": "✆ その怪物について、もっと調べねばならん。どこから来たのか、何を求めておるのか、な。",
+      "reason": "Wikiの条件がAbiphoneでも現れる台詞と明示し、実機の同じ話者の電話記号も確認済み。現在の採用済み固定訳に✆だけを付け、本文・名前・数値を変更しない。既存の電話専用訳と動的なプレイヤー名入り台詞は置き換えない。",
+      "source_sha256": "84b04b029de0a2717b5c86924d5b6c7507123d3b8482ee3bb6462da6c195d20e",
+      "speaker": "Dean",
+      "target_sha256": "65df954fe9acda0cc8295abe7ce26a1af79ad624e11b685a573b0eb7fa407603"
+    },
+    {
+      "approved": true,
+      "bare_en": "Well in that case, I will send you the list of items I need.",
+      "bare_ja": "それなら、必要な品の一覧を送るとしよう。",
+      "bare_source_ids": [
+        "recovered/npc/e8bc9f5e2ae4ba491cb49529"
+      ],
+      "bare_source_sha256": "66655d4cc01e545fef0f20997fdc66f3f384c924a6e5d3e8a8422306178015df",
+      "bare_target_sha256": "4e6c168f5d2bca10a1d0d477d70171a329ba00cde243d8d25703a5b012480d38",
+      "channel": "npc",
+      "en": "✆ Well in that case, I will send you the list of items I need.",
+      "evidence": {
+        "kind": "wiki_abiphone_dialogue",
+        "native_prefix": {
+          "event_hash_format": "canonical_json_v1",
+          "event_line": 2,
+          "event_sha256": "80251552da659f7f7be530c1bab620cc8030814523daa9627201f237ba06e9f8",
+          "log": "npc-dictionary-decisions.jsonl",
+          "source": "✆ If left unchecked, it is possible that the powers of this creature will grow.",
+          "source_complete": true,
+          "source_sha256": "3276c069da3b29ca8c144110d4d355145ab20053b4f463d41c9d56a0f64784d9",
+          "source_styled_complete": true,
+          "source_styled_runs": [
+            {
+              "bold": false,
+              "color": 5636095,
+              "italic": false,
+              "obfuscated": false,
+              "strikethrough": false,
+              "text": "✆",
+              "underlined": false
+            },
+            {
+              "bold": false,
+              "color": 16777215,
+              "italic": false,
+              "obfuscated": false,
+              "strikethrough": false,
+              "text": " If left unchecked, it is possible that the powers of this creature will grow.",
+              "underlined": false
+            }
+          ],
+          "source_styled_runs_sha256": "e8f93e2f1e2dd8ad6c3fa5236482902fd813a4d686c1717fda065ab642038d91",
+          "speaker": "Dean",
+          "time": "2026-10-30T01:54:55.726463700Z",
+          "version": "0.7.9"
+        },
+        "source_complete": true,
+        "speaker": "Dean",
+        "wiki_group": {
+          "conditions": [
+            "After finding the {{NPCSprite|Apprentice (Crimson Isle);Apprentice}} <br> (Can appear as [[Abiphone]] dialogue)"
+          ],
+          "conditions_sha256": "086aae8521df1bf9346d28d28708636d80dd169d3b73f3ec6727a90142c80e85",
+          "extracted_line": 5,
+          "extracted_text": "[NPC] Dean: You found my Apprentice and he WHAT?!\n[NPC] Dean: SULPHUR! This is catastrophic!!\n[NPC] Dean: My poor Apprentice, it is my vault, I shouldn't send him on difficult missions.\n[NPC] Dean: This will also delay my work considerably, how am I going to obtain all those precious materials now...\n[NPC] Dean: Oh, you are willing to help?\n[NPC] Dean: Well in that case, I will send you the list of items I need.\n[NPC] Dean: Thank you very much you are a life savior, quite literally.",
+          "extracted_text_sha256": "b87babc8179fd4483396214eda1235e3c733069989e2bf1c0be25812632afb2a",
+          "group_sha256": "054efb05e98e214204e0a145bc6b0ce18e158ea184af64ef4e317218e68b5f17",
+          "source": {
+            "dataset": "wiki",
+            "file": "wiki/pages/91759.json",
+            "pointer": "/raw_wikitext",
+            "revision": 830417,
+            "sha256": "1ccc7a2967d081ed1d64f257709046ad063eb6697287a0cafb827883a3278dff",
+            "source_id": "91759",
+            "span": [
+              9871,
+              10415
+            ],
+            "templatepath": "root/74/table/row[19]/message/dialogue[0]/1",
+            "url": "https://hypixelskyblock.minecraft.wiki/w/Special:PermanentLink/830417"
+          }
+        }
+      },
+      "id": "reviewed/npc_phone/ad2d931e0995e77ab49f4c00",
+      "ja": "✆ それなら、必要な品の一覧を送るとしよう。",
+      "reason": "Wikiの条件がAbiphoneでも現れる台詞と明示し、実機の同じ話者の電話記号も確認済み。現在の採用済み固定訳に✆だけを付け、本文・名前・数値を変更しない。既存の電話専用訳と動的なプレイヤー名入り台詞は置き換えない。",
+      "source_sha256": "80ddf1911d7b1f25e47cbf61269d671941288ae01bf8b3a66e94c550e8e0c96d",
+      "speaker": "Dean",
+      "target_sha256": "ff4bedf8b7cf1a28bf349a64516896899c510beef57a86faa18cc22b89fed13f"
+    },
+    {
+      "approved": true,
+      "bare_en": "Well that explains a lot, my Apprentice just awoken from his coma, he described the same creature.",
+      "bare_ja": "なるほど、それでいろいろと合点がいく。わしのApprenticeがついさっき昏睡から目を覚ましてな。同じ怪物のことを話しておったのじゃ。",
+      "bare_source_ids": [
+        "recovered/npc/dfb15c7cf45311279b7f10bf"
+      ],
+      "bare_source_sha256": "92db51d5a386b690243087538470809d78537d9a3c5b1c58871dba836cb969c8",
+      "bare_target_sha256": "7583474bd2bb9be7d6a059835cbc06daacedbb2f6d71dea70ee101a90f11e124",
+      "channel": "npc",
+      "en": "✆ Well that explains a lot, my Apprentice just awoken from his coma, he described the same creature.",
+      "evidence": {
+        "kind": "wiki_abiphone_dialogue",
+        "native_prefix": {
+          "event_hash_format": "canonical_json_v1",
+          "event_line": 2,
+          "event_sha256": "80251552da659f7f7be530c1bab620cc8030814523daa9627201f237ba06e9f8",
+          "log": "npc-dictionary-decisions.jsonl",
+          "source": "✆ If left unchecked, it is possible that the powers of this creature will grow.",
+          "source_complete": true,
+          "source_sha256": "3276c069da3b29ca8c144110d4d355145ab20053b4f463d41c9d56a0f64784d9",
+          "source_styled_complete": true,
+          "source_styled_runs": [
+            {
+              "bold": false,
+              "color": 5636095,
+              "italic": false,
+              "obfuscated": false,
+              "strikethrough": false,
+              "text": "✆",
+              "underlined": false
+            },
+            {
+              "bold": false,
+              "color": 16777215,
+              "italic": false,
+              "obfuscated": false,
+              "strikethrough": false,
+              "text": " If left unchecked, it is possible that the powers of this creature will grow.",
+              "underlined": false
+            }
+          ],
+          "source_styled_runs_sha256": "e8f93e2f1e2dd8ad6c3fa5236482902fd813a4d686c1717fda065ab642038d91",
+          "speaker": "Dean",
+          "time": "2026-10-30T01:54:55.726463700Z",
+          "version": "0.7.9"
+        },
+        "source_complete": true,
+        "speaker": "Dean",
+        "wiki_group": {
+          "conditions": [
+            "First interaction after defeating [[Kuudra]] <br> (Can appear as [[Abiphone]] dialogue)"
+          ],
+          "conditions_sha256": "f10abb5696f1fd6016e251071010f002cb6f30e108a5cf1e97f6504ef52ada4d",
+          "extracted_line": 3,
+          "extracted_text": "[NPC] Dean: Hello <player>?\n[NPC] Dean: You found who stole our Sulphur?\n[NPC] Dean: A giant magma creature with massive tentacles?\n[NPC] Dean: Well that explains a lot, my Apprentice just awoken from his coma, he described the same creature.\n[NPC] Dean: In a way it is good that the Piglins were not behind this.\n[NPC] Dean: We need to learn more about that monster, where it is from and what it wants.\n[NPC] Dean: I will call you later!",
+          "extracted_text_sha256": "711ac0661a48482693d0a8123622dcff05a3eab0627fd6066f664c2027dbb25d",
+          "group_sha256": "e603610003a07fc5adcc5b05c003d02e564699b0fc49aa0c21fbca8f2ac61496",
+          "source": {
+            "dataset": "wiki",
+            "file": "wiki/pages/91759.json",
+            "pointer": "/raw_wikitext",
+            "revision": 830417,
+            "sha256": "1ccc7a2967d081ed1d64f257709046ad063eb6697287a0cafb827883a3278dff",
+            "source_id": "91759",
+            "span": [
+              14933,
+              15432
+            ],
+            "templatepath": "root/74/table/row[35]/message/dialogue[0]/1",
+            "url": "https://hypixelskyblock.minecraft.wiki/w/Special:PermanentLink/830417"
+          }
+        }
+      },
+      "id": "reviewed/npc_phone/5adb362c2b5aa2c4f38148d5",
+      "ja": "✆ なるほど、それでいろいろと合点がいく。わしのApprenticeがついさっき昏睡から目を覚ましてな。同じ怪物のことを話しておったのじゃ。",
+      "reason": "Wikiの条件がAbiphoneでも現れる台詞と明示し、実機の同じ話者の電話記号も確認済み。現在の採用済み固定訳に✆だけを付け、本文・名前・数値を変更しない。既存の電話専用訳と動的なプレイヤー名入り台詞は置き換えない。",
+      "source_sha256": "a106565ee26eed679f52e45a6b0eb006ca92bbe266502c20682306ad9e3ab2aa",
+      "speaker": "Dean",
+      "target_sha256": "435faf616341f0f413ea17a20882be2b8f4486d6456586cad1688a35c053e9e6"
+    },
+    {
+      "approved": true,
+      "bare_en": "You found my Apprentice and he WHAT?!",
+      "bare_ja": "わしのApprenticeを見つけた、そして、あの子が何をしたじゃと？！",
+      "bare_source_ids": [
+        "recovered/npc/3a5712f19548ae95312e1a8f"
+      ],
+      "bare_source_sha256": "f2813b481e17af2769de3d1be88667bf00ecb2c95c2d281d93de568bff09dd05",
+      "bare_target_sha256": "9161a23efea6ce6682da5005bc57a2412c5f9383f4bf5c6514a587891b377d7d",
+      "channel": "npc",
+      "en": "✆ You found my Apprentice and he WHAT?!",
+      "evidence": {
+        "kind": "wiki_abiphone_dialogue",
+        "native_prefix": {
+          "event_hash_format": "canonical_json_v1",
+          "event_line": 2,
+          "event_sha256": "80251552da659f7f7be530c1bab620cc8030814523daa9627201f237ba06e9f8",
+          "log": "npc-dictionary-decisions.jsonl",
+          "source": "✆ If left unchecked, it is possible that the powers of this creature will grow.",
+          "source_complete": true,
+          "source_sha256": "3276c069da3b29ca8c144110d4d355145ab20053b4f463d41c9d56a0f64784d9",
+          "source_styled_complete": true,
+          "source_styled_runs": [
+            {
+              "bold": false,
+              "color": 5636095,
+              "italic": false,
+              "obfuscated": false,
+              "strikethrough": false,
+              "text": "✆",
+              "underlined": false
+            },
+            {
+              "bold": false,
+              "color": 16777215,
+              "italic": false,
+              "obfuscated": false,
+              "strikethrough": false,
+              "text": " If left unchecked, it is possible that the powers of this creature will grow.",
+              "underlined": false
+            }
+          ],
+          "source_styled_runs_sha256": "e8f93e2f1e2dd8ad6c3fa5236482902fd813a4d686c1717fda065ab642038d91",
+          "speaker": "Dean",
+          "time": "2026-10-30T01:54:55.726463700Z",
+          "version": "0.7.9"
+        },
+        "source_complete": true,
+        "speaker": "Dean",
+        "wiki_group": {
+          "conditions": [
+            "After finding the {{NPCSprite|Apprentice (Crimson Isle);Apprentice}} <br> (Can appear as [[Abiphone]] dialogue)"
+          ],
+          "conditions_sha256": "086aae8521df1bf9346d28d28708636d80dd169d3b73f3ec6727a90142c80e85",
+          "extracted_line": 0,
+          "extracted_text": "[NPC] Dean: You found my Apprentice and he WHAT?!\n[NPC] Dean: SULPHUR! This is catastrophic!!\n[NPC] Dean: My poor Apprentice, it is my vault, I shouldn't send him on difficult missions.\n[NPC] Dean: This will also delay my work considerably, how am I going to obtain all those precious materials now...\n[NPC] Dean: Oh, you are willing to help?\n[NPC] Dean: Well in that case, I will send you the list of items I need.\n[NPC] Dean: Thank you very much you are a life savior, quite literally.",
+          "extracted_text_sha256": "b87babc8179fd4483396214eda1235e3c733069989e2bf1c0be25812632afb2a",
+          "group_sha256": "054efb05e98e214204e0a145bc6b0ce18e158ea184af64ef4e317218e68b5f17",
+          "source": {
+            "dataset": "wiki",
+            "file": "wiki/pages/91759.json",
+            "pointer": "/raw_wikitext",
+            "revision": 830417,
+            "sha256": "1ccc7a2967d081ed1d64f257709046ad063eb6697287a0cafb827883a3278dff",
+            "source_id": "91759",
+            "span": [
+              9871,
+              10415
+            ],
+            "templatepath": "root/74/table/row[19]/message/dialogue[0]/1",
+            "url": "https://hypixelskyblock.minecraft.wiki/w/Special:PermanentLink/830417"
+          }
+        }
+      },
+      "id": "reviewed/npc_phone/423cc062d05a30d478c6c741",
+      "ja": "✆ わしのApprenticeを見つけた、そして、あの子が何をしたじゃと？！",
+      "reason": "Wikiの条件がAbiphoneでも現れる台詞と明示し、実機の同じ話者の電話記号も確認済み。現在の採用済み固定訳に✆だけを付け、本文・名前・数値を変更しない。既存の電話専用訳と動的なプレイヤー名入り台詞は置き換えない。",
+      "source_sha256": "4f1ce14fbf1b3e48f1db8dcc4e76f92a832853f77c79367881f45e04c1b32345",
+      "speaker": "Dean",
+      "target_sha256": "eb1c4ec4bb03f8371373462e7e695e1df83efc30896cf7906539c8500adf8255"
+    },
+    {
+      "approved": true,
+      "bare_en": "You found who stole our Sulphur?",
+      "bare_ja": "わしらのSulphurを盗んだ者が分かったのかね？",
+      "bare_source_ids": [
+        "recovered/npc/9b92704db91a6b9bc635a442"
+      ],
+      "bare_source_sha256": "fb8e051404bbf4aa481d3636336fccf74a0df97603120e2f36c63a613b9ea0c9",
+      "bare_target_sha256": "3bf4f93f0d39a0fefb6370e4b210587240ef28e2f423ebb8fb6506aabc034a79",
+      "channel": "npc",
+      "en": "✆ You found who stole our Sulphur?",
+      "evidence": {
+        "kind": "wiki_abiphone_dialogue",
+        "native_prefix": {
+          "event_hash_format": "canonical_json_v1",
+          "event_line": 2,
+          "event_sha256": "80251552da659f7f7be530c1bab620cc8030814523daa9627201f237ba06e9f8",
+          "log": "npc-dictionary-decisions.jsonl",
+          "source": "✆ If left unchecked, it is possible that the powers of this creature will grow.",
+          "source_complete": true,
+          "source_sha256": "3276c069da3b29ca8c144110d4d355145ab20053b4f463d41c9d56a0f64784d9",
+          "source_styled_complete": true,
+          "source_styled_runs": [
+            {
+              "bold": false,
+              "color": 5636095,
+              "italic": false,
+              "obfuscated": false,
+              "strikethrough": false,
+              "text": "✆",
+              "underlined": false
+            },
+            {
+              "bold": false,
+              "color": 16777215,
+              "italic": false,
+              "obfuscated": false,
+              "strikethrough": false,
+              "text": " If left unchecked, it is possible that the powers of this creature will grow.",
+              "underlined": false
+            }
+          ],
+          "source_styled_runs_sha256": "e8f93e2f1e2dd8ad6c3fa5236482902fd813a4d686c1717fda065ab642038d91",
+          "speaker": "Dean",
+          "time": "2026-10-30T01:54:55.726463700Z",
+          "version": "0.7.9"
+        },
+        "source_complete": true,
+        "speaker": "Dean",
+        "wiki_group": {
+          "conditions": [
+            "First interaction after defeating [[Kuudra]] <br> (Can appear as [[Abiphone]] dialogue)"
+          ],
+          "conditions_sha256": "f10abb5696f1fd6016e251071010f002cb6f30e108a5cf1e97f6504ef52ada4d",
+          "extracted_line": 1,
+          "extracted_text": "[NPC] Dean: Hello <player>?\n[NPC] Dean: You found who stole our Sulphur?\n[NPC] Dean: A giant magma creature with massive tentacles?\n[NPC] Dean: Well that explains a lot, my Apprentice just awoken from his coma, he described the same creature.\n[NPC] Dean: In a way it is good that the Piglins were not behind this.\n[NPC] Dean: We need to learn more about that monster, where it is from and what it wants.\n[NPC] Dean: I will call you later!",
+          "extracted_text_sha256": "711ac0661a48482693d0a8123622dcff05a3eab0627fd6066f664c2027dbb25d",
+          "group_sha256": "e603610003a07fc5adcc5b05c003d02e564699b0fc49aa0c21fbca8f2ac61496",
+          "source": {
+            "dataset": "wiki",
+            "file": "wiki/pages/91759.json",
+            "pointer": "/raw_wikitext",
+            "revision": 830417,
+            "sha256": "1ccc7a2967d081ed1d64f257709046ad063eb6697287a0cafb827883a3278dff",
+            "source_id": "91759",
+            "span": [
+              14933,
+              15432
+            ],
+            "templatepath": "root/74/table/row[35]/message/dialogue[0]/1",
+            "url": "https://hypixelskyblock.minecraft.wiki/w/Special:PermanentLink/830417"
+          }
+        }
+      },
+      "id": "reviewed/npc_phone/ff19c89e3be873bb60cfc369",
+      "ja": "✆ わしらのSulphurを盗んだ者が分かったのかね？",
+      "reason": "Wikiの条件がAbiphoneでも現れる台詞と明示し、実機の同じ話者の電話記号も確認済み。現在の採用済み固定訳に✆だけを付け、本文・名前・数値を変更しない。既存の電話専用訳と動的なプレイヤー名入り台詞は置き換えない。",
+      "source_sha256": "4933a79e635e450df110c8c2e6b9a65a3893e31a1064aa16e5ac0202e7cfe86a",
+      "speaker": "Dean",
+      "target_sha256": "6d27e85554869c7e38b1afefc480b509f49895dbbaee4c6a7fc853f7c50c6097"
+    }
+  ],
+  "schema_version": 1
+}

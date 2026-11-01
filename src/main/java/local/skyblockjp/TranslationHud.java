@@ -13,6 +13,8 @@ final class TranslationHud {
     private long statusAt;
     private int historyOffset, totalLines;
     private boolean wasChat;
+    private final HudLayoutCache layoutCache = new HudLayoutCache();
+    private HudViewport viewport = HudViewport.EMPTY;
     private java.nio.file.Path auditPath;
     private String auditSecret = "", lastSnapshot = "";
     private final java.util.concurrent.ThreadPoolExecutor auditWorker = new java.util.concurrent.ThreadPoolExecutor(1, 1, 0,
@@ -21,7 +23,8 @@ final class TranslationHud {
         }, new java.util.concurrent.ThreadPoolExecutor.DiscardPolicy());
     void configureAudit(java.nio.file.Path path, String secret) { auditPath = path; auditSecret = secret; lastSnapshot = ""; }
     void close() { auditWorker.shutdown(); }
-    void clear() { entries.clear(); status = ""; historyOffset = 0; }
+    void clear() { entries.clear(); status = ""; historyOffset = 0; totalLines = 0; wasChat = false; invalidateLayout(); }
+    void invalidateLayout() { layoutCache.invalidate(); viewport = HudViewport.EMPTY; }
     void status(String text) { status = text; statusAt = System.currentTimeMillis(); }
     void add(String speaker, Component text) {
         entries.addLast(new Entry(HudRows.message(speaker, text), System.currentTimeMillis()));
@@ -38,12 +41,8 @@ final class TranslationHud {
     static int panelHeight(Config c, int screen) { return Math.min(panelHeight(c), Math.max(55, screen - 8)); }
     static boolean visible(long now, long time, Config c, boolean chatOpen) { return chatOpen || c.hudSeconds == 0 || now - time <= c.hudSeconds * 1000L; }
     boolean scroll(double mx, double my, double amount, Config c) {
-        var mc = Minecraft.getInstance();
-        int w = panelWidth(c, mc.getWindow().getGuiScaledWidth()), h = panelHeight(c, mc.getWindow().getGuiScaledHeight());
-        int x = x(c, mc.getWindow().getGuiScaledWidth(), w), y = y(c, mc.getWindow().getGuiScaledHeight(), h);
-        if (mx < x || mx > x + w || my < y || my > y + h || amount == 0) return false;
-        int limit = lineLimit(c, h);
-        historyOffset = Math.clamp(historyOffset + (int)Math.signum(amount) * 3, 0, Math.max(0, totalLines - limit));
+        if (amount == 0 || !viewport.scrollableAt(mx, my)) return false;
+        historyOffset = viewport.scroll(historyOffset, amount);
         return true;
     }
     void render(GuiGraphicsExtractor g, Config c, boolean preview) {
@@ -51,6 +50,7 @@ final class TranslationHud {
         int w = panelWidth(c, mc.getWindow().getGuiScaledWidth()), h = panelHeight(c, mc.getWindow().getGuiScaledHeight());
         int x = x(c, mc.getWindow().getGuiScaledWidth(), w), y = y(c, mc.getWindow().getGuiScaledHeight(), h);
         boolean chatOpen = mc.gui.screen() instanceof net.minecraft.client.gui.screens.ChatScreen;
+        viewport = HudViewport.EMPTY;
         if (!chatOpen || !wasChat) historyOffset = 0;
         wasChat = chatOpen;
         var messages = new ArrayList<HudRows.Message>();
@@ -63,10 +63,10 @@ final class TranslationHud {
         }
         if (!preview && !status.isBlank() && now - statusAt < 15000)
             messages.add(HudRows.message("状態", Component.literal(status).withStyle(ChatFormatting.YELLOW)));
-        if (!preview && messages.isEmpty()) return;
+        if (!preview && messages.isEmpty()) { totalLines = 0; historyOffset = 0; return; }
         double scale = textScale(c);
         int logicalW = logicalWidth(c, w);
-        var layout = HudRows.layout(messages, logicalW, mc.font::width);
+        var layout = layoutCache.layout(messages, logicalW, mc.font, mc.font::width);
         var lines = layout.rows();
         totalLines = lines.size();
         int limit = lineLimit(c, h);
@@ -75,6 +75,7 @@ final class TranslationHud {
         int start = Math.max(0, end - limit);
         int drawn = end - start;
         int drawnHeight = (int)Math.ceil((22 + drawn * 11) * scale);
+        if (!preview && chatOpen && drawn > 0) viewport = new HudViewport(x, y, w, Math.min(h, drawnHeight), limit, totalLines);
         g.fill(x, y, x + w, y + (preview ? h : Math.min(h, drawnHeight)), ((int)Math.round(c.hudOpacity * 255) << 24) | 0x101820);
         var displayed = HudRows.window(layout, start, end, mc.font::width);
         g.enableScissor(x, y, x + w, y + h);
@@ -92,7 +93,7 @@ final class TranslationHud {
         } finally { g.pose().popMatrix(); g.disableScissor(); }
         if (!preview && auditPath != null) {
             var displayLines = displayed.stream().map(row -> row.name().getString() + " │ " + row.text().getString()).toList();
-            var record = new LinkedHashMap<String, Object>(Map.<String, Object>of("version", "0.6.4", "x", x, "y", y, "width", w,
+            var record = new LinkedHashMap<String, Object>(Map.<String, Object>of("version", ModVersion.CURRENT, "x", x, "y", y, "width", w,
                 "height", drawnHeight, "opacity", c.hudOpacity, "chatOpen", chatOpen, "historyOffset", historyOffset,
                 "displayLines", displayLines, "displayText", String.join("\n", displayLines)));
             record.put("nameWidth", layout.nameWidth()); record.put("textWidth", layout.textWidth());

@@ -4,7 +4,7 @@ import net.minecraft.network.chat.Component;
 import java.util.regex.Pattern;
 
 final class ChatText {
-    private static final Pattern HEADER = Pattern.compile("^<t\\d+>[^<>]*: ?</t\\d+>");
+    private static final Pattern HEADER = Pattern.compile("^<t\\d+>[^<>]*:\\s*</t\\d+>");
     static String body(String source) { return HEADER.matcher(source).replaceFirst(""); }
     static String rejoin(String source, String result) {
         if (result == null || result.isBlank()) return result;

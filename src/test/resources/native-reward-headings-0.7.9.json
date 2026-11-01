@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "source": "Level XXXV Rewards:",
+      "target": "レベルXXXVの報酬:",
+      "sourceLog": "translation-display.jsonl",
+      "sourceLine": 161,
+      "version": "0.7.9",
+      "time": "2026-10-30T01:48:12.775425700Z",
+      "tooltipId": "acd80b1e9cc1feed",
+      "recordSha256": "78e9f0a9986fde294bbd005f2dac27b5e59af4e768bd8586fa83aa83d164e416",
+      "runs": [
+        {
+          "text": "Level XXXV Rewards:",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ]
+    },
+    {
+      "source": "Level XXI Rewards:",
+      "target": "レベルXXIの報酬:",
+      "sourceLog": "translation-display.jsonl",
+      "sourceLine": 162,
+      "version": "0.7.9",
+      "time": "2026-10-30T01:49:26.745324300Z",
+      "tooltipId": "b949887268c0ffbb",
+      "recordSha256": "ec58364d4e6c8f327cb58ca55cd71cac12bd0e5916c619e9f4642eba5df27442",
+      "runs": [
+        {
+          "text": "Level XXI Rewards:",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ]
+    },
+    {
+      "source": "Level LVI Rewards:",
+      "target": "レベルLVIの報酬:",
+      "sourceLog": "translation-display.jsonl",
+      "sourceLine": 163,
+      "version": "0.7.9",
+      "time": "2026-10-30T01:52:27.841602200Z",
+      "tooltipId": "88d28d1be3a5e602",
+      "recordSha256": "29bcaa6284566ce721c692099596fa91fe607bf213043e2600e610f3e9179e89",
+      "runs": [
+        {
+          "text": "Level LVI Rewards:",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ]
+    },
+    {
+      "source": "Level XXX Rewards:",
+      "target": "レベルXXXの報酬:",
+      "sourceLog": "translation-display.jsonl",
+      "sourceLine": 164,
+      "version": "0.7.9",
+      "time": "2026-10-30T01:53:19.748995100Z",
+      "tooltipId": "ca6e181379bc59e6",
+      "recordSha256": "5a447eba32573d6ff678b521e2bf414bf0a03ec9112bc2d8941aaaac9bf38e3c",
+      "runs": [
+        {
+          "text": "Level XXX Rewards:",
+          "color": 11184810,
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ]
+    }
+  ]
+}

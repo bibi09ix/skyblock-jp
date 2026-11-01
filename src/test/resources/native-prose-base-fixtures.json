@@ -1,0 +1,106 @@
+[
+  {
+    "name": "native_fishing_reward_white_prose",
+    "source": "Grants +3.4➜3.5  Treasure Chance.",
+    "target": "+3.4➜3.5  Treasure Chanceを獲得する。",
+    "channel": "ui",
+    "sourceIds": [
+      "derived/skill_body/006b9d4d7ee2e08320736575"
+    ],
+    "lines": [
+      [
+        {
+          "text": "    ",
+          "color": 11141290,
+          "nativeStyle": "{color=dark_purple,!italic}",
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "Grants ",
+          "color": 16777215,
+          "nativeStyle": "{color=white,!italic}",
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "+",
+          "color": 5635925,
+          "nativeStyle": "{color=green,!italic}",
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "3.4➜",
+          "color": 5592405,
+          "nativeStyle": "{color=dark_gray,!italic}",
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "3.5",
+          "color": 5635925,
+          "nativeStyle": "{color=green,!italic}",
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": " ",
+          "color": 16777215,
+          "nativeStyle": "{color=white,!italic}",
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": " Treasure Chance",
+          "color": 16755200,
+          "nativeStyle": "{color=gold,!italic}",
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": ".",
+          "color": 16777215,
+          "nativeStyle": "{color=white,!italic}",
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ]
+    ],
+    "provenance": {
+      "source_log": "translation-display.jsonl",
+      "source_line": 161,
+      "time": "2026-10-30T01:48:12.775425700Z",
+      "version": "0.7.9",
+      "item": "Fishing XXXIV",
+      "tooltipId": "acd80b1e9cc1feed",
+      "dictionaryBuildId": "20261028T171546016395Z-candidate-415deba3b34e35bf",
+      "originalFailureReason": "STYLE_ALIGNMENT_MISSING",
+      "source_sha256": "9378897a8b3891af35bd342e97d88803d94473a447cc5a997c0f65bb9b24c7df"
+    }
+  }
+]

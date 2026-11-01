@@ -6,6 +6,16 @@ import java.util.regex.*;
 /** Only repairs unambiguous formatting omissions; validation still runs afterwards. */
 final class TranslationRepair {
     static String repair(String source, String result) {
+        String proposed = candidate(source, result);
+        return worsensStructure(source, result, proposed) ? result : proposed;
+    }
+    /** A rule may improve prose, but must never destroy already-valid span/value bindings. */
+    static boolean worsensStructure(String source, String original, String proposed) {
+        return original != null && StyledParagraph.validNumbers(source, original)
+            && (proposed == null || !StyledParagraph.validNumbers(source, proposed));
+    }
+    /** Keep the proposal separate so the service can audit rejected repairs as well as applied ones. */
+    static String candidate(String source, String result) {
         if (result == null) return null;
         result = result.replaceAll("(?i)<br\\s*/?>", "\n");
         result = SemanticTranslation.repair(source, result);

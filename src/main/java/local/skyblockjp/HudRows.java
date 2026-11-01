@@ -12,8 +12,8 @@ final class HudRows {
     record Layout(int nameWidth, int textWidth, List<Row> rows) {}
     static Message message(String speaker, Component text) {
         if (speaker.equals("チャット")) {
-            var m = Pattern.compile("^(?:(?:\\[[^\\]]+\\]|[^A-Za-z0-9_\\s])\\s*)*([A-Za-z0-9_]{1,32}):\\s*").matcher(text.getString());
-            if (m.find()) return new Message(slice(text, m.start(1), m.end(1)), slice(text, m.end(), text.getString().length()));
+            var header = ChatEnvelope.player(text.getString());
+            if (header != null) return new Message(slice(text, header.nameStart(), header.nameEnd()), slice(text, header.bodyStart(), text.getString().length()));
         }
         return new Message(Component.literal(speaker.replace("[NPC] ", "")).withStyle(ChatFormatting.AQUA), text.copy());
     }

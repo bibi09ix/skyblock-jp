@@ -1,0 +1,151 @@
+{
+  "editing_help": "明示的に確認した数値テンプレート。原文・訳文の数値位置と固定語句を保持する。source_pairs は既存辞書の原文・訳文・ID・ハッシュ、native_example は実機ログの証拠。採用元の翻訳や条件が変わったら再確認する。数値だけから自動生成しない。",
+  "entries": [
+    {
+      "approved": true,
+      "channels": [
+        "item",
+        "ui"
+      ],
+      "en": "Increases damage dealt to Sea Creatures by {v0}%.",
+      "id": "reviewed/template/sea_creature_damage_percent",
+      "ja": "Sea Creatureに与えるダメージが{v0}%増加する。",
+      "native_example": {
+        "channel": "item",
+        "event_line": 115,
+        "event_sha256": "5eaa541bad65d40d646a6e720371e1b9d6d1aa20aca06fbb40775a0ebc9c5862",
+        "item": "Backwater Belt",
+        "line_end": 8,
+        "line_start": 7,
+        "log": "translation-display.jsonl",
+        "role": "DESCRIPTION",
+        "screen_title": "Stats & Equipment",
+        "source": "Increases damage dealt to Sea Creatures by 20%.",
+        "source_lines": [
+          "Increases damage dealt to Sea",
+          "Creatures by 20%."
+        ],
+        "source_lines_sha256": "f7feeb1f5084e5347ee4b97b094ad3defe5ac8e638dfc89ee3f6d86fd459d8cc",
+        "source_sha256": "b7ce3405fecb499a4ba845aee20591fcab5ef6317e7f7cb8deb5511a266332c3",
+        "time": "2026-10-29T23:46:36.248621300Z",
+        "tooltip_id": "56823f60c0a2ac9b",
+        "value": "20",
+        "version": "0.7.7"
+      },
+      "reason": "既存の5%、25%、75%は完全に同じ文章構造・同じ日本語訳で、数値は与ダメージ増加率という単一の役割。実機のBackwater Beltでは同一文の20%を確認した。対象Sea Creatures・動作・%単位・終端を固定し、数字だけを型付きで受け渡す。別の対象、単位、追加条件、数値の増加は一致させない。",
+      "source_pairs": [
+        {
+          "source": "Increases damage dealt to Sea Creatures by 5%.",
+          "source_ids": [
+            "item/ability_body/3053553dae2aceb6e0911089"
+          ],
+          "source_sha256": "ff441fe784cbd47d8d3b40070dd6dd581a5b56692befe3911184905d6000b6f0",
+          "target": "Sea Creatureに与えるダメージが5%増加する。",
+          "target_sha256": "93469a9054f836fec394a9c181e7c852dd1d86aea30b25493e7a3ff48c66a28f",
+          "value": "5"
+        },
+        {
+          "source": "Increases damage dealt to Sea Creatures by 25%.",
+          "source_ids": [
+            "ui/slot_description/f6d226b246eec3339569f20e"
+          ],
+          "source_sha256": "413a19729304e5aa963fc5811f9cbcaf1fee8dfc1086baf49e1359fdd298c974",
+          "target": "Sea Creatureに与えるダメージが25%増加する。",
+          "target_sha256": "00591ac369abdb1c256bf556a1a5d8ca3c2eaf6d4d20ff26db779a7242e9feb0",
+          "value": "25"
+        },
+        {
+          "source": "Increases damage dealt to Sea Creatures by 75%.",
+          "source_ids": [
+            "ui/slot_description/fce3b5524058a7607b482e62"
+          ],
+          "source_sha256": "7052a5d7c21e955cceb4dcc522a6cb26c507b4c0c58452c5482a79751bdff913",
+          "target": "Sea Creatureに与えるダメージが75%増加する。",
+          "target_sha256": "7f5a99d2315526eab5dbedd3363eed87f6b776b33a1274088ac4a5dc91a9d363",
+          "value": "75"
+        }
+      ],
+      "source_sha256": "29b1fc9184034079f8883fec1d32295a23885de00dd4927defcc1c4ee0486051",
+      "variables": [
+        {
+          "name": "v0",
+          "type": "number"
+        }
+      ]
+    },
+    {
+      "approved": true,
+      "channels": [
+        "item",
+        "ui"
+      ],
+      "en": "Creates a veil of fire around you for 5s, dealing {v0} damage per second to mobs within.",
+      "id": "reviewed/template/fire_veil_damage_per_second",
+      "ja": "周囲に5秒間の炎の幕を作り、その中にいるモブに毎秒{v0}のダメージを与える。",
+      "kind": "fire_veil_damage_per_second",
+      "native_example": {
+        "channel": "item",
+        "event_sha256": "816995d0f5bd85c84c064afdfa92344a3aeea7ad2b91545dd68040a1faef679d",
+        "evidence_kind": "recorded_tooltip",
+        "line_end": 12,
+        "line_start": 10,
+        "native_styles": false,
+        "record_pointer": "/670",
+        "role": "DESCRIPTION",
+        "snapshot_file": "outputs/dictionary-missing-0.7.9/tooltip-replay-input.json",
+        "snapshot_sha256": "4057dbb0e609594909cad2d66c6edfa37cef920d4dc0deed6f0ce2d50f1bac90",
+        "source": "Creates a veil of fire around you for 5s, dealing 43,716.4 damage per second to mobs within.",
+        "source_complete": true,
+        "source_lines": [
+          "Creates a veil of fire around you for 5s,",
+          "dealing 43,716.4 damage per second to mobs",
+          "within."
+        ],
+        "source_lines_sha256": "48cc94dbaaa311f3c436278b299d31a1935242aaa32127bdd850c89bdf7b2fc9",
+        "source_sha256": "55f54ac1543178421b8ce6f0d5d186b8f9433659c074194f15726a5f51bb34cc",
+        "value": "43,716.4"
+      },
+      "reason": "同じ固定5秒の効果文で与ダメージだけが異なる既存採用訳3組と保存された実ゲーム原文を照合。対象・秒数・毎秒の意味を固定し、ダメージ値だけを受け渡す。灰色で再生した旧記録を新しい実機確認や実際の色として扱わない。",
+      "source_pairs": [
+        {
+          "source": "Creates a veil of fire around you for 5s, dealing 101,479.2 damage per second to mobs within.",
+          "source_ids": [
+            "observed/item/runtime079_17e9799efa320e1ac4"
+          ],
+          "source_sha256": "17e9799efa320e1ac4b4fd1713152f388c94744b4b18e22f87181ab1864aa670",
+          "target": "周囲に5秒間の炎の幕を作り、その中にいるモブに毎秒101,479.2のダメージを与える。",
+          "target_sha256": "f0001a434b5a386ce514a55a09b68597d8044d0b3081f5dcb3f98c63a9e9d34e",
+          "value": "101,479.2"
+        },
+        {
+          "source": "Creates a veil of fire around you for 5s, dealing 102,015.7 damage per second to mobs within.",
+          "source_ids": [
+            "observed/item/runtime079_80f433c05814417b66"
+          ],
+          "source_sha256": "80f433c05814417b66c9d588230dd51dc4f2105e497add969e0b87a0777730c4",
+          "target": "周囲に5秒間の炎の幕を作り、その中にいるモブに毎秒102,015.7のダメージを与える。",
+          "target_sha256": "f5fdab630a0093002b9c915817affe2a06fba3f19237d8cad7c8ad8bfd516a4a",
+          "value": "102,015.7"
+        },
+        {
+          "source": "Creates a veil of fire around you for 5s, dealing 105,582.3 damage per second to mobs within.",
+          "source_ids": [
+            "observed/item/runtime079_59033fccdd0ae4db64"
+          ],
+          "source_sha256": "59033fccdd0ae4db64a9687bcaebca07d835bf5ba8080a5faef44d9b4ca968e8",
+          "target": "周囲に5秒間の炎の幕を作り、その中にいるモブに毎秒105,582.3のダメージを与える。",
+          "target_sha256": "238e6e58a87592ad86cea4c83d602960c6b7e534daa9b22568f060eff2de46b3",
+          "value": "105,582.3"
+        }
+      ],
+      "source_sha256": "87eb50c32edc856503971b5368bfa80d6e0f0c91677599145f7841abd1e6aa56",
+      "variables": [
+        {
+          "name": "v0",
+          "type": "number"
+        }
+      ]
+    }
+  ],
+  "schema_version": 1
+}

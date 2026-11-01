@@ -34,13 +34,13 @@ class HudChatRegressionTest {
         assertNull(ChatText.death(Component.literal("Hello")));
     }
     @Test void headersAndAbbreviationsRemainWholeAndJsonCannotLeak() throws Exception {
-        var p = NpcTranslation.whole(Component.literal("[402] ᛃ [MVP+] TwoSwitch73: lf mith diana i have l5 and bs"));
+        var p = NpcTranslation.wholeChat(Component.literal("[402] ᛃ [MVP+] TwoSwitch73: lf mith diana i have l5 and bs"));
         assertTrue(p.encoded().contains("TwoSwitch73: </t"));
         assertTrue(p.encoded().contains(">l5</t"));
         assertFalse(p.encoded().contains("TwoSwitch<n"));
         var command = NpcTranslation.whole(Component.literal("lowballing 3b /visit me 100m+"));
         assertTrue(command.encoded().contains(">/visit me</t"));
-        var input = NpcTranslation.whole(Component.literal("[260] ⚔ [MVP+] ManSui: cqwl u want to buy ti"));
+        var input = NpcTranslation.wholeChat(Component.literal("[260] ⚔ [MVP+] ManSui: cqwl u want to buy ti"));
         assertTrue(input.encoded().contains(">cqwl</t")); assertTrue(input.encoded().contains(">ti</t"));
         String encoded = input.encoded().replace("u want to buy", "を買いたい？");
         assertNotNull(ChatText.validate(input.encoded(), encoded + " u"));
@@ -52,7 +52,7 @@ class HudChatRegressionTest {
         }
     }
     @Test void coordinatesOnlyCanRemainUnchangedWithoutThreeRetries() throws Exception {
-        var p = NpcTranslation.whole(Component.literal("[90] [MVP+] Zitely: x: 1, y: 2, z: 3 jawbus"));
+        var p = NpcTranslation.wholeChat(Component.literal("[90] [MVP+] Zitely: x: 1, y: 2, z: 3 jawbus"));
         assertTrue(ChatText.coordinatesOnly(p.encoded()));
         assertFalse(ChatText.coordinatesOnly(NpcTranslation.whole(Component.literal("Hello there")).encoded()));
         var calls = new java.util.concurrent.atomic.AtomicInteger();

@@ -59,7 +59,7 @@ class LatestReviewRegressionTest {
     @Test void colonProseIsNotProtectedAsAPlayer() {
         var p = new StyledParagraph(List.of(Component.literal("The type of Critter that shows up depends upon the type of Protected Tree you smeared:")));
         assertFalse(p.encoded().contains("<t"));
-        var player = NpcTranslation.whole(Component.literal("[488] ᛃ [MVP+] Player1: Hello"));
+        var player = NpcTranslation.wholeChat(Component.literal("[488] ᛃ [MVP+] Player1: Hello"));
         assertEquals("Hello", ChatText.body(player.encoded()));
     }
     @Test void restoresBrokenNameAndRemovesHtmlBreak() {

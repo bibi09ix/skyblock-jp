@@ -1,5 +1,5 @@
 plugins { id 'net.fabricmc.fabric-loom' version '1.16.1' }
-version = '0.6.4'
+version = '0.7.12'
 group = 'local.skyblockjp'
 repositories { mavenCentral() }
 dependencies {
@@ -11,7 +11,83 @@ dependencies {
 }
 java { sourceCompatibility = JavaVersion.VERSION_25; targetCompatibility = JavaVersion.VERSION_25; withSourcesJar() }
 tasks.withType(JavaCompile).configureEach { options.encoding = 'UTF-8'; options.release = 25 }
+tasks.withType(Test).configureEach {
+    // Corpus integration tests load both full JSON resources and multiple isolated indexes.
+    // This limit is for verification workers only, not the Minecraft client.
+    maxHeapSize = '1536m'
+}
 test { useJUnitPlatform() }
+
+// Routine validation is offline. Provider integration tests retain their separate opt-in env vars.
+tasks.register('offlineTest', Test) {
+    description = 'Run code tests without Minecraft or external translation providers.'
+    group = 'verification'
+    testClassesDirs = sourceSets.test.output.classesDirs
+    classpath = sourceSets.test.runtimeClasspath
+    useJUnitPlatform()
+    exclude '**/*LiveTest.class', '**/LiveTranslationTest.class'
+}
+tasks.register('verifyBundledDictionary') {
+    description = 'Verify the committed dictionary snapshot against its deterministic manifest.'
+    group = 'verification'
+    def resource = layout.projectDirectory.file('src/main/resources/assets/skyblock_jp/dictionary/candidate.json')
+    def manifest = layout.projectDirectory.file('src/main/resources/assets/skyblock_jp/dictionary/candidate.manifest.json')
+    def matching = layout.projectDirectory.file('src/main/resources/assets/skyblock_jp/dictionary/candidate-matching.json')
+    def reviewed = layout.projectDirectory.file('src/main/resources/assets/skyblock_jp/dictionary/candidate-reviewed.json')
+    def alignment = layout.projectDirectory.file('src/main/resources/assets/skyblock_jp/dictionary/alignment.json')
+    def ordinaryTokens = layout.projectDirectory.file('src/main/resources/assets/skyblock_jp/dictionary/ordinary-tokens.json')
+    def scopedDescriptions = layout.projectDirectory.file('src/main/resources/assets/skyblock_jp/dictionary/candidate-scoped-descriptions.json')
+    def applicabilitySource = layout.projectDirectory.file('scripts/dictionary-observed-applicability.json')
+    def runtimeVersion = layout.projectDirectory.file('src/main/java/local/skyblockjp/ModVersion.java')
+    def modMetadata = layout.projectDirectory.file('src/main/resources/fabric.mod.json')
+    inputs.files(resource, manifest, matching, reviewed, alignment, ordinaryTokens,scopedDescriptions,applicabilitySource,runtimeVersion,modMetadata)
+    doLast {
+        def report = new groovy.json.JsonSlurper().parse(manifest.asFile, 'UTF-8')
+        def digest = java.security.MessageDigest.getInstance('SHA-256')
+        resource.asFile.withInputStream { stream ->
+            byte[] buffer = new byte[65536]
+            int count
+            while ((count = stream.read(buffer)) != -1) digest.update(buffer, 0, count)
+        }
+        def actual = java.util.HexFormat.of().formatHex(digest.digest())
+        if (report.schema_version != 1 || report.tier != 'candidate' || !report.candidate_requires_runtime_opt_in
+            || report.actual_game_validation_performed || report.source_adoption_flags_modified
+            || report.dictionary_sha256 != actual || report.dictionary_bytes != resource.asFile.length()) {
+            throw new GradleException('Bundled dictionary snapshot/manifest mismatch; regenerate both files.')
+        }
+        digest.reset()
+        matching.asFile.withInputStream { stream ->
+            byte[] buffer = new byte[65536]
+            int count
+            while ((count = stream.read(buffer)) != -1) digest.update(buffer, 0, count)
+        }
+        def matchingHash = java.util.HexFormat.of().formatHex(digest.digest())
+        if (report.matching_sha256 != matchingHash || report.matching_bytes != matching.asFile.length()) {
+            throw new GradleException('Bundled matching resource/manifest mismatch; regenerate dictionary resources.')
+        }
+        [reviewed: reviewed, alignment: alignment, ordinary_tokens: ordinaryTokens,scoped_descriptions:scopedDescriptions].each { name, file ->
+            digest.reset()
+            file.asFile.withInputStream { stream ->
+                byte[] buffer = new byte[65536]
+                int count
+                while ((count = stream.read(buffer)) != -1) digest.update(buffer, 0, count)
+            }
+            def actualHash = java.util.HexFormat.of().formatHex(digest.digest())
+            if (report[name + '_sha256'] != actualHash || report[name + '_bytes'] != file.asFile.length())
+                throw new GradleException("Bundled ${name} resource/manifest mismatch; regenerate dictionary resources.")
+        }
+        digest.reset()
+        digest.update(applicabilitySource.asFile.bytes)
+        if(report.observed_applicability_source_sha256 != java.util.HexFormat.of().formatHex(digest.digest()))
+            throw new GradleException('Observed applicability review/manifest mismatch; regenerate dictionary resources.')
+        def metadata=new groovy.json.JsonSlurper().parse(modMetadata.asFile,'UTF-8')
+        if(metadata.version!=project.version.toString()||!runtimeVersion.asFile.getText('UTF-8').contains('CURRENT = "'+project.version+'";'))
+            throw new GradleException('Build, Fabric metadata and diagnostic versions must agree.')
+        logger.lifecycle("Bundled candidate dictionary: ${report.entry_count} scoped keys; SHA-256 ${actual}")
+    }
+}
+tasks.named('processResources') { dependsOn 'verifyBundledDictionary' }
+tasks.named('check') { dependsOn 'verifyBundledDictionary' }
 
 processResources {
     def updateRepo = providers.gradleProperty('updateRepository').getOrElse('')

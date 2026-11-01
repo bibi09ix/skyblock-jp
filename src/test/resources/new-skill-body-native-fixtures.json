@@ -1,0 +1,501 @@
+{
+  "schema_version": 1,
+  "fixtures": [
+    {
+      "item": "Farming XXXVI",
+      "originalLines": [
+        "Farming XXXVI",
+        "Harvest crops and shear sheep to",
+        "earn Farming EXP!",
+        "",
+        "Progress to Level XXXVII: 39.9%",
+        "                          758,799.6/1.9M",
+        "",
+        "Level XXXVII Rewards:",
+        "  Farmhand XXXVII",
+        "    Grants +144➜148  Farming",
+        "    Fortune, which increases your",
+        "    chance for multiple crops.",
+        "  +5 Health",
+        "  +550,000 Coins",
+        "  +20 SkyBlock XP",
+        "",
+        "Click to view!",
+        "minecraft:golden_hoe",
+        "19個のコンポーネント",
+        "Minecraft"
+      ],
+      "originalStyledLines": [
+        [
+          {
+            "text": "Farming XXXVI",
+            "color": 5635925,
+            "nativeStyle": "{color=green,!italic}",
+            "bold": false,
+            "italic": false,
+            "underlined": false,
+            "strikethrough": false,
+            "obfuscated": false
+          }
+        ],
+        [
+          {
+            "text": "Harvest crops and shear sheep to",
+            "color": 11184810,
+            "nativeStyle": "{color=gray,!italic}",
+            "bold": false,
+            "italic": false,
+            "underlined": false,
+            "strikethrough": false,
+            "obfuscated": false
+          }
+        ],
+        [
+          {
+            "text": "earn Farming EXP!",
+            "color": 11184810,
+            "nativeStyle": "{color=gray,!italic}",
+            "bold": false,
+            "italic": false,
+            "underlined": false,
+            "strikethrough": false,
+            "obfuscated": false
+          }
+        ],
+        [],
+        [
+          {
+            "text": "Progress to Level XXXVII: ",
+            "color": 11184810,
+            "nativeStyle": "{color=gray,!italic}",
+            "bold": false,
+            "italic": false,
+            "underlined": false,
+            "strikethrough": false,
+            "obfuscated": false
+          },
+          {
+            "text": "39.9%",
+            "color": 16777045,
+            "nativeStyle": "{color=yellow,!italic}",
+            "bold": false,
+            "italic": false,
+            "underlined": false,
+            "strikethrough": false,
+            "obfuscated": false
+          }
+        ],
+        [
+          {
+            "text": "          ",
+            "color": 43520,
+            "nativeStyle": "{color=dark_green,bold,!italic,strikethrough}",
+            "bold": true,
+            "italic": false,
+            "underlined": false,
+            "strikethrough": true,
+            "obfuscated": false
+          },
+          {
+            "text": "               ",
+            "color": 16777215,
+            "nativeStyle": "{color=white,bold,!italic,strikethrough}",
+            "bold": true,
+            "italic": false,
+            "underlined": false,
+            "strikethrough": true,
+            "obfuscated": false
+          },
+          {
+            "text": " ",
+            "color": 11141290,
+            "nativeStyle": "{color=dark_purple,!italic}",
+            "bold": false,
+            "italic": false,
+            "underlined": false,
+            "strikethrough": false,
+            "obfuscated": false
+          },
+          {
+            "text": "758,799.6",
+            "color": 16777045,
+            "nativeStyle": "{color=yellow,!italic}",
+            "bold": false,
+            "italic": false,
+            "underlined": false,
+            "strikethrough": false,
+            "obfuscated": false
+          },
+          {
+            "text": "/",
+            "color": 16755200,
+            "nativeStyle": "{color=gold,!italic}",
+            "bold": false,
+            "italic": false,
+            "underlined": false,
+            "strikethrough": false,
+            "obfuscated": false
+          },
+          {
+            "text": "1.9M",
+            "color": 16777045,
+            "nativeStyle": "{color=yellow,!italic}",
+            "bold": false,
+            "italic": false,
+            "underlined": false,
+            "strikethrough": false,
+            "obfuscated": false
+          }
+        ],
+        [],
+        [
+          {
+            "text": "Level XXXVII Rewards:",
+            "color": 11184810,
+            "nativeStyle": "{color=gray,!italic}",
+            "bold": false,
+            "italic": false,
+            "underlined": false,
+            "strikethrough": false,
+            "obfuscated": false
+          }
+        ],
+        [
+          {
+            "text": "  ",
+            "color": 11141290,
+            "nativeStyle": "{color=dark_purple,!italic}",
+            "bold": false,
+            "italic": false,
+            "underlined": false,
+            "strikethrough": false,
+            "obfuscated": false
+          },
+          {
+            "text": "Farmhand XXXVII",
+            "color": 16777045,
+            "nativeStyle": "{color=yellow,!italic}",
+            "bold": false,
+            "italic": false,
+            "underlined": false,
+            "strikethrough": false,
+            "obfuscated": false
+          }
+        ],
+        [
+          {
+            "text": "    ",
+            "color": 11141290,
+            "nativeStyle": "{color=dark_purple,!italic}",
+            "bold": false,
+            "italic": false,
+            "underlined": false,
+            "strikethrough": false,
+            "obfuscated": false
+          },
+          {
+            "text": "Grants ",
+            "color": 16777215,
+            "nativeStyle": "{color=white,!italic}",
+            "bold": false,
+            "italic": false,
+            "underlined": false,
+            "strikethrough": false,
+            "obfuscated": false
+          },
+          {
+            "text": "+",
+            "color": 5635925,
+            "nativeStyle": "{color=green,!italic}",
+            "bold": false,
+            "italic": false,
+            "underlined": false,
+            "strikethrough": false,
+            "obfuscated": false
+          },
+          {
+            "text": "144➜",
+            "color": 5592405,
+            "nativeStyle": "{color=dark_gray,!italic}",
+            "bold": false,
+            "italic": false,
+            "underlined": false,
+            "strikethrough": false,
+            "obfuscated": false
+          },
+          {
+            "text": "148",
+            "color": 5635925,
+            "nativeStyle": "{color=green,!italic}",
+            "bold": false,
+            "italic": false,
+            "underlined": false,
+            "strikethrough": false,
+            "obfuscated": false
+          },
+          {
+            "text": " ",
+            "color": 16777215,
+            "nativeStyle": "{color=white,!italic}",
+            "bold": false,
+            "italic": false,
+            "underlined": false,
+            "strikethrough": false,
+            "obfuscated": false
+          },
+          {
+            "text": " Farming",
+            "color": 16755200,
+            "nativeStyle": "{color=gold,!italic}",
+            "bold": false,
+            "italic": false,
+            "underlined": false,
+            "strikethrough": false,
+            "obfuscated": false
+          }
+        ],
+        [
+          {
+            "text": "    ",
+            "color": 11141290,
+            "nativeStyle": "{color=dark_purple,!italic}",
+            "bold": false,
+            "italic": false,
+            "underlined": false,
+            "strikethrough": false,
+            "obfuscated": false
+          },
+          {
+            "text": "Fortune",
+            "color": 16755200,
+            "nativeStyle": "{color=gold,!italic}",
+            "bold": false,
+            "italic": false,
+            "underlined": false,
+            "strikethrough": false,
+            "obfuscated": false
+          },
+          {
+            "text": ", which increases your",
+            "color": 16777215,
+            "nativeStyle": "{color=white,!italic}",
+            "bold": false,
+            "italic": false,
+            "underlined": false,
+            "strikethrough": false,
+            "obfuscated": false
+          }
+        ],
+        [
+          {
+            "text": "    ",
+            "color": 11141290,
+            "nativeStyle": "{color=dark_purple,!italic}",
+            "bold": false,
+            "italic": false,
+            "underlined": false,
+            "strikethrough": false,
+            "obfuscated": false
+          },
+          {
+            "text": "chance for multiple crops.",
+            "color": 16777215,
+            "nativeStyle": "{color=white,!italic}",
+            "bold": false,
+            "italic": false,
+            "underlined": false,
+            "strikethrough": false,
+            "obfuscated": false
+          }
+        ],
+        [
+          {
+            "text": "  ",
+            "color": 11141290,
+            "nativeStyle": "{color=dark_purple,!italic}",
+            "bold": false,
+            "italic": false,
+            "underlined": false,
+            "strikethrough": false,
+            "obfuscated": false
+          },
+          {
+            "text": "+",
+            "color": 5592405,
+            "nativeStyle": "{color=dark_gray,!italic}",
+            "bold": false,
+            "italic": false,
+            "underlined": false,
+            "strikethrough": false,
+            "obfuscated": false
+          },
+          {
+            "text": "5 Health",
+            "color": 16733525,
+            "nativeStyle": "{color=red,!italic}",
+            "bold": false,
+            "italic": false,
+            "underlined": false,
+            "strikethrough": false,
+            "obfuscated": false
+          }
+        ],
+        [
+          {
+            "text": "  ",
+            "color": 11141290,
+            "nativeStyle": "{color=dark_purple,!italic}",
+            "bold": false,
+            "italic": false,
+            "underlined": false,
+            "strikethrough": false,
+            "obfuscated": false
+          },
+          {
+            "text": "+",
+            "color": 5592405,
+            "nativeStyle": "{color=dark_gray,!italic}",
+            "bold": false,
+            "italic": false,
+            "underlined": false,
+            "strikethrough": false,
+            "obfuscated": false
+          },
+          {
+            "text": "550,000 ",
+            "color": 16755200,
+            "nativeStyle": "{color=gold,!italic}",
+            "bold": false,
+            "italic": false,
+            "underlined": false,
+            "strikethrough": false,
+            "obfuscated": false
+          },
+          {
+            "text": "Coins",
+            "color": 11184810,
+            "nativeStyle": "{color=gray,!italic}",
+            "bold": false,
+            "italic": false,
+            "underlined": false,
+            "strikethrough": false,
+            "obfuscated": false
+          }
+        ],
+        [
+          {
+            "text": "  ",
+            "color": 11141290,
+            "nativeStyle": "{color=dark_purple,!italic}",
+            "bold": false,
+            "italic": false,
+            "underlined": false,
+            "strikethrough": false,
+            "obfuscated": false
+          },
+          {
+            "text": "+",
+            "color": 5592405,
+            "nativeStyle": "{color=dark_gray,!italic}",
+            "bold": false,
+            "italic": false,
+            "underlined": false,
+            "strikethrough": false,
+            "obfuscated": false
+          },
+          {
+            "text": "20 SkyBlock XP",
+            "color": 5636095,
+            "nativeStyle": "{color=aqua,!italic}",
+            "bold": false,
+            "italic": false,
+            "underlined": false,
+            "strikethrough": false,
+            "obfuscated": false
+          }
+        ],
+        [],
+        [
+          {
+            "text": "Click to view!",
+            "color": 16777045,
+            "nativeStyle": "{color=yellow,!italic}",
+            "bold": false,
+            "italic": false,
+            "underlined": false,
+            "strikethrough": false,
+            "obfuscated": false
+          }
+        ],
+        [
+          {
+            "text": "minecraft:golden_hoe",
+            "color": 5592405,
+            "nativeStyle": "{color=dark_gray}",
+            "bold": false,
+            "italic": false,
+            "underlined": false,
+            "strikethrough": false,
+            "obfuscated": false
+          }
+        ],
+        [
+          {
+            "text": "19個のコンポーネント",
+            "color": 5592405,
+            "nativeStyle": "{color=dark_gray}",
+            "bold": false,
+            "italic": false,
+            "underlined": false,
+            "strikethrough": false,
+            "obfuscated": false
+          }
+        ],
+        [
+          {
+            "text": "Minecraft",
+            "color": 5592575,
+            "nativeStyle": "{color=blue,italic}",
+            "bold": false,
+            "italic": true,
+            "underlined": false,
+            "strikethrough": false,
+            "obfuscated": false
+          }
+        ]
+      ],
+      "classification": {
+        "kind": "UI",
+        "reason": "TRUSTED_MENU_CONTROL",
+        "evidence": {
+          "screenClass": "net.minecraft.client.gui.screens.inventory.ContainerScreen",
+          "numericStatRows": 4,
+          "skyblockItemId": "",
+          "slotMatches": true,
+          "location": "CONTAINER",
+          "slotIndex": 20,
+          "controlEvidence": true,
+          "minecraftItemId": "minecraft:golden_hoe",
+          "containerSize": 90,
+          "controlCarrierEvidence": false,
+          "containerTitle": "Your Skills",
+          "statBreakdownMenu": false,
+          "trustedMenu": true
+        }
+      },
+      "source_provenance": {
+        "file": "fixtures/captured/translation-display.jsonl",
+        "line": 120,
+        "event": "TOOLTIP_DISPLAY",
+        "tooltipId": "b91892d50d36fc3e"
+      },
+      "observed_at": "2026-10-29T23:48:36.585926100Z",
+      "runtime_version": "0.7.7",
+      "source": "Grants +144➜148  Farming Fortune, which increases your chance for multiple crops.",
+      "source_sha256": "7b00d970ca36e1589c1170e98f797e039cfd9f6e37e2088ff14b34b65615673d",
+      "derived_id": "derived/skill_body/4352546ac074b018e443492a",
+      "target": "作物の複数ドロップ率を高める+144➜148  Farming Fortuneを獲得する。"
+    }
+  ],
+  "privacy_scope": "Public skill tooltip only; no player or NPC chat, identifiers, config, cache or authentication data."
+}

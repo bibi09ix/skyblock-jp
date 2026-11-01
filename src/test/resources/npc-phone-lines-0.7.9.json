@@ -1,0 +1,136 @@
+{
+  "cases": [
+    {
+      "id": "reviewed/npc_phone/78fb477c858b88f8ca1ff327",
+      "source": "✆ A giant magma creature with massive tentacles?",
+      "speaker": "Dean",
+      "target": "✆ 巨大な触手を持つ、とてつもなく大きなマグマの怪物じゃと？"
+    },
+    {
+      "id": "reviewed/npc_phone/3f2a91ef6e850e21f4f566e7",
+      "source": "✆ Hallowed Skulls can be obtained from Bladesoul inside the Stronghold.",
+      "speaker": "Dean",
+      "target": "✆ Hallowed Skullsは、StrongholdにいるBladesoulから手に入るぞ。"
+    },
+    {
+      "id": "reviewed/npc_phone/e80b94cb67998364d8bb7e51",
+      "source": "✆ I have reasons to believe there is a lot of Sulphur in the North, it would explain the appearance of those Blaze species.",
+      "speaker": "Dean",
+      "target": "✆ 北にはSulphurが大量にあると考えておるのじゃ。そうなら、ああしたBlazeの種が現れるのも説明がつく。"
+    },
+    {
+      "id": "reviewed/npc_phone/5507ddcd0d088b33c1d42e69",
+      "source": "✆ I will call you later!",
+      "speaker": "Dean",
+      "target": "✆ また後で電話するとしよう！"
+    },
+    {
+      "id": "reviewed/npc_phone/21177aa7e6861807a3348ce2",
+      "source": "✆ If left unchecked, it is possible that the powers of this creature will grow.",
+      "speaker": "Dean",
+      "target": "✆ 放っておけば、この生き物の力はさらに増すかもしれん。"
+    },
+    {
+      "id": "reviewed/npc_phone/49c44b95beb2d9ef336773ce",
+      "source": "✆ In a way it is good that the Piglins were not behind this.",
+      "speaker": "Dean",
+      "target": "✆ ある意味、Piglinsの仕業ではなくてよかったのう。"
+    },
+    {
+      "id": "reviewed/npc_phone/3c37fe1278e75dfcfa57cc56",
+      "source": "✆ My poor Apprentice, it is my vault, I shouldn't send him on difficult missions.",
+      "speaker": "Dean",
+      "target": "✆ かわいそうなApprentice……わしの落ち度じゃ。難しい任務に行かせるべきではなかった。"
+    },
+    {
+      "id": "reviewed/npc_phone/4bd6437fdcf947e64555460c",
+      "source": "✆ Oh, you are willing to help?",
+      "speaker": "Dean",
+      "target": "✆ おお、手伝ってくれるというのかね？"
+    },
+    {
+      "id": "reviewed/npc_phone/fd03c5aa4e9892182f50ccf1",
+      "source": "✆ SULPHUR! This is catastrophic!!",
+      "speaker": "Dean",
+      "target": "✆ SULPHURじゃと！ なんということじゃ！！"
+    },
+    {
+      "id": "reviewed/npc_phone/64eccab1d045172f2f3d8a4d",
+      "source": "✆ Thank you very much you are a life savior, quite literally.",
+      "speaker": "Dean",
+      "target": "✆ 本当にありがとう。君は命の恩人じゃ。文字どおり、な。"
+    },
+    {
+      "id": "reviewed/npc_phone/f38899dad56c470cae0c4e9c",
+      "source": "✆ The Stronghold was built by Blazes and Wither Skeletons, they are still expanding it slowly, quite fascinating.",
+      "speaker": "Dean",
+      "target": "✆ StrongholdはBlazesとWither Skeletonsが建てたのじゃ。今も少しずつ広げておる。実に興味深いのう。"
+    },
+    {
+      "id": "reviewed/npc_phone/bd1fde67c896abe4e34b2b0d",
+      "source": "✆ The reason why I need a Lumino Fiber? Well...it's hard to explain.",
+      "speaker": "Dean",
+      "target": "✆ Lumino Fiberが必要な理由かね？ ううむ……説明が難しくてな。"
+    },
+    {
+      "id": "reviewed/npc_phone/857b5248e300bb896f10bdd2",
+      "source": "✆ This will also delay my work considerably, how am I going to obtain all those precious materials now...",
+      "speaker": "Dean",
+      "target": "✆ これでは研究も大幅に遅れてしまう。貴重な材料を、これからどうやって集めたものか……。"
+    },
+    {
+      "id": "reviewed/npc_phone/d1ffe7ed26768f9b7f4fe6d8",
+      "source": "✆ We need to learn more about that monster, where it is from and what it wants.",
+      "speaker": "Dean",
+      "target": "✆ その怪物について、もっと調べねばならん。どこから来たのか、何を求めておるのか、な。"
+    },
+    {
+      "id": "reviewed/npc_phone/ad2d931e0995e77ab49f4c00",
+      "source": "✆ Well in that case, I will send you the list of items I need.",
+      "speaker": "Dean",
+      "target": "✆ それなら、必要な品の一覧を送るとしよう。"
+    },
+    {
+      "id": "reviewed/npc_phone/5adb362c2b5aa2c4f38148d5",
+      "source": "✆ Well that explains a lot, my Apprentice just awoken from his coma, he described the same creature.",
+      "speaker": "Dean",
+      "target": "✆ なるほど、それでいろいろと合点がいく。わしのApprenticeがついさっき昏睡から目を覚ましてな。同じ怪物のことを話しておったのじゃ。"
+    },
+    {
+      "id": "reviewed/npc_phone/423cc062d05a30d478c6c741",
+      "source": "✆ You found my Apprentice and he WHAT?!",
+      "speaker": "Dean",
+      "target": "✆ わしのApprenticeを見つけた、そして、あの子が何をしたじゃと？！"
+    },
+    {
+      "id": "reviewed/npc_phone/ff19c89e3be873bb60cfc369",
+      "source": "✆ You found who stole our Sulphur?",
+      "speaker": "Dean",
+      "target": "✆ わしらのSulphurを盗んだ者が分かったのかね？"
+    }
+  ],
+  "native": {
+    "runs": [
+      {
+        "bold": false,
+        "color": 5636095,
+        "italic": false,
+        "obfuscated": false,
+        "strikethrough": false,
+        "text": "✆",
+        "underlined": false
+      },
+      {
+        "bold": false,
+        "color": 16777215,
+        "italic": false,
+        "obfuscated": false,
+        "strikethrough": false,
+        "text": " If left unchecked, it is possible that the powers of this creature will grow.",
+        "underlined": false
+      }
+    ],
+    "source": "✆ If left unchecked, it is possible that the powers of this creature will grow."
+  },
+  "schemaVersion": 1
+}

@@ -7,6 +7,14 @@ public final class Config {
     public boolean enabled = true;
     public boolean npcTranslation = true;
     public boolean loreTranslation = true;
+    // OFF isolates bundled/local translations from both provider requests and saved API results.
+    public boolean apiTranslation = true;
+    // The complete bundled corpus has not been verified in a game client.
+    public boolean candidateDictionary = false;
+    // Effective only while candidateDictionary is enabled; never sends an API request.
+    public boolean dictionaryAutoDisplay = true;
+    public boolean dictionaryDiagnostics = true;
+    public boolean dictionaryPlainFallback = true;
     public boolean hypixelOnly = true;
     public String provider = "GROQ";
     public boolean initialSetupShown = false;
@@ -15,16 +23,14 @@ public final class Config {
     public int wrapWidth = 260;
     public int translateKey = 71;
     public boolean translationHud = false;
-    public boolean chatButtons = true;
-    public boolean chatButtonFirst = true;
+    public boolean chatButtons = true; // Legacy JSON name: now enables hover + translation key.
+    public boolean chatButtonFirst = true; // Legacy setting retained for config compatibility only.
     public double hudX = 1, hudY = 1;
     public int hudWidth = 480, hudLines = 13, hudSeconds = 30;
     public double hudOpacity = 0.69;
     public double hudTextScale = 1.0;
-    public boolean backgroundTranslation = true;
     public boolean autoUpdate = true;
     public String updateRepository = "";
-    public int backgroundIdleSeconds = 120, backgroundIntervalSeconds = 180;
     public void resetHudLayout() {
         var defaults = new Config();
         hudX = defaults.hudX; hudY = defaults.hudY;
@@ -53,8 +59,6 @@ public final class Config {
             config.hudSeconds = config.hudSeconds == 0 ? 0 : Math.clamp(config.hudSeconds, 5, 300);
             config.hudOpacity = Double.isFinite(config.hudOpacity) ? Math.clamp(config.hudOpacity, 0, 1) : 0.69;
             config.hudTextScale = Double.isFinite(config.hudTextScale) ? Math.clamp(config.hudTextScale, 0.75, 2.5) : 1.0;
-            config.backgroundIdleSeconds = Math.clamp(config.backgroundIdleSeconds, 60, 600);
-            config.backgroundIntervalSeconds = Math.clamp(config.backgroundIntervalSeconds, 120, 900);
             if (!"GOOGLE".equals(config.provider) && !"GROQ".equals(config.provider)) throw new IllegalArgumentException("Provider must be GOOGLE or GROQ");
             return config;
         }

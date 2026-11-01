@@ -1,0 +1,4059 @@
+{
+  "schema_version": 1,
+  "normalization": "bundled-source-v1",
+  "plans": [
+    {
+      "id": "recorded-item-f6604effb1cf30c0a901",
+      "channel": "item",
+      "source": "While in The Catacombs, consume 1⸕ charge to break a block. 20 blocks can be broken at a time, and re-appear after 10s. 2⸕ charges are regenerated each second.",
+      "target": "The Catacombs内で1⸕チャージを消費し、ブロックを壊す。同時に壊せるのは20ブロックまでで、10秒後に元に戻る。毎秒2⸕チャージを回復する。",
+      "sourceSha256": "4ce4cda0c904de2670d5e093c6c7b30671c241c5e668c8d4120f745560c50a61",
+      "targetSha256": "29d54b3e2747fd0924baffc2b36bef5ff883e5989e1b352791ae2682baec4dfe",
+      "reviewed": true,
+      "sourceIds": [
+        "item/ability_body/cbd5436d4af7d74fbf0e5ee5"
+      ],
+      "spans": [
+        {
+          "id": "phrase.0",
+          "kind": "name",
+          "sourceStart": 9,
+          "sourceEnd": 22,
+          "targetStart": 0,
+          "targetEnd": 13,
+          "sourceText": "The Catacombs",
+          "targetText": "The Catacombs",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "phrase.1",
+          "kind": "ordinary",
+          "sourceStart": 117,
+          "sourceEnd": 118,
+          "targetStart": 54,
+          "targetEnd": 55,
+          "sourceText": "s",
+          "targetText": "秒",
+          "confirmedOrdinary": true,
+          "allowPlain": false
+        },
+        {
+          "id": "value.0",
+          "kind": "value",
+          "sourceStart": 32,
+          "sourceEnd": 33,
+          "targetStart": 15,
+          "targetEnd": 16,
+          "sourceText": "1",
+          "targetText": "1",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "value.1",
+          "kind": "value",
+          "sourceStart": 60,
+          "sourceEnd": 62,
+          "targetStart": 42,
+          "targetEnd": 44,
+          "sourceText": "20",
+          "targetText": "20",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "value.2",
+          "kind": "value",
+          "sourceStart": 115,
+          "sourceEnd": 117,
+          "targetStart": 52,
+          "targetEnd": 54,
+          "sourceText": "10",
+          "targetText": "10",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "value.3",
+          "kind": "value",
+          "sourceStart": 120,
+          "sourceEnd": 121,
+          "targetStart": 64,
+          "targetEnd": 65,
+          "sourceText": "2",
+          "targetText": "2",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "recorded-ui-f6604effb1cf30c0a901",
+      "channel": "ui",
+      "source": "While in The Catacombs, consume 1⸕ charge to break a block. 20 blocks can be broken at a time, and re-appear after 10s. 2⸕ charges are regenerated each second.",
+      "target": "The Catacombs内で1⸕チャージを消費し、ブロックを壊す。同時に壊せるのは20ブロックまでで、10秒後に元に戻る。毎秒2⸕チャージを回復する。",
+      "sourceSha256": "4ce4cda0c904de2670d5e093c6c7b30671c241c5e668c8d4120f745560c50a61",
+      "targetSha256": "29d54b3e2747fd0924baffc2b36bef5ff883e5989e1b352791ae2682baec4dfe",
+      "reviewed": true,
+      "sourceIds": [
+        "item/ability_body/cbd5436d4af7d74fbf0e5ee5"
+      ],
+      "spans": [
+        {
+          "id": "phrase.0",
+          "kind": "name",
+          "sourceStart": 9,
+          "sourceEnd": 22,
+          "targetStart": 0,
+          "targetEnd": 13,
+          "sourceText": "The Catacombs",
+          "targetText": "The Catacombs",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "phrase.1",
+          "kind": "ordinary",
+          "sourceStart": 117,
+          "sourceEnd": 118,
+          "targetStart": 54,
+          "targetEnd": 55,
+          "sourceText": "s",
+          "targetText": "秒",
+          "confirmedOrdinary": true,
+          "allowPlain": false
+        },
+        {
+          "id": "value.0",
+          "kind": "value",
+          "sourceStart": 32,
+          "sourceEnd": 33,
+          "targetStart": 15,
+          "targetEnd": 16,
+          "sourceText": "1",
+          "targetText": "1",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "value.1",
+          "kind": "value",
+          "sourceStart": 60,
+          "sourceEnd": 62,
+          "targetStart": 42,
+          "targetEnd": 44,
+          "sourceText": "20",
+          "targetText": "20",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "value.2",
+          "kind": "value",
+          "sourceStart": 115,
+          "sourceEnd": 117,
+          "targetStart": 52,
+          "targetEnd": 54,
+          "sourceText": "10",
+          "targetText": "10",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "value.3",
+          "kind": "value",
+          "sourceStart": 120,
+          "sourceEnd": 121,
+          "targetStart": 64,
+          "targetEnd": 65,
+          "sourceText": "2",
+          "targetText": "2",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "recorded-item-8e07e2549e623160c3e7",
+      "channel": "item",
+      "source": "Keep this item in your inventory to increase the bonus up to +30☯ Fishing Wisdom, at which point the item evolves!",
+      "target": "インベントリに入れておくとボーナスが最大+30☯ Fishing Wisdomまで増加し、その時点でアイテムが進化する！",
+      "sourceSha256": "58eb7aa2e39e03cf4c6b250cb2a913f544d36c07b46ddba8bc8fc4126549f459",
+      "targetSha256": "592cfc5d537791f9098f807d08c9c27d2e7faa6f859da5e6351081e22db31445",
+      "reviewed": true,
+      "sourceIds": [
+        "item/description/ca92e3e711bfc64ea0ff79c7",
+        "ui/slot_description/06619fd1b45c3f241dad7184"
+      ],
+      "spans": [
+        {
+          "id": "phrase.0",
+          "kind": "ordinary",
+          "sourceStart": 106,
+          "sourceEnd": 113,
+          "targetStart": 55,
+          "targetEnd": 57,
+          "sourceText": "evolves",
+          "targetText": "進化",
+          "confirmedOrdinary": true,
+          "allowPlain": false
+        },
+        {
+          "id": "value.0",
+          "kind": "value",
+          "sourceStart": 61,
+          "sourceEnd": 64,
+          "targetStart": 20,
+          "targetEnd": 23,
+          "sourceText": "+30",
+          "targetText": "+30",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "recorded-ui-8e07e2549e623160c3e7",
+      "channel": "ui",
+      "source": "Keep this item in your inventory to increase the bonus up to +30☯ Fishing Wisdom, at which point the item evolves!",
+      "target": "インベントリに入れておくとボーナスが最大+30☯ Fishing Wisdomまで増加し、その時点でアイテムが進化する！",
+      "sourceSha256": "58eb7aa2e39e03cf4c6b250cb2a913f544d36c07b46ddba8bc8fc4126549f459",
+      "targetSha256": "592cfc5d537791f9098f807d08c9c27d2e7faa6f859da5e6351081e22db31445",
+      "reviewed": true,
+      "sourceIds": [
+        "item/description/ca92e3e711bfc64ea0ff79c7",
+        "ui/slot_description/06619fd1b45c3f241dad7184"
+      ],
+      "spans": [
+        {
+          "id": "phrase.0",
+          "kind": "ordinary",
+          "sourceStart": 106,
+          "sourceEnd": 113,
+          "targetStart": 55,
+          "targetEnd": 57,
+          "sourceText": "evolves",
+          "targetText": "進化",
+          "confirmedOrdinary": true,
+          "allowPlain": false
+        },
+        {
+          "id": "value.0",
+          "kind": "value",
+          "sourceStart": 61,
+          "sourceEnd": 64,
+          "targetStart": 20,
+          "targetEnd": 23,
+          "sourceText": "+30",
+          "targetText": "+30",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "recorded-item-bcc67fb93b5d652561a4",
+      "channel": "item",
+      "source": "Keep this item in your inventory to increase the bonus up to +300 Intelligence, at which point the item evolves!",
+      "target": "Inventoryに入れておくと、ボーナスが最大+300 Intelligenceまで増加する。最大に達するとアイテムが進化する！",
+      "sourceSha256": "524b911a87965a635ba7783f04ec359d09c8ebe2d023a465a8091234fef0d8be",
+      "targetSha256": "359755720b84f569e2dd1bb12bce045b4496a09429a8acd294eeadbcea2406ea",
+      "reviewed": true,
+      "sourceIds": [
+        "item/description/6a6407a588c8a940cc91be51"
+      ],
+      "spans": [
+        {
+          "id": "phrase.0",
+          "kind": "ordinary",
+          "sourceStart": 105,
+          "sourceEnd": 112,
+          "targetStart": 61,
+          "targetEnd": 63,
+          "sourceText": "evolves",
+          "targetText": "進化",
+          "confirmedOrdinary": true,
+          "allowPlain": false
+        },
+        {
+          "id": "value.0",
+          "kind": "value",
+          "sourceStart": 61,
+          "sourceEnd": 65,
+          "targetStart": 24,
+          "targetEnd": 28,
+          "sourceText": "+300",
+          "targetText": "+300",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "recorded-ui-bcc67fb93b5d652561a4",
+      "channel": "ui",
+      "source": "Keep this item in your inventory to increase the bonus up to +300 Intelligence, at which point the item evolves!",
+      "target": "Inventoryに入れておくと、ボーナスが最大+300 Intelligenceまで増加する。最大に達するとアイテムが進化する！",
+      "sourceSha256": "524b911a87965a635ba7783f04ec359d09c8ebe2d023a465a8091234fef0d8be",
+      "targetSha256": "359755720b84f569e2dd1bb12bce045b4496a09429a8acd294eeadbcea2406ea",
+      "reviewed": true,
+      "sourceIds": [
+        "item/description/6a6407a588c8a940cc91be51"
+      ],
+      "spans": [
+        {
+          "id": "phrase.0",
+          "kind": "ordinary",
+          "sourceStart": 105,
+          "sourceEnd": 112,
+          "targetStart": 61,
+          "targetEnd": 63,
+          "sourceText": "evolves",
+          "targetText": "進化",
+          "confirmedOrdinary": true,
+          "allowPlain": false
+        },
+        {
+          "id": "value.0",
+          "kind": "value",
+          "sourceStart": 61,
+          "sourceEnd": 65,
+          "targetStart": 24,
+          "targetEnd": 28,
+          "sourceText": "+300",
+          "targetText": "+300",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "recorded-item-60b7977382ca2a9ece21",
+      "channel": "item",
+      "source": "Doubles your  Defense while in water.",
+      "target": "水中では、 Defenseが2倍になる。",
+      "sourceSha256": "811b6e61f929e9193a4bbf3558a052fb196d64e35e29e85bc724916f4e030773",
+      "targetSha256": "4c344398506593b976a58e5dee43043c432f0a970b5b40e28bb22346ffd4738f",
+      "reviewed": true,
+      "sourceIds": [
+        "item/ability_body/23eea289c6ce0aec727e9b84"
+      ],
+      "spans": [
+        {
+          "id": "phrase.0",
+          "kind": "name",
+          "sourceStart": 15,
+          "sourceEnd": 22,
+          "targetStart": 7,
+          "targetEnd": 14,
+          "sourceText": "Defense",
+          "targetText": "Defense",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "recorded-ui-60b7977382ca2a9ece21",
+      "channel": "ui",
+      "source": "Doubles your  Defense while in water.",
+      "target": "水中では、 Defenseが2倍になる。",
+      "sourceSha256": "811b6e61f929e9193a4bbf3558a052fb196d64e35e29e85bc724916f4e030773",
+      "targetSha256": "4c344398506593b976a58e5dee43043c432f0a970b5b40e28bb22346ffd4738f",
+      "reviewed": true,
+      "sourceIds": [
+        "item/ability_body/23eea289c6ce0aec727e9b84"
+      ],
+      "spans": [
+        {
+          "id": "phrase.0",
+          "kind": "name",
+          "sourceStart": 15,
+          "sourceEnd": 22,
+          "targetStart": 7,
+          "targetEnd": 14,
+          "sourceText": "Defense",
+          "targetText": "Defense",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "recorded-item-1bfdfb466c034b133061",
+      "channel": "item",
+      "source": "Can be used to damage  Pests.",
+      "target": " Pestにダメージを与えるために使用できる。",
+      "sourceSha256": "25e273ccc81651f403e45fb465c93562c0efa508834a97ee4d83429d74ebd3b3",
+      "targetSha256": "c075ee5fe4ec91495aa99c529014bbee552575d71714212c39e55da1d8cf21bf",
+      "reviewed": true,
+      "sourceIds": [
+        "item/description/80667e303398a69f865bc61f",
+        "item/description/98db54b79440b916bc5e5b83",
+        "item/description/bdbbd9f26decc45b3bdda9f3",
+        "item/description/c8e52a81e31b01a0511139f3",
+        "item/description/ced6097272b98a80eaab7855"
+      ],
+      "spans": [
+        {
+          "id": "phrase.0",
+          "kind": "name",
+          "sourceStart": 24,
+          "sourceEnd": 29,
+          "targetStart": 2,
+          "targetEnd": 6,
+          "sourceText": "Pests",
+          "targetText": "Pest",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "recorded-ui-1bfdfb466c034b133061",
+      "channel": "ui",
+      "source": "Can be used to damage  Pests.",
+      "target": " Pestにダメージを与えるために使用できる。",
+      "sourceSha256": "25e273ccc81651f403e45fb465c93562c0efa508834a97ee4d83429d74ebd3b3",
+      "targetSha256": "c075ee5fe4ec91495aa99c529014bbee552575d71714212c39e55da1d8cf21bf",
+      "reviewed": true,
+      "sourceIds": [
+        "item/description/80667e303398a69f865bc61f",
+        "item/description/98db54b79440b916bc5e5b83",
+        "item/description/bdbbd9f26decc45b3bdda9f3",
+        "item/description/c8e52a81e31b01a0511139f3",
+        "item/description/ced6097272b98a80eaab7855"
+      ],
+      "spans": [
+        {
+          "id": "phrase.0",
+          "kind": "name",
+          "sourceStart": 24,
+          "sourceEnd": 29,
+          "targetStart": 2,
+          "targetEnd": 6,
+          "sourceText": "Pests",
+          "targetText": "Pest",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "recorded-item-51767a02885298e3f662",
+      "channel": "item",
+      "source": "Deals 100  Damage per second to nearby  Pests.",
+      "target": "近くの Pestに、毎秒100  Damageを与える。",
+      "sourceSha256": "d60927352082fe0b1964c51c1831b040dfc0eb496463723edb8ca66d179a442c",
+      "targetSha256": "a5ef7d66df96963e6c852a5ba64c29037f3fe6a528e0b51980bf41c78d80a857",
+      "reviewed": true,
+      "sourceIds": [
+        "item/ability_body/874f94a7cd241ec3cea7630b"
+      ],
+      "spans": [
+        {
+          "id": "phrase.0",
+          "kind": "name",
+          "sourceStart": 42,
+          "sourceEnd": 47,
+          "targetStart": 5,
+          "targetEnd": 9,
+          "sourceText": "Pests",
+          "targetText": "Pest",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "phrase.1",
+          "kind": "name",
+          "sourceStart": 12,
+          "sourceEnd": 18,
+          "targetStart": 19,
+          "targetEnd": 25,
+          "sourceText": "Damage",
+          "targetText": "Damage",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "value.0",
+          "kind": "value",
+          "sourceStart": 6,
+          "sourceEnd": 9,
+          "targetStart": 13,
+          "targetEnd": 16,
+          "sourceText": "100",
+          "targetText": "100",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "recorded-ui-51767a02885298e3f662",
+      "channel": "ui",
+      "source": "Deals 100  Damage per second to nearby  Pests.",
+      "target": "近くの Pestに、毎秒100  Damageを与える。",
+      "sourceSha256": "d60927352082fe0b1964c51c1831b040dfc0eb496463723edb8ca66d179a442c",
+      "targetSha256": "a5ef7d66df96963e6c852a5ba64c29037f3fe6a528e0b51980bf41c78d80a857",
+      "reviewed": true,
+      "sourceIds": [
+        "item/ability_body/874f94a7cd241ec3cea7630b"
+      ],
+      "spans": [
+        {
+          "id": "phrase.0",
+          "kind": "name",
+          "sourceStart": 42,
+          "sourceEnd": 47,
+          "targetStart": 5,
+          "targetEnd": 9,
+          "sourceText": "Pests",
+          "targetText": "Pest",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "phrase.1",
+          "kind": "name",
+          "sourceStart": 12,
+          "sourceEnd": 18,
+          "targetStart": 19,
+          "targetEnd": 25,
+          "sourceText": "Damage",
+          "targetText": "Damage",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "value.0",
+          "kind": "value",
+          "sourceStart": 6,
+          "sourceEnd": 9,
+          "targetStart": 13,
+          "targetEnd": 16,
+          "sourceText": "100",
+          "targetText": "100",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "recorded-item-8ca53aa2b965b052355d",
+      "channel": "item",
+      "source": "Buzzing Bonus This item deals x2 Damage towards  Pests.",
+      "target": "Buzzing Bonus このアイテムが Pestに与える Damageがx2になる。",
+      "sourceSha256": "3051707a7b452c54dea4934d96219c1c863110352280827401a4e56bab73216a",
+      "targetSha256": "a466fb1dfeff10fe48660ba522f9bb9e1e591fc0b5850ea2fa358b9755081a10",
+      "reviewed": true,
+      "sourceIds": [
+        "item/description/4f30eae62d41b384ba3ea9e5"
+      ],
+      "spans": [
+        {
+          "id": "phrase.0",
+          "kind": "name",
+          "sourceStart": 0,
+          "sourceEnd": 13,
+          "targetStart": 0,
+          "targetEnd": 13,
+          "sourceText": "Buzzing Bonus",
+          "targetText": "Buzzing Bonus",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "phrase.1",
+          "kind": "name",
+          "sourceStart": 51,
+          "sourceEnd": 56,
+          "targetStart": 23,
+          "targetEnd": 27,
+          "sourceText": "Pests",
+          "targetText": "Pest",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "phrase.2",
+          "kind": "name",
+          "sourceStart": 34,
+          "sourceEnd": 40,
+          "targetStart": 33,
+          "targetEnd": 39,
+          "sourceText": "Damage",
+          "targetText": "Damage",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "phrase.3",
+          "kind": "value",
+          "sourceStart": 30,
+          "sourceEnd": 31,
+          "targetStart": 40,
+          "targetEnd": 41,
+          "sourceText": "x",
+          "targetText": "x",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "value.0",
+          "kind": "value",
+          "sourceStart": 31,
+          "sourceEnd": 32,
+          "targetStart": 41,
+          "targetEnd": 42,
+          "sourceText": "2",
+          "targetText": "2",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "recorded-ui-8ca53aa2b965b052355d",
+      "channel": "ui",
+      "source": "Buzzing Bonus This item deals x2 Damage towards  Pests.",
+      "target": "Buzzing Bonus このアイテムが Pestに与える Damageがx2になる。",
+      "sourceSha256": "3051707a7b452c54dea4934d96219c1c863110352280827401a4e56bab73216a",
+      "targetSha256": "a466fb1dfeff10fe48660ba522f9bb9e1e591fc0b5850ea2fa358b9755081a10",
+      "reviewed": true,
+      "sourceIds": [
+        "item/description/4f30eae62d41b384ba3ea9e5"
+      ],
+      "spans": [
+        {
+          "id": "phrase.0",
+          "kind": "name",
+          "sourceStart": 0,
+          "sourceEnd": 13,
+          "targetStart": 0,
+          "targetEnd": 13,
+          "sourceText": "Buzzing Bonus",
+          "targetText": "Buzzing Bonus",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "phrase.1",
+          "kind": "name",
+          "sourceStart": 51,
+          "sourceEnd": 56,
+          "targetStart": 23,
+          "targetEnd": 27,
+          "sourceText": "Pests",
+          "targetText": "Pest",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "phrase.2",
+          "kind": "name",
+          "sourceStart": 34,
+          "sourceEnd": 40,
+          "targetStart": 33,
+          "targetEnd": 39,
+          "sourceText": "Damage",
+          "targetText": "Damage",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "phrase.3",
+          "kind": "value",
+          "sourceStart": 30,
+          "sourceEnd": 31,
+          "targetStart": 40,
+          "targetEnd": 41,
+          "sourceText": "x",
+          "targetText": "x",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "value.0",
+          "kind": "value",
+          "sourceStart": 31,
+          "sourceEnd": 32,
+          "targetStart": 41,
+          "targetEnd": 42,
+          "sourceText": "2",
+          "targetText": "2",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "recorded-item-230af31942aff03aa45a",
+      "channel": "item",
+      "source": "Select a nozzle and material for spraying. Certain materials attract certain types of  Pests.",
+      "target": "散布に使うNozzleと素材を選ぶ。素材ごとに、引き寄せる Pestの種類が異なる。",
+      "sourceSha256": "f16e9ba6259a8503b0dd861f590f75706960a9cf444f67732362ab837aa90a09",
+      "targetSha256": "8d27cd70fcfb9027e7179613ae44dbf79a82d3b95327e183a7bd2ed5122743c2",
+      "reviewed": true,
+      "sourceIds": [
+        "item/ability_body/32e6c04fc420ab45c67a30c2"
+      ],
+      "spans": [
+        {
+          "id": "phrase.0",
+          "kind": "name",
+          "sourceStart": 88,
+          "sourceEnd": 93,
+          "targetStart": 31,
+          "targetEnd": 35,
+          "sourceText": "Pests",
+          "targetText": "Pest",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "recorded-ui-230af31942aff03aa45a",
+      "channel": "ui",
+      "source": "Select a nozzle and material for spraying. Certain materials attract certain types of  Pests.",
+      "target": "散布に使うNozzleと素材を選ぶ。素材ごとに、引き寄せる Pestの種類が異なる。",
+      "sourceSha256": "f16e9ba6259a8503b0dd861f590f75706960a9cf444f67732362ab837aa90a09",
+      "targetSha256": "8d27cd70fcfb9027e7179613ae44dbf79a82d3b95327e183a7bd2ed5122743c2",
+      "reviewed": true,
+      "sourceIds": [
+        "item/ability_body/32e6c04fc420ab45c67a30c2"
+      ],
+      "spans": [
+        {
+          "id": "phrase.0",
+          "kind": "name",
+          "sourceStart": 88,
+          "sourceEnd": 93,
+          "targetStart": 31,
+          "targetEnd": 35,
+          "sourceText": "Pests",
+          "targetText": "Pest",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "recorded-item-ba6dd4ba5c2abefc5a93",
+      "channel": "item",
+      "source": "Can be spread across a Garden plot with a Sprayonator or used in Pest Traps.",
+      "target": "SprayonatorでGardenのPlotに散布するか、Pest Trapに入れて使用できる。",
+      "sourceSha256": "d02fb850fa3ff7a3141feaee797ec29b50677ea093bc92df022a7dc0590a31dd",
+      "targetSha256": "bcc9dafc183166b518dd08556c372af7f230a9ef151ef258e201050e99b35c18",
+      "reviewed": true,
+      "sourceIds": [
+        "item/description/08c80961215654af1f5ba223",
+        "item/description/0fbc311a991f9ced48ff0fd9",
+        "item/description/48af529280a59017f00c9565",
+        "item/description/7dcc60687a28df0d3ae9b9be",
+        "item/description/aa7746cf60925917e1304fce",
+        "item/description/ec187b7e7ac13d9e0c4f81fa",
+        "ui/slot_description/4414ef245e8742d6ab4e61bf"
+      ],
+      "spans": [
+        {
+          "id": "phrase.0",
+          "kind": "name",
+          "sourceStart": 23,
+          "sourceEnd": 29,
+          "targetStart": 12,
+          "targetEnd": 18,
+          "sourceText": "Garden",
+          "targetText": "Garden",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "phrase.1",
+          "kind": "name",
+          "sourceStart": 42,
+          "sourceEnd": 53,
+          "targetStart": 0,
+          "targetEnd": 11,
+          "sourceText": "Sprayonator",
+          "targetText": "Sprayonator",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "phrase.2",
+          "kind": "name",
+          "sourceStart": 65,
+          "sourceEnd": 75,
+          "targetStart": 30,
+          "targetEnd": 39,
+          "sourceText": "Pest Traps",
+          "targetText": "Pest Trap",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "recorded-ui-ba6dd4ba5c2abefc5a93",
+      "channel": "ui",
+      "source": "Can be spread across a Garden plot with a Sprayonator or used in Pest Traps.",
+      "target": "SprayonatorでGardenのPlotに散布するか、Pest Trapに入れて使用できる。",
+      "sourceSha256": "d02fb850fa3ff7a3141feaee797ec29b50677ea093bc92df022a7dc0590a31dd",
+      "targetSha256": "bcc9dafc183166b518dd08556c372af7f230a9ef151ef258e201050e99b35c18",
+      "reviewed": true,
+      "sourceIds": [
+        "item/description/08c80961215654af1f5ba223",
+        "item/description/0fbc311a991f9ced48ff0fd9",
+        "item/description/48af529280a59017f00c9565",
+        "item/description/7dcc60687a28df0d3ae9b9be",
+        "item/description/aa7746cf60925917e1304fce",
+        "item/description/ec187b7e7ac13d9e0c4f81fa",
+        "ui/slot_description/4414ef245e8742d6ab4e61bf"
+      ],
+      "spans": [
+        {
+          "id": "phrase.0",
+          "kind": "name",
+          "sourceStart": 23,
+          "sourceEnd": 29,
+          "targetStart": 12,
+          "targetEnd": 18,
+          "sourceText": "Garden",
+          "targetText": "Garden",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "phrase.1",
+          "kind": "name",
+          "sourceStart": 42,
+          "sourceEnd": 53,
+          "targetStart": 0,
+          "targetEnd": 11,
+          "sourceText": "Sprayonator",
+          "targetText": "Sprayonator",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "phrase.2",
+          "kind": "name",
+          "sourceStart": 65,
+          "sourceEnd": 75,
+          "targetStart": 30,
+          "targetEnd": 39,
+          "sourceText": "Pest Traps",
+          "targetText": "Pest Trap",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "recorded-item-ae14e14dae8d7fe48695",
+      "channel": "item",
+      "source": "Can be traded in to Liz when Diaz is Mayor for special items!",
+      "target": "DiazがMayorの間、Lizのところで特別な品と交換できる！",
+      "sourceSha256": "15aabee123b15c009106ad0a7736cf1e005499c58349c4cbd84f7acb4b11974d",
+      "targetSha256": "6734a6a649e2dc51d955a50cd7642b1246af1285aac7b11e4db7a90450315bd2",
+      "reviewed": true,
+      "sourceIds": [
+        "item/description/67baedc0c2099fb9cb708180"
+      ],
+      "spans": [
+        {
+          "id": "phrase.0",
+          "kind": "name",
+          "sourceStart": 20,
+          "sourceEnd": 23,
+          "targetStart": 13,
+          "targetEnd": 16,
+          "sourceText": "Liz",
+          "targetText": "Liz",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "phrase.1",
+          "kind": "name",
+          "sourceStart": 29,
+          "sourceEnd": 33,
+          "targetStart": 0,
+          "targetEnd": 4,
+          "sourceText": "Diaz",
+          "targetText": "Diaz",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "phrase.2",
+          "kind": "name",
+          "sourceStart": 37,
+          "sourceEnd": 42,
+          "targetStart": 5,
+          "targetEnd": 10,
+          "sourceText": "Mayor",
+          "targetText": "Mayor",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "phrase.3",
+          "kind": "ordinary",
+          "sourceStart": 47,
+          "sourceEnd": 60,
+          "targetStart": 21,
+          "targetEnd": 25,
+          "sourceText": "special items",
+          "targetText": "特別な品",
+          "confirmedOrdinary": true,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "recorded-ui-ae14e14dae8d7fe48695",
+      "channel": "ui",
+      "source": "Can be traded in to Liz when Diaz is Mayor for special items!",
+      "target": "DiazがMayorの間、Lizのところで特別な品と交換できる！",
+      "sourceSha256": "15aabee123b15c009106ad0a7736cf1e005499c58349c4cbd84f7acb4b11974d",
+      "targetSha256": "6734a6a649e2dc51d955a50cd7642b1246af1285aac7b11e4db7a90450315bd2",
+      "reviewed": true,
+      "sourceIds": [
+        "item/description/67baedc0c2099fb9cb708180"
+      ],
+      "spans": [
+        {
+          "id": "phrase.0",
+          "kind": "name",
+          "sourceStart": 20,
+          "sourceEnd": 23,
+          "targetStart": 13,
+          "targetEnd": 16,
+          "sourceText": "Liz",
+          "targetText": "Liz",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "phrase.1",
+          "kind": "name",
+          "sourceStart": 29,
+          "sourceEnd": 33,
+          "targetStart": 0,
+          "targetEnd": 4,
+          "sourceText": "Diaz",
+          "targetText": "Diaz",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "phrase.2",
+          "kind": "name",
+          "sourceStart": 37,
+          "sourceEnd": 42,
+          "targetStart": 5,
+          "targetEnd": 10,
+          "sourceText": "Mayor",
+          "targetText": "Mayor",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "phrase.3",
+          "kind": "ordinary",
+          "sourceStart": 47,
+          "sourceEnd": 60,
+          "targetStart": 21,
+          "targetEnd": 25,
+          "sourceText": "special items",
+          "targetText": "特別な品",
+          "confirmedOrdinary": true,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "recorded-item-c2065ab4eabf0fd1e9d5",
+      "channel": "item",
+      "source": "Grants a +18.5% chance to catch Sharks during the Fishing Festival.",
+      "target": "Fishing Festival中、Sharkが釣れる確率が+18.5%上昇する。",
+      "sourceSha256": "a1a71389efc7184d09aee7252fb34e74c80ea86e965e51ebe7c4d8a47fc80249",
+      "targetSha256": "06a263c55cacd7b6be65f00610465ebe2dd7ee9309a30f6cec586880d1783a1b",
+      "reviewed": true,
+      "sourceIds": [
+        "item/ability_body/74a5df293cd970763c59262c"
+      ],
+      "spans": [
+        {
+          "id": "phrase.0",
+          "kind": "name",
+          "sourceStart": 32,
+          "sourceEnd": 38,
+          "targetStart": 18,
+          "targetEnd": 23,
+          "sourceText": "Sharks",
+          "targetText": "Shark",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "phrase.1",
+          "kind": "name",
+          "sourceStart": 50,
+          "sourceEnd": 66,
+          "targetStart": 0,
+          "targetEnd": 16,
+          "sourceText": "Fishing Festival",
+          "targetText": "Fishing Festival",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "value.0",
+          "kind": "value",
+          "sourceStart": 9,
+          "sourceEnd": 15,
+          "targetStart": 30,
+          "targetEnd": 36,
+          "sourceText": "+18.5%",
+          "targetText": "+18.5%",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "recorded-ui-c2065ab4eabf0fd1e9d5",
+      "channel": "ui",
+      "source": "Grants a +18.5% chance to catch Sharks during the Fishing Festival.",
+      "target": "Fishing Festival中、Sharkが釣れる確率が+18.5%上昇する。",
+      "sourceSha256": "a1a71389efc7184d09aee7252fb34e74c80ea86e965e51ebe7c4d8a47fc80249",
+      "targetSha256": "06a263c55cacd7b6be65f00610465ebe2dd7ee9309a30f6cec586880d1783a1b",
+      "reviewed": true,
+      "sourceIds": [
+        "item/ability_body/74a5df293cd970763c59262c"
+      ],
+      "spans": [
+        {
+          "id": "phrase.0",
+          "kind": "name",
+          "sourceStart": 32,
+          "sourceEnd": 38,
+          "targetStart": 18,
+          "targetEnd": 23,
+          "sourceText": "Sharks",
+          "targetText": "Shark",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "phrase.1",
+          "kind": "name",
+          "sourceStart": 50,
+          "sourceEnd": 66,
+          "targetStart": 0,
+          "targetEnd": 16,
+          "sourceText": "Fishing Festival",
+          "targetText": "Fishing Festival",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "value.0",
+          "kind": "value",
+          "sourceStart": 9,
+          "sourceEnd": 15,
+          "targetStart": 30,
+          "targetEnd": 36,
+          "sourceText": "+18.5%",
+          "targetText": "+18.5%",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "recorded-item-63d7f91de2f3aa9864f8",
+      "channel": "item",
+      "source": "Your pet fuses its power with placed Deployables to give them 2x duration.",
+      "target": "Petが設置したDeployableに力を合わせ、その持続時間を2xにする。",
+      "sourceSha256": "80f94da76d7e5b530e9fba5ccdafe619d83fa284d3e33cdeb26d0363451e6b64",
+      "targetSha256": "8c37e5d7f9211ce16688effd8d75de850aedc8ab8c8e82b2e74b230c97641fd0",
+      "reviewed": true,
+      "sourceIds": [
+        "item/description/f9d3d6aa7f5fecea9c708c9a"
+      ],
+      "spans": [
+        {
+          "id": "phrase.0",
+          "kind": "name",
+          "sourceStart": 37,
+          "sourceEnd": 48,
+          "targetStart": 8,
+          "targetEnd": 18,
+          "sourceText": "Deployables",
+          "targetText": "Deployable",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "phrase.1",
+          "kind": "value",
+          "sourceStart": 63,
+          "sourceEnd": 64,
+          "targetStart": 33,
+          "targetEnd": 34,
+          "sourceText": "x",
+          "targetText": "x",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "value.0",
+          "kind": "value",
+          "sourceStart": 62,
+          "sourceEnd": 63,
+          "targetStart": 32,
+          "targetEnd": 33,
+          "sourceText": "2",
+          "targetText": "2",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "recorded-ui-63d7f91de2f3aa9864f8",
+      "channel": "ui",
+      "source": "Your pet fuses its power with placed Deployables to give them 2x duration.",
+      "target": "Petが設置したDeployableに力を合わせ、その持続時間を2xにする。",
+      "sourceSha256": "80f94da76d7e5b530e9fba5ccdafe619d83fa284d3e33cdeb26d0363451e6b64",
+      "targetSha256": "8c37e5d7f9211ce16688effd8d75de850aedc8ab8c8e82b2e74b230c97641fd0",
+      "reviewed": true,
+      "sourceIds": [
+        "item/description/f9d3d6aa7f5fecea9c708c9a"
+      ],
+      "spans": [
+        {
+          "id": "phrase.0",
+          "kind": "name",
+          "sourceStart": 37,
+          "sourceEnd": 48,
+          "targetStart": 8,
+          "targetEnd": 18,
+          "sourceText": "Deployables",
+          "targetText": "Deployable",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "phrase.1",
+          "kind": "value",
+          "sourceStart": 63,
+          "sourceEnd": 64,
+          "targetStart": 33,
+          "targetEnd": 34,
+          "sourceText": "x",
+          "targetText": "x",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "value.0",
+          "kind": "value",
+          "sourceStart": 62,
+          "sourceEnd": 63,
+          "targetStart": 32,
+          "targetEnd": 33,
+          "sourceText": "2",
+          "targetText": "2",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "recorded-item-7e0abaf5973c37e26846",
+      "channel": "item",
+      "source": "Gain 13.3  Crit Damage for every nearby wolf monster Max 10 wolves",
+      "target": "近くにいるWolfモンスターごとに、 Crit Damageが13.3増加する。計算対象は最大10体まで。",
+      "sourceSha256": "aa4d54ff028e60422948493a404c7084672ee29c4a0cde0a5236fff5a2fd5007",
+      "targetSha256": "42444eb2f5a9bce7e3f4d0296d1e3f9e903c56d9a9a4dd64e01e6e014b154cd8",
+      "reviewed": true,
+      "sourceIds": [
+        "item/ability_body/4b598f8fc1f613b10c327606",
+        "item/ability_body/6bc35b64da62bd191dd3abb4",
+        "item/ability_body/9ebec2a82a7117dbd095c374"
+      ],
+      "spans": [
+        {
+          "id": "phrase.0",
+          "kind": "name",
+          "sourceStart": 12,
+          "sourceEnd": 23,
+          "targetStart": 20,
+          "targetEnd": 31,
+          "sourceText": "Crit Damage",
+          "targetText": "Crit Damage",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "phrase.1",
+          "kind": "ordinary",
+          "sourceStart": 54,
+          "sourceEnd": 57,
+          "targetStart": 46,
+          "targetEnd": 48,
+          "sourceText": "Max",
+          "targetText": "最大",
+          "confirmedOrdinary": true,
+          "allowPlain": false
+        },
+        {
+          "id": "phrase.2",
+          "kind": "ordinary",
+          "sourceStart": 61,
+          "sourceEnd": 67,
+          "targetStart": 50,
+          "targetEnd": 51,
+          "sourceText": "wolves",
+          "targetText": "体",
+          "confirmedOrdinary": true,
+          "allowPlain": false
+        },
+        {
+          "id": "value.0",
+          "kind": "value",
+          "sourceStart": 5,
+          "sourceEnd": 9,
+          "targetStart": 32,
+          "targetEnd": 36,
+          "sourceText": "13.3",
+          "targetText": "13.3",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "value.1",
+          "kind": "value",
+          "sourceStart": 58,
+          "sourceEnd": 60,
+          "targetStart": 48,
+          "targetEnd": 50,
+          "sourceText": "10",
+          "targetText": "10",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "recorded-ui-7e0abaf5973c37e26846",
+      "channel": "ui",
+      "source": "Gain 13.3  Crit Damage for every nearby wolf monster Max 10 wolves",
+      "target": "近くにいるWolfモンスターごとに、 Crit Damageが13.3増加する。計算対象は最大10体まで。",
+      "sourceSha256": "aa4d54ff028e60422948493a404c7084672ee29c4a0cde0a5236fff5a2fd5007",
+      "targetSha256": "42444eb2f5a9bce7e3f4d0296d1e3f9e903c56d9a9a4dd64e01e6e014b154cd8",
+      "reviewed": true,
+      "sourceIds": [
+        "item/ability_body/4b598f8fc1f613b10c327606",
+        "item/ability_body/6bc35b64da62bd191dd3abb4",
+        "item/ability_body/9ebec2a82a7117dbd095c374"
+      ],
+      "spans": [
+        {
+          "id": "phrase.0",
+          "kind": "name",
+          "sourceStart": 12,
+          "sourceEnd": 23,
+          "targetStart": 20,
+          "targetEnd": 31,
+          "sourceText": "Crit Damage",
+          "targetText": "Crit Damage",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "phrase.1",
+          "kind": "ordinary",
+          "sourceStart": 54,
+          "sourceEnd": 57,
+          "targetStart": 46,
+          "targetEnd": 48,
+          "sourceText": "Max",
+          "targetText": "最大",
+          "confirmedOrdinary": true,
+          "allowPlain": false
+        },
+        {
+          "id": "phrase.2",
+          "kind": "ordinary",
+          "sourceStart": 61,
+          "sourceEnd": 67,
+          "targetStart": 50,
+          "targetEnd": 51,
+          "sourceText": "wolves",
+          "targetText": "体",
+          "confirmedOrdinary": true,
+          "allowPlain": false
+        },
+        {
+          "id": "value.0",
+          "kind": "value",
+          "sourceStart": 5,
+          "sourceEnd": 9,
+          "targetStart": 32,
+          "targetEnd": 36,
+          "sourceText": "13.3",
+          "targetText": "13.3",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "value.1",
+          "kind": "value",
+          "sourceStart": 58,
+          "sourceEnd": 60,
+          "targetStart": 48,
+          "targetEnd": 50,
+          "sourceText": "10",
+          "targetText": "10",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "recorded-item-615b7fd2bd76d7eba8fd",
+      "channel": "item",
+      "source": "Damage taken from  Magmatic mobs is reduced by 5% and damage dealt is increased by 1.1x.",
+      "target": " Magmaticモブから受けるダメージが5%減少し、与えるダメージが1.1倍になる。",
+      "sourceSha256": "da739321e2350b6f96b86e455c878ac7b0344aeca482fbdb0566bba6eeaaedfb",
+      "targetSha256": "4e6140f601264399af7425bc00f3694121e9da4a4d0e9f5333bdd32b2cae933b",
+      "reviewed": true,
+      "sourceIds": [
+        "item/description/03e9f04c844a262a1f232032",
+        "item/description/056387e7b60c45cf8b8b5609",
+        "item/description/5a05022fb8319674eeaecb2a",
+        "item/description/7624c737350133429c4a653f"
+      ],
+      "spans": [
+        {
+          "id": "phrase.0",
+          "kind": "name",
+          "sourceStart": 20,
+          "sourceEnd": 28,
+          "targetStart": 2,
+          "targetEnd": 10,
+          "sourceText": "Magmatic",
+          "targetText": "Magmatic",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "phrase.1",
+          "kind": "ordinary",
+          "sourceStart": 87,
+          "sourceEnd": 88,
+          "targetStart": 39,
+          "targetEnd": 40,
+          "sourceText": "x",
+          "targetText": "倍",
+          "confirmedOrdinary": true,
+          "allowPlain": false
+        },
+        {
+          "id": "value.0",
+          "kind": "value",
+          "sourceStart": 48,
+          "sourceEnd": 50,
+          "targetStart": 22,
+          "targetEnd": 24,
+          "sourceText": "5%",
+          "targetText": "5%",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "value.1",
+          "kind": "value",
+          "sourceStart": 84,
+          "sourceEnd": 87,
+          "targetStart": 36,
+          "targetEnd": 39,
+          "sourceText": "1.1",
+          "targetText": "1.1",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "recorded-ui-615b7fd2bd76d7eba8fd",
+      "channel": "ui",
+      "source": "Damage taken from  Magmatic mobs is reduced by 5% and damage dealt is increased by 1.1x.",
+      "target": " Magmaticモブから受けるダメージが5%減少し、与えるダメージが1.1倍になる。",
+      "sourceSha256": "da739321e2350b6f96b86e455c878ac7b0344aeca482fbdb0566bba6eeaaedfb",
+      "targetSha256": "4e6140f601264399af7425bc00f3694121e9da4a4d0e9f5333bdd32b2cae933b",
+      "reviewed": true,
+      "sourceIds": [
+        "item/description/03e9f04c844a262a1f232032",
+        "item/description/056387e7b60c45cf8b8b5609",
+        "item/description/5a05022fb8319674eeaecb2a",
+        "item/description/7624c737350133429c4a653f"
+      ],
+      "spans": [
+        {
+          "id": "phrase.0",
+          "kind": "name",
+          "sourceStart": 20,
+          "sourceEnd": 28,
+          "targetStart": 2,
+          "targetEnd": 10,
+          "sourceText": "Magmatic",
+          "targetText": "Magmatic",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "phrase.1",
+          "kind": "ordinary",
+          "sourceStart": 87,
+          "sourceEnd": 88,
+          "targetStart": 39,
+          "targetEnd": 40,
+          "sourceText": "x",
+          "targetText": "倍",
+          "confirmedOrdinary": true,
+          "allowPlain": false
+        },
+        {
+          "id": "value.0",
+          "kind": "value",
+          "sourceStart": 48,
+          "sourceEnd": 50,
+          "targetStart": 22,
+          "targetEnd": 24,
+          "sourceText": "5%",
+          "targetText": "5%",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "value.1",
+          "kind": "value",
+          "sourceStart": 84,
+          "sourceEnd": 87,
+          "targetStart": 36,
+          "targetEnd": 39,
+          "sourceText": "1.1",
+          "targetText": "1.1",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "recorded-item-3e86154f9b582451819e",
+      "channel": "item",
+      "source": "Increases damage dealt to Sea Creatures by 5%.",
+      "target": "Sea Creatureに与えるダメージが5%増加する。",
+      "sourceSha256": "ff441fe784cbd47d8d3b40070dd6dd581a5b56692befe3911184905d6000b6f0",
+      "targetSha256": "93469a9054f836fec394a9c181e7c852dd1d86aea30b25493e7a3ff48c66a28f",
+      "reviewed": true,
+      "sourceIds": [
+        "item/ability_body/3053553dae2aceb6e0911089"
+      ],
+      "spans": [
+        {
+          "id": "phrase.0",
+          "kind": "name",
+          "sourceStart": 26,
+          "sourceEnd": 39,
+          "targetStart": 0,
+          "targetEnd": 12,
+          "sourceText": "Sea Creatures",
+          "targetText": "Sea Creature",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "value.0",
+          "kind": "value",
+          "sourceStart": 43,
+          "sourceEnd": 45,
+          "targetStart": 21,
+          "targetEnd": 23,
+          "sourceText": "5%",
+          "targetText": "5%",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "recorded-ui-3e86154f9b582451819e",
+      "channel": "ui",
+      "source": "Increases damage dealt to Sea Creatures by 5%.",
+      "target": "Sea Creatureに与えるダメージが5%増加する。",
+      "sourceSha256": "ff441fe784cbd47d8d3b40070dd6dd581a5b56692befe3911184905d6000b6f0",
+      "targetSha256": "93469a9054f836fec394a9c181e7c852dd1d86aea30b25493e7a3ff48c66a28f",
+      "reviewed": true,
+      "sourceIds": [
+        "item/ability_body/3053553dae2aceb6e0911089"
+      ],
+      "spans": [
+        {
+          "id": "phrase.0",
+          "kind": "name",
+          "sourceStart": 26,
+          "sourceEnd": 39,
+          "targetStart": 0,
+          "targetEnd": 12,
+          "sourceText": "Sea Creatures",
+          "targetText": "Sea Creature",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "value.0",
+          "kind": "value",
+          "sourceStart": 43,
+          "sourceEnd": 45,
+          "targetStart": 21,
+          "targetEnd": 23,
+          "sourceText": "5%",
+          "targetText": "5%",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "recorded-item-79d9422f9ec6de42c532",
+      "channel": "item",
+      "source": "Some islands also have Quests for you to complete! Some items can only be obtained through Quests.",
+      "target": "一部の島にはQuestもある！ Questでしか入手できない アイテムもある。",
+      "sourceSha256": "3390dec53b544a262c9f70b83d40f0bb4f98d5890ab79abdf3bfb64597393f6b",
+      "targetSha256": "d5460256a5857b5481c163940c1b2fefaad025ccf2ba9cabbf78a0c755da8829",
+      "reviewed": true,
+      "sourceIds": [
+        "ui/slot_description/f7add64116f0a948bcbcb0b1"
+      ],
+      "spans": [
+        {
+          "id": "phrase.0",
+          "kind": "name",
+          "sourceStart": 23,
+          "sourceEnd": 29,
+          "targetStart": 6,
+          "targetEnd": 11,
+          "sourceText": "Quests",
+          "targetText": "Quest",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "phrase.1",
+          "kind": "name",
+          "sourceStart": 91,
+          "sourceEnd": 97,
+          "targetStart": 16,
+          "targetEnd": 21,
+          "sourceText": "Quests",
+          "targetText": "Quest",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "recorded-ui-79d9422f9ec6de42c532",
+      "channel": "ui",
+      "source": "Some islands also have Quests for you to complete! Some items can only be obtained through Quests.",
+      "target": "一部の島にはQuestもある！ Questでしか入手できない アイテムもある。",
+      "sourceSha256": "3390dec53b544a262c9f70b83d40f0bb4f98d5890ab79abdf3bfb64597393f6b",
+      "targetSha256": "d5460256a5857b5481c163940c1b2fefaad025ccf2ba9cabbf78a0c755da8829",
+      "reviewed": true,
+      "sourceIds": [
+        "ui/slot_description/f7add64116f0a948bcbcb0b1"
+      ],
+      "spans": [
+        {
+          "id": "phrase.0",
+          "kind": "name",
+          "sourceStart": 23,
+          "sourceEnd": 29,
+          "targetStart": 6,
+          "targetEnd": 11,
+          "sourceText": "Quests",
+          "targetText": "Quest",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "phrase.1",
+          "kind": "name",
+          "sourceStart": 91,
+          "sourceEnd": 97,
+          "targetStart": 16,
+          "targetEnd": 21,
+          "sourceText": "Quests",
+          "targetText": "Quest",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "recorded-item-fecbd31173fec7724394",
+      "channel": "item",
+      "source": "Sells Abiphones for beginners.",
+      "target": "初心者向けのAbiphoneを売る。",
+      "sourceSha256": "36bf09c4b18baa05e50aafd92afb04ff670b3c1ff444bcbb85111641a189c8d4",
+      "targetSha256": "7574f322fdcca3dc4d2647ef64954fd71ab2439a8cc1f8c0f0e202cd34a8df34",
+      "reviewed": true,
+      "sourceIds": [
+        "ui/slot_description/db5f85fcce89525de9f43eab"
+      ],
+      "spans": [
+        {
+          "id": "phrase.0",
+          "kind": "name",
+          "sourceStart": 6,
+          "sourceEnd": 15,
+          "targetStart": 6,
+          "targetEnd": 14,
+          "sourceText": "Abiphones",
+          "targetText": "Abiphone",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "recorded-ui-fecbd31173fec7724394",
+      "channel": "ui",
+      "source": "Sells Abiphones for beginners.",
+      "target": "初心者向けのAbiphoneを売る。",
+      "sourceSha256": "36bf09c4b18baa05e50aafd92afb04ff670b3c1ff444bcbb85111641a189c8d4",
+      "targetSha256": "7574f322fdcca3dc4d2647ef64954fd71ab2439a8cc1f8c0f0e202cd34a8df34",
+      "reviewed": true,
+      "sourceIds": [
+        "ui/slot_description/db5f85fcce89525de9f43eab"
+      ],
+      "spans": [
+        {
+          "id": "phrase.0",
+          "kind": "name",
+          "sourceStart": 6,
+          "sourceEnd": 15,
+          "targetStart": 6,
+          "targetEnd": 14,
+          "sourceText": "Abiphones",
+          "targetText": "Abiphone",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "recorded-item-1078f3e4f5f1ab26c542",
+      "channel": "item",
+      "source": "A perfectly refined Sapphire.",
+      "target": "完璧に精製されたSapphire。",
+      "sourceSha256": "0676d8b2c5ffc8e0742f5a742bb57fc25fef223b052618c1ddc2fc8e7ef2f6b1",
+      "targetSha256": "7a18b3644addbf24cf166b7e65bfdbb3d78806f5b4f783ab2b852aff20cdc074",
+      "reviewed": true,
+      "sourceIds": [
+        "item/description/52027f1c1eb986fd2fd47851",
+        "ui/slot_description/93fdcf399b4801219a482438"
+      ],
+      "spans": [
+        {
+          "id": "phrase.0",
+          "kind": "ordinary",
+          "sourceStart": 12,
+          "sourceEnd": 19,
+          "targetStart": 3,
+          "targetEnd": 8,
+          "sourceText": "refined",
+          "targetText": "精製された",
+          "confirmedOrdinary": true,
+          "allowPlain": false
+        },
+        {
+          "id": "phrase.1",
+          "kind": "name",
+          "sourceStart": 20,
+          "sourceEnd": 28,
+          "targetStart": 8,
+          "targetEnd": 16,
+          "sourceText": "Sapphire",
+          "targetText": "Sapphire",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "recorded-ui-1078f3e4f5f1ab26c542",
+      "channel": "ui",
+      "source": "A perfectly refined Sapphire.",
+      "target": "完璧に精製されたSapphire。",
+      "sourceSha256": "0676d8b2c5ffc8e0742f5a742bb57fc25fef223b052618c1ddc2fc8e7ef2f6b1",
+      "targetSha256": "7a18b3644addbf24cf166b7e65bfdbb3d78806f5b4f783ab2b852aff20cdc074",
+      "reviewed": true,
+      "sourceIds": [
+        "item/description/52027f1c1eb986fd2fd47851",
+        "ui/slot_description/93fdcf399b4801219a482438"
+      ],
+      "spans": [
+        {
+          "id": "phrase.0",
+          "kind": "ordinary",
+          "sourceStart": 12,
+          "sourceEnd": 19,
+          "targetStart": 3,
+          "targetEnd": 8,
+          "sourceText": "refined",
+          "targetText": "精製された",
+          "confirmedOrdinary": true,
+          "allowPlain": false
+        },
+        {
+          "id": "phrase.1",
+          "kind": "name",
+          "sourceStart": 20,
+          "sourceEnd": 28,
+          "targetStart": 8,
+          "targetEnd": 16,
+          "sourceText": "Sapphire",
+          "targetText": "Sapphire",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "recorded-item-2afb4101f20b56596cf7",
+      "channel": "item",
+      "source": "Some say that when harnessed properly, it can give its owner extra  Intelligence.",
+      "target": "うまく力を引き出せば、持ち主に追加の Intelligenceを与えるという。",
+      "sourceSha256": "03d4ec3344aef3eff078def449d9c857d693c9ecd8f80744610c7e6cb69f3c2c",
+      "targetSha256": "435f6f842857c94870fbc7938e53cbc9715bb8eaaefc44df9a84f91e1dda775c",
+      "reviewed": true,
+      "sourceIds": [
+        "item/description/013130ce1d5ca8beafecef60",
+        "item/description/0e43f7c7f9d82b75c882cc73",
+        "item/description/7ed13b59d3d4d6becad02893",
+        "item/description/ca7df49e44cc04f69d2f0cfe",
+        "item/description/eb2dfd4c7866a774af666090"
+      ],
+      "spans": [
+        {
+          "id": "phrase.0",
+          "kind": "ordinary",
+          "sourceStart": 19,
+          "sourceEnd": 37,
+          "targetStart": 0,
+          "targetEnd": 10,
+          "sourceText": "harnessed properly",
+          "targetText": "うまく力を引き出せば",
+          "confirmedOrdinary": true,
+          "allowPlain": false
+        },
+        {
+          "id": "phrase.1",
+          "kind": "name",
+          "sourceStart": 69,
+          "sourceEnd": 81,
+          "targetStart": 20,
+          "targetEnd": 32,
+          "sourceText": "Intelligence",
+          "targetText": "Intelligence",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "recorded-ui-2afb4101f20b56596cf7",
+      "channel": "ui",
+      "source": "Some say that when harnessed properly, it can give its owner extra  Intelligence.",
+      "target": "うまく力を引き出せば、持ち主に追加の Intelligenceを与えるという。",
+      "sourceSha256": "03d4ec3344aef3eff078def449d9c857d693c9ecd8f80744610c7e6cb69f3c2c",
+      "targetSha256": "435f6f842857c94870fbc7938e53cbc9715bb8eaaefc44df9a84f91e1dda775c",
+      "reviewed": true,
+      "sourceIds": [
+        "item/description/013130ce1d5ca8beafecef60",
+        "item/description/0e43f7c7f9d82b75c882cc73",
+        "item/description/7ed13b59d3d4d6becad02893",
+        "item/description/ca7df49e44cc04f69d2f0cfe",
+        "item/description/eb2dfd4c7866a774af666090"
+      ],
+      "spans": [
+        {
+          "id": "phrase.0",
+          "kind": "ordinary",
+          "sourceStart": 19,
+          "sourceEnd": 37,
+          "targetStart": 0,
+          "targetEnd": 10,
+          "sourceText": "harnessed properly",
+          "targetText": "うまく力を引き出せば",
+          "confirmedOrdinary": true,
+          "allowPlain": false
+        },
+        {
+          "id": "phrase.1",
+          "kind": "name",
+          "sourceStart": 69,
+          "sourceEnd": 81,
+          "targetStart": 20,
+          "targetEnd": 32,
+          "sourceText": "Intelligence",
+          "targetText": "Intelligence",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "recorded-item-21e0ff5eede2cbeb7205",
+      "channel": "item",
+      "source": "Gains 1 Sweep every 2,000 Logs cut on Galatea. (max 20)",
+      "target": "GalateaでLogを2,000本切るごとに、1 Sweepを獲得する。（最大20）",
+      "sourceSha256": "98f760196373c1809d868f8fb25083d85a36d1f9060e9dfb5b4fb48668d21ffd",
+      "targetSha256": "d90a1fe644b8ac2d4d682eef8470469713f0e78cb75c6e01ddfd1ab8a99d62ce",
+      "reviewed": true,
+      "sourceIds": [
+        "item/ability_body/32d5dd9eef97e976682ecc03"
+      ],
+      "spans": [
+        {
+          "id": "phrase.0",
+          "kind": "name",
+          "sourceStart": 27,
+          "sourceEnd": 31,
+          "targetStart": 8,
+          "targetEnd": 11,
+          "sourceText": "Logs",
+          "targetText": "Log",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "phrase.1",
+          "kind": "name",
+          "sourceStart": 39,
+          "sourceEnd": 46,
+          "targetStart": 0,
+          "targetEnd": 7,
+          "sourceText": "Galatea",
+          "targetText": "Galatea",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "phrase.2",
+          "kind": "ordinary",
+          "sourceStart": 48,
+          "sourceEnd": 52,
+          "targetStart": 38,
+          "targetEnd": 41,
+          "sourceText": "(max",
+          "targetText": "（最大",
+          "confirmedOrdinary": true,
+          "allowPlain": false
+        },
+        {
+          "id": "phrase.3",
+          "kind": "ordinary",
+          "sourceStart": 55,
+          "sourceEnd": 56,
+          "targetStart": 43,
+          "targetEnd": 44,
+          "sourceText": ")",
+          "targetText": "）",
+          "confirmedOrdinary": true,
+          "allowPlain": false
+        },
+        {
+          "id": "value.0",
+          "kind": "value",
+          "sourceStart": 6,
+          "sourceEnd": 7,
+          "targetStart": 24,
+          "targetEnd": 25,
+          "sourceText": "1",
+          "targetText": "1",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "value.1",
+          "kind": "value",
+          "sourceStart": 21,
+          "sourceEnd": 26,
+          "targetStart": 12,
+          "targetEnd": 17,
+          "sourceText": "2,000",
+          "targetText": "2,000",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "value.2",
+          "kind": "value",
+          "sourceStart": 53,
+          "sourceEnd": 55,
+          "targetStart": 41,
+          "targetEnd": 43,
+          "sourceText": "20",
+          "targetText": "20",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "recorded-ui-21e0ff5eede2cbeb7205",
+      "channel": "ui",
+      "source": "Gains 1 Sweep every 2,000 Logs cut on Galatea. (max 20)",
+      "target": "GalateaでLogを2,000本切るごとに、1 Sweepを獲得する。（最大20）",
+      "sourceSha256": "98f760196373c1809d868f8fb25083d85a36d1f9060e9dfb5b4fb48668d21ffd",
+      "targetSha256": "d90a1fe644b8ac2d4d682eef8470469713f0e78cb75c6e01ddfd1ab8a99d62ce",
+      "reviewed": true,
+      "sourceIds": [
+        "item/ability_body/32d5dd9eef97e976682ecc03"
+      ],
+      "spans": [
+        {
+          "id": "phrase.0",
+          "kind": "name",
+          "sourceStart": 27,
+          "sourceEnd": 31,
+          "targetStart": 8,
+          "targetEnd": 11,
+          "sourceText": "Logs",
+          "targetText": "Log",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "phrase.1",
+          "kind": "name",
+          "sourceStart": 39,
+          "sourceEnd": 46,
+          "targetStart": 0,
+          "targetEnd": 7,
+          "sourceText": "Galatea",
+          "targetText": "Galatea",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "phrase.2",
+          "kind": "ordinary",
+          "sourceStart": 48,
+          "sourceEnd": 52,
+          "targetStart": 38,
+          "targetEnd": 41,
+          "sourceText": "(max",
+          "targetText": "（最大",
+          "confirmedOrdinary": true,
+          "allowPlain": false
+        },
+        {
+          "id": "phrase.3",
+          "kind": "ordinary",
+          "sourceStart": 55,
+          "sourceEnd": 56,
+          "targetStart": 43,
+          "targetEnd": 44,
+          "sourceText": ")",
+          "targetText": "）",
+          "confirmedOrdinary": true,
+          "allowPlain": false
+        },
+        {
+          "id": "value.0",
+          "kind": "value",
+          "sourceStart": 6,
+          "sourceEnd": 7,
+          "targetStart": 24,
+          "targetEnd": 25,
+          "sourceText": "1",
+          "targetText": "1",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "value.1",
+          "kind": "value",
+          "sourceStart": 21,
+          "sourceEnd": 26,
+          "targetStart": 12,
+          "targetEnd": 17,
+          "sourceText": "2,000",
+          "targetText": "2,000",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "value.2",
+          "kind": "value",
+          "sourceStart": 53,
+          "sourceEnd": 55,
+          "targetStart": 41,
+          "targetEnd": 43,
+          "sourceText": "20",
+          "targetText": "20",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "recorded-item-8781922eb64a780d6733",
+      "channel": "item",
+      "source": "Your axe deals double  Damage to creatures on Galatea for 10s.",
+      "target": "10sの間、斧がGalateaの生き物に与える Damageが倍になる。",
+      "sourceSha256": "9346551a54a38561c5cfa67fcb9be327c8222ec735fd8204fd5283b5b1d2b1a7",
+      "targetSha256": "03ac98a801f1b766e5124ec73074874d8492cc608dd9cfbe1b839f37132bd9a8",
+      "reviewed": true,
+      "sourceIds": [
+        "common/ability_body/42ceb262d76b29378860b405"
+      ],
+      "spans": [
+        {
+          "id": "phrase.0",
+          "kind": "name",
+          "sourceStart": 47,
+          "sourceEnd": 54,
+          "targetStart": 8,
+          "targetEnd": 15,
+          "sourceText": "Galatea",
+          "targetText": "Galatea",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "phrase.1",
+          "kind": "name",
+          "sourceStart": 24,
+          "sourceEnd": 30,
+          "targetStart": 25,
+          "targetEnd": 31,
+          "sourceText": "Damage",
+          "targetText": "Damage",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "phrase.2",
+          "kind": "value",
+          "sourceStart": 61,
+          "sourceEnd": 62,
+          "targetStart": 2,
+          "targetEnd": 3,
+          "sourceText": "s",
+          "targetText": "s",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "value.0",
+          "kind": "value",
+          "sourceStart": 59,
+          "sourceEnd": 61,
+          "targetStart": 0,
+          "targetEnd": 2,
+          "sourceText": "10",
+          "targetText": "10",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "recorded-ui-8781922eb64a780d6733",
+      "channel": "ui",
+      "source": "Your axe deals double  Damage to creatures on Galatea for 10s.",
+      "target": "10sの間、斧がGalateaの生き物に与える Damageが倍になる。",
+      "sourceSha256": "9346551a54a38561c5cfa67fcb9be327c8222ec735fd8204fd5283b5b1d2b1a7",
+      "targetSha256": "03ac98a801f1b766e5124ec73074874d8492cc608dd9cfbe1b839f37132bd9a8",
+      "reviewed": true,
+      "sourceIds": [
+        "common/ability_body/42ceb262d76b29378860b405"
+      ],
+      "spans": [
+        {
+          "id": "phrase.0",
+          "kind": "name",
+          "sourceStart": 47,
+          "sourceEnd": 54,
+          "targetStart": 8,
+          "targetEnd": 15,
+          "sourceText": "Galatea",
+          "targetText": "Galatea",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "phrase.1",
+          "kind": "name",
+          "sourceStart": 24,
+          "sourceEnd": 30,
+          "targetStart": 25,
+          "targetEnd": 31,
+          "sourceText": "Damage",
+          "targetText": "Damage",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "phrase.2",
+          "kind": "value",
+          "sourceStart": 61,
+          "sourceEnd": 62,
+          "targetStart": 2,
+          "targetEnd": 3,
+          "sourceText": "s",
+          "targetText": "s",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "value.0",
+          "kind": "value",
+          "sourceStart": 59,
+          "sourceEnd": 61,
+          "targetStart": 0,
+          "targetEnd": 2,
+          "sourceText": "10",
+          "targetText": "10",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "recorded-common-8781922eb64a780d6733",
+      "channel": "common",
+      "source": "Your axe deals double  Damage to creatures on Galatea for 10s.",
+      "target": "10sの間、斧がGalateaの生き物に与える Damageが倍になる。",
+      "sourceSha256": "9346551a54a38561c5cfa67fcb9be327c8222ec735fd8204fd5283b5b1d2b1a7",
+      "targetSha256": "03ac98a801f1b766e5124ec73074874d8492cc608dd9cfbe1b839f37132bd9a8",
+      "reviewed": true,
+      "sourceIds": [
+        "common/ability_body/42ceb262d76b29378860b405"
+      ],
+      "spans": [
+        {
+          "id": "phrase.0",
+          "kind": "name",
+          "sourceStart": 47,
+          "sourceEnd": 54,
+          "targetStart": 8,
+          "targetEnd": 15,
+          "sourceText": "Galatea",
+          "targetText": "Galatea",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "phrase.1",
+          "kind": "name",
+          "sourceStart": 24,
+          "sourceEnd": 30,
+          "targetStart": 25,
+          "targetEnd": 31,
+          "sourceText": "Damage",
+          "targetText": "Damage",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "phrase.2",
+          "kind": "value",
+          "sourceStart": 61,
+          "sourceEnd": 62,
+          "targetStart": 2,
+          "targetEnd": 3,
+          "sourceText": "s",
+          "targetText": "s",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "value.0",
+          "kind": "value",
+          "sourceStart": 59,
+          "sourceEnd": 61,
+          "targetStart": 0,
+          "targetEnd": 2,
+          "sourceText": "10",
+          "targetText": "10",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "recorded-item-8d544e866ffbebbf02b4",
+      "channel": "item",
+      "source": "When playing, this vinyl attracts Beetle Pests.",
+      "target": "再生中、このVinylはBeetle Pestを引き寄せる。",
+      "sourceSha256": "547cc5be02c1034142f1e0f0a2039a3f4724d1a9d5f4214705f6b8c3122ecf51",
+      "targetSha256": "25527a5e494ab2d3197138cb9b008bcb8783396bb188dfffa53fa37299c6e90a",
+      "reviewed": true,
+      "sourceIds": [
+        "item/description/57e9542813356dabaa781a96"
+      ],
+      "spans": [
+        {
+          "id": "phrase.0",
+          "kind": "name",
+          "sourceStart": 34,
+          "sourceEnd": 46,
+          "targetStart": 12,
+          "targetEnd": 23,
+          "sourceText": "Beetle Pests",
+          "targetText": "Beetle Pest",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "recorded-ui-8d544e866ffbebbf02b4",
+      "channel": "ui",
+      "source": "When playing, this vinyl attracts Beetle Pests.",
+      "target": "再生中、このVinylはBeetle Pestを引き寄せる。",
+      "sourceSha256": "547cc5be02c1034142f1e0f0a2039a3f4724d1a9d5f4214705f6b8c3122ecf51",
+      "targetSha256": "25527a5e494ab2d3197138cb9b008bcb8783396bb188dfffa53fa37299c6e90a",
+      "reviewed": true,
+      "sourceIds": [
+        "item/description/57e9542813356dabaa781a96"
+      ],
+      "spans": [
+        {
+          "id": "phrase.0",
+          "kind": "name",
+          "sourceStart": 34,
+          "sourceEnd": 46,
+          "targetStart": 12,
+          "targetEnd": 23,
+          "sourceText": "Beetle Pests",
+          "targetText": "Beetle Pest",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "recorded-item-d013ac22b6b6311cdc79",
+      "channel": "item",
+      "source": "Grants +250%  Mining Speed for 15s.",
+      "target": "15sの間、 Mining Speedが+250%増加する。",
+      "sourceSha256": "311764ee0581f3b5237d4796c855e23f21b8c7090dd2ad9ee48228e3d032a6c2",
+      "targetSha256": "1e802c9ba6a34309001d667fe9c871491b7cac1a122becc3f6c00738851e79bf",
+      "reviewed": true,
+      "sourceIds": [
+        "common/ability_body/0173b8de72527454dd36ab65"
+      ],
+      "spans": [
+        {
+          "id": "phrase.0",
+          "kind": "name",
+          "sourceStart": 15,
+          "sourceEnd": 27,
+          "targetStart": 8,
+          "targetEnd": 20,
+          "sourceText": "Mining Speed",
+          "targetText": "Mining Speed",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "phrase.1",
+          "kind": "value",
+          "sourceStart": 34,
+          "sourceEnd": 35,
+          "targetStart": 2,
+          "targetEnd": 3,
+          "sourceText": "s",
+          "targetText": "s",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "value.0",
+          "kind": "value",
+          "sourceStart": 7,
+          "sourceEnd": 12,
+          "targetStart": 21,
+          "targetEnd": 26,
+          "sourceText": "+250%",
+          "targetText": "+250%",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "value.1",
+          "kind": "value",
+          "sourceStart": 32,
+          "sourceEnd": 34,
+          "targetStart": 0,
+          "targetEnd": 2,
+          "sourceText": "15",
+          "targetText": "15",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "recorded-ui-d013ac22b6b6311cdc79",
+      "channel": "ui",
+      "source": "Grants +250%  Mining Speed for 15s.",
+      "target": "15sの間、 Mining Speedが+250%増加する。",
+      "sourceSha256": "311764ee0581f3b5237d4796c855e23f21b8c7090dd2ad9ee48228e3d032a6c2",
+      "targetSha256": "1e802c9ba6a34309001d667fe9c871491b7cac1a122becc3f6c00738851e79bf",
+      "reviewed": true,
+      "sourceIds": [
+        "common/ability_body/0173b8de72527454dd36ab65"
+      ],
+      "spans": [
+        {
+          "id": "phrase.0",
+          "kind": "name",
+          "sourceStart": 15,
+          "sourceEnd": 27,
+          "targetStart": 8,
+          "targetEnd": 20,
+          "sourceText": "Mining Speed",
+          "targetText": "Mining Speed",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "phrase.1",
+          "kind": "value",
+          "sourceStart": 34,
+          "sourceEnd": 35,
+          "targetStart": 2,
+          "targetEnd": 3,
+          "sourceText": "s",
+          "targetText": "s",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "value.0",
+          "kind": "value",
+          "sourceStart": 7,
+          "sourceEnd": 12,
+          "targetStart": 21,
+          "targetEnd": 26,
+          "sourceText": "+250%",
+          "targetText": "+250%",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "value.1",
+          "kind": "value",
+          "sourceStart": 32,
+          "sourceEnd": 34,
+          "targetStart": 0,
+          "targetEnd": 2,
+          "sourceText": "15",
+          "targetText": "15",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "recorded-common-d013ac22b6b6311cdc79",
+      "channel": "common",
+      "source": "Grants +250%  Mining Speed for 15s.",
+      "target": "15sの間、 Mining Speedが+250%増加する。",
+      "sourceSha256": "311764ee0581f3b5237d4796c855e23f21b8c7090dd2ad9ee48228e3d032a6c2",
+      "targetSha256": "1e802c9ba6a34309001d667fe9c871491b7cac1a122becc3f6c00738851e79bf",
+      "reviewed": true,
+      "sourceIds": [
+        "common/ability_body/0173b8de72527454dd36ab65"
+      ],
+      "spans": [
+        {
+          "id": "phrase.0",
+          "kind": "name",
+          "sourceStart": 15,
+          "sourceEnd": 27,
+          "targetStart": 8,
+          "targetEnd": 20,
+          "sourceText": "Mining Speed",
+          "targetText": "Mining Speed",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "phrase.1",
+          "kind": "value",
+          "sourceStart": 34,
+          "sourceEnd": 35,
+          "targetStart": 2,
+          "targetEnd": 3,
+          "sourceText": "s",
+          "targetText": "s",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "value.0",
+          "kind": "value",
+          "sourceStart": 7,
+          "sourceEnd": 12,
+          "targetStart": 21,
+          "targetEnd": 26,
+          "sourceText": "+250%",
+          "targetText": "+250%",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "value.1",
+          "kind": "value",
+          "sourceStart": 32,
+          "sourceEnd": 34,
+          "targetStart": 0,
+          "targetEnd": 2,
+          "sourceText": "15",
+          "targetText": "15",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "recorded-item-84f7fb1aa4b0ee51912f",
+      "channel": "item",
+      "source": "Grants 32.08 Foraging Fortune for 20s every time you jump. Gain Jump Boost IV while on Foraging Islands.",
+      "target": "ジャンプするたびに、20秒間 Foraging Fortuneが32.08増加する。Foraging Islandsにいる間はJump Boost IVを得る。",
+      "sourceSha256": "b448557d8175f4ff22758daabb45fa802f127f6f8c3c2f1d5cb24f63b8fb4409",
+      "targetSha256": "3f3afa706ca702fce557588285bc5c44a3fff8f9cf104eecfe4adfa23a47c598",
+      "reviewed": true,
+      "sourceIds": [
+        "item/ability_body/4687fb85f5a2b982ae7f63bd",
+        "item/ability_body/51d544d4bd35c6fcafa1b77e",
+        "item/ability_body/672f693112e5c54e99586349",
+        "item/ability_body/67fc343f34eb9d5c5ce6288a",
+        "item/ability_body/7c979af21a5443acba74e4a4",
+        "item/ability_body/c8b83fcd79c3f39b5c42f064"
+      ],
+      "spans": [
+        {
+          "id": "phrase.0",
+          "kind": "name",
+          "sourceStart": 14,
+          "sourceEnd": 30,
+          "targetStart": 16,
+          "targetEnd": 32,
+          "sourceText": "Foraging Fortune",
+          "targetText": "Foraging Fortune",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "phrase.1",
+          "kind": "ordinary",
+          "sourceStart": 37,
+          "sourceEnd": 38,
+          "targetStart": 12,
+          "targetEnd": 13,
+          "sourceText": "s",
+          "targetText": "秒",
+          "confirmedOrdinary": true,
+          "allowPlain": false
+        },
+        {
+          "id": "phrase.2",
+          "kind": "name",
+          "sourceStart": 65,
+          "sourceEnd": 78,
+          "targetStart": 64,
+          "targetEnd": 77,
+          "sourceText": "Jump Boost IV",
+          "targetText": "Jump Boost IV",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "phrase.3",
+          "kind": "name",
+          "sourceStart": 88,
+          "sourceEnd": 104,
+          "targetStart": 43,
+          "targetEnd": 59,
+          "sourceText": "Foraging Islands",
+          "targetText": "Foraging Islands",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "value.0",
+          "kind": "value",
+          "sourceStart": 7,
+          "sourceEnd": 12,
+          "targetStart": 33,
+          "targetEnd": 38,
+          "sourceText": "32.08",
+          "targetText": "32.08",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "value.1",
+          "kind": "value",
+          "sourceStart": 35,
+          "sourceEnd": 37,
+          "targetStart": 10,
+          "targetEnd": 12,
+          "sourceText": "20",
+          "targetText": "20",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "recorded-ui-84f7fb1aa4b0ee51912f",
+      "channel": "ui",
+      "source": "Grants 32.08 Foraging Fortune for 20s every time you jump. Gain Jump Boost IV while on Foraging Islands.",
+      "target": "ジャンプするたびに、20秒間 Foraging Fortuneが32.08増加する。Foraging Islandsにいる間はJump Boost IVを得る。",
+      "sourceSha256": "b448557d8175f4ff22758daabb45fa802f127f6f8c3c2f1d5cb24f63b8fb4409",
+      "targetSha256": "3f3afa706ca702fce557588285bc5c44a3fff8f9cf104eecfe4adfa23a47c598",
+      "reviewed": true,
+      "sourceIds": [
+        "item/ability_body/4687fb85f5a2b982ae7f63bd",
+        "item/ability_body/51d544d4bd35c6fcafa1b77e",
+        "item/ability_body/672f693112e5c54e99586349",
+        "item/ability_body/67fc343f34eb9d5c5ce6288a",
+        "item/ability_body/7c979af21a5443acba74e4a4",
+        "item/ability_body/c8b83fcd79c3f39b5c42f064"
+      ],
+      "spans": [
+        {
+          "id": "phrase.0",
+          "kind": "name",
+          "sourceStart": 14,
+          "sourceEnd": 30,
+          "targetStart": 16,
+          "targetEnd": 32,
+          "sourceText": "Foraging Fortune",
+          "targetText": "Foraging Fortune",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "phrase.1",
+          "kind": "ordinary",
+          "sourceStart": 37,
+          "sourceEnd": 38,
+          "targetStart": 12,
+          "targetEnd": 13,
+          "sourceText": "s",
+          "targetText": "秒",
+          "confirmedOrdinary": true,
+          "allowPlain": false
+        },
+        {
+          "id": "phrase.2",
+          "kind": "name",
+          "sourceStart": 65,
+          "sourceEnd": 78,
+          "targetStart": 64,
+          "targetEnd": 77,
+          "sourceText": "Jump Boost IV",
+          "targetText": "Jump Boost IV",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "phrase.3",
+          "kind": "name",
+          "sourceStart": 88,
+          "sourceEnd": 104,
+          "targetStart": 43,
+          "targetEnd": 59,
+          "sourceText": "Foraging Islands",
+          "targetText": "Foraging Islands",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "value.0",
+          "kind": "value",
+          "sourceStart": 7,
+          "sourceEnd": 12,
+          "targetStart": 33,
+          "targetEnd": 38,
+          "sourceText": "32.08",
+          "targetText": "32.08",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "value.1",
+          "kind": "value",
+          "sourceStart": 35,
+          "sourceEnd": 37,
+          "targetStart": 10,
+          "targetEnd": 12,
+          "sourceText": "20",
+          "targetText": "20",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "recorded-item-f7aabbb3410c950b0dec",
+      "channel": "item",
+      "source": "Use at Kat to upgrade Frog Pets from Uncommon to Rare.",
+      "target": "Katのところで使うと、Frog PetをUncommonからRareにアップグレードする。",
+      "sourceSha256": "46712af68f6bf6aca2a459624cb474f80f5eb5a5deb01756cc100c1cc6561248",
+      "targetSha256": "be2398e3ff6e4079d342b2e37302ca020e6ddda97f09bec194323cc1900f8400",
+      "reviewed": true,
+      "sourceIds": [
+        "item/description/647898a4d44436ff9b60afa5",
+        "ui/slot_description/434f435dddefd07fbd8efd38"
+      ],
+      "spans": [
+        {
+          "id": "phrase.0",
+          "kind": "name",
+          "sourceStart": 7,
+          "sourceEnd": 10,
+          "targetStart": 0,
+          "targetEnd": 3,
+          "sourceText": "Kat",
+          "targetText": "Kat",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "phrase.1",
+          "kind": "name",
+          "sourceStart": 22,
+          "sourceEnd": 31,
+          "targetStart": 12,
+          "targetEnd": 20,
+          "sourceText": "Frog Pets",
+          "targetText": "Frog Pet",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "phrase.2",
+          "kind": "name",
+          "sourceStart": 37,
+          "sourceEnd": 45,
+          "targetStart": 21,
+          "targetEnd": 29,
+          "sourceText": "Uncommon",
+          "targetText": "Uncommon",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "phrase.3",
+          "kind": "name",
+          "sourceStart": 49,
+          "sourceEnd": 54,
+          "targetStart": 31,
+          "targetEnd": 35,
+          "sourceText": "Rare.",
+          "targetText": "Rare",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "recorded-ui-f7aabbb3410c950b0dec",
+      "channel": "ui",
+      "source": "Use at Kat to upgrade Frog Pets from Uncommon to Rare.",
+      "target": "Katのところで使うと、Frog PetをUncommonからRareにアップグレードする。",
+      "sourceSha256": "46712af68f6bf6aca2a459624cb474f80f5eb5a5deb01756cc100c1cc6561248",
+      "targetSha256": "be2398e3ff6e4079d342b2e37302ca020e6ddda97f09bec194323cc1900f8400",
+      "reviewed": true,
+      "sourceIds": [
+        "item/description/647898a4d44436ff9b60afa5",
+        "ui/slot_description/434f435dddefd07fbd8efd38"
+      ],
+      "spans": [
+        {
+          "id": "phrase.0",
+          "kind": "name",
+          "sourceStart": 7,
+          "sourceEnd": 10,
+          "targetStart": 0,
+          "targetEnd": 3,
+          "sourceText": "Kat",
+          "targetText": "Kat",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "phrase.1",
+          "kind": "name",
+          "sourceStart": 22,
+          "sourceEnd": 31,
+          "targetStart": 12,
+          "targetEnd": 20,
+          "sourceText": "Frog Pets",
+          "targetText": "Frog Pet",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "phrase.2",
+          "kind": "name",
+          "sourceStart": 37,
+          "sourceEnd": 45,
+          "targetStart": 21,
+          "targetEnd": 29,
+          "sourceText": "Uncommon",
+          "targetText": "Uncommon",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "phrase.3",
+          "kind": "name",
+          "sourceStart": 49,
+          "sourceEnd": 54,
+          "targetStart": 31,
+          "targetEnd": 35,
+          "sourceText": "Rare.",
+          "targetText": "Rare",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "recorded-item-3524be6f6a0f01f9661a",
+      "channel": "item",
+      "source": "Gain +5 Strength for every 5% of total HP you have for 5s. Capped at +100 Strength.",
+      "target": "現在のHPが合計HPに占める割合5%ごとに、5秒間 Strengthを+5得る。最大+100 Strengthまで。",
+      "sourceSha256": "fb529896ee6c582204668a2ac3343ac403221cbfd683374e039a30dcabfde9a2",
+      "targetSha256": "20faebc213dbd97b2347d9863756d8389a7404cbf872940081a06d86bc0677f2",
+      "reviewed": true,
+      "sourceIds": [
+        "item/ability_body/9b59cc8611d73b402048afc8"
+      ],
+      "spans": [
+        {
+          "id": "phrase.0",
+          "kind": "name",
+          "sourceStart": 9,
+          "sourceEnd": 17,
+          "targetStart": 27,
+          "targetEnd": 35,
+          "sourceText": "Strength",
+          "targetText": "Strength",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "phrase.1",
+          "kind": "name",
+          "sourceStart": 76,
+          "sourceEnd": 84,
+          "targetStart": 49,
+          "targetEnd": 57,
+          "sourceText": "Strength",
+          "targetText": "Strength",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "phrase.2",
+          "kind": "ordinary",
+          "sourceStart": 57,
+          "sourceEnd": 58,
+          "targetStart": 23,
+          "targetEnd": 24,
+          "sourceText": "s",
+          "targetText": "秒",
+          "confirmedOrdinary": true,
+          "allowPlain": false
+        },
+        {
+          "id": "value.0",
+          "kind": "value",
+          "sourceStart": 5,
+          "sourceEnd": 7,
+          "targetStart": 36,
+          "targetEnd": 38,
+          "sourceText": "+5",
+          "targetText": "+5",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "value.1",
+          "kind": "value",
+          "sourceStart": 28,
+          "sourceEnd": 30,
+          "targetStart": 16,
+          "targetEnd": 18,
+          "sourceText": "5%",
+          "targetText": "5%",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "value.2",
+          "kind": "value",
+          "sourceStart": 56,
+          "sourceEnd": 57,
+          "targetStart": 22,
+          "targetEnd": 23,
+          "sourceText": "5",
+          "targetText": "5",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "value.3",
+          "kind": "value",
+          "sourceStart": 70,
+          "sourceEnd": 74,
+          "targetStart": 43,
+          "targetEnd": 47,
+          "sourceText": "+100",
+          "targetText": "+100",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "recorded-ui-3524be6f6a0f01f9661a",
+      "channel": "ui",
+      "source": "Gain +5 Strength for every 5% of total HP you have for 5s. Capped at +100 Strength.",
+      "target": "現在のHPが合計HPに占める割合5%ごとに、5秒間 Strengthを+5得る。最大+100 Strengthまで。",
+      "sourceSha256": "fb529896ee6c582204668a2ac3343ac403221cbfd683374e039a30dcabfde9a2",
+      "targetSha256": "20faebc213dbd97b2347d9863756d8389a7404cbf872940081a06d86bc0677f2",
+      "reviewed": true,
+      "sourceIds": [
+        "item/ability_body/9b59cc8611d73b402048afc8"
+      ],
+      "spans": [
+        {
+          "id": "phrase.0",
+          "kind": "name",
+          "sourceStart": 9,
+          "sourceEnd": 17,
+          "targetStart": 27,
+          "targetEnd": 35,
+          "sourceText": "Strength",
+          "targetText": "Strength",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "phrase.1",
+          "kind": "name",
+          "sourceStart": 76,
+          "sourceEnd": 84,
+          "targetStart": 49,
+          "targetEnd": 57,
+          "sourceText": "Strength",
+          "targetText": "Strength",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "phrase.2",
+          "kind": "ordinary",
+          "sourceStart": 57,
+          "sourceEnd": 58,
+          "targetStart": 23,
+          "targetEnd": 24,
+          "sourceText": "s",
+          "targetText": "秒",
+          "confirmedOrdinary": true,
+          "allowPlain": false
+        },
+        {
+          "id": "value.0",
+          "kind": "value",
+          "sourceStart": 5,
+          "sourceEnd": 7,
+          "targetStart": 36,
+          "targetEnd": 38,
+          "sourceText": "+5",
+          "targetText": "+5",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "value.1",
+          "kind": "value",
+          "sourceStart": 28,
+          "sourceEnd": 30,
+          "targetStart": 16,
+          "targetEnd": 18,
+          "sourceText": "5%",
+          "targetText": "5%",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "value.2",
+          "kind": "value",
+          "sourceStart": 56,
+          "sourceEnd": 57,
+          "targetStart": 22,
+          "targetEnd": 23,
+          "sourceText": "5",
+          "targetText": "5",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "value.3",
+          "kind": "value",
+          "sourceStart": 70,
+          "sourceEnd": 74,
+          "targetStart": 43,
+          "targetEnd": 47,
+          "sourceText": "+100",
+          "targetText": "+100",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "recorded-item-2b18402643af9f9c03eb",
+      "channel": "item",
+      "source": "The more Safari Milestones you have, the stronger this belt gets!",
+      "target": "Safari Milestoneが増えるほど、このBeltは強くなる！",
+      "sourceSha256": "48ff6f99fe02aa256532d0ed4eb81f97d6eb586d8e5f19d6182a39a6310d5f19",
+      "targetSha256": "6e61c41e09cc3797311ff3f3b764985f722100282997264da693b19d3880cd62",
+      "reviewed": true,
+      "sourceIds": [
+        "item/description/89617c1736ef28843a106901",
+        "ui/slot_description/24ee86afcb05aa745c788d2a",
+        "ui/slot_description/34f9eff7a540a2e0bf10900f",
+        "ui/slot_description/67d5c07537fbec9208c18d5a",
+        "ui/slot_description/84382502217c5207cbf5cc0e"
+      ],
+      "spans": [
+        {
+          "id": "phrase.0",
+          "kind": "name",
+          "sourceStart": 9,
+          "sourceEnd": 26,
+          "targetStart": 0,
+          "targetEnd": 16,
+          "sourceText": "Safari Milestones",
+          "targetText": "Safari Milestone",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "recorded-ui-2b18402643af9f9c03eb",
+      "channel": "ui",
+      "source": "The more Safari Milestones you have, the stronger this belt gets!",
+      "target": "Safari Milestoneが増えるほど、このBeltは強くなる！",
+      "sourceSha256": "48ff6f99fe02aa256532d0ed4eb81f97d6eb586d8e5f19d6182a39a6310d5f19",
+      "targetSha256": "6e61c41e09cc3797311ff3f3b764985f722100282997264da693b19d3880cd62",
+      "reviewed": true,
+      "sourceIds": [
+        "item/description/89617c1736ef28843a106901",
+        "ui/slot_description/24ee86afcb05aa745c788d2a",
+        "ui/slot_description/34f9eff7a540a2e0bf10900f",
+        "ui/slot_description/67d5c07537fbec9208c18d5a",
+        "ui/slot_description/84382502217c5207cbf5cc0e"
+      ],
+      "spans": [
+        {
+          "id": "phrase.0",
+          "kind": "name",
+          "sourceStart": 9,
+          "sourceEnd": 26,
+          "targetStart": 0,
+          "targetEnd": 16,
+          "sourceText": "Safari Milestones",
+          "targetText": "Safari Milestone",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "recorded-item-5034116af02eaa3e2964",
+      "channel": "item",
+      "source": "Increases the effect of Wounded Potions by 10%.",
+      "target": "Wounded Potionの効果が10%増加する。",
+      "sourceSha256": "93bf90dead7d5b596a529c3567f5aa5b21b6116909e181b1e7820446197cd04c",
+      "targetSha256": "f4792ae2fb7b2ac09b3d007b8f4f79822d4ab42a4e34f0761defd5b219d73448",
+      "reviewed": true,
+      "sourceIds": [
+        "item/description/42d7b14bfb62110e167af9f5"
+      ],
+      "spans": [
+        {
+          "id": "phrase.0",
+          "kind": "name",
+          "sourceStart": 24,
+          "sourceEnd": 39,
+          "targetStart": 0,
+          "targetEnd": 14,
+          "sourceText": "Wounded Potions",
+          "targetText": "Wounded Potion",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "value.0",
+          "kind": "value",
+          "sourceStart": 43,
+          "sourceEnd": 46,
+          "targetStart": 18,
+          "targetEnd": 21,
+          "sourceText": "10%",
+          "targetText": "10%",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "recorded-ui-5034116af02eaa3e2964",
+      "channel": "ui",
+      "source": "Increases the effect of Wounded Potions by 10%.",
+      "target": "Wounded Potionの効果が10%増加する。",
+      "sourceSha256": "93bf90dead7d5b596a529c3567f5aa5b21b6116909e181b1e7820446197cd04c",
+      "targetSha256": "f4792ae2fb7b2ac09b3d007b8f4f79822d4ab42a4e34f0761defd5b219d73448",
+      "reviewed": true,
+      "sourceIds": [
+        "item/description/42d7b14bfb62110e167af9f5"
+      ],
+      "spans": [
+        {
+          "id": "phrase.0",
+          "kind": "name",
+          "sourceStart": 24,
+          "sourceEnd": 39,
+          "targetStart": 0,
+          "targetEnd": 14,
+          "sourceText": "Wounded Potions",
+          "targetText": "Wounded Potion",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "value.0",
+          "kind": "value",
+          "sourceStart": 43,
+          "sourceEnd": 46,
+          "targetStart": 18,
+          "targetEnd": 21,
+          "sourceText": "10%",
+          "targetText": "10%",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "recorded-item-811d8e3ba7df90777524",
+      "channel": "item",
+      "source": "Its warm chocolatey goodness imbues you with the ability to overcome the heat death of the Blazing Volcano.",
+      "target": "温かく濃厚なチョコレートのおいしさが、Blazing Volcanoの灼熱を乗り越える力を与えてくれる。",
+      "sourceSha256": "3a5e0fa28315940c790ee61c410ef2dd2fa594dc9cc4f62d209f8334ae039703",
+      "targetSha256": "bb95740c3e02f132e0556f389f63e23494a591402a7267f92a37a908decf02a7",
+      "reviewed": true,
+      "sourceIds": [
+        "item/description/406827901d96ba63f81788d9"
+      ],
+      "spans": [
+        {
+          "id": "phrase.0",
+          "kind": "ordinary",
+          "sourceStart": 9,
+          "sourceEnd": 19,
+          "targetStart": 6,
+          "targetEnd": 12,
+          "sourceText": "chocolatey",
+          "targetText": "チョコレート",
+          "confirmedOrdinary": true,
+          "allowPlain": false
+        },
+        {
+          "id": "phrase.1",
+          "kind": "name",
+          "sourceStart": 91,
+          "sourceEnd": 106,
+          "targetStart": 19,
+          "targetEnd": 34,
+          "sourceText": "Blazing Volcano",
+          "targetText": "Blazing Volcano",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "recorded-ui-811d8e3ba7df90777524",
+      "channel": "ui",
+      "source": "Its warm chocolatey goodness imbues you with the ability to overcome the heat death of the Blazing Volcano.",
+      "target": "温かく濃厚なチョコレートのおいしさが、Blazing Volcanoの灼熱を乗り越える力を与えてくれる。",
+      "sourceSha256": "3a5e0fa28315940c790ee61c410ef2dd2fa594dc9cc4f62d209f8334ae039703",
+      "targetSha256": "bb95740c3e02f132e0556f389f63e23494a591402a7267f92a37a908decf02a7",
+      "reviewed": true,
+      "sourceIds": [
+        "item/description/406827901d96ba63f81788d9"
+      ],
+      "spans": [
+        {
+          "id": "phrase.0",
+          "kind": "ordinary",
+          "sourceStart": 9,
+          "sourceEnd": 19,
+          "targetStart": 6,
+          "targetEnd": 12,
+          "sourceText": "chocolatey",
+          "targetText": "チョコレート",
+          "confirmedOrdinary": true,
+          "allowPlain": false
+        },
+        {
+          "id": "phrase.1",
+          "kind": "name",
+          "sourceStart": 91,
+          "sourceEnd": 106,
+          "targetStart": 19,
+          "targetEnd": 34,
+          "sourceText": "Blazing Volcano",
+          "targetText": "Blazing Volcano",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "observed-item-kat-rarity-079",
+      "channel": "item",
+      "source": "Kat will take care of your Frog for 2 hours then its rarity will be upgraded!",
+      "target": "KatがFrogを2時間預かると、レアリティが上がる！",
+      "sourceSha256": "8a082ff135a521365d23ead7bc5d9e0c6cd7ed57e62309badcf0ee049a183268",
+      "targetSha256": "9c6a41363ab4b6caf8b582aa4ebfb82731f92b11bdf6bf143236260d955f47eb",
+      "reviewed": true,
+      "sourceIds": [
+        "observed/item/runtime079_8a082ff135a521365d"
+      ],
+      "spans": [
+        {
+          "id": "rarity",
+          "kind": "ordinary",
+          "sourceStart": 53,
+          "sourceEnd": 59,
+          "targetStart": 17,
+          "targetEnd": 22,
+          "sourceText": "rarity",
+          "targetText": "レアリティ",
+          "confirmedOrdinary": true,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "review0710/item/renowned-rate-values",
+      "channel": "item",
+      "source": "Grants +1%  Magic Find and +1% to ALL Combat Stats.",
+      "target": " Magic Findが+1%、すべてのCombat Statsが+1%増加する。",
+      "sourceSha256": "08551577d2de3ed599c8ba22d5cb593a6d32715af9b2dc0c9a25096256fe61aa",
+      "targetSha256": "16591f3baee32f07cf237648236a65ade3739f4f7a6fe62b8022d14029a4eb87",
+      "reviewed": true,
+      "sourceIds": [
+        "common/ability_body/11c8eb6fcc86b2b06efc28fd"
+      ],
+      "spans": [
+        {
+          "id": "magic-find.rate",
+          "kind": "value",
+          "sourceStart": 7,
+          "sourceEnd": 10,
+          "targetStart": 13,
+          "targetEnd": 16,
+          "sourceText": "+1%",
+          "targetText": "+1%",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "combat-stats.rate",
+          "kind": "value",
+          "sourceStart": 28,
+          "sourceEnd": 31,
+          "targetStart": 34,
+          "targetEnd": 37,
+          "sourceText": "+1%",
+          "targetText": "+1%",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "review0710/ui/renowned-rate-values",
+      "channel": "ui",
+      "source": "Grants +1%  Magic Find and +1% to ALL Combat Stats.",
+      "target": " Magic Findが+1%、すべてのCombat Statsが+1%増加する。",
+      "sourceSha256": "08551577d2de3ed599c8ba22d5cb593a6d32715af9b2dc0c9a25096256fe61aa",
+      "targetSha256": "16591f3baee32f07cf237648236a65ade3739f4f7a6fe62b8022d14029a4eb87",
+      "reviewed": true,
+      "sourceIds": [
+        "common/ability_body/11c8eb6fcc86b2b06efc28fd"
+      ],
+      "spans": [
+        {
+          "id": "magic-find.rate",
+          "kind": "value",
+          "sourceStart": 7,
+          "sourceEnd": 10,
+          "targetStart": 13,
+          "targetEnd": 16,
+          "sourceText": "+1%",
+          "targetText": "+1%",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "combat-stats.rate",
+          "kind": "value",
+          "sourceStart": 28,
+          "sourceEnd": 31,
+          "targetStart": 34,
+          "targetEnd": 37,
+          "sourceText": "+1%",
+          "targetText": "+1%",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "review0710/item/pet-item-condition",
+      "channel": "item",
+      "source": "Pet Items can boost pets in many powerful ways! A pet can only hold one Pet Item, but you can swap it at any time! The pet must be visible to apply the item!",
+      "target": "Pet Itemsは、さまざまな強力な効果でペットを強化する！ ペットが持てるPet Itemはひとつだけだが、いつでも交換できる！ アイテムを使うには、ペットを表示しておく必要がある！",
+      "sourceSha256": "1e8905d75307c43065fa4ea62b9fb276ce88ca40ae157d6d1899f95239deeb60",
+      "targetSha256": "73cb2f60944f5ca3783630272d21bb21770a0401554733f63c9f6c883c52c3c1",
+      "reviewed": true,
+      "sourceIds": [
+        "item/description/020314bf44f4c3df74bd7ff2",
+        "item/description/0a0de3c86e33935a24ac645b",
+        "item/description/0cf0da3ba65a6c0262f563df",
+        "item/description/102c0dd349343a687dc29bb9",
+        "item/description/1af39b599db9b150f29b9285",
+        "item/description/1ea43879b7ff4a2a05610e1f",
+        "item/description/20e1536da19d39c5beecb84a",
+        "item/description/227fa7c40d35acadb30133a2",
+        "item/description/2299b8af77547f9bcfec5a57",
+        "item/description/2aa447892ec66229686d8214",
+        "item/description/2c0e2f6d1f46c51b34abca7e",
+        "item/description/308e87867c2d902b26d05a94",
+        "item/description/34d058bb88cb5266c58174e5",
+        "item/description/376ca300c50fc0ba1026ca77",
+        "item/description/3bc6bb6980b37efe91c3bd5e",
+        "item/description/46ae4438f61f6d6179ee125b",
+        "item/description/47ce5c2c0fa344253a18693f",
+        "item/description/4b382f6f62063de61ec65e66",
+        "item/description/4c2f9620f9c029b62d9ad263",
+        "item/description/4fd362f09f1648d1bfd9335d",
+        "item/description/5077ecfaff27d10eba0b4c38",
+        "item/description/515f50db450acbfe43612ab0",
+        "item/description/51dd1eef449ac98802b63061",
+        "item/description/51e0cce050fd9fa64163ff3b",
+        "item/description/53fc66b1c207e42910c8681e",
+        "item/description/56cb75abcb7aa719e77a3faa",
+        "item/description/6ab5a5b290d63955aa441611",
+        "item/description/6e0da483b90f9d70bf1546bf",
+        "item/description/71bf525a274bc7ddf6b7ea28",
+        "item/description/72de1331bf73463fcd805890",
+        "item/description/74f17b993cb3102d9e18c67e",
+        "item/description/7f8b512df4e8182f32f2ea8b",
+        "item/description/80523b90de124a669611ebd6",
+        "item/description/80735baf50804e61b5fd8133",
+        "item/description/80b695ed2308852b91500b06",
+        "item/description/83de6a4f5680f810808594fe",
+        "item/description/89f31d5b75307f92908fca61",
+        "item/description/8b33d9955f82d594cea728a2",
+        "item/description/918d33fa8ad8d80f4bbebb4e",
+        "item/description/93af2d071c504f6444aa9907",
+        "item/description/9700ddde7740c9bf5b5c3c7f",
+        "item/description/99d3b56ce8f6c6cd8452fe6a",
+        "item/description/9adbaf3051aa8df14dbcbaf0",
+        "item/description/9bba2f7af001a5b310d305cf",
+        "item/description/9d2a5d5e17b2b6c560abfb44",
+        "item/description/a0ff299d0477b7bccd207b39",
+        "item/description/a48a16c21fe0d3ae8dafd52e",
+        "item/description/aab45873e56f451c53574318",
+        "item/description/ad98b38af2ac8f58593e27c0",
+        "item/description/b30ed059380322e3860bdd21",
+        "item/description/b75e6d6081da91e07a4aafab",
+        "item/description/bb97bcb444dc882c29032d0c",
+        "item/description/bd0d97fd97ba512d57d8e17d",
+        "item/description/bfcfcf558e8b39316ecebf04",
+        "item/description/c78cfe845e0740040d000a76",
+        "item/description/c826b5d21c6bd7f7c91b8666",
+        "item/description/cc8d4966f4b5aff6b0229ad9",
+        "item/description/d004dc2f5800f0d72d58b832",
+        "item/description/d174b7315fb03b6bb054c5b7",
+        "item/description/e272571994befc7152b2de82",
+        "item/description/e7373722d6b5346f033a347b",
+        "item/description/e7fba0b348e9ee0a0c014650",
+        "item/description/ef8ae3d01af000f19ed37340",
+        "item/description/f28896f78d3e872b2ca6f8e4",
+        "item/description/f3ab93d8e0f2271a9d2e71af",
+        "item/description/f6a211c6a4c869b22a1e0a4a",
+        "item/description/f8ce92404e7e8920c0d8422c",
+        "item/description/ff72082906565110c089ea3c",
+        "ui/slot_description/05cea8fe620b94d61509aec3",
+        "ui/slot_description/08ba4769a383b048040f91e5",
+        "ui/slot_description/22cb26a89a542883641f1707",
+        "ui/slot_description/2611658ee38b6aeccc769bb2",
+        "ui/slot_description/375a9408172c701a000d9510",
+        "ui/slot_description/6b0b84dbaa0d9acb28b3c2be",
+        "ui/slot_description/7a37c9411ea2c69813171753",
+        "ui/slot_description/7eb7313ab89ddf01f3491caa",
+        "ui/slot_description/820cfd7c9f337c1ae2f7b4b0",
+        "ui/slot_description/8acd810e82dc6cd1a5e461a2",
+        "ui/slot_description/92635a46e401b8640dd55144",
+        "ui/slot_description/92e31d5b907216b71c3ec21f",
+        "ui/slot_description/edbf23ba81cbf6aab490a288",
+        "ui/slot_description/fcf84c98dd2995737b3ef4ee"
+      ],
+      "spans": [
+        {
+          "id": "swap",
+          "kind": "ordinary",
+          "sourceStart": 94,
+          "sourceEnd": 98,
+          "targetStart": 60,
+          "targetEnd": 62,
+          "sourceText": "swap",
+          "targetText": "交換",
+          "confirmedOrdinary": true,
+          "allowPlain": false
+        },
+        {
+          "id": "visible-pet-condition",
+          "kind": "ordinary",
+          "sourceStart": 115,
+          "sourceEnd": 157,
+          "targetStart": 67,
+          "targetEnd": 93,
+          "sourceText": "The pet must be visible to apply the item!",
+          "targetText": "アイテムを使うには、ペットを表示しておく必要がある！",
+          "confirmedOrdinary": true,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "review0710/ui/pet-item-condition",
+      "channel": "ui",
+      "source": "Pet Items can boost pets in many powerful ways! A pet can only hold one Pet Item, but you can swap it at any time! The pet must be visible to apply the item!",
+      "target": "Pet Itemsは、さまざまな強力な効果でペットを強化する！ ペットが持てるPet Itemはひとつだけだが、いつでも交換できる！ アイテムを使うには、ペットを表示しておく必要がある！",
+      "sourceSha256": "1e8905d75307c43065fa4ea62b9fb276ce88ca40ae157d6d1899f95239deeb60",
+      "targetSha256": "73cb2f60944f5ca3783630272d21bb21770a0401554733f63c9f6c883c52c3c1",
+      "reviewed": true,
+      "sourceIds": [
+        "item/description/020314bf44f4c3df74bd7ff2",
+        "item/description/0a0de3c86e33935a24ac645b",
+        "item/description/0cf0da3ba65a6c0262f563df",
+        "item/description/102c0dd349343a687dc29bb9",
+        "item/description/1af39b599db9b150f29b9285",
+        "item/description/1ea43879b7ff4a2a05610e1f",
+        "item/description/20e1536da19d39c5beecb84a",
+        "item/description/227fa7c40d35acadb30133a2",
+        "item/description/2299b8af77547f9bcfec5a57",
+        "item/description/2aa447892ec66229686d8214",
+        "item/description/2c0e2f6d1f46c51b34abca7e",
+        "item/description/308e87867c2d902b26d05a94",
+        "item/description/34d058bb88cb5266c58174e5",
+        "item/description/376ca300c50fc0ba1026ca77",
+        "item/description/3bc6bb6980b37efe91c3bd5e",
+        "item/description/46ae4438f61f6d6179ee125b",
+        "item/description/47ce5c2c0fa344253a18693f",
+        "item/description/4b382f6f62063de61ec65e66",
+        "item/description/4c2f9620f9c029b62d9ad263",
+        "item/description/4fd362f09f1648d1bfd9335d",
+        "item/description/5077ecfaff27d10eba0b4c38",
+        "item/description/515f50db450acbfe43612ab0",
+        "item/description/51dd1eef449ac98802b63061",
+        "item/description/51e0cce050fd9fa64163ff3b",
+        "item/description/53fc66b1c207e42910c8681e",
+        "item/description/56cb75abcb7aa719e77a3faa",
+        "item/description/6ab5a5b290d63955aa441611",
+        "item/description/6e0da483b90f9d70bf1546bf",
+        "item/description/71bf525a274bc7ddf6b7ea28",
+        "item/description/72de1331bf73463fcd805890",
+        "item/description/74f17b993cb3102d9e18c67e",
+        "item/description/7f8b512df4e8182f32f2ea8b",
+        "item/description/80523b90de124a669611ebd6",
+        "item/description/80735baf50804e61b5fd8133",
+        "item/description/80b695ed2308852b91500b06",
+        "item/description/83de6a4f5680f810808594fe",
+        "item/description/89f31d5b75307f92908fca61",
+        "item/description/8b33d9955f82d594cea728a2",
+        "item/description/918d33fa8ad8d80f4bbebb4e",
+        "item/description/93af2d071c504f6444aa9907",
+        "item/description/9700ddde7740c9bf5b5c3c7f",
+        "item/description/99d3b56ce8f6c6cd8452fe6a",
+        "item/description/9adbaf3051aa8df14dbcbaf0",
+        "item/description/9bba2f7af001a5b310d305cf",
+        "item/description/9d2a5d5e17b2b6c560abfb44",
+        "item/description/a0ff299d0477b7bccd207b39",
+        "item/description/a48a16c21fe0d3ae8dafd52e",
+        "item/description/aab45873e56f451c53574318",
+        "item/description/ad98b38af2ac8f58593e27c0",
+        "item/description/b30ed059380322e3860bdd21",
+        "item/description/b75e6d6081da91e07a4aafab",
+        "item/description/bb97bcb444dc882c29032d0c",
+        "item/description/bd0d97fd97ba512d57d8e17d",
+        "item/description/bfcfcf558e8b39316ecebf04",
+        "item/description/c78cfe845e0740040d000a76",
+        "item/description/c826b5d21c6bd7f7c91b8666",
+        "item/description/cc8d4966f4b5aff6b0229ad9",
+        "item/description/d004dc2f5800f0d72d58b832",
+        "item/description/d174b7315fb03b6bb054c5b7",
+        "item/description/e272571994befc7152b2de82",
+        "item/description/e7373722d6b5346f033a347b",
+        "item/description/e7fba0b348e9ee0a0c014650",
+        "item/description/ef8ae3d01af000f19ed37340",
+        "item/description/f28896f78d3e872b2ca6f8e4",
+        "item/description/f3ab93d8e0f2271a9d2e71af",
+        "item/description/f6a211c6a4c869b22a1e0a4a",
+        "item/description/f8ce92404e7e8920c0d8422c",
+        "item/description/ff72082906565110c089ea3c",
+        "ui/slot_description/05cea8fe620b94d61509aec3",
+        "ui/slot_description/08ba4769a383b048040f91e5",
+        "ui/slot_description/22cb26a89a542883641f1707",
+        "ui/slot_description/2611658ee38b6aeccc769bb2",
+        "ui/slot_description/375a9408172c701a000d9510",
+        "ui/slot_description/6b0b84dbaa0d9acb28b3c2be",
+        "ui/slot_description/7a37c9411ea2c69813171753",
+        "ui/slot_description/7eb7313ab89ddf01f3491caa",
+        "ui/slot_description/820cfd7c9f337c1ae2f7b4b0",
+        "ui/slot_description/8acd810e82dc6cd1a5e461a2",
+        "ui/slot_description/92635a46e401b8640dd55144",
+        "ui/slot_description/92e31d5b907216b71c3ec21f",
+        "ui/slot_description/edbf23ba81cbf6aab490a288",
+        "ui/slot_description/fcf84c98dd2995737b3ef4ee"
+      ],
+      "spans": [
+        {
+          "id": "swap",
+          "kind": "ordinary",
+          "sourceStart": 94,
+          "sourceEnd": 98,
+          "targetStart": 60,
+          "targetEnd": 62,
+          "sourceText": "swap",
+          "targetText": "交換",
+          "confirmedOrdinary": true,
+          "allowPlain": false
+        },
+        {
+          "id": "visible-pet-condition",
+          "kind": "ordinary",
+          "sourceStart": 115,
+          "sourceEnd": 157,
+          "targetStart": 67,
+          "targetEnd": 93,
+          "sourceText": "The pet must be visible to apply the item!",
+          "targetText": "アイテムを使うには、ペットを表示しておく必要がある！",
+          "confirmedOrdinary": true,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "review0710/item/owl-training-maximum-combined",
+      "channel": "item",
+      "source": "Training Refunds The more coins you spend on Fann's Sessions, the less coins they will cost in the future. (Max 5% off).",
+      "target": "Training Refunds Fannの訓練にCoinsを使うほど、 今後の訓練費用が安くなる（最大5%引き）。",
+      "sourceSha256": "8a540c7a5f989bbc74b504e790f083002c27975d32218f96f999e5882d2838f5",
+      "targetSha256": "58482fb7ee6efd2d58eda5492fc4d75b76bc772ab2793c8859d97c2e90c97fa3",
+      "reviewed": true,
+      "sourceIds": [
+        "ui/slot_description/dbeecdca18f0c6290c562d4c"
+      ],
+      "spans": [
+        {
+          "id": "parenthesis",
+          "kind": "ordinary",
+          "sourceStart": 107,
+          "sourceEnd": 108,
+          "targetStart": 49,
+          "targetEnd": 50,
+          "sourceText": "(",
+          "targetText": "（",
+          "confirmedOrdinary": true,
+          "allowPlain": false
+        },
+        {
+          "id": "maximum",
+          "kind": "ordinary",
+          "sourceStart": 108,
+          "sourceEnd": 111,
+          "targetStart": 50,
+          "targetEnd": 52,
+          "sourceText": "Max",
+          "targetText": "最大",
+          "confirmedOrdinary": true,
+          "allowPlain": false
+        },
+        {
+          "id": "discount",
+          "kind": "ordinary",
+          "sourceStart": 115,
+          "sourceEnd": 120,
+          "targetStart": 54,
+          "targetEnd": 58,
+          "sourceText": "off).",
+          "targetText": "引き）。",
+          "confirmedOrdinary": true,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "review0710/ui/owl-training-maximum-combined",
+      "channel": "ui",
+      "source": "Training Refunds The more coins you spend on Fann's Sessions, the less coins they will cost in the future. (Max 5% off).",
+      "target": "Training Refunds Fannの訓練にCoinsを使うほど、 今後の訓練費用が安くなる（最大5%引き）。",
+      "sourceSha256": "8a540c7a5f989bbc74b504e790f083002c27975d32218f96f999e5882d2838f5",
+      "targetSha256": "58482fb7ee6efd2d58eda5492fc4d75b76bc772ab2793c8859d97c2e90c97fa3",
+      "reviewed": true,
+      "sourceIds": [
+        "ui/slot_description/dbeecdca18f0c6290c562d4c"
+      ],
+      "spans": [
+        {
+          "id": "parenthesis",
+          "kind": "ordinary",
+          "sourceStart": 107,
+          "sourceEnd": 108,
+          "targetStart": 49,
+          "targetEnd": 50,
+          "sourceText": "(",
+          "targetText": "（",
+          "confirmedOrdinary": true,
+          "allowPlain": false
+        },
+        {
+          "id": "maximum",
+          "kind": "ordinary",
+          "sourceStart": 108,
+          "sourceEnd": 111,
+          "targetStart": 50,
+          "targetEnd": 52,
+          "sourceText": "Max",
+          "targetText": "最大",
+          "confirmedOrdinary": true,
+          "allowPlain": false
+        },
+        {
+          "id": "discount",
+          "kind": "ordinary",
+          "sourceStart": 115,
+          "sourceEnd": 120,
+          "targetStart": 54,
+          "targetEnd": 58,
+          "sourceText": "off).",
+          "targetText": "引き）。",
+          "confirmedOrdinary": true,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "review0710/item/chapter-small-rewards",
+      "channel": "item",
+      "source": "Complete tasks within a Chapter to earn small rewards, or complete entire Chapters to earn big ones!",
+      "target": "Chapter内の課題を達成すると小さな報酬を、そのChapterをすべて終えると大きな報酬を得られる！",
+      "sourceSha256": "be2b945f1ae85b2b2821ddb3c811fe3c8a72b6776be0f8c1eefaad67b00854a3",
+      "targetSha256": "3d1589d028179e0a0438207d3d9e982c3d06c4b8f14269361a8ede4f407ebf17",
+      "reviewed": true,
+      "sourceIds": [
+        "ui/slot_description/3314ae97c6097cc709525ea4",
+        "ui/slot_description/8667ace6caab4ae1c95256cd"
+      ],
+      "spans": [
+        {
+          "id": "small-task-rewards",
+          "kind": "ordinary",
+          "sourceStart": 46,
+          "sourceEnd": 53,
+          "targetStart": 20,
+          "targetEnd": 22,
+          "sourceText": "rewards",
+          "targetText": "報酬",
+          "confirmedOrdinary": true,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "review0710/ui/chapter-small-rewards",
+      "channel": "ui",
+      "source": "Complete tasks within a Chapter to earn small rewards, or complete entire Chapters to earn big ones!",
+      "target": "Chapter内の課題を達成すると小さな報酬を、そのChapterをすべて終えると大きな報酬を得られる！",
+      "sourceSha256": "be2b945f1ae85b2b2821ddb3c811fe3c8a72b6776be0f8c1eefaad67b00854a3",
+      "targetSha256": "3d1589d028179e0a0438207d3d9e982c3d06c4b8f14269361a8ede4f407ebf17",
+      "reviewed": true,
+      "sourceIds": [
+        "ui/slot_description/3314ae97c6097cc709525ea4",
+        "ui/slot_description/8667ace6caab4ae1c95256cd"
+      ],
+      "spans": [
+        {
+          "id": "small-task-rewards",
+          "kind": "ordinary",
+          "sourceStart": 46,
+          "sourceEnd": 53,
+          "targetStart": 20,
+          "targetEnd": 22,
+          "sourceText": "rewards",
+          "targetText": "報酬",
+          "confirmedOrdinary": true,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "review0710/item/broodfather-possessive",
+      "channel": "item",
+      "source": "Tarantula Broodfather's  Vitality reduction is 25% less effective against you.",
+      "target": "Tarantula Broodfatherによる Vitality低下の影響を、25%軽減する。",
+      "sourceSha256": "511b3e1b5197c655c47ba1e6d66d740b0e06ce9c30aeb4ec19bf99e24a5e0820",
+      "targetSha256": "a5b2d32dd382ca6254d12b1587546a4570acec32807a41caff9a6b8e553db88d",
+      "reviewed": true,
+      "sourceIds": [
+        "item/description/e0d5840b6bbc6276bff64804"
+      ],
+      "spans": [
+        {
+          "id": "possessive",
+          "kind": "ordinary",
+          "sourceStart": 21,
+          "sourceEnd": 23,
+          "targetStart": 21,
+          "targetEnd": 24,
+          "sourceText": "'s",
+          "targetText": "による",
+          "confirmedOrdinary": true,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "review0710/ui/broodfather-possessive",
+      "channel": "ui",
+      "source": "Tarantula Broodfather's  Vitality reduction is 25% less effective against you.",
+      "target": "Tarantula Broodfatherによる Vitality低下の影響を、25%軽減する。",
+      "sourceSha256": "511b3e1b5197c655c47ba1e6d66d740b0e06ce9c30aeb4ec19bf99e24a5e0820",
+      "targetSha256": "a5b2d32dd382ca6254d12b1587546a4570acec32807a41caff9a6b8e553db88d",
+      "reviewed": true,
+      "sourceIds": [
+        "item/description/e0d5840b6bbc6276bff64804"
+      ],
+      "spans": [
+        {
+          "id": "possessive",
+          "kind": "ordinary",
+          "sourceStart": 21,
+          "sourceEnd": 23,
+          "targetStart": 21,
+          "targetEnd": 24,
+          "sourceText": "'s",
+          "targetText": "による",
+          "confirmedOrdinary": true,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "review0710/item/owl-training-maximum-body",
+      "channel": "item",
+      "source": "The more coins you spend on Fann's Sessions, the less coins they will cost in the future. (Max 5% off).",
+      "target": "FannのSessionにCoinsを使うほど、今後のSessionの費用が安くなる。（最大5%割引）",
+      "sourceSha256": "b18d67379d301837f30ea4b1da4ab9545262f7bc6771c9db033082bdddc026ce",
+      "targetSha256": "f700eb447f1c013f495a0fe4186d3542c961c4e8762914a8ac4c734577f4a86b",
+      "reviewed": true,
+      "sourceIds": [
+        "item/ability_body/348e3db2d8b623b180828d73"
+      ],
+      "spans": [
+        {
+          "id": "parenthesis",
+          "kind": "ordinary",
+          "sourceStart": 90,
+          "sourceEnd": 91,
+          "targetStart": 43,
+          "targetEnd": 44,
+          "sourceText": "(",
+          "targetText": "（",
+          "confirmedOrdinary": true,
+          "allowPlain": false
+        },
+        {
+          "id": "maximum",
+          "kind": "ordinary",
+          "sourceStart": 91,
+          "sourceEnd": 94,
+          "targetStart": 44,
+          "targetEnd": 46,
+          "sourceText": "Max",
+          "targetText": "最大",
+          "confirmedOrdinary": true,
+          "allowPlain": false
+        },
+        {
+          "id": "discount",
+          "kind": "ordinary",
+          "sourceStart": 98,
+          "sourceEnd": 103,
+          "targetStart": 48,
+          "targetEnd": 51,
+          "sourceText": "off).",
+          "targetText": "割引）",
+          "confirmedOrdinary": true,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "review0710/ui/owl-training-maximum-body",
+      "channel": "ui",
+      "source": "The more coins you spend on Fann's Sessions, the less coins they will cost in the future. (Max 5% off).",
+      "target": "FannのSessionにCoinsを使うほど、今後のSessionの費用が安くなる。（最大5%割引）",
+      "sourceSha256": "b18d67379d301837f30ea4b1da4ab9545262f7bc6771c9db033082bdddc026ce",
+      "targetSha256": "f700eb447f1c013f495a0fe4186d3542c961c4e8762914a8ac4c734577f4a86b",
+      "reviewed": true,
+      "sourceIds": [
+        "item/ability_body/348e3db2d8b623b180828d73"
+      ],
+      "spans": [
+        {
+          "id": "parenthesis",
+          "kind": "ordinary",
+          "sourceStart": 90,
+          "sourceEnd": 91,
+          "targetStart": 43,
+          "targetEnd": 44,
+          "sourceText": "(",
+          "targetText": "（",
+          "confirmedOrdinary": true,
+          "allowPlain": false
+        },
+        {
+          "id": "maximum",
+          "kind": "ordinary",
+          "sourceStart": 91,
+          "sourceEnd": 94,
+          "targetStart": 44,
+          "targetEnd": 46,
+          "sourceText": "Max",
+          "targetText": "最大",
+          "confirmedOrdinary": true,
+          "allowPlain": false
+        },
+        {
+          "id": "discount",
+          "kind": "ordinary",
+          "sourceStart": 98,
+          "sourceEnd": 103,
+          "targetStart": 48,
+          "targetEnd": 51,
+          "sourceText": "off).",
+          "targetText": "割引）",
+          "confirmedOrdinary": true,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "npc-native-style-a757f7d665fe4a39db13",
+      "channel": "npc",
+      "source": "For my wares, you'll have to pay the iron price!",
+      "target": "うちの品が欲しければ、鉄の代償を払ってもらうぞ！",
+      "sourceSha256": "a757f7d665fe4a39db13f5bac5fdbead822f4c6a5a82d1c60890a6a7adb07431",
+      "targetSha256": "438a839050a38b70466ba2fbbb4818bdf7d926d311e2c957e506113b32763f36",
+      "reviewed": true,
+      "sourceIds": [
+        "npc/dialogue_group/9cfbeca20deaed2fea0f7a7a"
+      ],
+      "spans": [
+        {
+          "id": "phrase.0",
+          "kind": "ordinary",
+          "sourceStart": 37,
+          "sourceEnd": 47,
+          "targetStart": 11,
+          "targetEnd": 15,
+          "sourceText": "iron price",
+          "targetText": "鉄の代償",
+          "confirmedOrdinary": true,
+          "allowPlain": false
+        }
+      ],
+      "bodyAnchor": {
+        "sourceStart": 0,
+        "sourceEnd": 12,
+        "sourceText": "For my wares",
+        "role": "prose"
+      }
+    },
+    {
+      "id": "npc-native-style-d7a6d70649468f4bb15c",
+      "channel": "npc",
+      "source": "You can enchant items by clicking any Enchantment Table. Enchanting costs experience levels - the more levels you spend, the better enchantments you will receive.",
+      "target": "Enchantment Tableをクリックすれば、アイテムをエンチャントできます。経験値レベルが必要で、たくさん使うほど、よい効果が得られますよ。",
+      "sourceSha256": "d7a6d70649468f4bb15cbe5ddb0b00b7d2577c60d9c29b3aaddbbfab57e730bb",
+      "targetSha256": "9f350e5333bec3ec7ec501eab25832b9889c74f3440ef034103a96f5acd68f17",
+      "reviewed": true,
+      "sourceIds": [
+        "npc/dialogue_group/07571539488018a174fef1e0"
+      ],
+      "spans": [
+        {
+          "id": "phrase.0",
+          "kind": "ordinary",
+          "sourceStart": 74,
+          "sourceEnd": 91,
+          "targetStart": 42,
+          "targetEnd": 48,
+          "sourceText": "experience levels",
+          "targetText": "経験値レベル",
+          "confirmedOrdinary": true,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "npc-native-style-4e0a69c39a2a295b5f07",
+      "channel": "npc",
+      "source": "Here, read my notes!",
+      "target": "ほら、私のノートを読んでみて！",
+      "sourceSha256": "4e0a69c39a2a295b5f07652d5561634e1a4a122a6445fa4a1ad8e99fcd2b9436",
+      "targetSha256": "e9c497c25a35693f856f4dd03adb047933776e88dce9f0d95a24eafe41d751a5",
+      "reviewed": true,
+      "sourceIds": [
+        "npc/dialogue_group/f74c58fd2b4553ebb5d78f1f"
+      ],
+      "spans": [
+        {
+          "id": "phrase.0",
+          "kind": "ordinary",
+          "sourceStart": 14,
+          "sourceEnd": 19,
+          "targetStart": 5,
+          "targetEnd": 8,
+          "sourceText": "notes",
+          "targetText": "ノート",
+          "confirmedOrdinary": true,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "npc-native-style-93ce1393fd58ad58305d",
+      "channel": "npc",
+      "source": "If you have any questions about Bait, you can view my Bait Guide at any time!",
+      "target": "Baitについて知りたくなったら、僕のBait Guideを、いつでも見てくれていい！",
+      "sourceSha256": "93ce1393fd58ad58305db7599d67191016e88fa761e87c6b38b5495a609ccf18",
+      "targetSha256": "66d435ce9be3ab213ac0375ffd8acba8e9ed6a2a739407cb6ae2772671a188f1",
+      "reviewed": true,
+      "sourceIds": [
+        "npc/dialogue_group/ac678bd4138b7ab6ba57f9b9"
+      ],
+      "spans": [
+        {
+          "id": "phrase.0",
+          "kind": "name",
+          "sourceStart": 32,
+          "sourceEnd": 36,
+          "targetStart": 0,
+          "targetEnd": 4,
+          "sourceText": "Bait",
+          "targetText": "Bait",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "phrase.1",
+          "kind": "name",
+          "sourceStart": 54,
+          "sourceEnd": 64,
+          "targetStart": 19,
+          "targetEnd": 29,
+          "sourceText": "Bait Guide",
+          "targetText": "Bait Guide",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "npc-native-style-a6cda4b98f859d158232",
+      "channel": "npc",
+      "source": "Bring any Junk you find while fishing with your Junk Sinker to me, and I'll let ya trade it in for something more worth your time!",
+      "target": "Junk Sinkerを使った釣りで見つけたJunkは、何でも持ってきてくれ。もっと手間に見合うものと、交換してやろう！",
+      "sourceSha256": "a6cda4b98f859d158232d81cba52fd3248e7b1967dfcd62a950b4eef2e17b2a7",
+      "targetSha256": "cff54c9b833afdbdfc5620b6fc1e1b40a91999f9cfcf72b6c4a877fcc4a7e0bb",
+      "reviewed": true,
+      "sourceIds": [
+        "npc/dialogue_group/36a4caf8c186841a5f8e67cf"
+      ],
+      "spans": [
+        {
+          "id": "phrase.0",
+          "kind": "name",
+          "sourceStart": 10,
+          "sourceEnd": 14,
+          "targetStart": 22,
+          "targetEnd": 26,
+          "sourceText": "Junk",
+          "targetText": "Junk",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "phrase.1",
+          "kind": "name",
+          "sourceStart": 48,
+          "sourceEnd": 59,
+          "targetStart": 0,
+          "targetEnd": 11,
+          "sourceText": "Junk Sinker",
+          "targetText": "Junk Sinker",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        }
+      ]
+    },
+    {
+      "id": "npc-native-style-4e727c819a9c39514ce8",
+      "channel": "npc",
+      "source": "The campfire deals both normal damage and true damage.",
+      "target": "キャンプファイアからは、通常ダメージとtrue damageの両方を受ける。",
+      "sourceSha256": "4e727c819a9c39514ce8d883720e79e358baa49ec39b68b665f65527bc95e5b7",
+      "targetSha256": "a2f68fcc894aba25db76026852c705701cc1d5e0f7378e7a19da672bbc6fdb93",
+      "reviewed": true,
+      "sourceIds": [
+        "observed/npc/2584635be1e2c0720a0a164c"
+      ],
+      "spans": [
+        {
+          "id": "phrase.0",
+          "kind": "ordinary",
+          "sourceStart": 31,
+          "sourceEnd": 37,
+          "targetStart": 14,
+          "targetEnd": 18,
+          "sourceText": "damage",
+          "targetText": "ダメージ",
+          "confirmedOrdinary": true,
+          "allowPlain": false
+        }
+      ],
+      "bodyAnchor": {
+        "sourceStart": 0,
+        "sourceEnd": 18,
+        "sourceText": "The campfire deals",
+        "role": "prose"
+      }
+    },
+    {
+      "id": "npc-native-style-531f507bd4940c25a3ca",
+      "channel": "npc",
+      "source": "And true damage can be reduced by  True Defense.",
+      "target": "それから、true damageは True Defenseで軽減できる。",
+      "sourceSha256": "531f507bd4940c25a3ca8b517e7c277a540b88a404f796330420b68d495bd495",
+      "targetSha256": "52088ee8ec8dd3d7f5d2641e67dda60eb71d813e895db9c2e332ab175030d999",
+      "reviewed": true,
+      "sourceIds": [
+        "observed/npc/f570aea9e64e5743d349381c"
+      ],
+      "spans": [],
+      "bodyAnchor": {
+        "sourceStart": 16,
+        "sourceEnd": 33,
+        "sourceText": "can be reduced by",
+        "role": "prose"
+      }
+    },
+    {
+      "id": "npc-native-style-b921073f194317b31f8f",
+      "channel": "npc",
+      "source": "Oh my goodness! I forgot about Melody! She's still over on Melody's Plateau!",
+      "target": "しまった！ Melodyのことを忘れていた！ まだMelody's Plateauにいるんだ！",
+      "sourceSha256": "b921073f194317b31f8f5c008082af8017ffea9fb7126662b9766a7dc95c3c19",
+      "targetSha256": "220bb2f23734ae12e804891dc52cf512fbacca12fb6569ba070c15ca16104523",
+      "reviewed": true,
+      "sourceIds": [
+        "npc/dialogue_group/dc6fe1c15e49db080739b412"
+      ],
+      "spans": [
+        {
+          "id": "phrase.0",
+          "kind": "name",
+          "sourceStart": 31,
+          "sourceEnd": 37,
+          "targetStart": 6,
+          "targetEnd": 12,
+          "sourceText": "Melody",
+          "targetText": "Melody",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        },
+        {
+          "id": "phrase.1",
+          "kind": "name",
+          "sourceStart": 59,
+          "sourceEnd": 75,
+          "targetStart": 25,
+          "targetEnd": 41,
+          "sourceText": "Melody's Plateau",
+          "targetText": "Melody's Plateau",
+          "confirmedOrdinary": false,
+          "allowPlain": false
+        }
+      ]
+    }
+  ]
+}

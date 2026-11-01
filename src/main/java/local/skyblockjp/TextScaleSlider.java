@@ -13,4 +13,5 @@ final class TextScaleSlider extends AbstractSliderButton {
         setMessage(Component.literal("HUDの文字サイズ: " + Math.round((.75 + value * 1.75) * 100) + "%"));
     }
     @Override protected void applyValue() { draft.hudTextScale = Math.round((.75 + value * 1.75) * 100) / 100.0; }
+    void syncFromConfig() { value = (draft.hudTextScale - .75) / 1.75; updateMessage(); }
 }

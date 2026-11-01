@@ -9,11 +9,14 @@ final class QuantityValidation {
         Map.entry("zero", "0"), Map.entry("one", "1"), Map.entry("two", "2"), Map.entry("three", "3"),
         Map.entry("four", "4"), Map.entry("five", "5"), Map.entry("six", "6"), Map.entry("seven", "7"),
         Map.entry("eight", "8"), Map.entry("nine", "9"), Map.entry("ten", "10"), Map.entry("double", "2"),
-        Map.entry("doubled", "2"), Map.entry("twice", "2"), Map.entry("triple", "3"), Map.entry("thrice", "3"), Map.entry("quadruple", "4"));
+        Map.entry("doubled", "2"), Map.entry("doubles", "2"), Map.entry("twice", "2"),
+        Map.entry("triple", "3"), Map.entry("triples", "3"), Map.entry("tripled", "3"), Map.entry("thrice", "3"),
+        Map.entry("quadruple", "4"), Map.entry("quadruples", "4"), Map.entry("quadrupled", "4"));
     private static List<String> numbers(String text) {
         return new ArrayList<>(StyledParagraph.NUMBER.matcher(text).results().map(m -> m.group().replace(",", "")).toList());
     }
     static boolean preserved(String source, String result) {
+        if (!EffectLevelTokens.preserved(source, result)) return false;
         // Keep a separator for protected values, so "every <n0/> seconds" is not
         // mistaken for "every second" after stripping markup.
         String input = source.replaceAll("<t\\d+>[^<>]*</t\\d+>", "term").replaceAll("<n\\d+/>", "#").replaceAll("</?s\\d+>", "");

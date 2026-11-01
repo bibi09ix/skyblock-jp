@@ -1,0 +1,86 @@
+{
+  "build_id": "20261028T171546016395Z-candidate-39dae61d79154f4d",
+  "rules": [
+    {
+      "from_channel": "item",
+      "id": "observed-applicability/new-31",
+      "requires": {
+        "location": "CONTAINER",
+        "paragraphRole": "DESCRIPTION",
+        "slotMatches": true,
+        "tooltipKind": "UI",
+        "tooltipTitle": "Booster Cookie"
+      },
+      "semantic_role": "DESCRIPTION",
+      "source": "Obtain the Cookie Buff from Booster Cookies in the hub's Community Shop.",
+      "source_ids": [
+        "observed/item/runtime079_3a29ed15a14527f1b3"
+      ],
+      "source_sha256": "3a29ed15a14527f1b3c0fd0c5bb07e8c1eca6811bebe35547384496595fd9eb5",
+      "target": "HubのCommunity ShopでBooster Cookiesを入手して、Cookie Buffを得よう。",
+      "target_sha256": "50558abd016afbed461e25a32967458d6c11122fc6b68485b533d44f4e44d563",
+      "to_channel": "ui"
+    },
+    {
+      "from_channel": "item",
+      "id": "observed-applicability/new-34",
+      "requires": {
+        "location": "CONTAINER",
+        "paragraphRole": "DESCRIPTION",
+        "slotMatches": true,
+        "tooltipKind": "UI",
+        "tooltipTitle": "Loadouts"
+      },
+      "semantic_role": "DESCRIPTION",
+      "source": "View and edit preset armor and equipment sets with other settings to make switching activities easy.",
+      "source_ids": [
+        "observed/item/runtime079_857be82ee975adecab"
+      ],
+      "source_sha256": "857be82ee975adecab6c7c0bc23a7fc9fbac53e94c831fc4225adf80c036e34a",
+      "target": "防具・Equipmentのセットとその他の設定をまとめたプリセットを確認・編集し、活動を簡単に切り替えられる。",
+      "target_sha256": "b80134fbb36e86148926754ed10511c8d3b1cc3be93a6ea51f7215c90fe4ed41",
+      "to_channel": "ui"
+    },
+    {
+      "from_channel": "item",
+      "id": "observed-applicability/old-11",
+      "requires": {
+        "location": "CONTAINER",
+        "paragraphRole": "DESCRIPTION",
+        "slotMatches": true,
+        "tooltipKind": "UI",
+        "tooltipTitle": "Calendar and Events"
+      },
+      "semantic_role": "DESCRIPTION",
+      "source": "View the SkyBlock Calendar, upcoming events, and event rewards!",
+      "source_ids": [
+        "observed/item/runtime079_fc0e055e5124f5353e"
+      ],
+      "source_sha256": "fc0e055e5124f5353e2a315fc9cec1796822fa5d996fd54074593f4c340a9d55",
+      "target": "SkyBlock Calendar、今後のイベント、イベント報酬を確認できる！",
+      "target_sha256": "f6f45b3e338e4d938f57c821065d128ce82e0f225067c6a6a60311fd8301fa65",
+      "to_channel": "ui"
+    },
+    {
+      "from_channel": "item",
+      "id": "observed-applicability/old-12",
+      "requires": {
+        "location": "CONTAINER",
+        "paragraphRole": "DESCRIPTION_LABEL",
+        "slotMatches": true,
+        "tooltipKind": "UI",
+        "tooltipTitle": "Calendar and Events"
+      },
+      "semantic_role": "DESCRIPTION_LABEL",
+      "source": "Active Events:",
+      "source_ids": [
+        "observed/item/review0710_45e673b619462b91df_2481f749"
+      ],
+      "source_sha256": "45e673b619462b91dfcc546888b369d1ce0f431f53d557433d368d20d109746b",
+      "target": "開催中のイベント:",
+      "target_sha256": "2481f749d2c23320d4cd89a292c31811c6d6aebbdeedb82030ca04c836fd4102",
+      "to_channel": "ui"
+    }
+  ],
+  "schema_version": 1
+}

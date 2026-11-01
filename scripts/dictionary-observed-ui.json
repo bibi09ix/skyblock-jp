@@ -1,0 +1,230 @@
+{
+  "editing_help": "ja（日本語訳）と reason（判断理由）を編集。en・source_sha256・evidence は実機原文の証拠なので変更しない。approved=true の候補辞書だけに収録し、UI以外の会話やアイテム名には適用しない。",
+  "entries": [
+    {
+      "approved": true,
+      "channel": "ui",
+      "en": "Right-click to manage!",
+      "evidence": {
+        "channel": "ui",
+        "event_line": 126,
+        "event_sha256": "b6181b511d6da1a9f440e69718d618eb803ebfea2dfa79c4f2341ec7aeb3292c",
+        "item": "Dean",
+        "line_end": 4,
+        "line_start": 4,
+        "log": "translation-display.jsonl",
+        "role": "UI_CONTROL",
+        "screen_title": "Abiphone X Red",
+        "source_lines": [
+          "Right-click to manage!"
+        ],
+        "source_lines_sha256": "ac05fdb0ee2e8cb0cb1c56939955f3d8429551d35c0bf3de5080f2dba64879f2",
+        "time": "2026-10-29T23:53:58.959025200Z",
+        "tooltip_id": "2928b0086ff0a51c",
+        "version": "0.7.7"
+      },
+      "id": "observed/ui/contact_manage",
+      "ja": "右クリックで管理！",
+      "reason": "AbiphoneのDean・Maddox連絡先の実機ツールチップで共通する操作文として確認。右クリックという入力と連絡先を管理する動作を保持する。NPCの会話には適用しない。",
+      "role": "UI_CONTROL",
+      "source_sha256": "d9973e48dc0f53e6054fa44b8700dc6e3045eb4bb36e86f6743b429897ca1718"
+    },
+    {
+      "approved": true,
+      "channel": "ui",
+      "en": "Left-click to call!",
+      "evidence": {
+        "channel": "ui",
+        "event_line": 126,
+        "event_sha256": "b6181b511d6da1a9f440e69718d618eb803ebfea2dfa79c4f2341ec7aeb3292c",
+        "item": "Dean",
+        "line_end": 5,
+        "line_start": 5,
+        "log": "translation-display.jsonl",
+        "role": "UI_CONTROL",
+        "screen_title": "Abiphone X Red",
+        "source_lines": [
+          "Left-click to call!"
+        ],
+        "source_lines_sha256": "b0b36a7bce9c3941dc66134c1c7f66994e764896cd1ff90e29d114c10e116261",
+        "time": "2026-10-29T23:53:58.959025200Z",
+        "tooltip_id": "2928b0086ff0a51c",
+        "version": "0.7.7"
+      },
+      "id": "observed/ui/contact_call",
+      "ja": "左クリックで電話をかける！",
+      "reason": "AbiphoneのDean・Maddox連絡先の実機ツールチップで共通する操作文として確認。左クリックで電話をかける操作を表す。NPCの会話やDeanの未収録台詞を追加するものではない。",
+      "role": "UI_CONTROL",
+      "source_sha256": "c428bcb637ac331e8d3dea5737190e20d153c266f66d818030a84985b29540d5"
+    },
+    {
+      "approved": true,
+      "channel": "ui",
+      "en": "Close",
+      "evidence": {
+        "channel": "ui",
+        "event_line": 106,
+        "event_sha256": "d0799e95d7d3694cced6f6928a8a87cd237d97d5ecf1e33574dfd308542ee1f7",
+        "item": "Close",
+        "line_end": 1,
+        "line_start": 1,
+        "log": "translation-display.jsonl",
+        "role": "UI_TITLE",
+        "screen_title": "SkyBlock Menu",
+        "source_lines": [
+          "Close"
+        ],
+        "source_lines_sha256": "27ec7eac471568b902151f29c86f5da8fd5684bb1bddf5aac799a4abd84f63e4",
+        "time": "2026-10-29T23:43:41.028089800Z",
+        "tooltip_id": "a689667890c370d0",
+        "version": "0.7.7"
+      },
+      "id": "observed/ui/close",
+      "ja": "閉じる",
+      "reason": "SkyBlock Menu の barrier 操作ボタンとして実機で確認。アイテム名やNPC会話ではなく、UIタイトルに限定する。",
+      "role": "UI_TITLE",
+      "source_sha256": "7d9eb7acb13e24625c404401d8e88b2350e32162455885f18276cf802f7701ed"
+    },
+    {
+      "approved": true,
+      "channel": "ui",
+      "en": "Left-click to summon!",
+      "evidence": {
+        "channel": "ui",
+        "event_line": 108,
+        "event_sha256": "b354707328b6e5928e4bc2857ca2ea5c057da4a233149d5b124b97f95cd9bcbc",
+        "item": "[Lvl 85] Megalodon",
+        "line_end": 29,
+        "line_start": 29,
+        "log": "translation-display.jsonl",
+        "role": "UI_CONTROL",
+        "screen_title": "(1/2) Pets",
+        "source_lines": [
+          "Left-click to summon!"
+        ],
+        "source_lines_sha256": "632da3fbcf51124b7cb054041853e0ae91479f540c7107468f47dcf62d7e5a12",
+        "time": "2026-10-29T23:44:00.626485200Z",
+        "tooltip_id": "6d4888124dcb180e",
+        "version": "0.7.7"
+      },
+      "id": "observed/ui/pet_summon",
+      "ja": "左クリックで呼び出す！",
+      "reason": "Pets メニューで複数ペットに共通する操作文として実機で確認。左クリックという入力と呼び出す動作を保持する。",
+      "role": "UI_CONTROL",
+      "source_sha256": "5d27b863e820f4a82544a79e0843e27c4bdda6e17cffc86d37c60b8d2c505cbc"
+    },
+    {
+      "approved": true,
+      "channel": "ui",
+      "en": "Shift Left-click to toggle as favorite!",
+      "evidence": {
+        "channel": "ui",
+        "event_line": 108,
+        "event_sha256": "b354707328b6e5928e4bc2857ca2ea5c057da4a233149d5b124b97f95cd9bcbc",
+        "item": "[Lvl 85] Megalodon",
+        "line_end": 30,
+        "line_start": 30,
+        "log": "translation-display.jsonl",
+        "role": "UI_CONTROL",
+        "screen_title": "(1/2) Pets",
+        "source_lines": [
+          "Shift Left-click to toggle as favorite!"
+        ],
+        "source_lines_sha256": "be55ddd3af42cd06b375c819879b29ce52291cdaf3b987733015e0d1a0dcf729",
+        "time": "2026-10-29T23:44:00.626485200Z",
+        "tooltip_id": "6d4888124dcb180e",
+        "version": "0.7.7"
+      },
+      "id": "observed/ui/pet_favorite",
+      "ja": "Shiftを押しながら左クリックでお気に入りを登録・解除！",
+      "reason": "Pets メニューで実機確認。Shiftを押しながら左クリックする操作と、登録・解除の両方を切り替える意味を保持する。",
+      "role": "UI_CONTROL",
+      "source_sha256": "55647cd63660b415811f0307a2602d3b3844178ebc76f0b8237df52c80daf72d"
+    },
+    {
+      "approved": true,
+      "channel": "ui",
+      "en": "Right-click to convert to an item!",
+      "evidence": {
+        "channel": "ui",
+        "event_line": 108,
+        "event_sha256": "b354707328b6e5928e4bc2857ca2ea5c057da4a233149d5b124b97f95cd9bcbc",
+        "item": "[Lvl 85] Megalodon",
+        "line_end": 31,
+        "line_start": 31,
+        "log": "translation-display.jsonl",
+        "role": "UI_CONTROL",
+        "screen_title": "(1/2) Pets",
+        "source_lines": [
+          "Right-click to convert to an item!"
+        ],
+        "source_lines_sha256": "bbf64e008f680d96b741c2135994b5e97c62578c1550d0ca6b92bc90f631f423",
+        "time": "2026-10-29T23:44:00.626485200Z",
+        "tooltip_id": "6d4888124dcb180e",
+        "version": "0.7.7"
+      },
+      "id": "observed/ui/pet_convert_to_item",
+      "ja": "右クリックでアイテムに戻す！",
+      "reason": "Pets メニューで実機確認。右クリックでメニュー内のペットを所持可能なアイテムへ変える操作を表す。",
+      "role": "UI_CONTROL",
+      "source_sha256": "fb382eee1ef5e03984a331df6e84ab4baa2ce8570a599dcfb2d9b247c79b2d19"
+    },
+    {
+      "approved": true,
+      "channel": "ui",
+      "en": "Also accessible via /profiles",
+      "evidence": {
+        "channel": "ui",
+        "event_line": 113,
+        "event_sha256": "4a4e27ff4e0afa3e97e8f98b8beed31254aca72749ae06177973468e286de10e",
+        "item": "Profile Management",
+        "line_end": 13,
+        "line_start": 13,
+        "log": "translation-display.jsonl",
+        "role": "UI_CONTROL",
+        "screen_title": "SkyBlock Menu",
+        "source_lines": [
+          "Also accessible via /profiles"
+        ],
+        "source_lines_sha256": "cdcc2ddfe422991d56907e39a2b246acca9a74c33f69fdb07890df26223ed62e",
+        "time": "2026-10-29T23:45:01.094943Z",
+        "tooltip_id": "0ac99ad03d296efa",
+        "version": "0.7.7"
+      },
+      "id": "observed/ui/access_profiles",
+      "ja": "/profilesからも開ける。",
+      "reason": "Profile Management の実機原文を確認。既存辞書には他23コマンドの同型操作文があるが /profiles は未収録。原文のコマンドをそのまま保持する。",
+      "role": "UI_CONTROL",
+      "source_sha256": "16fffb2a84d1c4e2c7048f0eea6b3228104652c1d29b3b9ec3fc9cc4cf2e138a"
+    },
+    {
+      "approved": true,
+      "channel": "ui",
+      "en": "Also accessible via /stats",
+      "evidence": {
+        "channel": "ui",
+        "event_line": 114,
+        "event_sha256": "094b2dd3e1cff2994ec2e753de6d8a5d9e75400f34c792582ee719bd4e11dd1a",
+        "item": "Stats & Equipment",
+        "line_end": 14,
+        "line_start": 14,
+        "log": "translation-display.jsonl",
+        "role": "UI_CONTROL",
+        "screen_title": "SkyBlock Menu",
+        "source_lines": [
+          "Also accessible via /stats"
+        ],
+        "source_lines_sha256": "a5720df875f555e8d632a737cd214aed9733bb996aa439dbf144545f739d1319",
+        "time": "2026-10-29T23:45:10.607954300Z",
+        "tooltip_id": "03eee171f12011b0",
+        "version": "0.7.7"
+      },
+      "id": "observed/ui/access_stats",
+      "ja": "/statsからも開ける。",
+      "reason": "Stats & Equipment の実機原文を確認。既存辞書には他23コマンドの同型操作文があるが /stats は未収録。原文のコマンドをそのまま保持する。",
+      "role": "UI_CONTROL",
+      "source_sha256": "bb3bf530059b984f2e711d258e25694538c5062e1a265197530926da1d00be4e"
+    }
+  ],
+  "schema_version": 1
+}

@@ -15,15 +15,18 @@ class NpcLevelRegressionTest {
         assertNull(NpcTranslation.validate(p.encoded(), result), result);
         return p.decode(result).getString();
     }
-    @Test void levelAndSkillStayTogetherWithTheirDifferentOriginalColors() {
+    @Test void decomposedLevelRetainsItsSkillLabelAndDifferentOriginalColors() {
         var source = Component.literal("[NPC] Fann: Come back to me when you have ")
             .append(Component.literal("Taming Skill ").withStyle(ChatFormatting.GREEN))
             .append(Component.literal("10").withStyle(ChatFormatting.GOLD));
         var p = NpcTranslation.paragraph(source);
-        assertTrue(p.encoded().contains("<t0>Taming Skill 10</t0>"));
+        assertTrue(p.encoded().contains("<t0>Taming</t0>"));
+        assertTrue(p.encoded().contains("<n0/>"));
+        assertTrue(p.encoded().contains("Skill"));
         var output = p.decode(NpcTranslationRepair.repair(p.encoded(), "訳文。10", ""));
         assertEquals("Taming Skill 10に到達したら、また来てね。", output.getString());
         assertTrue(StyledParagraph.glyphs(output).stream().anyMatch(g -> g.text().equals("T") && g.style().getColor().getValue() == net.minecraft.network.chat.TextColor.GREEN.getValue()));
+        assertTrue(StyledParagraph.glyphs(output).stream().anyMatch(g -> g.text().equals("S") && g.style().getColor().getValue() == net.minecraft.network.chat.TextColor.GREEN.getValue()));
         assertTrue(StyledParagraph.glyphs(output).stream().anyMatch(g -> g.text().equals("1") && g.style().getColor().getValue() == net.minecraft.network.chat.TextColor.GOLD.getValue()));
     }
     @Test void miningRequirementIsNotDuplicatedOrConvertedToSkillAcquisition() {
@@ -54,6 +57,12 @@ class NpcLevelRegressionTest {
     @Test void sourceQuantityIsVariableNotHardcoded() {
         assertEquals("Taming Skill 25に到達したら、また来てね。", fix("Come back to me when you have Taming Skill 25", "最後に25", ""));
         assertEquals("Mining Skill 50に到達したら、また来てね。", fix("Come back once you have reached Mining Skill 50!", "末尾に50", ""));
+        assertEquals("Combat Level XVに到達したら、また来てね。", fix("Come back to me when you have Combat Level XV", "Combatレベル XIVだね。", ""));
+        assertEquals("Foraging Skill 40に到達したら、また来てね。", fix("Come back to me when you have Foraging Skill 40", "最後に10", ""));
+    }
+    @Test void oldWholeLevelMarkersStillRepairWithoutInventingAValue() {
+        String source = "Come back to me when you have <t0>Taming Skill 25</t0>";
+        assertEquals("<t0>Taming Skill 25</t0>に到達したら、また来てね。", NpcTranslationRepair.repair(source, "最後に10", ""));
     }
     @Test void automaticNpcPathAppliesAndAuditsRepair() throws Exception {
         var p = NpcTranslation.paragraph(Component.literal("[NPC] Fann: Come back to me when you have Taming Skill 10"));

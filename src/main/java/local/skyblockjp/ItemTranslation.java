@@ -3,7 +3,7 @@ import java.util.*;
 import java.util.function.Function;
 import net.minecraft.network.chat.Component;
 
-/** Prepare every replacement before making any visible change. */
+/** Atomic API display and synchronous local dictionary paragraph replacements. */
 public final class ItemTranslation {
     public record Result(List<Component> lines, int complete, int total, String error) {
         public boolean ready() { return total > 0 && complete == total && error == null; }
@@ -11,11 +11,16 @@ public final class ItemTranslation {
     public static Result prepare(List<Component> original, List<LoreParser.Block> blocks,
             List<StyledParagraph> paragraphs, Function<String, String> cache,
             Function<Component, List<Component>> wrap) {
+        return prepareParagraphs(original, blocks, paragraphs, p -> cache.apply(p.encoded()), wrap);
+    }
+    public static Result prepareParagraphs(List<Component> original, List<LoreParser.Block> blocks,
+            List<StyledParagraph> paragraphs, Function<StyledParagraph, String> cache,
+            Function<Component, List<Component>> wrap) {
         List<List<Component>> replacements = new ArrayList<>();
         int complete = 0;
         String error = null;
         for (StyledParagraph paragraph : paragraphs) {
-            String text = cache.apply(paragraph.encoded());
+            String text = cache.apply(paragraph);
             if (text == null) { replacements.add(null); continue; }
             try { replacements.add(wrap.apply(paragraph.decodeForDisplay(text))); complete++; }
             catch (IllegalArgumentException e) { replacements.add(null); error = "色・数値の復元に失敗しました"; }
@@ -26,6 +31,34 @@ public final class ItemTranslation {
                 result.subList(blocks.get(i).start(), blocks.get(i).end()).clear();
                 result.addAll(blocks.get(i).start(), replacements.get(i));
             }
+        }
+        return new Result(result, complete, paragraphs.size(), error);
+    }
+    /** Apply local dictionary hits in this call; misses never delay or trigger another lookup path. */
+    public static Result prepareDictionary(List<Component> original, List<LoreParser.Block> blocks,
+            List<StyledParagraph> paragraphs, Function<StyledParagraph, String> localLookup,
+            Function<Component, List<Component>> wrap) {
+        List<List<Component>> replacements = new ArrayList<>();
+        int complete = 0;
+        String error = null;
+        for (StyledParagraph paragraph : paragraphs) {
+            String text = localLookup.apply(paragraph);
+            if (text == null) { replacements.add(null); continue; }
+            try {
+                if (text.isBlank() || !StyledParagraph.validNumbers(paragraph.encoded(), text))
+                    throw new IllegalArgumentException("Invalid local dictionary value");
+                replacements.add(wrap.apply(paragraph.decode(text)));
+                complete++;
+            } catch (IllegalArgumentException e) {
+                replacements.add(null);
+                error = "辞書の色・数値の復元に失敗しました";
+            }
+        }
+        List<Component> result = new ArrayList<>(original);
+        for (int i = blocks.size() - 1; i >= 0; i--) {
+            if (replacements.get(i) == null) continue;
+            result.subList(blocks.get(i).start(), blocks.get(i).end()).clear();
+            result.addAll(blocks.get(i).start(), replacements.get(i));
         }
         return new Result(result, complete, paragraphs.size(), error);
     }

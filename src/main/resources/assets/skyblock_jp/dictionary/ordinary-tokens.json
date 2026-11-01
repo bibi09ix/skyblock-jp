@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "normalization": "bundled-source-v1",
+  "rules": [
+    {
+      "id": "ui.health.maximum_health_ordinary",
+      "approved": true,
+      "source": "Your Health stat increases your maximum health.",
+      "source_sha256": "59ddbd914b863892bc896aebd8227eabf94057f07e8ef36559b2e958c53bac4d",
+      "reason": "The initial Health is the named stat; the final lowercase health is ordinary maximum-health wording.",
+      "ordinary_spans": [
+        {
+          "start": 40,
+          "end": 46,
+          "text": "health"
+        }
+      ]
+    },
+    {
+      "id": "item.giant_killer.extra_health_ordinary",
+      "approved": true,
+      "source": "Increases damage dealt by 0.9% for each percent of extra health that your target has above you up to 45%.",
+      "source_sha256": "4cd19c29d1d37bc4583faa2c63b27f12cdce53733c19aa8079b272b8d0840667",
+      "reason": "The lowercase health describes the target's current health in a comparative condition, not a second named stat. Damage percentages remain protected.",
+      "ordinary_spans": [
+        {
+          "start": 57,
+          "end": 63,
+          "text": "health"
+        }
+      ]
+    },
+    {
+      "id": "item.bonzo.replenish_health_ordinary",
+      "approved": true,
+      "source": "Instead of dying, gain damage immunity and +33.6  Strength for 3s and fully replenish your health. The cooldown and Strength bonus you receive improve based on your Dungeoneering Skill level. This ability only works while in The Catacombs!",
+      "source_sha256": "7c6b12d0a09d6fa07698377283d139a103f8ae01449764ab124236699cdb0958",
+      "reason": "The lowercase health is the ordinary object of fully replenish. Named Strength, Dungeoneering Skill and The Catacombs remain protected.",
+      "ordinary_spans": [
+        {
+          "start": 92,
+          "end": 98,
+          "text": "health"
+        }
+      ]
+    }
+  ]
+}

@@ -16,12 +16,16 @@ final class MessageHandles {
     Component get(String id) { return messages.get(id); }
     void clear() { messages.clear(); }
     static Component original(Component message) {
+        return originalReference(message).copy();
+    }
+    /** Keep vanilla GuiMessage parent identity for occurrence-specific context lookup. */
+    static Component originalReference(Component message) {
         var parts = message.getSiblings();
         if (parts.size() == 3) {
-            if (isButton(parts.getFirst())) return parts.getLast().copy();
-            if (isButton(parts.getLast())) return parts.getFirst().copy();
+            if (isButton(parts.getFirst())) return parts.getLast();
+            if (isButton(parts.getLast())) return parts.getFirst();
         }
-        return message.copy();
+        return message;
     }
     private static boolean isButton(Component c) {
         return c.getString().equals("[訳]") && c.getStyle().getClickEvent() instanceof ClickEvent.RunCommand command && command.command().startsWith("/sbjp translate ");

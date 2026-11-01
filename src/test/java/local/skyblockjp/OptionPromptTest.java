@@ -40,7 +40,7 @@ class OptionPromptTest {
     @Test void manualPromptDoesNotGetSplitIntoHeaderAndBody() {
         var p = NpcTranslation.whole(Component.literal("Select an option: [Yes] [No]"));
         assertEquals(p.encoded(), ChatText.body(p.encoded()));
-        var player = NpcTranslation.whole(Component.literal("[VIP] Player: hello"));
+        var player = NpcTranslation.wholeChat(Component.literal("[VIP] Player: hello"));
         assertFalse(ChatText.body(player.encoded()).contains("Player:"));
     }
 }
