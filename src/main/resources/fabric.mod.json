@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "skyblock_jp",
-  "version": "0.7.12",
+  "version": "0.8.0",
   "name": "SkyBlock JP",
   "description": "Paragraph-aware Japanese lore and NPC translation. Keeps item statistics in English.",
   "environment": "client",

@@ -1,6 +1,9 @@
 # JSON resources and their reviewed inputs are bound by byte-level SHA-256.
 # Preserve their original bytes on Windows and Linux checkouts.
 *.json -text whitespace=trailing-space,space-before-tab,cr-at-eol
+*.java text eol=lf
+*.py text eol=lf
+*.md text eol=lf
 
 # These files are executed or parsed by Linux release runners.
 gradlew text eol=lf

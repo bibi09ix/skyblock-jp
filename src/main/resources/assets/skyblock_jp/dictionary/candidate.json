@@ -2121,7 +2121,7 @@
       "speaker": ""
     }
   ],
-  "build_id": "20261028T171546016395Z-candidate-39dae61d79154f4d",
+  "build_id": "20261028T171546016395Z-candidate-eb862ce7f0259b2e",
   "entries": [
     {
       "channel": "common",
@@ -89763,24 +89763,24 @@
     },
     {
       "channel": "item",
-      "keep_original": true,
+      "keep_original": false,
       "source": "Consumes 3 material to grant the following effects: ➜ +50 Bonus Pest Chance while in a sprayed plot. ➜  Pests are 2x more likely to spawn in sprayed plots.",
       "source_ids": [
         "ui/slot_description/7b138cb2b5af2775bdd65544",
         "ui/slot_description/a530b73d242f4f7b87e8d5e9"
       ],
       "speaker": "",
-      "target": "Consumes 3 material to grant the following effects: ➜ +50 Bonus Pest Chance while in a sprayed plot. ➜  Pests are 2x more likely to spawn in sprayed plots."
+      "target": "素材を3個消費して、次の効果を得る: ➜ 散布済みの区画内では+50 Bonus Pest Chance。 ➜ 散布済みの区画では Pestsの出現率が2倍になる。"
     },
     {
       "channel": "item",
-      "keep_original": true,
+      "keep_original": false,
       "source": "Consumes 5 material to grant the following effects: ➜ +75 Bonus Pest Chance while in a sprayed plot. ➜  Pests are 3x more likely to spawn in sprayed plots.",
       "source_ids": [
         "ui/slot_description/ac2c14cf210c1c486023304f"
       ],
       "speaker": "",
-      "target": "Consumes 5 material to grant the following effects: ➜ +75 Bonus Pest Chance while in a sprayed plot. ➜  Pests are 3x more likely to spawn in sprayed plots."
+      "target": "素材を5個消費して、次の効果を得る: ➜ 散布済みの区画内では+75 Bonus Pest Chance。 ➜ 散布済みの区画では Pestsの出現率が3倍になる。"
     },
     {
       "channel": "item",
@@ -545551,24 +545551,24 @@
     },
     {
       "channel": "ui",
-      "keep_original": true,
+      "keep_original": false,
       "source": "Consumes 3 material to grant the following effects: ➜ +50 Bonus Pest Chance while in a sprayed plot. ➜  Pests are 2x more likely to spawn in sprayed plots.",
       "source_ids": [
         "ui/slot_description/7b138cb2b5af2775bdd65544",
         "ui/slot_description/a530b73d242f4f7b87e8d5e9"
       ],
       "speaker": "",
-      "target": "Consumes 3 material to grant the following effects: ➜ +50 Bonus Pest Chance while in a sprayed plot. ➜  Pests are 2x more likely to spawn in sprayed plots."
+      "target": "素材を3個消費して、次の効果を得る: ➜ 散布済みの区画内では+50 Bonus Pest Chance。 ➜ 散布済みの区画では Pestsの出現率が2倍になる。"
     },
     {
       "channel": "ui",
-      "keep_original": true,
+      "keep_original": false,
       "source": "Consumes 5 material to grant the following effects: ➜ +75 Bonus Pest Chance while in a sprayed plot. ➜  Pests are 3x more likely to spawn in sprayed plots.",
       "source_ids": [
         "ui/slot_description/ac2c14cf210c1c486023304f"
       ],
       "speaker": "",
-      "target": "Consumes 5 material to grant the following effects: ➜ +75 Bonus Pest Chance while in a sprayed plot. ➜  Pests are 3x more likely to spawn in sprayed plots."
+      "target": "素材を5個消費して、次の効果を得る: ➜ 散布済みの区画内では+75 Bonus Pest Chance。 ➜ 散布済みの区画では Pestsの出現率が3倍になる。"
     },
     {
       "channel": "ui",

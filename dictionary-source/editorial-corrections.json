@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "notes": "Reviewed editorial corrections applied when exporting the initial portable source snapshot. Original workbench files are not modified.",
+  "entries": [
+    {
+      "id": "ui/slot_description/a530b73d242f4f7b87e8d5e9",
+      "approved": true,
+      "source_sha256": "b194b4c6ffb633ebeab53632461b8cba611fb12fdfec120cfc2a2ab196450a24",
+      "previous_status": "excluded",
+      "previous_ja": "",
+      "ja": "素材を3個消費して、次の効果を得る:\n➜ 散布済みの区画内では+50 Bonus Pest Chance。\n➜ 散布済みの区画では Pestsの出現率が2倍になる。",
+      "reason": "素材消費量・Bonus Pest Chance・Pests出現倍率を説明する本文。名称のみとする旧保持理由を訂正し、数値・固有名・記号を維持して翻訳。",
+      "source_refs": [
+        {
+          "dataset": "wiki-features",
+          "file": "wiki-features/pages/140073.json",
+          "sha256": "3af454f31b5ac8c3308081ff5b74add17f05dc1a31aba89493f9b7e50e15e1e3",
+          "url": "https://hypixelskyblock.minecraft.wiki/w/Special:PermanentLink/844780",
+          "source_id": "140073",
+          "revision": 844780,
+          "span": [
+            0,
+            1736
+          ],
+          "templatepath": "root/0/UI/4, 5/slot_description",
+          "pointer": "/raw_wikitext",
+          "rendered_line_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "rendered_field_line_count": 8,
+          "rendered_paragraph_count": 2,
+          "rendered_line_mapping": "zero-based lines of render_text(raw, breaks=True); raw is the complete original field",
+          "occurrence_id": "occ/b72d2ee18085328f3f80b4e2"
+        }
+      ]
+    },
+    {
+      "id": "ui/slot_description/7b138cb2b5af2775bdd65544",
+      "approved": true,
+      "source_sha256": "b194b4c6ffb633ebeab53632461b8cba611fb12fdfec120cfc2a2ab196450a24",
+      "previous_status": "excluded",
+      "previous_ja": "",
+      "ja": "素材を3個消費して、次の効果を得る:\n➜ 散布済みの区画内では+50 Bonus Pest Chance。\n➜ 散布済みの区画では Pestsの出現率が2倍になる。",
+      "reason": "素材消費量・Bonus Pest Chance・Pests出現倍率を説明する本文。名称のみとする旧保持理由を訂正し、数値・固有名・記号を維持して翻訳。",
+      "source_refs": [
+        {
+          "dataset": "wiki-features",
+          "file": "wiki-features/pages/140071.json",
+          "sha256": "92f5695c2b0b28130b4c1f4c52ef2db1077df203b7ac81c2262fad665f408e1e",
+          "url": "https://hypixelskyblock.minecraft.wiki/w/Special:PermanentLink/844779",
+          "source_id": "140071",
+          "revision": 844779,
+          "span": [
+            0,
+            1879
+          ],
+          "templatepath": "root/0/UI/4, 5/slot_description",
+          "pointer": "/raw_wikitext",
+          "rendered_line_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "rendered_field_line_count": 8,
+          "rendered_paragraph_count": 2,
+          "rendered_line_mapping": "zero-based lines of render_text(raw, breaks=True); raw is the complete original field",
+          "occurrence_id": "occ/cfd0d074ab6dc33052c86232"
+        }
+      ]
+    },
+    {
+      "id": "ui/slot_description/ac2c14cf210c1c486023304f",
+      "approved": true,
+      "source_sha256": "1ad327b419331f1bcd1769c816e9fd2f24bcbc71dc41915344da4f74f1ab3461",
+      "previous_status": "excluded",
+      "previous_ja": "",
+      "ja": "素材を5個消費して、次の効果を得る:\n➜ 散布済みの区画内では+75 Bonus Pest Chance。\n➜ 散布済みの区画では Pestsの出現率が3倍になる。",
+      "reason": "素材消費量・Bonus Pest Chance・Pests出現倍率を説明する本文。名称のみとする旧保持理由を訂正し、数値・固有名・記号を維持して翻訳。",
+      "source_refs": [
+        {
+          "dataset": "wiki-features",
+          "file": "wiki-features/pages/140071.json",
+          "sha256": "92f5695c2b0b28130b4c1f4c52ef2db1077df203b7ac81c2262fad665f408e1e",
+          "url": "https://hypixelskyblock.minecraft.wiki/w/Special:PermanentLink/844779",
+          "source_id": "140071",
+          "revision": 844779,
+          "span": [
+            0,
+            1879
+          ],
+          "templatepath": "root/0/UI/4, 6/slot_description",
+          "pointer": "/raw_wikitext",
+          "rendered_line_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "rendered_field_line_count": 8,
+          "rendered_paragraph_count": 2,
+          "rendered_line_mapping": "zero-based lines of render_text(raw, breaks=True); raw is the complete original field",
+          "occurrence_id": "occ/b675ad63ddb2c90ae9be97af"
+        }
+      ]
+    }
+  ]
+}

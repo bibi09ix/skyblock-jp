@@ -1,5 +1,8 @@
-plugins { id 'net.fabricmc.fabric-loom' version '1.16.1' }
-version = '0.7.12'
+plugins {
+    id 'net.fabricmc.fabric-loom' version '1.16.1'
+    id 'com.diffplug.spotless' version '8.10.4'
+}
+version = '0.8.0'
 group = 'local.skyblockjp'
 repositories { mavenCentral() }
 dependencies {
@@ -10,6 +13,13 @@ dependencies {
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 java { sourceCompatibility = JavaVersion.VERSION_25; targetCompatibility = JavaVersion.VERSION_25; withSourcesJar() }
+
+spotless {
+    java {
+        target 'src/main/java/**/*.java', 'src/test/java/**/*.java'
+        googleJavaFormat('1.36.1').aosp().skipJavadocFormatting()
+    }
+}
 tasks.withType(JavaCompile).configureEach { options.encoding = 'UTF-8'; options.release = 25 }
 tasks.withType(Test).configureEach {
     // Corpus integration tests load both full JSON resources and multiple isolated indexes.
@@ -27,6 +37,26 @@ tasks.register('offlineTest', Test) {
     useJUnitPlatform()
     exclude '**/*LiveTest.class', '**/LiveTranslationTest.class'
 }
+
+// Replay reviewed, anonymous native tooltips through the same production pipeline.
+// The fixture's intent labels fix the denominator independently of parser choices.
+tasks.register('dictionaryCoverage', JavaExec) {
+    group = 'verification'
+    description = 'Measure the bundled dictionary through classification and final rendering.'
+    dependsOn testClasses
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = 'local.skyblockjp.DictionaryCoverageRunner'
+    maxHeapSize = '1536m'
+    def output = providers.gradleProperty('coverageOutput').getOrElse(
+            layout.buildDirectory.file('reports/dictionary-coverage/current.json').get().asFile.absolutePath)
+    def archives = providers.gradleProperty('coverageZips').getOrElse('')
+    if (archives) {
+        args '--zip', output
+        args archives.split(';').findAll { !it.isBlank() }
+    } else {
+        args layout.projectDirectory.file('src/test/resources/dictionary-coverage-fixtures.json').asFile.absolutePath, output
+    }
+}
 tasks.register('verifyBundledDictionary') {
     description = 'Verify the committed dictionary snapshot against its deterministic manifest.'
     group = 'verification'
@@ -37,10 +67,11 @@ tasks.register('verifyBundledDictionary') {
     def alignment = layout.projectDirectory.file('src/main/resources/assets/skyblock_jp/dictionary/alignment.json')
     def ordinaryTokens = layout.projectDirectory.file('src/main/resources/assets/skyblock_jp/dictionary/ordinary-tokens.json')
     def scopedDescriptions = layout.projectDirectory.file('src/main/resources/assets/skyblock_jp/dictionary/candidate-scoped-descriptions.json')
+    def terminology = layout.projectDirectory.file('src/main/resources/assets/skyblock_jp/terminology.json')
     def applicabilitySource = layout.projectDirectory.file('scripts/dictionary-observed-applicability.json')
     def runtimeVersion = layout.projectDirectory.file('src/main/java/local/skyblockjp/ModVersion.java')
     def modMetadata = layout.projectDirectory.file('src/main/resources/fabric.mod.json')
-    inputs.files(resource, manifest, matching, reviewed, alignment, ordinaryTokens,scopedDescriptions,applicabilitySource,runtimeVersion,modMetadata)
+    inputs.files(resource, manifest, matching, reviewed, alignment, ordinaryTokens,scopedDescriptions,terminology,applicabilitySource,runtimeVersion,modMetadata)
     doLast {
         def report = new groovy.json.JsonSlurper().parse(manifest.asFile, 'UTF-8')
         def digest = java.security.MessageDigest.getInstance('SHA-256')
@@ -80,6 +111,10 @@ tasks.register('verifyBundledDictionary') {
         digest.update(applicabilitySource.asFile.bytes)
         if(report.observed_applicability_source_sha256 != java.util.HexFormat.of().formatHex(digest.digest()))
             throw new GradleException('Observed applicability review/manifest mismatch; regenerate dictionary resources.')
+        digest.reset()
+        digest.update(terminology.asFile.bytes)
+        if(report.terminology_sha256 != java.util.HexFormat.of().formatHex(digest.digest()))
+            throw new GradleException('Terminology resource/manifest mismatch; regenerate dictionary resources.')
         def metadata=new groovy.json.JsonSlurper().parse(modMetadata.asFile,'UTF-8')
         if(metadata.version!=project.version.toString()||!runtimeVersion.asFile.getText('UTF-8').contains('CURRENT = "'+project.version+'";'))
             throw new GradleException('Build, Fabric metadata and diagnostic versions must agree.')

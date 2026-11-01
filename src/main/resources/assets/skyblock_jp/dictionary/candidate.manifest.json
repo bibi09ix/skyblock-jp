@@ -3,7 +3,7 @@
   "alignment_bytes": 138407,
   "alignment_sha256": "9090a9c28494eaa2c51ba4497fd0377decb6d02d7656aff9118705e4ac1a6662",
   "blocked_key_count": 424,
-  "build_id": "20261028T171546016395Z-candidate-39dae61d79154f4d",
+  "build_id": "20261028T171546016395Z-candidate-eb862ce7f0259b2e",
   "candidate_requires_runtime_opt_in": true,
   "conflicting_key_count": 424,
   "conflicts": [
@@ -18785,8 +18785,8 @@
       ]
     }
   ],
-  "dictionary_bytes": 31362836,
-  "dictionary_sha256": "976a9e238408aec2af02efa7ec80aac989f0025f5baf4e6d2b02cf328a862fff",
+  "dictionary_bytes": 31362916,
+  "dictionary_sha256": "f861d9329f767e3c3531801ee51ae2d8253b316320283351863b9d5afeae668f",
   "emitted_source_id_count": 112819,
   "entry_count": 75542,
   "entry_counts_by_channel": {
@@ -18801,13 +18801,13 @@
   },
   "input_entry_count": 125003,
   "input_status_counts": {
-    "draft": 100908,
-    "excluded": 24065,
+    "draft": 100911,
+    "excluded": 24062,
     "hold": 30
   },
-  "keep_original_count": 13581,
+  "keep_original_count": 13577,
   "matching_bytes": 289301,
-  "matching_sha256": "45c7a7c59f26e35d655e2c4fd80caefd90d588137841f45b295e91df03314b11",
+  "matching_sha256": "37041af687f70c3069e49b651c0e047fe8312b78554518ba85ab1ec9b7188696",
   "notes": [
     "Exact/normalized keys and explicitly typed numeric/Roman templates only; no fuzzy matching.",
     "Candidate packaging is not source approval or evidence of live game validation.",
@@ -45820,6 +45820,7 @@
   "ordinary_tokens_bytes": 1943,
   "ordinary_tokens_sha256": "36612ad54f92b8f6c8480da43c56743fa0ff8d513651c5806537c1c2cccb96bb",
   "proposed_unit_count": 204247,
+  "public_source_snapshot_sha256": "43a74140ac029bc8cf9decf9a0bf0aaf4d87dd0f86c7557dd4e39cd80e704646",
   "reviewed_bytes": 888774,
   "reviewed_contextual_rule_count": 6,
   "reviewed_numeric_families_source_sha256": "11b8c74bf66769c95a1888832ef6681cbed70bbf240d36b629780a4de10ef1c5",
@@ -45973,7 +45974,7 @@
   ],
   "reviewed_rule_count": 436,
   "reviewed_rule_rejections": [],
-  "reviewed_sha256": "47f2fa21834afd0f1ea278bd07e9f026fc2212b4844d2be58a4857aa044fa27f",
+  "reviewed_sha256": "066930a477f0b7d517694e13b84503b1e8db87a13cc563379ada3233abbc368d",
   "reviewed_token_role_decisions": [
     {
       "id": "reviewed/item/682eacba4f11f283e5-44136fa3",
@@ -46218,7 +46219,7 @@
   "scoped_description_rejections": [],
   "scoped_description_rule_count": 4,
   "scoped_descriptions_bytes": 3357,
-  "scoped_descriptions_sha256": "0773d705d2a711fc8bdb611e4b6f2a50f38441aef33826a9e2c0ad2abfdcfc11",
+  "scoped_descriptions_sha256": "1830898e69314d03b16f3bd9a247831f2e2d33764bfded03e7e0ee6d83767b0b",
   "skill_bodies_source_sha256": "a650dcaab33b63be14d69b7e97b1aa9b9aa89a57690e01664dddaa50108909ed",
   "skill_body_entry_count": 507,
   "skill_body_evidence": [
@@ -84046,7 +84047,7 @@
     ]
   },
   "source_adoption_flags_modified": false,
-  "source_manifest_sha256": "d3d9518a390fbcdf31fe6365811b7460504f8cb5ca160ac4bab0982c2c66aab5",
+  "source_manifest_sha256": "1d2111559b4a9bfa3489a9d403f87335cfae1f645242244900e310b9ac3293c1",
   "source_packs": [
     {
       "path": "translations/common/accessory/0001.json",
@@ -90578,7 +90579,7 @@
     },
     {
       "path": "translations/ui/general_skyblock/0688.json",
-      "sha256": "20f1c66293bfbf923c5eed781fa57a2358723d414879a4b67438a5e97c31d371"
+      "sha256": "228a9f3002373396daaf0de6dbabd472d5c45a080b6e16bd5bcae1ac8fd2f43c"
     },
     {
       "path": "translations/ui/general_skyblock/0689.json",
@@ -91018,7 +91019,7 @@
     },
     {
       "path": "translations/ui/general_skyblock/0798.json",
-      "sha256": "012b31b032dc1aaeb821e84a1874f553810aecadb018c738ce71288bfead8cc0"
+      "sha256": "d8fa92cdd88b6e78d9cac7275f6772bea9d4bdaf5b8ab3e3fde83270ca91c245"
     },
     {
       "path": "translations/ui/general_skyblock/0799.json",
@@ -92101,7 +92102,7 @@
       "sha256": "1b7c1eb3c0523df883e7dd325639536983e5415e501d92e7ecb0be04258330c2"
     }
   ],
-  "source_packs_sha256": "363a9dedb707e5fb57518a54f6ee026e21db34523db2102cc0d1325a07ce624a",
+  "source_packs_sha256": "3a7310b254661101fed7a52403e75fd9932442da6431b5b8d8731c92d41fb308",
   "source_translation_policy_sha256": "a0f0e708932c9d4642bcd58632a6a76c5b4fc55db4dd7129b1ff06b9b6599adc",
   "template_conflicts": [
     {
@@ -92335,6 +92336,7 @@
     "unsupported_template_context": 172
   },
   "template_source_id_count": 649,
+  "terminology_sha256": "12fa1fbf1e37bbef2f68458fbd4cea032bd79451f8c5e2d43e45708e80482383",
   "tier": "candidate",
   "verified_alias_count": 2
 }

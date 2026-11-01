@@ -1,5 +1,7 @@
 package local.skyblockjp;
 
+import static org.junit.jupiter.api.Assertions.*;
+
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import java.nio.file.Files;
@@ -13,7 +15,6 @@ import net.minecraft.network.chat.Component;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
 import org.slf4j.LoggerFactory;
-import static org.junit.jupiter.api.Assertions.*;
 
 class ApiDisabledDisplayIntegrationTest {
     @TempDir Path dir;
@@ -22,29 +23,58 @@ class ApiDisabledDisplayIntegrationTest {
     private static final String UNKNOWN = "A recently discovered effect.";
     private static final String KNOWN_JA = "Healthを50回復する。";
     private static final String UNKNOWN_JA = "最近発見された効果。";
-    private static final TooltipContext.Decision CONTEXT = new TooltipContext.Decision(
-        TooltipContext.Kind.ITEM, "SKYBLOCK_ITEM_ID", Map.of("skyblockItemId", "API_POLICY_FIXTURE"));
-    private static final Function<StyledParagraph, String> NO_API_CACHE = paragraph -> {
-        throw new AssertionError("API OFF must not consult saved/completed API results: " + paragraph.sourceText());
-    };
-    private static final Function<StyledParagraph, String> NO_DICTIONARY = paragraph -> {
-        throw new AssertionError("Dictionary display policy must prevent this lookup: " + paragraph.sourceText());
-    };
+    private static final TooltipContext.Decision CONTEXT =
+            new TooltipContext.Decision(
+                    TooltipContext.Kind.ITEM,
+                    "SKYBLOCK_ITEM_ID",
+                    Map.of("skyblockItemId", "API_POLICY_FIXTURE"));
+    private static final Function<StyledParagraph, String> NO_API_CACHE =
+            paragraph -> {
+                throw new AssertionError(
+                        "API OFF must not consult saved/completed API results: "
+                                + paragraph.sourceText());
+            };
+    private static final Function<StyledParagraph, String> NO_DICTIONARY =
+            paragraph -> {
+                throw new AssertionError(
+                        "Dictionary display policy must prevent this lookup: "
+                                + paragraph.sourceText());
+            };
 
-    private record Fixture(List<Component> original, LoreParser.Analysis analysis,
-            List<LoreParser.Block> blocks, List<StyledParagraph> paragraphs) {}
+    private record Fixture(
+            List<Component> original,
+            LoreParser.Analysis analysis,
+            List<LoreParser.Block> blocks,
+            List<StyledParagraph> paragraphs) {}
 
     private static Fixture fixture() {
-        var explanation = Component.literal("Restores ").withStyle(ChatFormatting.GRAY)
-            .append(Component.literal("50").withStyle(ChatFormatting.GREEN))
-            .append(Component.literal(" Health.").withStyle(ChatFormatting.GRAY));
-        List<Component> original = List.of(Component.literal("Fixture"), Component.literal("Damage: +100"),
-            Component.empty(), explanation, Component.empty(), Component.literal(UNKNOWN));
-        var analysis = LoreParser.analyze(original.stream().map(Component::getString).toList(), CONTEXT);
+        var explanation =
+                Component.literal("Restores ")
+                        .withStyle(ChatFormatting.GRAY)
+                        .append(Component.literal("50").withStyle(ChatFormatting.GREEN))
+                        .append(Component.literal(" Health.").withStyle(ChatFormatting.GRAY));
+        List<Component> original =
+                List.of(
+                        Component.literal("Fixture"),
+                        Component.literal("Damage: +100"),
+                        Component.empty(),
+                        explanation,
+                        Component.empty(),
+                        Component.literal(UNKNOWN));
+        var analysis =
+                LoreParser.analyze(original.stream().map(Component::getString).toList(), CONTEXT);
         var blocks = analysis.paragraphs().stream().map(LoreParser.Paragraph::block).toList();
         assertEquals(List.of(KNOWN, UNKNOWN), blocks.stream().map(LoreParser.Block::text).toList());
-        return new Fixture(original, analysis, blocks, blocks.stream()
-            .map(block -> new StyledParagraph(original.subList(block.start(), block.end()))).toList());
+        return new Fixture(
+                original,
+                analysis,
+                blocks,
+                blocks.stream()
+                        .map(
+                                block ->
+                                        new StyledParagraph(
+                                                original.subList(block.start(), block.end())))
+                        .toList());
     }
 
     private static Config config(boolean automatic) {
@@ -70,26 +100,41 @@ class ApiDisabledDisplayIntegrationTest {
         return encode(paragraph, paragraph.sourceText().equals(KNOWN) ? KNOWN_JA : UNKNOWN_JA);
     }
 
-    private static ItemTooltipTranslation.Result display(Fixture fixture, Config config, boolean requested,
-            Function<StyledParagraph, String> dictionary, Function<StyledParagraph, String> completed) {
-        return ItemTooltipTranslation.prepare(fixture.original(), fixture.blocks(), fixture.paragraphs(), config,
-            requested, dictionary, completed, List::of);
+    private static ItemTooltipTranslation.Result display(
+            Fixture fixture,
+            Config config,
+            boolean requested,
+            Function<StyledParagraph, String> dictionary,
+            Function<StyledParagraph, String> completed) {
+        return ItemTooltipTranslation.prepare(
+                fixture.original(),
+                fixture.blocks(),
+                fixture.paragraphs(),
+                config,
+                requested,
+                dictionary,
+                completed,
+                List::of);
     }
 
-    @Test void newAndLegacyConfigurationsKeepApiEnabledUntilExplicitlyDisabled() throws Exception {
+    @Test
+    void newAndLegacyConfigurationsKeepApiEnabledUntilExplicitlyDisabled() throws Exception {
         Path fresh = dir.resolve("fresh.json");
         assertTrue(new Config().apiTranslation);
         assertTrue(Config.load(fresh).apiTranslation);
         assertTrue(Config.load(fresh).apiTranslation);
 
         Path legacy = dir.resolve("legacy.json");
-        Files.writeString(legacy, """
+        Files.writeString(
+                legacy,
+                """
             {"candidateDictionary":true,"dictionaryAutoDisplay":false,"provider":"GOOGLE",
              "groqApiKey":"fixture-key","groqModel":"fixture-model","translateKey":72,
              "translationHud":true,"hudX":0.25,"hudY":0.8,"hudTextScale":1.5}
             """);
         var loaded = Config.load(legacy);
-        assertTrue(loaded.apiTranslation, "A missing new field must retain pre-upgrade API behavior");
+        assertTrue(
+                loaded.apiTranslation, "A missing new field must retain pre-upgrade API behavior");
         assertTrue(loaded.candidateDictionary);
         assertFalse(loaded.dictionaryAutoDisplay);
         assertEquals("GOOGLE", loaded.provider);
@@ -102,7 +147,8 @@ class ApiDisabledDisplayIntegrationTest {
         assertEquals(1.5, loaded.hudTextScale);
     }
 
-    @Test void explicitOffRoundTripsWithoutResettingCredentialsKeyBindingsOrHud() throws Exception {
+    @Test
+    void explicitOffRoundTripsWithoutResettingCredentialsKeyBindingsOrHud() throws Exception {
         Path file = dir.resolve("off.json");
         var config = config(false);
         config.provider = "GROQ";
@@ -110,9 +156,12 @@ class ApiDisabledDisplayIntegrationTest {
         config.groqModel = "fixture-custom-model";
         config.translateKey = 82;
         config.translationHud = true;
-        config.hudX = 0.3; config.hudY = 0.7;
-        config.hudWidth = 520; config.hudLines = 16;
-        config.hudOpacity = 0.35; config.hudTextScale = 1.75;
+        config.hudX = 0.3;
+        config.hudY = 0.7;
+        config.hudWidth = 520;
+        config.hudLines = 16;
+        config.hudOpacity = 0.35;
+        config.hudTextScale = 1.75;
         config.hudSeconds = 0;
         Config.save(file, config);
 
@@ -125,62 +174,91 @@ class ApiDisabledDisplayIntegrationTest {
         assertEquals("fixture-custom-model", restored.groqModel);
         assertEquals(82, restored.translateKey);
         assertTrue(restored.translationHud);
-        assertEquals(0.3, restored.hudX); assertEquals(0.7, restored.hudY);
-        assertEquals(520, restored.hudWidth); assertEquals(16, restored.hudLines);
-        assertEquals(0.35, restored.hudOpacity); assertEquals(1.75, restored.hudTextScale);
+        assertEquals(0.3, restored.hudX);
+        assertEquals(0.7, restored.hudY);
+        assertEquals(520, restored.hudWidth);
+        assertEquals(16, restored.hudLines);
+        assertEquals(0.35, restored.hudOpacity);
+        assertEquals(1.75, restored.hudTextScale);
         assertEquals(0, restored.hudSeconds);
         restored.apiTranslation = true;
         Config.save(file, restored);
         assertTrue(Config.load(file).apiTranslation, "The API switch must also be reversible");
     }
 
-    @Test void partialDictionaryIsImmediateAndNeverPendingEvenAfterManualRequest() {
+    @Test
+    void partialDictionaryIsImmediateAndNeverPendingEvenAfterManualRequest() {
         var fixture = fixture();
         for (boolean requested : List.of(false, true)) {
             AtomicInteger lookups = new AtomicInteger();
-            var result = display(fixture, config(true), requested, paragraph -> {
-                lookups.incrementAndGet();
-                return knownOnly(paragraph);
-            }, NO_API_CACHE);
+            var result =
+                    display(
+                            fixture,
+                            config(true),
+                            requested,
+                            paragraph -> {
+                                lookups.incrementAndGet();
+                                return knownOnly(paragraph);
+                            },
+                            NO_API_CACHE);
             assertEquals(ItemTooltipTranslation.Mode.DICTIONARY, result.mode());
-            assertEquals(1, result.complete()); assertEquals(2, result.total());
+            assertEquals(1, result.complete());
+            assertEquals(2, result.total());
             assertEquals(1, result.dictionaryMatches());
-            assertEquals(2, lookups.get(), "Each local paragraph should be looked up once per display pass");
+            assertEquals(
+                    2,
+                    lookups.get(),
+                    "Each local paragraph should be looked up once per display pass");
             assertEquals(List.of(KNOWN_JA, UNKNOWN), result.paragraphs());
             assertEquals(KNOWN_JA, result.lines().get(3).getString());
             assertEquals(UNKNOWN, result.lines().get(5).getString());
-            assertEquals(fixture.original().get(1), result.lines().get(1), "Stat rows must stay original");
-            var number = StyledParagraph.glyphs(result.lines().get(3)).stream()
-                .filter(glyph -> glyph.text().equals("5")).findFirst().orElseThrow();
+            assertEquals(
+                    fixture.original().get(1),
+                    result.lines().get(1),
+                    "Stat rows must stay original");
+            var number =
+                    StyledParagraph.glyphs(result.lines().get(3)).stream()
+                            .filter(glyph -> glyph.text().equals("5"))
+                            .findFirst()
+                            .orElseThrow();
             assertEquals(0x55FF55, number.style().getColor().getValue());
         }
     }
 
-    @Test void unknownManualRequestRetainsOriginalInsteadOfWaitingForAnImpossibleApiResult() {
+    @Test
+    void unknownManualRequestRetainsOriginalInsteadOfWaitingForAnImpossibleApiResult() {
         var fixture = fixture();
         var result = display(fixture, config(true), true, paragraph -> null, NO_API_CACHE);
         assertEquals(ItemTooltipTranslation.Mode.ORIGINAL, result.mode());
-        assertEquals(0, result.complete()); assertEquals(0, result.dictionaryMatches());
+        assertEquals(0, result.complete());
+        assertEquals(0, result.dictionaryMatches());
         assertEquals(2, result.total());
         assertEquals(fixture.original(), result.lines());
         assertEquals(List.of(KNOWN, UNKNOWN), result.paragraphs());
     }
 
-    @Test void automaticDisplayOffSkipsBothLookupsUntilTheUserRequestsTranslation() {
+    @Test
+    void automaticDisplayOffSkipsBothLookupsUntilTheUserRequestsTranslation() {
         var fixture = fixture();
         var untouched = display(fixture, config(false), false, NO_DICTIONARY, NO_API_CACHE);
         assertEquals(ItemTooltipTranslation.Mode.ORIGINAL, untouched.mode());
         assertEquals(fixture.original(), untouched.lines());
         assertEquals(0, untouched.dictionaryMatches());
 
-        var requested = display(fixture, config(false), true,
-            ApiDisabledDisplayIntegrationTest::knownOnly, NO_API_CACHE);
+        var requested =
+                display(
+                        fixture,
+                        config(false),
+                        true,
+                        ApiDisabledDisplayIntegrationTest::knownOnly,
+                        NO_API_CACHE);
         assertEquals(ItemTooltipTranslation.Mode.DICTIONARY, requested.mode());
         assertEquals(List.of(KNOWN_JA, UNKNOWN), requested.paragraphs());
         assertEquals(KNOWN_JA, requested.lines().get(3).getString());
     }
 
-    @Test void dictionaryMasterOffKeepsOriginalForAutomaticAndManualDisplay() {
+    @Test
+    void dictionaryMasterOffKeepsOriginalForAutomaticAndManualDisplay() {
         var fixture = fixture();
         for (boolean automatic : List.of(false, true)) {
             var config = config(automatic);
@@ -195,15 +273,17 @@ class ApiDisabledDisplayIntegrationTest {
         }
     }
 
-    @Test void disablingApiHidesPreviouslyAvailableCompletedResultsOnTheNextDisplayPass() {
+    @Test
+    void disablingApiHidesPreviouslyAvailableCompletedResultsOnTheNextDisplayPass() {
         var fixture = fixture();
         var config = config(true);
         config.apiTranslation = true;
         AtomicInteger completedLookups = new AtomicInteger();
-        Function<StyledParagraph, String> savedApi = paragraph -> {
-            completedLookups.incrementAndGet();
-            return allKnown(paragraph);
-        };
+        Function<StyledParagraph, String> savedApi =
+                paragraph -> {
+                    completedLookups.incrementAndGet();
+                    return allKnown(paragraph);
+                };
         var before = display(fixture, config, true, paragraph -> null, savedApi);
         assertEquals(ItemTooltipTranslation.Mode.FULL, before.mode());
         assertEquals(List.of(KNOWN_JA, UNKNOWN_JA), before.paragraphs());
@@ -213,41 +293,90 @@ class ApiDisabledDisplayIntegrationTest {
         var after = display(fixture, config, true, paragraph -> null, savedApi);
         assertEquals(ItemTooltipTranslation.Mode.ORIGINAL, after.mode());
         assertEquals(fixture.original(), after.lines());
-        assertEquals(2, completedLookups.get(), "OFF must not even read otherwise valid saved API results");
+        assertEquals(
+                2,
+                completedLookups.get(),
+                "OFF must not even read otherwise valid saved API results");
     }
 
-    @Test void completeLocalDictionaryStillUsesDictionaryModeWhenApiIsDisabled() {
+    @Test
+    void completeLocalDictionaryStillUsesDictionaryModeWhenApiIsDisabled() {
         var fixture = fixture();
-        var result = display(fixture, config(false), true,
-            ApiDisabledDisplayIntegrationTest::allKnown, NO_API_CACHE);
+        var result =
+                display(
+                        fixture,
+                        config(false),
+                        true,
+                        ApiDisabledDisplayIntegrationTest::allKnown,
+                        NO_API_CACHE);
         assertEquals(ItemTooltipTranslation.Mode.DICTIONARY, result.mode());
-        assertEquals(2, result.complete()); assertEquals(2, result.dictionaryMatches());
+        assertEquals(2, result.complete());
+        assertEquals(2, result.dictionaryMatches());
         assertEquals(List.of(KNOWN_JA, UNKNOWN_JA), result.paragraphs());
     }
 
-    private JsonObject audit(Fixture fixture, Config config, boolean requested,
-            ItemTooltipTranslation.Result result, boolean hasKnownEntry, String fileName) throws Exception {
-        var decisions = fixture.paragraphs().stream().map(paragraph -> {
-            String encoded = hasKnownEntry ? knownOnly(paragraph) : null;
-            return encoded == null
-                ? new Translator.DictionaryDecision(null, "not_found", "none", "item", List.of(),
-                    Map.of("stage", "DICTIONARY_LOOKUP"))
-                : new Translator.DictionaryDecision(encoded, "matched", "exact", "item", List.of("api-off-fixture"),
-                    Map.of("stage", "ACCEPTED"));
-        }).toList();
+    private JsonObject audit(
+            Fixture fixture,
+            Config config,
+            boolean requested,
+            ItemTooltipTranslation.Result result,
+            boolean hasKnownEntry,
+            String fileName)
+            throws Exception {
+        var decisions =
+                fixture.paragraphs().stream()
+                        .map(
+                                paragraph -> {
+                                    String encoded = hasKnownEntry ? knownOnly(paragraph) : null;
+                                    return encoded == null
+                                            ? new Translator.DictionaryDecision(
+                                                    null,
+                                                    "not_found",
+                                                    "none",
+                                                    "item",
+                                                    List.of(),
+                                                    Map.of("stage", "DICTIONARY_LOOKUP"))
+                                            : new Translator.DictionaryDecision(
+                                                    encoded,
+                                                    "matched",
+                                                    "exact",
+                                                    "item",
+                                                    List.of("api-off-fixture"),
+                                                    Map.of("stage", "ACCEPTED"));
+                                })
+                        .toList();
         Path path = dir.resolve(fileName);
-        boolean dictionaryAllowed = config.candidateDictionary && (config.dictionaryAutoDisplay || requested);
-        try (var audit = new TooltipAudit(path, LoggerFactory.getLogger("api-off-audit-test"), "")) {
-            audit.recordDetailed(fileName, fixture.original(), result.lines(), result.paragraphs(), 260,
-                config.provider, config.groqModel, "item", "Storage", fixture.blocks(), decisions,
-                result.mode().name(), dictionaryAllowed, CONTEXT, fixture.analysis(),
-                fixture.paragraphs().stream().map(paragraph -> new Translator.CacheInspection("API_DISABLED", "")).toList(),
-                requested, config.candidateDictionary && config.dictionaryAutoDisplay);
+        boolean dictionaryAllowed =
+                config.candidateDictionary && (config.dictionaryAutoDisplay || requested);
+        try (var audit =
+                new TooltipAudit(path, LoggerFactory.getLogger("api-off-audit-test"), "")) {
+            audit.recordDetailed(
+                    fileName,
+                    fixture.original(),
+                    result.lines(),
+                    result.paragraphs(),
+                    260,
+                    config.provider,
+                    config.groqModel,
+                    "item",
+                    "Storage",
+                    fixture.blocks(),
+                    decisions,
+                    result.mode().name(),
+                    dictionaryAllowed,
+                    CONTEXT,
+                    fixture.analysis(),
+                    fixture.paragraphs().stream()
+                            .map(paragraph -> new Translator.CacheInspection("API_DISABLED", ""))
+                            .toList(),
+                    requested,
+                    config.candidateDictionary && config.dictionaryAutoDisplay);
         }
         return JsonParser.parseString(Files.readAllLines(path).getFirst()).getAsJsonObject();
     }
 
-    @Test void unknownManualRequestLogsApiPolicySeparatelyFromTheDictionaryMiss() throws Exception {
+    @Test
+    void unknownManualRequestLogsApiPolicySeparatelyFromTheDictionaryMiss() throws Exception {
         var fixture = fixture();
         var config = config(true);
         var result = display(fixture, config, true, paragraph -> null, NO_API_CACHE);
@@ -266,10 +395,17 @@ class ApiDisabledDisplayIntegrationTest {
         }
     }
 
-    @Test void localTranslationAndDisabledApiMissHaveDifferentSuppliersInTheSameAudit() throws Exception {
+    @Test
+    void localTranslationAndDisabledApiMissHaveDifferentSuppliersInTheSameAudit() throws Exception {
         var fixture = fixture();
         var config = config(false);
-        var result = display(fixture, config, true, ApiDisabledDisplayIntegrationTest::knownOnly, NO_API_CACHE);
+        var result =
+                display(
+                        fixture,
+                        config,
+                        true,
+                        ApiDisabledDisplayIntegrationTest::knownOnly,
+                        NO_API_CACHE);
         var row = audit(fixture, config, true, result, true, "mixed.jsonl");
         assertEquals("MIXED", row.get("provider").getAsString());
         assertFalse(row.get("apiTranslationEnabled").getAsBoolean());
@@ -288,7 +424,9 @@ class ApiDisabledDisplayIntegrationTest {
         assertEquals(UNKNOWN, missing.get("displayedText").getAsString());
     }
 
-    @Test void idleKnownEntryWithAutomaticDisplayOffLogsDisplayPolicyRatherThanApiFailure() throws Exception {
+    @Test
+    void idleKnownEntryWithAutomaticDisplayOffLogsDisplayPolicyRatherThanApiFailure()
+            throws Exception {
         var fixture = fixture();
         var config = config(false);
         var result = display(fixture, config, false, NO_DICTIONARY, NO_API_CACHE);

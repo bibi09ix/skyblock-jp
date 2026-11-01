@@ -3,8 +3,9 @@
 
 This compiler does not approve translations or modify their adoption flags.  The
 default verified tier requires BOTH runtime_eligible and game_validated.  Public
-resource drafts can only be packaged with the explicit --candidate switch; the
-mod must separately opt in to that candidate tier.  No network is used.
+resource drafts can only be packaged with the explicit --candidate switch.
+Runtime use still follows candidateDictionary (enabled for new installs); this
+does not change source adoption or game-validation flags. No network is used.
 """
 from __future__ import annotations
 
@@ -201,10 +202,11 @@ class Unit:
 
 
 class Compiler:
-    def __init__(self, *, candidate: bool = False, names: Iterable[str] = (), reviews: dict[str, Any] | None = None, alignment_sha256: str = '', ordinary_tokens_sha256: str = '') -> None:
+    def __init__(self, *, candidate: bool = False, names: Iterable[str] = (), reviews: dict[str, Any] | None = None, alignment_sha256: str = '', ordinary_tokens_sha256: str = '', terminology_sha256: str = '') -> None:
         self.reviews = reviews or {'schema_version': 1, 'rules': []}
         self.alignment_sha256 = alignment_sha256
         self.ordinary_tokens_sha256 = ordinary_tokens_sha256
+        self.terminology_sha256 = terminology_sha256
         self.candidate = candidate
         self.names = ProtectedNames(name for name in names if name not in ORDINARY_POLICY_WORDS)
         self.proposals: dict[tuple[str, str, str], dict[tuple[str, bool], set[str]]] = defaultdict(lambda: defaultdict(set))
@@ -982,6 +984,7 @@ class Compiler:
                     'blocked_keys': blocked_keys, 'matching': matching, 'reviewed': reviewed,
                     'review_evidence': review_evidence, 'alignment_sha256': self.alignment_sha256,
                     'ordinary_tokens_sha256': self.ordinary_tokens_sha256,
+                    'terminology_sha256': self.terminology_sha256,
                     'observed_ui': self.observed_ui,
                     'observed_text': self.observed_text,
                      'observed_applicability': self.observed_applicability,
@@ -1048,6 +1051,7 @@ class Compiler:
             'reviewed_numeric_family_count': len(self.reviewed_numeric_families),
             'reviewed_numeric_family_evidence': self.reviewed_numeric_families,
             'ordinary_tokens_sha256': self.ordinary_tokens_sha256,
+            'terminology_sha256': self.terminology_sha256,
         }
         return dictionary, report
 
@@ -1066,8 +1070,11 @@ def compile_source(source_root: Path, *, candidate: bool = False, include_supple
     alignment_raw = alignment_path.read_bytes() if alignment_path.exists() else b''
     ordinary_tokens_path = alignment_path.with_name('ordinary-tokens.json')
     ordinary_tokens_raw = ordinary_tokens_path.read_bytes() if ordinary_tokens_path.exists() else b''
+    terminology_path = alignment_path.parents[1] / 'terminology.json'
+    terminology_raw = terminology_path.read_bytes() if terminology_path.exists() else b''
     compiler = Compiler(candidate=candidate, names=policy.get("names", {}), reviews=reviews,
-                        alignment_sha256=sha256(alignment_raw), ordinary_tokens_sha256=sha256(ordinary_tokens_raw))
+                        alignment_sha256=sha256(alignment_raw), ordinary_tokens_sha256=sha256(ordinary_tokens_raw),
+                        terminology_sha256=sha256(terminology_raw))
     hashes: list[dict[str, str]] = []
     ids: set[str] = set()
     packs = sorted((source_root / "translations").rglob("*.json"))
@@ -1137,25 +1144,39 @@ def compile_source(source_root: Path, *, candidate: bool = False, include_supple
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--source-root", type=Path, required=True, help="Read-only workbench containing manifest.json and translations/")
+    source = parser.add_mutually_exclusive_group(required=True)
+    source.add_argument("--source-root", type=Path, help="Read-only workbench containing manifest.json and translations/")
+    source.add_argument("--source-snapshot", type=Path, help="Verified portable source ZIP and its .manifest.json sidecar")
     parser.add_argument("--output", type=Path, required=True, help="Destination literal dictionary JSON (never inside source-root)")
     parser.add_argument("--report", type=Path, required=True, help="Destination deterministic manifest/audit JSON")
-    parser.add_argument("--candidate", action="store_true", help="Explicitly package reviewed drafts as opt-in candidates; does not approve them")
+    parser.add_argument("--candidate", action="store_true", help="Explicitly package reviewed drafts as candidates; does not approve game validation")
     parser.add_argument("--matching-output", type=Path, help="Optional aliases/templates resource (default candidate-matching.json beside output)")
     parser.add_argument('--reviewed-output', type=Path, help='Optional reviewed decisions resource (default candidate-reviewed.json beside output)')
     parser.add_argument('--scoped-descriptions-output', type=Path, help='Optional guarded observed presentation resource (default candidate-scoped-descriptions.json beside output)')
     args = parser.parse_args(argv)
-    source_root = args.source_root.resolve()
+    source_root = args.source_root.resolve() if args.source_root else args.source_snapshot.resolve()
     matching_output=args.matching_output or args.output.with_name('candidate-matching.json')
     reviewed_output=args.reviewed_output or args.output.with_name('candidate-reviewed.json')
     scoped_output=args.scoped_descriptions_output or args.output.with_name('candidate-scoped-descriptions.json')
+    protected_inputs = {source_root}
+    if args.source_snapshot:
+        protected_inputs.add(source_root.with_suffix('.manifest.json').resolve())
     for destination in (args.output.resolve(), args.report.resolve(), matching_output.resolve(), reviewed_output.resolve(), scoped_output.resolve()):
-        if destination == source_root or source_root in destination.parents:
+        if destination in protected_inputs or source_root in destination.parents:
             parser.error("Outputs must be outside the read-only source corpus")
     destinations = (args.output.resolve(), args.report.resolve(), matching_output.resolve(), reviewed_output.resolve(), scoped_output.resolve())
     if len(set(destinations)) != len(destinations):
         parser.error('All dictionary, manifest, matching, reviewed and scoped outputs must be different files')
-    dictionary, report = compile_source(source_root, candidate=args.candidate)
+    if args.source_snapshot:
+        spec = importlib.util.spec_from_file_location('skyblock_dictionary_source', Path(__file__).with_name('dictionary_source.py'))
+        snapshot = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(snapshot)
+        with tempfile.TemporaryDirectory(prefix='skyblock-jp-source-') as extracted:
+            root = snapshot.unpack(source_root, Path(extracted))
+            dictionary, report = compile_source(root, candidate=args.candidate)
+        report['public_source_snapshot_sha256'] = sha256(source_root.read_bytes())
+    else:
+        dictionary, report = compile_source(source_root, candidate=args.candidate)
     matching=report.pop('matching_document')
     reviewed=report.pop('reviewed_document')
     scoped=report.pop('scoped_descriptions_document')

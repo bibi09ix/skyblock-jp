@@ -9,8 +9,10 @@ public final class Config {
     public boolean loreTranslation = true;
     // OFF isolates bundled/local translations from both provider requests and saved API results.
     public boolean apiTranslation = true;
-    // The complete bundled corpus has not been verified in a game client.
-    public boolean candidateDictionary = false;
+    // Bundled translations work without a provider key; individual unverified entries remain
+    // guarded.
+    // Gson retains an existing explicit false, so upgrades do not overwrite the user's choice.
+    public boolean candidateDictionary = true;
     // Effective only while candidateDictionary is enabled; never sends an API request.
     public boolean dictionaryAutoDisplay = true;
     public boolean dictionaryDiagnostics = true;
@@ -31,18 +33,31 @@ public final class Config {
     public double hudTextScale = 1.0;
     public boolean autoUpdate = true;
     public String updateRepository = "";
+
+    /** Explicit onboarding choice. Credentials and provider preferences are retained for later use. */
+    public void useDictionaryOnly() {
+        enabled = true;
+        candidateDictionary = true;
+        dictionaryAutoDisplay = true;
+        apiTranslation = false;
+    }
+
     public void resetHudLayout() {
         var defaults = new Config();
-        hudX = defaults.hudX; hudY = defaults.hudY;
-        hudWidth = defaults.hudWidth; hudLines = defaults.hudLines;
+        hudX = defaults.hudX;
+        hudY = defaults.hudY;
+        hudWidth = defaults.hudWidth;
+        hudLines = defaults.hudLines;
         hudTextScale = defaults.hudTextScale;
     }
+
     public static void save(Path file, Config config) throws Exception {
         Files.createDirectories(file.getParent());
         Path temp = file.resolveSibling(file.getFileName() + ".tmp");
         Files.writeString(temp, new GsonBuilder().setPrettyPrinting().create().toJson(config));
         Files.move(temp, file, StandardCopyOption.REPLACE_EXISTING);
     }
+
     public static Config load(Path file) throws Exception {
         var gson = new GsonBuilder().setPrettyPrinting().create();
         if (Files.exists(file)) {
@@ -57,9 +72,14 @@ public final class Config {
             config.hudWidth = Math.clamp(config.hudWidth, 160, 600);
             config.hudLines = Math.clamp(config.hudLines, 3, 20);
             config.hudSeconds = config.hudSeconds == 0 ? 0 : Math.clamp(config.hudSeconds, 5, 300);
-            config.hudOpacity = Double.isFinite(config.hudOpacity) ? Math.clamp(config.hudOpacity, 0, 1) : 0.69;
-            config.hudTextScale = Double.isFinite(config.hudTextScale) ? Math.clamp(config.hudTextScale, 0.75, 2.5) : 1.0;
-            if (!"GOOGLE".equals(config.provider) && !"GROQ".equals(config.provider)) throw new IllegalArgumentException("Provider must be GOOGLE or GROQ");
+            config.hudOpacity =
+                    Double.isFinite(config.hudOpacity) ? Math.clamp(config.hudOpacity, 0, 1) : 0.69;
+            config.hudTextScale =
+                    Double.isFinite(config.hudTextScale)
+                            ? Math.clamp(config.hudTextScale, 0.75, 2.5)
+                            : 1.0;
+            if (!"GOOGLE".equals(config.provider) && !"GROQ".equals(config.provider))
+                throw new IllegalArgumentException("Provider must be GOOGLE or GROQ");
             return config;
         }
         Config config = new Config();

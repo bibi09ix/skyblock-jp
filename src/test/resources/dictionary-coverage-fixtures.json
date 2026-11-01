@@ -1,0 +1,3046 @@
+{
+  "schemaVersion": 1,
+  "description": "Curated fixed game text and authored variants. Native RGB/styles are retained from selected static game examples or existing public tests. No raw shared log, player name, roster, personal progress, dates, account ID or API/cache data is included. This is a regression cohort, not an estimate of whole-game coverage.",
+  "intentPolicy": "TRANSLATE fixes the denominator before parsing. PRESERVE is intentional English names/stats/rarities/blank lines. UNREVIEWED is never silently exempted. Weights are authored repetitions for frequency aggregation, not render-frame counts.",
+  "cases": [
+    {
+      "id": "close",
+      "screen": "Recipe Book",
+      "weight": 1,
+      "evidence": {
+        "screenClass": "CoverageContainerScreen",
+        "containerTitle": "Recipe Book",
+        "location": "CONTAINER",
+        "slotMatches": true,
+        "skyblockItemId": "",
+        "minecraftItemId": "minecraft:barrier",
+        "slotIndex": 10,
+        "containerSize": 54
+      },
+      "lines": [
+        {
+          "intent": "TRANSLATE",
+          "reason": "Ordinary game explanation or instruction",
+          "runs": [
+            {
+              "text": "Close",
+              "color": 16733525,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "go-back",
+      "screen": "Recipe Book",
+      "weight": 1,
+      "evidence": {
+        "screenClass": "CoverageContainerScreen",
+        "containerTitle": "Recipe Book",
+        "location": "CONTAINER",
+        "slotMatches": true,
+        "skyblockItemId": "",
+        "minecraftItemId": "minecraft:arrow",
+        "slotIndex": 10,
+        "containerSize": 54
+      },
+      "lines": [
+        {
+          "intent": "TRANSLATE",
+          "reason": "Ordinary game explanation or instruction",
+          "runs": [
+            {
+              "text": "Go Back",
+              "color": 5635925,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Ordinary game explanation or instruction",
+          "runs": [
+            {
+              "text": "To SkyBlock Menu",
+              "color": 11184810,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pets",
+      "screen": "SkyBlock Menu",
+      "weight": 2,
+      "evidence": {
+        "screenClass": "CoverageContainerScreen",
+        "containerTitle": "SkyBlock Menu",
+        "location": "CONTAINER",
+        "slotMatches": true,
+        "skyblockItemId": "",
+        "minecraftItemId": "minecraft:bone",
+        "slotIndex": 10,
+        "containerSize": 54
+      },
+      "lines": [
+        {
+          "intent": "TRANSLATE",
+          "reason": "General menu heading: Pets",
+          "runs": [
+            {
+              "text": "Pets",
+              "color": 5635925,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Ordinary game explanation or instruction",
+          "runs": [
+            {
+              "text": "View and manage all of your Pets.",
+              "color": 11184810,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        },
+        {
+          "intent": "PRESERVE",
+          "reason": "Blank separator",
+          "runs": []
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Ordinary game explanation or instruction",
+          "runs": [
+            {
+              "text": "Level up your pets faster by gaining",
+              "color": 11184810,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Ordinary game explanation or instruction",
+          "runs": [
+            {
+              "text": "XP in their favorite skill!",
+              "color": 11184810,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        },
+        {
+          "intent": "PRESERVE",
+          "reason": "Blank separator",
+          "runs": []
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Ordinary game explanation or instruction",
+          "runs": [
+            {
+              "text": "Also accessible via /pets.",
+              "color": 5592405,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        },
+        {
+          "intent": "PRESERVE",
+          "reason": "Blank separator",
+          "runs": []
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Ordinary game explanation or instruction",
+          "runs": [
+            {
+              "text": "Click to view!",
+              "color": 16777045,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "collections",
+      "screen": "SkyBlock Menu",
+      "weight": 1,
+      "evidence": {
+        "screenClass": "CoverageContainerScreen",
+        "containerTitle": "SkyBlock Menu",
+        "location": "CONTAINER",
+        "slotMatches": true,
+        "skyblockItemId": "",
+        "minecraftItemId": "minecraft:painting",
+        "slotIndex": 10,
+        "containerSize": 54
+      },
+      "lines": [
+        {
+          "intent": "TRANSLATE",
+          "reason": "General menu heading: Collections",
+          "runs": [
+            {
+              "text": "Collections",
+              "color": 5635925,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Ordinary game explanation or instruction",
+          "runs": [
+            {
+              "text": "View all of the items available in",
+              "color": 11184810,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Ordinary game explanation or instruction",
+          "runs": [
+            {
+              "text": "SkyBlock. Collect more of an item to",
+              "color": 11184810,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Ordinary game explanation or instruction",
+          "runs": [
+            {
+              "text": "unlock rewards on your way to",
+              "color": 11184810,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Ordinary game explanation or instruction",
+          "runs": [
+            {
+              "text": "becoming a master of SkyBlock!",
+              "color": 11184810,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        },
+        {
+          "intent": "PRESERVE",
+          "reason": "Blank separator",
+          "runs": []
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Ordinary game explanation or instruction",
+          "runs": [
+            {
+              "text": "Also accessible via /collection.",
+              "color": 5592405,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        },
+        {
+          "intent": "PRESERVE",
+          "reason": "Blank separator",
+          "runs": []
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Ordinary game explanation or instruction",
+          "runs": [
+            {
+              "text": "Click to view!",
+              "color": 16777045,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mining-collections",
+      "screen": "Collections",
+      "weight": 1,
+      "evidence": {
+        "screenClass": "CoverageContainerScreen",
+        "containerTitle": "Collections",
+        "location": "CONTAINER",
+        "slotMatches": true,
+        "skyblockItemId": "",
+        "minecraftItemId": "minecraft:stone_pickaxe",
+        "slotIndex": 10,
+        "containerSize": 54
+      },
+      "lines": [
+        {
+          "intent": "TRANSLATE",
+          "reason": "General menu heading: Mining Collections",
+          "runs": [
+            {
+              "text": "Mining Collections",
+              "color": 5635925,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Ordinary game explanation or instruction",
+          "runs": [
+            {
+              "text": "View your ",
+              "color": 11184810,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            },
+            {
+              "text": "Mining Collections",
+              "color": 5635925,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            },
+            {
+              "text": "!",
+              "color": 11184810,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        },
+        {
+          "intent": "PRESERVE",
+          "reason": "Blank separator",
+          "runs": []
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Ordinary game explanation or instruction",
+          "runs": [
+            {
+              "text": "Click to view!",
+              "color": 16777045,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bottle-jyrre",
+      "screen": "Inventory",
+      "weight": 1,
+      "evidence": {
+        "screenClass": "CoverageContainerScreen",
+        "containerTitle": "",
+        "location": "PLAYER",
+        "slotMatches": true,
+        "skyblockItemId": "NEW_BOTTLE_OF_JYRRE",
+        "minecraftItemId": "minecraft:potion",
+        "slotIndex": 10,
+        "containerSize": 54
+      },
+      "lines": [
+        {
+          "intent": "PRESERVE",
+          "reason": "English game name, stat, ability heading or rarity retained by policy",
+          "runs": [
+            {
+              "text": "Bottle of Jyrre",
+              "color": 16733525,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Ordinary game explanation or instruction",
+          "runs": [
+            {
+              "text": "Consume to boost your ",
+              "color": 11184810,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            },
+            {
+              "text": "",
+              "color": 5636095,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Ordinary game explanation or instruction",
+          "runs": [
+            {
+              "text": "Intelligence ",
+              "color": 5636095,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            },
+            {
+              "text": "for ",
+              "color": 11184810,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            },
+            {
+              "text": "60m",
+              "color": 5635925,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            },
+            {
+              "text": ".",
+              "color": 11184810,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        },
+        {
+          "intent": "PRESERVE",
+          "reason": "Blank separator",
+          "runs": []
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Ordinary game explanation or instruction",
+          "runs": [
+            {
+              "text": "Keep this item in your inventory to",
+              "color": 11184810,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Ordinary game explanation or instruction",
+          "runs": [
+            {
+              "text": "increase the bonus up to ",
+              "color": 11184810,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            },
+            {
+              "text": "+300",
+              "color": 5636095,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Ordinary game explanation or instruction",
+          "runs": [
+            {
+              "text": "Intelligence",
+              "color": 5636095,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            },
+            {
+              "text": ", at which point the item",
+              "color": 11184810,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Ordinary game explanation or instruction",
+          "runs": [
+            {
+              "text": "evolves",
+              "color": 16733525,
+              "bold": false,
+              "italic": true,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            },
+            {
+              "text": "!",
+              "color": 11184810,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        },
+        {
+          "intent": "PRESERVE",
+          "reason": "Blank separator",
+          "runs": []
+        },
+        {
+          "intent": "PRESERVE",
+          "reason": "English game name, stat, ability heading or rarity retained by policy",
+          "runs": [
+            {
+              "text": "RARE",
+              "color": 5592575,
+              "bold": true,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "spirit-leap",
+      "screen": "Inventory",
+      "weight": 1,
+      "evidence": {
+        "screenClass": "CoverageContainerScreen",
+        "containerTitle": "",
+        "location": "PLAYER",
+        "slotMatches": true,
+        "skyblockItemId": "SPIRIT_LEAP",
+        "minecraftItemId": "minecraft:ender_pearl",
+        "slotIndex": 10,
+        "containerSize": 54
+      },
+      "lines": [
+        {
+          "intent": "PRESERVE",
+          "reason": "English game name, stat, ability heading or rarity retained by policy",
+          "runs": [
+            {
+              "text": "Spirit Leap",
+              "color": 5592575,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        },
+        {
+          "intent": "PRESERVE",
+          "reason": "English game name, stat, ability heading or rarity retained by policy",
+          "runs": [
+            {
+              "text": "Ability: Spirit Leap  ",
+              "color": 16755200,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            },
+            {
+              "text": "RIGHT CLICK",
+              "color": 16777045,
+              "bold": true,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Ordinary game explanation or instruction",
+          "runs": [
+            {
+              "text": "Allows you to teleport to any teammate! Grants",
+              "color": 11184810,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Ordinary game explanation or instruction",
+          "runs": [
+            {
+              "text": "1 ",
+              "color": 5635925,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            },
+            {
+              "text": "second of immunity after teleporting,",
+              "color": 11184810,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Ordinary game explanation or instruction",
+          "runs": [
+            {
+              "text": "immunity is cancelled upon dealing damage.",
+              "color": 11184810,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        },
+        {
+          "intent": "PRESERVE",
+          "reason": "English game name, stat, ability heading or rarity retained by policy",
+          "runs": [
+            {
+              "text": "Cooldown: ",
+              "color": 5592405,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            },
+            {
+              "text": "5s",
+              "color": 5635925,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        },
+        {
+          "intent": "PRESERVE",
+          "reason": "Blank separator",
+          "runs": []
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Ordinary game explanation or instruction",
+          "runs": [
+            {
+              "text": "Dungeons only!",
+              "color": 16733525,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        },
+        {
+          "intent": "PRESERVE",
+          "reason": "Blank separator",
+          "runs": []
+        },
+        {
+          "intent": "PRESERVE",
+          "reason": "English game name, stat, ability heading or rarity retained by policy",
+          "runs": [
+            {
+              "text": "RARE DUNGEON ITEM",
+              "color": 5592575,
+              "bold": true,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "catalyst",
+      "screen": "Inventory",
+      "weight": 2,
+      "evidence": {
+        "screenClass": "CoverageContainerScreen",
+        "containerTitle": "",
+        "location": "PLAYER",
+        "slotMatches": true,
+        "skyblockItemId": "CATALYST",
+        "minecraftItemId": "minecraft:nether_star",
+        "slotIndex": 10,
+        "containerSize": 54
+      },
+      "lines": [
+        {
+          "intent": "PRESERVE",
+          "reason": "English game name, stat, ability heading or rarity retained by policy",
+          "runs": [
+            {
+              "text": "Catalyst",
+              "color": 5592575,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        },
+        {
+          "intent": "PRESERVE",
+          "reason": "English game name, stat, ability heading or rarity retained by policy",
+          "runs": [
+            {
+              "text": "Minion Fuel",
+              "color": 5592405,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        },
+        {
+          "intent": "PRESERVE",
+          "reason": "Blank separator",
+          "runs": []
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Ordinary game explanation or instruction",
+          "runs": [
+            {
+              "text": "When in a minion, this increases the",
+              "color": 11184810,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Ordinary game explanation or instruction",
+          "runs": [
+            {
+              "text": "number of resources created by ",
+              "color": 11184810,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            },
+            {
+              "text": "3x",
+              "color": 5635925,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Ordinary game explanation or instruction",
+          "runs": [
+            {
+              "text": "for ",
+              "color": 11184810,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            },
+            {
+              "text": "3 hours",
+              "color": 5635925,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            },
+            {
+              "text": "!",
+              "color": 11184810,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        },
+        {
+          "intent": "PRESERVE",
+          "reason": "Blank separator",
+          "runs": []
+        },
+        {
+          "intent": "PRESERVE",
+          "reason": "English game name, stat, ability heading or rarity retained by policy",
+          "runs": [
+            {
+              "text": "RARE",
+              "color": 5592575,
+              "bold": true,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "junk-sinker",
+      "screen": "Inventory",
+      "weight": 1,
+      "evidence": {
+        "screenClass": "CoverageContainerScreen",
+        "containerTitle": "",
+        "location": "PLAYER",
+        "slotMatches": true,
+        "skyblockItemId": "JUNK_SINKER",
+        "minecraftItemId": "minecraft:paper",
+        "slotIndex": 10,
+        "containerSize": 54
+      },
+      "lines": [
+        {
+          "intent": "PRESERVE",
+          "reason": "English game name, stat, ability heading or rarity retained by policy",
+          "runs": [
+            {
+              "text": "Junk Sinker",
+              "color": 5635925,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Ordinary game explanation or instruction",
+          "runs": [
+            {
+              "text": "Grants ",
+              "color": 11184810,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            },
+            {
+              "text": "+10 Treasure Chance ",
+              "color": 16755200,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            },
+            {
+              "text": "while",
+              "color": 11184810,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Ordinary game explanation or instruction",
+          "runs": [
+            {
+              "text": "in the ",
+              "color": 11184810,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            },
+            {
+              "text": "Backwater Bayou ",
+              "color": 43520,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            },
+            {
+              "text": "but replaces",
+              "color": 11184810,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Ordinary game explanation or instruction",
+          "runs": [
+            {
+              "text": "all ",
+              "color": 11184810,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            },
+            {
+              "text": "Treasure ",
+              "color": 16755200,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            },
+            {
+              "text": "catches with ",
+              "color": 11184810,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            },
+            {
+              "text": "Junk",
+              "color": 43520,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            },
+            {
+              "text": "!",
+              "color": 11184810,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        },
+        {
+          "intent": "PRESERVE",
+          "reason": "Blank separator",
+          "runs": []
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Ordinary game explanation or instruction",
+          "runs": [
+            {
+              "text": "Talk to ",
+              "color": 11184810,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            },
+            {
+              "text": "Roddy ",
+              "color": 43520,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            },
+            {
+              "text": "in the ",
+              "color": 11184810,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            },
+            {
+              "text": "Backwater",
+              "color": 43520,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Ordinary game explanation or instruction",
+          "runs": [
+            {
+              "text": "Bayou ",
+              "color": 43520,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            },
+            {
+              "text": "to apply this ",
+              "color": 11184810,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            },
+            {
+              "text": "Sinker ",
+              "color": 5592575,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            },
+            {
+              "text": "to a",
+              "color": 11184810,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Ordinary game explanation or instruction",
+          "runs": [
+            {
+              "text": "Fishing Rod.",
+              "color": 11184810,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        },
+        {
+          "intent": "PRESERVE",
+          "reason": "Blank separator",
+          "runs": []
+        },
+        {
+          "intent": "PRESERVE",
+          "reason": "English game name, stat, ability heading or rarity retained by policy",
+          "runs": [
+            {
+              "text": "UNCOMMON ROD PART",
+              "color": 5635925,
+              "bold": true,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bal",
+      "screen": "Pets",
+      "weight": 1,
+      "evidence": {
+        "screenClass": "CoverageContainerScreen",
+        "containerTitle": "Pets",
+        "location": "CONTAINER",
+        "slotMatches": true,
+        "skyblockItemId": "PET",
+        "minecraftItemId": "minecraft:player_head",
+        "slotIndex": 10,
+        "containerSize": 54
+      },
+      "lines": [
+        {
+          "intent": "PRESERVE",
+          "reason": "English game name, stat, ability heading or rarity retained by policy",
+          "runs": [
+            {
+              "text": "[Lvl 1] ",
+              "color": 11184810,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            },
+            {
+              "text": "Bal",
+              "color": 11141290,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        },
+        {
+          "intent": "PRESERVE",
+          "reason": "English game name, stat, ability heading or rarity retained by policy",
+          "runs": [
+            {
+              "text": "Mining Pet",
+              "color": 5592405,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        },
+        {
+          "intent": "PRESERVE",
+          "reason": "Blank separator",
+          "runs": []
+        },
+        {
+          "intent": "PRESERVE",
+          "reason": "English game name, stat, ability heading or rarity retained by policy",
+          "runs": [
+            {
+              "text": "Heat Resistance: ",
+              "color": 11184810,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            },
+            {
+              "text": "+1.5",
+              "color": 16733525,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        },
+        {
+          "intent": "PRESERVE",
+          "reason": "English game name, stat, ability heading or rarity retained by policy",
+          "runs": [
+            {
+              "text": "Mining Fortune: ",
+              "color": 11184810,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            },
+            {
+              "text": "+1",
+              "color": 16755200,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        },
+        {
+          "intent": "PRESERVE",
+          "reason": "Blank separator",
+          "runs": []
+        },
+        {
+          "intent": "PRESERVE",
+          "reason": "English game name, stat, ability heading or rarity retained by policy",
+          "runs": [
+            {
+              "text": "Furnace",
+              "color": 16755200,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Ordinary game explanation or instruction",
+          "runs": [
+            {
+              "text": "Grants ",
+              "color": 11184810,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            },
+            {
+              "text": "+0.02 Pristine ",
+              "color": 11141290,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            },
+            {
+              "text": "while in the",
+              "color": 11184810,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Ordinary game explanation or instruction",
+          "runs": [
+            {
+              "text": "Magma Fields",
+              "color": 16733525,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            },
+            {
+              "text": ".",
+              "color": 11184810,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        },
+        {
+          "intent": "PRESERVE",
+          "reason": "Blank separator",
+          "runs": []
+        },
+        {
+          "intent": "PRESERVE",
+          "reason": "English game name, stat, ability heading or rarity retained by policy",
+          "runs": [
+            {
+              "text": "Dispersion",
+              "color": 16755200,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Ordinary game explanation or instruction",
+          "runs": [
+            {
+              "text": "While in the ",
+              "color": 11184810,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            },
+            {
+              "text": "Crystal Hollows",
+              "color": 11141290,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            },
+            {
+              "text": ", killing",
+              "color": 11184810,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Ordinary game explanation or instruction",
+          "runs": [
+            {
+              "text": "mobs reduces your ",
+              "color": 11184810,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            },
+            {
+              "text": " Heat ",
+              "color": 16733525,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            },
+            {
+              "text": "by ",
+              "color": 11184810,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            },
+            {
+              "text": "0.02",
+              "color": 16733525,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            },
+            {
+              "text": ".",
+              "color": 11184810,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        },
+        {
+          "intent": "PRESERVE",
+          "reason": "Blank separator",
+          "runs": []
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Ordinary game explanation or instruction",
+          "runs": [
+            {
+              "text": "Right-click to add this pet to your pet menu!",
+              "color": 16777045,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        },
+        {
+          "intent": "PRESERVE",
+          "reason": "Blank separator",
+          "runs": []
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Ordinary game explanation or instruction",
+          "runs": [
+            {
+              "text": "Can be upgraded at Kat in The Hub!",
+              "color": 5592405,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        },
+        {
+          "intent": "PRESERVE",
+          "reason": "English game name, stat, ability heading or rarity retained by policy",
+          "runs": [
+            {
+              "text": "EPIC PET",
+              "color": 11141290,
+              "bold": true,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "leveling",
+      "screen": "SkyBlock Menu",
+      "weight": 1,
+      "evidence": {
+        "screenClass": "CoverageContainerScreen",
+        "containerTitle": "SkyBlock Menu",
+        "location": "CONTAINER",
+        "slotMatches": true,
+        "skyblockItemId": "",
+        "minecraftItemId": "minecraft:player_head",
+        "slotIndex": 10,
+        "containerSize": 54
+      },
+      "lines": [
+        {
+          "intent": "TRANSLATE",
+          "reason": "General menu heading: SkyBlock Leveling",
+          "runs": [
+            {
+              "text": "SkyBlock Leveling",
+              "color": 5635925,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        },
+        {
+          "intent": "PRESERVE",
+          "reason": "Blank separator",
+          "runs": []
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Ordinary game explanation or instruction",
+          "runs": [
+            {
+              "text": "Determine how far you've",
+              "color": 11184810,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Ordinary game explanation or instruction",
+          "runs": [
+            {
+              "text": "progressed in SkyBlock and earn",
+              "color": 11184810,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Ordinary game explanation or instruction",
+          "runs": [
+            {
+              "text": "rewards from completing unique",
+              "color": 11184810,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Ordinary game explanation or instruction",
+          "runs": [
+            {
+              "text": "tasks.",
+              "color": 11184810,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        },
+        {
+          "intent": "PRESERVE",
+          "reason": "Blank separator",
+          "runs": []
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Ordinary game explanation or instruction",
+          "runs": [
+            {
+              "text": "Also accessible via /levels",
+              "color": 5592405,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        },
+        {
+          "intent": "PRESERVE",
+          "reason": "Blank separator",
+          "runs": []
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Ordinary game explanation or instruction",
+          "runs": [
+            {
+              "text": "Click to view!",
+              "color": 16777045,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "crafting-table",
+      "screen": "SkyBlock Menu",
+      "weight": 1,
+      "evidence": {
+        "screenClass": "CoverageContainerScreen",
+        "containerTitle": "SkyBlock Menu",
+        "location": "CONTAINER",
+        "slotMatches": true,
+        "skyblockItemId": "",
+        "minecraftItemId": "minecraft:crafting_table",
+        "slotIndex": 10,
+        "containerSize": 54
+      },
+      "lines": [
+        {
+          "intent": "PRESERVE",
+          "reason": "English game name, stat, ability heading or rarity retained by policy",
+          "runs": [
+            {
+              "text": "Crafting Table",
+              "color": 5635925,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Ordinary game explanation or instruction",
+          "runs": [
+            {
+              "text": "Opens the crafting grid.",
+              "color": 11184810,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        },
+        {
+          "intent": "PRESERVE",
+          "reason": "Blank separator",
+          "runs": []
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Ordinary game explanation or instruction",
+          "runs": [
+            {
+              "text": "Also accessible via /craft",
+              "color": 5592405,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        },
+        {
+          "intent": "PRESERVE",
+          "reason": "Blank separator",
+          "runs": []
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Ordinary game explanation or instruction",
+          "runs": [
+            {
+              "text": "Click to open!",
+              "color": 16777045,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "recipe-required",
+      "screen": "Craft Item",
+      "weight": 1,
+      "evidence": {
+        "screenClass": "CoverageContainerScreen",
+        "containerTitle": "Craft Item",
+        "location": "CONTAINER",
+        "slotMatches": true,
+        "skyblockItemId": "",
+        "minecraftItemId": "minecraft:barrier",
+        "slotIndex": 10,
+        "containerSize": 54
+      },
+      "lines": [
+        {
+          "intent": "TRANSLATE",
+          "reason": "Ordinary game explanation or instruction",
+          "runs": [
+            {
+              "text": "Recipe Required",
+              "color": 16733525,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Ordinary game explanation or instruction",
+          "runs": [
+            {
+              "text": "Add the items for a valid recipe in",
+              "color": 11184810,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Ordinary game explanation or instruction",
+          "runs": [
+            {
+              "text": "the crafting grid to the left!",
+              "color": 11184810,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quick-crafting-slot",
+      "screen": "Craft Item",
+      "weight": 1,
+      "evidence": {
+        "screenClass": "CoverageContainerScreen",
+        "containerTitle": "Craft Item",
+        "location": "CONTAINER",
+        "slotMatches": true,
+        "skyblockItemId": "",
+        "minecraftItemId": "minecraft:gray_stained_glass_pane",
+        "slotIndex": 10,
+        "containerSize": 54
+      },
+      "lines": [
+        {
+          "intent": "TRANSLATE",
+          "reason": "Ordinary game explanation or instruction",
+          "runs": [
+            {
+              "text": "Quick Crafting Slot",
+              "color": 16733525,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Ordinary game explanation or instruction",
+          "runs": [
+            {
+              "text": "Quick crafting allows you to craft",
+              "color": 11184810,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Ordinary game explanation or instruction",
+          "runs": [
+            {
+              "text": "items without assembling the recipe.",
+              "color": 11184810,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "supercraft",
+      "screen": "Craft Item",
+      "weight": 1,
+      "evidence": {
+        "screenClass": "CoverageContainerScreen",
+        "containerTitle": "Enchanted Ender Pearl",
+        "location": "CONTAINER",
+        "slotMatches": true,
+        "skyblockItemId": "",
+        "minecraftItemId": "minecraft:golden_pickaxe",
+        "slotIndex": 10,
+        "containerSize": 54
+      },
+      "lines": [
+        {
+          "intent": "PRESERVE",
+          "reason": "English game name, stat, ability heading or rarity retained by policy",
+          "runs": [
+            {
+              "text": "Supercraft",
+              "color": 5635925,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        },
+        {
+          "intent": "PRESERVE",
+          "reason": "Blank separator",
+          "runs": []
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Ordinary game explanation or instruction",
+          "runs": [
+            {
+              "text": "Crafting ",
+              "color": 5635925,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            },
+            {
+              "text": "1 ",
+              "color": 43520,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            },
+            {
+              "text": "item into your sacks!",
+              "color": 5635925,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        },
+        {
+          "intent": "PRESERVE",
+          "reason": "Blank separator",
+          "runs": []
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Ordinary game explanation or instruction",
+          "runs": [
+            {
+              "text": "Right-Click to set amount!",
+              "color": 5636095,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Ordinary game explanation or instruction",
+          "runs": [
+            {
+              "text": "Click to craft!",
+              "color": 16777045,
+              "bold": false,
+              "italic": false,
+              "underlined": false,
+              "strikethrough": false,
+              "obfuscated": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "collection-recipes",
+      "screen": "Mining Collection",
+      "weight": 1,
+      "evidence": {
+        "screenClass": "CoverageContainerScreen",
+        "containerTitle": "Mining Collection",
+        "location": "CONTAINER",
+        "slotMatches": true,
+        "skyblockItemId": "",
+        "minecraftItemId": "minecraft:paper",
+        "slotIndex": 10,
+        "containerSize": 54
+      },
+      "lines": [
+        {
+          "intent": "PRESERVE",
+          "reason": "English name, numeric stat or blank separator",
+          "runs": [
+            {
+              "text": "Collection Reward",
+              "color": 11184810
+            }
+          ]
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "General UI heading: Rewards",
+          "runs": [
+            {
+              "text": "Rewards:",
+              "color": 11184810
+            }
+          ]
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Authored fixed explanation/instruction",
+          "runs": [
+            {
+              "text": "Hardened Diamond Helmet Recipe",
+              "color": 11184810
+            }
+          ]
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Authored fixed explanation/instruction",
+          "runs": [
+            {
+              "text": "Hardened Diamond Boots Recipe",
+              "color": 11184810
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "combat-stats",
+      "screen": "Stats & Equipment",
+      "weight": 1,
+      "evidence": {
+        "screenClass": "CoverageContainerScreen",
+        "containerTitle": "Stats & Equipment",
+        "location": "CONTAINER",
+        "slotMatches": true,
+        "skyblockItemId": "",
+        "minecraftItemId": "minecraft:paper",
+        "slotIndex": 10,
+        "containerSize": 54
+      },
+      "lines": [
+        {
+          "intent": "TRANSLATE",
+          "reason": "General menu heading: Combat Stats",
+          "runs": [
+            {
+              "text": "Combat Stats",
+              "color": 11184810
+            }
+          ]
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Authored fixed explanation/instruction",
+          "runs": [
+            {
+              "text": "Stats that influence how much",
+              "color": 11184810
+            }
+          ]
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Authored fixed explanation/instruction",
+          "runs": [
+            {
+              "text": "damage you take and deal when in",
+              "color": 11184810
+            }
+          ]
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Authored fixed explanation/instruction",
+          "runs": [
+            {
+              "text": "combat.",
+              "color": 11184810
+            }
+          ]
+        },
+        {
+          "intent": "PRESERVE",
+          "reason": "English name, numeric stat or blank separator",
+          "runs": [
+            {
+              "text": "",
+              "color": 11184810
+            }
+          ]
+        },
+        {
+          "intent": "PRESERVE",
+          "reason": "English name, numeric stat or blank separator",
+          "runs": [
+            {
+              "text": "Health: +100",
+              "color": 11184810
+            }
+          ]
+        },
+        {
+          "intent": "PRESERVE",
+          "reason": "English name, numeric stat or blank separator",
+          "runs": [
+            {
+              "text": "Defense: +50",
+              "color": 11184810
+            }
+          ]
+        },
+        {
+          "intent": "PRESERVE",
+          "reason": "English name, numeric stat or blank separator",
+          "runs": [
+            {
+              "text": "",
+              "color": 11184810
+            }
+          ]
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Authored fixed explanation/instruction",
+          "runs": [
+            {
+              "text": "Click for details!",
+              "color": 11184810
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "unseen-explanation",
+      "screen": "SkyBlock Menu",
+      "weight": 1,
+      "evidence": {
+        "screenClass": "CoverageContainerScreen",
+        "containerTitle": "SkyBlock Menu",
+        "location": "CONTAINER",
+        "slotMatches": true,
+        "skyblockItemId": "",
+        "minecraftItemId": "minecraft:paper",
+        "slotIndex": 10,
+        "containerSize": 54
+      },
+      "lines": [
+        {
+          "intent": "PRESERVE",
+          "reason": "English name, numeric stat or blank separator",
+          "runs": [
+            {
+              "text": "A future feature",
+              "color": 11184810
+            }
+          ]
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Authored fixed explanation/instruction",
+          "runs": [
+            {
+              "text": "This deliberately unrecorded coverage fixture explains a future game feature.",
+              "color": 11184810
+            }
+          ]
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Authored fixed explanation/instruction",
+          "runs": [
+            {
+              "text": "Click to view!",
+              "color": 11184810
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "unknown-context",
+      "screen": "Unknown Screen",
+      "weight": 1,
+      "evidence": {
+        "screenClass": "CoverageUnknownScreen",
+        "containerTitle": "Unrecognized Screen",
+        "location": "UNKNOWN",
+        "slotMatches": false,
+        "skyblockItemId": "",
+        "minecraftItemId": "minecraft:paper",
+        "slotIndex": -1,
+        "containerSize": 0
+      },
+      "lines": [
+        {
+          "intent": "TRANSLATE",
+          "reason": "Authored UI instruction title without trusted slot context",
+          "runs": [
+            {
+              "text": "Unrecognized Control",
+              "color": 11184810
+            }
+          ]
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Authored fixed explanation/instruction",
+          "runs": [
+            {
+              "text": "Open this menu to view your rewards.",
+              "color": 11184810
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "style-same-color-multiplier-duration-reorder",
+      "screen": "Inventory Style Cases",
+      "weight": 1,
+      "evidence": {
+        "screenClass": "CoverageInventoryScreen",
+        "containerTitle": "",
+        "location": "PLAYER",
+        "slotMatches": true,
+        "skyblockItemId": "",
+        "minecraftItemId": "minecraft:paper",
+        "slotIndex": 1,
+        "containerSize": 0
+      },
+      "lines": [
+        {
+          "intent": "PRESERVE",
+          "reason": "Authored example title",
+          "runs": [
+            {
+              "text": "Coverage Effect",
+              "color": 11184810
+            }
+          ]
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Existing public fixed game effect test",
+          "runs": [
+            {
+              "text": "When in a minion, this increases the number of resources created by ",
+              "color": 11184810
+            },
+            {
+              "text": "3x",
+              "color": 5635925
+            },
+            {
+              "text": " for ",
+              "color": 11184810
+            },
+            {
+              "text": "3",
+              "color": 5635925
+            },
+            {
+              "text": " hours!",
+              "color": 11184810
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "style-same-color-kills-duration-reorder",
+      "screen": "Inventory Style Cases",
+      "weight": 1,
+      "evidence": {
+        "screenClass": "CoverageInventoryScreen",
+        "containerTitle": "",
+        "location": "PLAYER",
+        "slotMatches": true,
+        "skyblockItemId": "",
+        "minecraftItemId": "minecraft:paper",
+        "slotIndex": 1,
+        "containerSize": 0
+      },
+      "lines": [
+        {
+          "intent": "PRESERVE",
+          "reason": "Authored example title",
+          "runs": [
+            {
+              "text": "Coverage Effect",
+              "color": 11184810
+            }
+          ]
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Existing public fixed game effect test",
+          "runs": [
+            {
+              "text": "Increases your damage by ",
+              "color": 11184810
+            },
+            {
+              "text": "+1%",
+              "color": 5635925
+            },
+            {
+              "text": " per kill up to ",
+              "color": 11184810
+            },
+            {
+              "text": "2",
+              "color": 5635925
+            },
+            {
+              "text": " kills within ",
+              "color": 11184810
+            },
+            {
+              "text": "2s",
+              "color": 5635925
+            },
+            {
+              "text": ".",
+              "color": 11184810
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "style-different-color-count-duration",
+      "screen": "Inventory Style Cases",
+      "weight": 1,
+      "evidence": {
+        "screenClass": "CoverageInventoryScreen",
+        "containerTitle": "",
+        "location": "PLAYER",
+        "slotMatches": true,
+        "skyblockItemId": "",
+        "minecraftItemId": "minecraft:paper",
+        "slotIndex": 1,
+        "containerSize": 0
+      },
+      "lines": [
+        {
+          "intent": "PRESERVE",
+          "reason": "Authored example title",
+          "runs": [
+            {
+              "text": "Coverage Effect",
+              "color": 11184810
+            }
+          ]
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Existing public fixed game effect test",
+          "runs": [
+            {
+              "text": "Stacks up to ",
+              "color": 11184810
+            },
+            {
+              "text": "4",
+              "color": 5635925
+            },
+            {
+              "text": " times and lasts ",
+              "color": 11184810
+            },
+            {
+              "text": "4",
+              "color": 16755200
+            },
+            {
+              "text": " seconds.",
+              "color": 11184810
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "style-different-color-distance-count",
+      "screen": "Inventory Style Cases",
+      "weight": 1,
+      "evidence": {
+        "screenClass": "CoverageInventoryScreen",
+        "containerTitle": "",
+        "location": "PLAYER",
+        "slotMatches": true,
+        "skyblockItemId": "",
+        "minecraftItemId": "minecraft:paper",
+        "slotIndex": 1,
+        "containerSize": 0
+      },
+      "lines": [
+        {
+          "intent": "PRESERVE",
+          "reason": "Authored example title",
+          "runs": [
+            {
+              "text": "Coverage Effect",
+              "color": 11184810
+            }
+          ]
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Existing public fixed game effect test",
+          "runs": [
+            {
+              "text": "Within ",
+              "color": 11184810
+            },
+            {
+              "text": "10",
+              "color": 16777045
+            },
+            {
+              "text": " blocks. Maximum of ",
+              "color": 11184810
+            },
+            {
+              "text": "10",
+              "color": 16733525
+            },
+            {
+              "text": " enemies.",
+              "color": 11184810
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "style-ambiguous-duplicate-duration-different-color",
+      "screen": "Inventory Style Cases",
+      "weight": 1,
+      "evidence": {
+        "screenClass": "CoverageInventoryScreen",
+        "containerTitle": "",
+        "location": "PLAYER",
+        "slotMatches": true,
+        "skyblockItemId": "",
+        "minecraftItemId": "minecraft:paper",
+        "slotIndex": 1,
+        "containerSize": 0
+      },
+      "lines": [
+        {
+          "intent": "PRESERVE",
+          "reason": "Authored example title",
+          "runs": [
+            {
+              "text": "Coverage Effect",
+              "color": 11184810
+            }
+          ]
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Existing public fixed game effect test",
+          "runs": [
+            {
+              "text": "Lasts ",
+              "color": 11184810
+            },
+            {
+              "text": "4",
+              "color": 16733525
+            },
+            {
+              "text": " seconds and ",
+              "color": 11184810
+            },
+            {
+              "text": "4",
+              "color": 5635925
+            },
+            {
+              "text": " seconds.",
+              "color": 11184810
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "style-same-color-untyped-values",
+      "screen": "Inventory Style Cases",
+      "weight": 1,
+      "evidence": {
+        "screenClass": "CoverageInventoryScreen",
+        "containerTitle": "",
+        "location": "PLAYER",
+        "slotMatches": true,
+        "skyblockItemId": "",
+        "minecraftItemId": "minecraft:paper",
+        "slotIndex": 1,
+        "containerSize": 0
+      },
+      "lines": [
+        {
+          "intent": "PRESERVE",
+          "reason": "Authored example title",
+          "runs": [
+            {
+              "text": "Coverage Effect",
+              "color": 11184810
+            }
+          ]
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Existing public fixed game effect test",
+          "runs": [
+            {
+              "text": "Gain ",
+              "color": 11184810
+            },
+            {
+              "text": "10",
+              "color": 5635925
+            },
+            {
+              "text": " alpha and ",
+              "color": 11184810
+            },
+            {
+              "text": "10",
+              "color": 5635925
+            },
+            {
+              "text": " beta.",
+              "color": 11184810
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "style-different-color-untyped-values",
+      "screen": "Inventory Style Cases",
+      "weight": 1,
+      "evidence": {
+        "screenClass": "CoverageInventoryScreen",
+        "containerTitle": "",
+        "location": "PLAYER",
+        "slotMatches": true,
+        "skyblockItemId": "",
+        "minecraftItemId": "minecraft:paper",
+        "slotIndex": 1,
+        "containerSize": 0
+      },
+      "lines": [
+        {
+          "intent": "PRESERVE",
+          "reason": "Authored example title",
+          "runs": [
+            {
+              "text": "Coverage Effect",
+              "color": 11184810
+            }
+          ]
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Existing public fixed game effect test",
+          "runs": [
+            {
+              "text": "Gain ",
+              "color": 11184810
+            },
+            {
+              "text": "10",
+              "color": 5635925
+            },
+            {
+              "text": " alpha and ",
+              "color": 11184810
+            },
+            {
+              "text": "10",
+              "color": 16733525
+            },
+            {
+              "text": " beta.",
+              "color": 11184810
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "style-dimension-5x5",
+      "screen": "Inventory Style Cases",
+      "weight": 1,
+      "evidence": {
+        "screenClass": "CoverageInventoryScreen",
+        "containerTitle": "",
+        "location": "PLAYER",
+        "slotMatches": true,
+        "skyblockItemId": "",
+        "minecraftItemId": "minecraft:paper",
+        "slotIndex": 1,
+        "containerSize": 0
+      },
+      "lines": [
+        {
+          "intent": "PRESERVE",
+          "reason": "Authored example title",
+          "runs": [
+            {
+              "text": "Coverage Effect",
+              "color": 11184810
+            }
+          ]
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Existing public fixed game effect test",
+          "runs": [
+            {
+              "text": "Cleans a ",
+              "color": 11184810
+            },
+            {
+              "text": "5x5",
+              "color": 5592575
+            },
+            {
+              "text": " area of grass, leaves and flowers.",
+              "color": 11184810
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "style-parentheses-semantic-signature",
+      "screen": "Inventory Style Cases",
+      "weight": 1,
+      "evidence": {
+        "screenClass": "CoverageInventoryScreen",
+        "containerTitle": "",
+        "location": "PLAYER",
+        "slotMatches": true,
+        "skyblockItemId": "",
+        "minecraftItemId": "minecraft:paper",
+        "slotIndex": 1,
+        "containerSize": 0
+      },
+      "lines": [
+        {
+          "intent": "PRESERVE",
+          "reason": "Authored example title",
+          "runs": [
+            {
+              "text": "Coverage Effect",
+              "color": 11184810
+            }
+          ]
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Existing public fixed game effect test",
+          "runs": [
+            {
+              "text": "Heal ",
+              "color": 11184810
+            },
+            {
+              "text": "30❤",
+              "color": 16733525
+            },
+            {
+              "text": " every time you kill a mob. ",
+              "color": 11184810
+            },
+            {
+              "text": "(",
+              "color": 5592405
+            },
+            {
+              "text": "0.5",
+              "color": 5592405
+            },
+            {
+              "text": "s Cooldown).",
+              "color": 5592405
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "style-punctuation-without-anchor-stays-unresolved",
+      "screen": "Inventory Style Cases",
+      "weight": 1,
+      "evidence": {
+        "screenClass": "CoverageInventoryScreen",
+        "containerTitle": "",
+        "location": "PLAYER",
+        "slotMatches": true,
+        "skyblockItemId": "",
+        "minecraftItemId": "minecraft:paper",
+        "slotIndex": 1,
+        "containerSize": 0
+      },
+      "lines": [
+        {
+          "intent": "PRESERVE",
+          "reason": "Authored example title",
+          "runs": [
+            {
+              "text": "Coverage Effect",
+              "color": 11184810
+            }
+          ]
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Existing public fixed game effect test",
+          "runs": [
+            {
+              "text": "Gain power. ",
+              "color": 11184810
+            },
+            {
+              "text": "(optional)",
+              "color": 5592405
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "style-nested-numeric-style-parenthetical",
+      "screen": "Inventory Style Cases",
+      "weight": 1,
+      "evidence": {
+        "screenClass": "CoverageInventoryScreen",
+        "containerTitle": "",
+        "location": "PLAYER",
+        "slotMatches": true,
+        "skyblockItemId": "",
+        "minecraftItemId": "minecraft:paper",
+        "slotIndex": 1,
+        "containerSize": 0
+      },
+      "lines": [
+        {
+          "intent": "PRESERVE",
+          "reason": "Authored example title",
+          "runs": [
+            {
+              "text": "Coverage Effect",
+              "color": 11184810
+            }
+          ]
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Existing public fixed game effect test",
+          "runs": [
+            {
+              "text": "Gain ",
+              "color": 11184810
+            },
+            {
+              "text": "10",
+              "color": 5635925,
+              "bold": true
+            },
+            {
+              "text": " power ",
+              "color": 11184810
+            },
+            {
+              "text": "(",
+              "color": 5592405
+            },
+            {
+              "text": "max ",
+              "color": 5592405
+            },
+            {
+              "text": "20",
+              "color": 5635925,
+              "bold": true
+            },
+            {
+              "text": ").",
+              "color": 5592405
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "style-long-white-emphasis-with-gray-body",
+      "screen": "Inventory Style Cases",
+      "weight": 1,
+      "evidence": {
+        "screenClass": "CoverageInventoryScreen",
+        "containerTitle": "",
+        "location": "PLAYER",
+        "slotMatches": true,
+        "skyblockItemId": "",
+        "minecraftItemId": "minecraft:paper",
+        "slotIndex": 1,
+        "containerSize": 0
+      },
+      "lines": [
+        {
+          "intent": "PRESERVE",
+          "reason": "Authored example title",
+          "runs": [
+            {
+              "text": "Coverage Effect",
+              "color": 11184810
+            }
+          ]
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Existing public fixed game effect test",
+          "runs": [
+            {
+              "text": "Hit ",
+              "color": 11184810
+            },
+            {
+              "text": "nearby enemies",
+              "color": 16777215
+            },
+            {
+              "text": ".",
+              "color": 11184810
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "style-aqua-body-white-protected-stat",
+      "screen": "Inventory Style Cases",
+      "weight": 1,
+      "evidence": {
+        "screenClass": "CoverageInventoryScreen",
+        "containerTitle": "",
+        "location": "PLAYER",
+        "slotMatches": true,
+        "skyblockItemId": "",
+        "minecraftItemId": "minecraft:paper",
+        "slotIndex": 1,
+        "containerSize": 0
+      },
+      "lines": [
+        {
+          "intent": "PRESERVE",
+          "reason": "Authored example title",
+          "runs": [
+            {
+              "text": "Coverage Effect",
+              "color": 11184810
+            }
+          ]
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Existing public fixed game effect test",
+          "runs": [
+            {
+              "text": "Mining Fortune",
+              "color": 16777215
+            },
+            {
+              "text": " grants ",
+              "color": 5636095
+            },
+            {
+              "text": "+5",
+              "color": 5635925
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "style-green-body-with-gray-arrow",
+      "screen": "Inventory Style Cases",
+      "weight": 1,
+      "evidence": {
+        "screenClass": "CoverageInventoryScreen",
+        "containerTitle": "",
+        "location": "PLAYER",
+        "slotMatches": true,
+        "skyblockItemId": "",
+        "minecraftItemId": "minecraft:paper",
+        "slotIndex": 1,
+        "containerSize": 0
+      },
+      "lines": [
+        {
+          "intent": "PRESERVE",
+          "reason": "Authored example title",
+          "runs": [
+            {
+              "text": "Coverage Effect",
+              "color": 11184810
+            }
+          ]
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Existing public fixed game effect test",
+          "runs": [
+            {
+              "text": "Gain ",
+              "color": 5635925
+            },
+            {
+              "text": "+5",
+              "color": 16777045
+            },
+            {
+              "text": "➜",
+              "color": 11184810
+            },
+            {
+              "text": "10",
+              "color": 16777045
+            },
+            {
+              "text": " Mining Fortune",
+              "color": 16755200
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "style-unknown-emphasis-no-guessed-alias",
+      "screen": "Inventory Style Cases",
+      "weight": 1,
+      "evidence": {
+        "screenClass": "CoverageInventoryScreen",
+        "containerTitle": "",
+        "location": "PLAYER",
+        "slotMatches": true,
+        "skyblockItemId": "",
+        "minecraftItemId": "minecraft:paper",
+        "slotIndex": 1,
+        "containerSize": 0
+      },
+      "lines": [
+        {
+          "intent": "PRESERVE",
+          "reason": "Authored example title",
+          "runs": [
+            {
+              "text": "Coverage Effect",
+              "color": 11184810
+            }
+          ]
+        },
+        {
+          "intent": "TRANSLATE",
+          "reason": "Existing public fixed game effect test",
+          "runs": [
+            {
+              "text": "Gain ",
+              "color": 11184810
+            },
+            {
+              "text": "curiously humming",
+              "color": 16777215,
+              "bold": true
+            },
+            {
+              "text": " power.",
+              "color": 11184810
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

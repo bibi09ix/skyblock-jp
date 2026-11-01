@@ -1,4 +1,5 @@
 package local.skyblockjp;
+
 import java.util.*;
 import java.util.function.Function;
 import net.minecraft.network.chat.Component;
@@ -6,24 +7,42 @@ import net.minecraft.network.chat.Component;
 /** Atomic API display and synchronous local dictionary paragraph replacements. */
 public final class ItemTranslation {
     public record Result(List<Component> lines, int complete, int total, String error) {
-        public boolean ready() { return total > 0 && complete == total && error == null; }
+        public boolean ready() {
+            return total > 0 && complete == total && error == null;
+        }
     }
-    public static Result prepare(List<Component> original, List<LoreParser.Block> blocks,
-            List<StyledParagraph> paragraphs, Function<String, String> cache,
+
+    public static Result prepare(
+            List<Component> original,
+            List<LoreParser.Block> blocks,
+            List<StyledParagraph> paragraphs,
+            Function<String, String> cache,
             Function<Component, List<Component>> wrap) {
         return prepareParagraphs(original, blocks, paragraphs, p -> cache.apply(p.encoded()), wrap);
     }
-    public static Result prepareParagraphs(List<Component> original, List<LoreParser.Block> blocks,
-            List<StyledParagraph> paragraphs, Function<StyledParagraph, String> cache,
+
+    public static Result prepareParagraphs(
+            List<Component> original,
+            List<LoreParser.Block> blocks,
+            List<StyledParagraph> paragraphs,
+            Function<StyledParagraph, String> cache,
             Function<Component, List<Component>> wrap) {
         List<List<Component>> replacements = new ArrayList<>();
         int complete = 0;
         String error = null;
         for (StyledParagraph paragraph : paragraphs) {
             String text = cache.apply(paragraph);
-            if (text == null) { replacements.add(null); continue; }
-            try { replacements.add(wrap.apply(paragraph.decodeForDisplay(text))); complete++; }
-            catch (IllegalArgumentException e) { replacements.add(null); error = "色・数値の復元に失敗しました"; }
+            if (text == null) {
+                replacements.add(null);
+                continue;
+            }
+            try {
+                replacements.add(wrap.apply(paragraph.decodeForDisplay(text)));
+                complete++;
+            } catch (IllegalArgumentException e) {
+                replacements.add(null);
+                error = "色・数値の復元に失敗しました";
+            }
         }
         List<Component> result = new ArrayList<>(original);
         if (complete == paragraphs.size() && error == null) {
@@ -34,16 +53,23 @@ public final class ItemTranslation {
         }
         return new Result(result, complete, paragraphs.size(), error);
     }
+
     /** Apply local dictionary hits in this call; misses never delay or trigger another lookup path. */
-    public static Result prepareDictionary(List<Component> original, List<LoreParser.Block> blocks,
-            List<StyledParagraph> paragraphs, Function<StyledParagraph, String> localLookup,
+    public static Result prepareDictionary(
+            List<Component> original,
+            List<LoreParser.Block> blocks,
+            List<StyledParagraph> paragraphs,
+            Function<StyledParagraph, String> localLookup,
             Function<Component, List<Component>> wrap) {
         List<List<Component>> replacements = new ArrayList<>();
         int complete = 0;
         String error = null;
         for (StyledParagraph paragraph : paragraphs) {
             String text = localLookup.apply(paragraph);
-            if (text == null) { replacements.add(null); continue; }
+            if (text == null) {
+                replacements.add(null);
+                continue;
+            }
             try {
                 if (text.isBlank() || !StyledParagraph.validNumbers(paragraph.encoded(), text))
                     throw new IllegalArgumentException("Invalid local dictionary value");

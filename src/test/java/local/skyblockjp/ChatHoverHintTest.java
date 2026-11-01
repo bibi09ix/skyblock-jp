@@ -1,18 +1,29 @@
 package local.skyblockjp;
 
+import static org.junit.jupiter.api.Assertions.*;
+
+import java.util.List;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.StringSplitter;
 import net.minecraft.network.chat.*;
 import net.minecraft.util.FormattedCharSequence;
 import org.junit.jupiter.api.Test;
-import java.util.List;
-import static org.junit.jupiter.api.Assertions.*;
 
 class ChatHoverHintTest {
-    @Test void textHoverKeepsEveryOriginalGlyphStyleAndNewlineWithoutMutatingSource() {
-        var original = Component.literal("Quest details\n").withStyle(ChatFormatting.GOLD, ChatFormatting.BOLD)
-            .append(Component.literal("Second line").setStyle(Style.EMPTY.withColor(ChatFormatting.AQUA).withItalic(true)
-                .withClickEvent(new ClickEvent.RunCommand("/quest"))));
+    @Test
+    void textHoverKeepsEveryOriginalGlyphStyleAndNewlineWithoutMutatingSource() {
+        var original =
+                Component.literal("Quest details\n")
+                        .withStyle(ChatFormatting.GOLD, ChatFormatting.BOLD)
+                        .append(
+                                Component.literal("Second line")
+                                        .setStyle(
+                                                Style.EMPTY
+                                                        .withColor(ChatFormatting.AQUA)
+                                                        .withItalic(true)
+                                                        .withClickEvent(
+                                                                new ClickEvent.RunCommand(
+                                                                        "/quest"))));
         var before = StyledParagraph.glyphs(original);
         var style = Style.EMPTY.withHoverEvent(new HoverEvent.ShowText(original));
         var display = ChatHoverHint.compose(style, "G");
@@ -23,17 +34,31 @@ class ChatHoverHintTest {
         assertEquals(before, StyledParagraph.glyphs(original));
         var hintStyle = actual.getLast().style();
         assertEquals(0xAAAAAA, hintStyle.getColor().getValue());
-        assertFalse(hintStyle.isBold()); assertFalse(hintStyle.isItalic()); assertNull(hintStyle.getClickEvent());
-        assertSame(original, ((HoverEvent.ShowText)style.getHoverEvent()).value());
+        assertFalse(hintStyle.isBold());
+        assertFalse(hintStyle.isItalic());
+        assertNull(hintStyle.getClickEvent());
+        assertSame(original, ((HoverEvent.ShowText) style.getHoverEvent()).value());
     }
-    @Test void plainHoverUsesTheConfiguredKeyAndNoExtraHint() {
+
+    @Test
+    void plainHoverUsesTheConfiguredKeyAndNoExtraHint() {
         var result = ChatHoverHint.compose(Style.EMPTY, "H");
-        assertEquals("Hで翻訳", result.tooltip().getString()); assertNull(result.separateHint());
+        assertEquals("Hで翻訳", result.tooltip().getString());
+        assertNull(result.separateHint());
     }
-    @Test void styleHitTestingUsesTheCharacterUnderTheCursorRatherThanTheMessageRoot() {
+
+    @Test
+    void styleHitTestingUsesTheCharacterUnderTheCursorRatherThanTheMessageRoot() {
         var normal = Style.EMPTY.withColor(ChatFormatting.GRAY);
-        var linked = Style.EMPTY.withColor(ChatFormatting.GOLD).withHoverEvent(new HoverEvent.ShowText(Component.literal("Link details")));
-        var sequence = FormattedCharSequence.composite(List.of(FormattedCharSequence.forward("AB", normal), FormattedCharSequence.forward("CD", linked)));
+        var linked =
+                Style.EMPTY
+                        .withColor(ChatFormatting.GOLD)
+                        .withHoverEvent(new HoverEvent.ShowText(Component.literal("Link details")));
+        var sequence =
+                FormattedCharSequence.composite(
+                        List.of(
+                                FormattedCharSequence.forward("AB", normal),
+                                FormattedCharSequence.forward("CD", linked)));
         var splitter = new StringSplitter((cp, style) -> cp == 'C' ? 2 : 1);
         assertNull(ChatHover.styleAt(sequence, -1, splitter));
         assertEquals(normal, ChatHover.styleAt(sequence, 1.5, splitter));

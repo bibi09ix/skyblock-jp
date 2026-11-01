@@ -1,8 +1,9 @@
 package local.skyblockjp;
-import net.minecraft.network.chat.Component;
+
 import java.util.*;
 import java.util.function.ToIntFunction;
 import java.util.regex.Pattern;
+import net.minecraft.network.chat.Component;
 
 final class TooltipWrap {
     static List<Component> wrap(Component text, int width, ToIntFunction<Component> measure) {
@@ -11,22 +12,36 @@ final class TooltipWrap {
         StringBuilder plain = new StringBuilder();
         int[] offsets = new int[count + 1], sizes = new int[count];
         for (int i = 0; i < count; i++) {
-            offsets[i] = plain.length(); plain.append(glyphs.get(i).text());
-            sizes[i] = measure.applyAsInt(Component.literal(glyphs.get(i).text()).setStyle(glyphs.get(i).style()));
+            offsets[i] = plain.length();
+            plain.append(glyphs.get(i).text());
+            sizes[i] =
+                    measure.applyAsInt(
+                            Component.literal(glyphs.get(i).text())
+                                    .setStyle(glyphs.get(i).style()));
         }
         offsets[count] = plain.length();
         boolean[] locked = new boolean[plain.length() + 1];
-        for (Pattern pattern : List.of(ProtectedTerms.forText(plain.toString()),
-            Pattern.compile("\\d[\\d,]*(?:\\.\\d+)?/\\d[\\d,]*(?:\\.\\d+)?[kKmMbB]?"),
-            Pattern.compile("/?[A-Za-z][A-Za-z0-9_'/-]*"),
-            Pattern.compile("[+−-]?\\d[\\d,]*(?:\\.\\d+)?(?:\\s*(?:秒間|分間|時間|秒|分|日|回|体|個|つ|倍|%|[A-Za-z]+))?[\\p{Co}❤☯]*"),
-            Pattern.compile("[ァ-ヺー]+[ぁ-ゖ]*|[\\p{IsHan}々]+[ぁ-ゖ]*|[ぁ-ゖ]+"))) {
-            pattern.matcher(plain).results().forEach(m -> { for (int k = m.start() + 1; k < m.end(); k++) locked[k] = true; });
+        for (Pattern pattern :
+                List.of(
+                        ProtectedTerms.forText(plain.toString()),
+                        Pattern.compile("\\d[\\d,]*(?:\\.\\d+)?/\\d[\\d,]*(?:\\.\\d+)?[kKmMbB]?"),
+                        Pattern.compile("/?[A-Za-z][A-Za-z0-9_'/-]*"),
+                        Pattern.compile(
+                                "[+−-]?\\d[\\d,]*(?:\\.\\d+)?(?:\\s*(?:秒間|分間|時間|秒|分|日|回|体|個|つ|倍|%|[A-Za-z]+))?[\\p{Co}❤☯]*"),
+                        Pattern.compile("[ァ-ヺー]+[ぁ-ゖ]*|[\\p{IsHan}々]+[ぁ-ゖ]*|[ぁ-ゖ]+"))) {
+            pattern.matcher(plain)
+                    .results()
+                    .forEach(
+                            m -> {
+                                for (int k = m.start() + 1; k < m.end(); k++) locked[k] = true;
+                            });
         }
         List<Component> result = new ArrayList<>();
-        for (int start = 0; start < count;) {
+        for (int start = 0; start < count; ) {
             int end = start, used = 0;
-            while (end < count && !glyphs.get(end).text().equals("\n") && (end == start || used + sizes[end] <= width)) used += sizes[end++];
+            while (end < count
+                    && !glyphs.get(end).text().equals("\n")
+                    && (end == start || used + sizes[end] <= width)) used += sizes[end++];
             int cut = end;
             if (end < count && !glyphs.get(end).text().equals("\n")) {
                 while (cut > start && !allowed(glyphs, offsets, locked, cut)) cut--;
@@ -45,7 +60,9 @@ final class TooltipWrap {
                 while (cut < count && closing(glyphs.get(cut).text())) cut++;
             }
             var line = Component.empty();
-            for (int i = start; i < cut; i++) line.append(Component.literal(glyphs.get(i).text()).setStyle(glyphs.get(i).style()));
+            for (int i = start; i < cut; i++)
+                line.append(
+                        Component.literal(glyphs.get(i).text()).setStyle(glyphs.get(i).style()));
             result.add(line);
             start = cut;
             if (start < count && glyphs.get(start).text().equals("\n")) start++;
@@ -53,8 +70,15 @@ final class TooltipWrap {
         if (count > 0 && glyphs.getLast().text().equals("\n")) result.add(Component.empty());
         return result;
     }
-    private static boolean closing(String s) { return "、。，．！？!?：:；;)]}）］｝」』】".contains(s); }
-    private static boolean allowed(List<StyledParagraph.Glyph> glyphs, int[] offsets, boolean[] locked, int cut) {
-        return !locked[offsets[cut]] && !closing(glyphs.get(cut).text()) && !"([{（［｛「『【".contains(glyphs.get(cut - 1).text());
+
+    private static boolean closing(String s) {
+        return "、。，．！？!?：:；;)]}）］｝」』】".contains(s);
+    }
+
+    private static boolean allowed(
+            List<StyledParagraph.Glyph> glyphs, int[] offsets, boolean[] locked, int cut) {
+        return !locked[offsets[cut]]
+                && !closing(glyphs.get(cut).text())
+                && !"([{（［｛「『【".contains(glyphs.get(cut - 1).text());
     }
 }
